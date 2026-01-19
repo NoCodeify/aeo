@@ -1,0 +1,247 @@
+THE 5-STEP AEO AUDIT SYSTEM I USE WITH EVERY CLIENT
+
+
+
+=== HOOK ===
+
+I ran the same search query in ChatGPT 10 times. Got 10 different answers.
+
+This is why I run 100 queries minimum in every audit I do.
+
+Most businesses test their AI visibility once. That's like flipping a coin and calling it research.
+
+I'm going to show you the 5-step audit system I use to find out if ChatGPT is actually recommending your brand.
+
+Step 2 takes 30 seconds and most brands fail it immediately.
+
+
+
+=== SETUP ===
+
+Here's what most people do when they want to check their AI visibility.
+
+They open ChatGPT. They type their brand name. They see a response. And they say "Great, ChatGPT knows us. We're good."
+
+That test has two major problems.
+
+I learned this working with a hair transplant clinic. They typed their name into ChatGPT and it responded. Great, right? Except the information was completely wrong. Outdated pricing from 5 years ago. Claims pulled from random Reddit threads and old forum posts. ChatGPT was confidently telling potential patients things that hadn't been true for years.
+
+Problem one: just because ChatGPT responds doesn't mean it's accurate.
+
+Then I ran the queries that actually bring in new customers - "best hair transplant in Europe," "top FUE surgeon" - and they weren't mentioned at all.
+
+Problem two: branded queries only matter after someone already knows you exist.
+
+So they had the worst of both worlds. Wrong information when people searched their name. And zero visibility when people searched for solutions.
+
+Most businesses only test the first part. They never test the second. And that's where the real money is.
+
+And here's the uncomfortable truth.
+
+ChatGPT's responses are non-deterministic. That's a fancy way of saying: the same question can give different answers every single time.
+
+This isn't a bug. This is how LLMs work. They sample from probability distributions. They're creative. And that creativity means inconsistency.
+
+So that one test you ran? It might have been the only time you showed up. Or the only time you didn't.
+
+You have no idea.
+
+That's why I developed a 5-step audit system that gives you real data. Not hope.
+
+Let me walk you through exactly how it works.
+
+
+
+=== STEP 1: CLIENT INTAKE QUESTIONNAIRE ===
+
+The first thing I do with every client - before I run a single query - is ask them one question.
+
+"What 5 queries would you MOST want to appear for when someone searches in ChatGPT?"
+
+Not "what keywords do you rank for on Google." Not "what's your brand name."
+
+What queries do you want to OWN?
+
+I call these Dream Queries. And they become the foundation of everything else.
+
+Because here's what most agencies do wrong. They audit what you already rank for. That's backwards.
+
+Dream Queries force you to think about where you WANT to be found. Not where you are.
+
+Things like "best hair transplant in Europe" or "premium AI consulting firm" or "what's the safest option for my surgery."
+
+But collecting Dream Queries is just the starting point.
+
+Because once I have those queries, I need to see if your website is even capable of ranking for them.
+
+And that's where step 2 comes in. The one that takes 30 seconds and fails 80% of brands I audit.
+
+
+
+=== STEP 2: FIRST 50 WORDS AUDIT ===
+
+Pull up your homepage right now. Read the first 50 words.
+
+If it starts with something like "Unlock the power of innovation" or "In today's competitive landscape" or "Are you ready to transform your business?" - you have a problem.
+
+LLMs process text sequentially. They often truncate after the first chunk of content. And they definitely lose focus.
+
+So if your first 50 words don't tell them WHO you are, WHAT you do, WHERE you're located, and HOW MUCH you charge - you're invisible.
+
+I call this the First 50 Words Test. And it's brutally simple.
+
+Here's a website that fails:
+
+"Unlock the power of AI to revolutionize your search visibility. In today's competitive landscape, businesses need every advantage they can get..."
+
+24 words in and I still don't know what they do, where they are, or what they charge.
+
+Here's one that passes:
+
+"AEO Protocol optimizes brands for ChatGPT and Gemini visibility. We're based in Amsterdam. Pricing starts at $3,000 per month. We've helped 50+ brands increase LLM citations by an average of 340%."
+
+WHO: AEO Protocol. WHAT: Optimizes for AI. WHERE: Amsterdam. PRICE: $3,000. Plus a proof point.
+
+Now you might be thinking "Okay, I'll fix my first 50 words. Problem solved."
+
+Not so fast.
+
+Because even if your content is perfect, you still don't know if ChatGPT is actually recommending you.
+
+And testing that? It's more complicated than you think.
+
+
+
+=== STEP 3: 10-RUN CONSISTENCY TEST ===
+
+Remember what I said at the beginning? I ran the same query 10 times and got 10 different answers.
+
+This is the most important step in the entire audit. And almost nobody does it.
+
+Watch this.
+
+Run 1: Recommends Clinic A, Clinic B, Clinic C.
+
+Run 2: Recommends Clinic B, Clinic D, Clinic E.
+
+Run 3: Recommends Clinic A, Clinic C, Clinic F.
+
+Different answer. Every. Single. Time.
+
+Now imagine you're a potential customer. You ask ChatGPT for a recommendation. You get Clinic B. You go with Clinic B.
+
+Meanwhile, Clinic A - who might actually be better - just lost a customer because they happened to lose that particular coin flip.
+
+This is happening thousands of times a day. And most brands have no idea.
+
+This is why I developed the 10-Run Consistency Test.
+
+For every dream query, I run it 10 times in ChatGPT. And 10 times in Gemini. That's 20 data points per query.
+
+Then I calculate a consistency score. If your brand appears in 8 out of 10 runs, that's an 80% consistency score. Good.
+
+If you appear in 2 out of 10? That's a problem. It means you're leaving 80% of potential recommendations on the table.
+
+One client I audited - they showed up in branded queries 100% of the time. Great.
+
+But discovery queries? "Best in their category?" Zero out of ten. They were invisible to anyone who didn't already know them.
+
+Think about that. If someone already knew their name, ChatGPT would praise them. But if someone was LOOKING for a solution - total silence. That's a business problem hiding in plain sight.
+
+And this brings up an important question.
+
+If you can only test so many queries, which ones actually matter?
+
+That's step 4. And it's the one that separates amateurs from professionals.
+
+
+
+=== STEP 4: DISCOVERY QUERY MAPPING ===
+
+Here's a mistake I see constantly.
+
+Brands obsess over their branded queries. "Does ChatGPT know who we are?"
+
+But your brand name queries don't matter if nobody knows you exist in the first place.
+
+Think of it like a funnel. At the top, you have people who don't know any brands yet. They're just searching for solutions. "Best hair transplant in Europe." "Top AI consulting firm." "Premium accounting software."
+
+That's discovery. That's where the volume is.
+
+At the bottom, you have people who already know your name. They're comparing you to competitors, reading reviews, checking prices.
+
+That's brand. That's where you convert.
+
+But here's the thing - you can't convert people at the bottom if they never found you at the top.
+
+So I map queries into two categories.
+
+Discovery Queries: How people FIND you before they know you exist.
+- "best [category] in [location]"
+- "top [professional type] for [use case]"
+- "premium [category] [region]"
+
+Brand Queries: How people learn MORE once they've heard of you.
+- "[brand name] reviews"
+- "[brand name] vs [competitor]"
+- "Is [brand name] worth it"
+
+The money is in discovery queries. That's where new customers come from.
+
+Brand queries just convert people who already found you somewhere else.
+
+So when I build the query set for an audit, I weight heavily toward discovery. I test 5-7 discovery queries versus 2-3 brand queries. That's where you find the gaps that are actually costing you money.
+
+
+
+=== STEP 5: PLAYBOOK CREATION ===
+
+So now I have all this data. Dream queries, first 50 words analysis, consistency scores, discovery vs brand breakdown.
+
+But data without action is just noise.
+
+That's why every audit I run ends with a Playbook.
+
+The Playbook converts findings into prioritized weekly actions.
+
+Week 1 - Critical: Fix your first 50 words. Target queries where you have 0% visibility.
+
+Week 2 - High Priority: Create comparison pages. Fix technical issues like robots.txt blocking AI crawlers.
+
+Month 1 - Medium Priority: Build external citations. Get listed on review platforms. Create content for dream queries you're missing.
+
+One client went from zero mentions to 8 out of 10 consistency in 30 days. Not because they did everything. Because they did the right things in the right order.
+
+The audit tells you what's broken. The playbook tells you how to fix it.
+
+
+
+=== PAYOFF ===
+
+So let me bring this back to where we started.
+
+I ran the same query 10 times and got 10 different answers. That's not a bug. That's how LLMs work.
+
+And if you're testing your visibility with one query, one time - you're gambling with your business.
+
+The brands that win in AI aren't the ones who check once and hope for the best. They're the ones who test systematically, find the gaps, and fix them in the right order.
+
+Remember I said step 2 takes 30 seconds and most brands fail it immediately?
+
+Go read your homepage right now. Count the first 50 words. If you don't see WHO, WHAT, WHERE, and PRICE - you know what to fix first. That alone could change how ChatGPT sees you.
+
+This 5-step system - Intake, First 50, 10-Run Test, Discovery Mapping, Playbook - this is what separates brands that show up in AI from brands that don't.
+
+It's not complicated. But it is systematic. And systems beat hope every single time.
+
+
+
+=== CTA ===
+
+If you remember one thing from this video: stop guessing about your AI visibility. Test it properly. 10 runs per query. Focus on discovery. Build a playbook.
+
+Now, you've seen the system. But you might be wondering - does it actually work?
+
+In the next video, I'm going to show you exactly how I used this system to get a hair clinic mentioned in ChatGPT in 30 days. Real client. Real results. Step by step.
+
+I'll see you in the next one.

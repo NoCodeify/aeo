@@ -1,0 +1,112 @@
+VIDEO TITLE: [Title]
+TOTAL RUNTIME: [X] minutes
+DATE: [Date]
+
+---
+
+[HOOK - 30-60 seconds]
+
+[Line 1 - Pattern Interrupt]
+
+
+[Line 2 - Credibility]
+
+
+[Line 3 - Empathy]
+
+
+[Line 4 - Promise]
+
+
+[Line 5 - Teaser]
+
+
+---
+
+[SETUP - 1-2 minutes]
+
+[Problem statement]
+
+
+[Why it matters]
+
+
+[Open loop for later]
+
+
+---
+
+[POINT 1]
+
+[Introduction to point]
+
+
+[Story or example]
+
+
+[Framework explanation]
+
+
+[Partial resolution]
+
+
+---
+
+[POINT 2]
+
+[Introduction to point]
+
+
+[Story or example]
+
+
+[Framework explanation]
+
+
+[Partial resolution]
+
+
+---
+
+[POINT 3]
+
+[Introduction to point]
+
+
+[Story or example]
+
+
+[Framework explanation]
+
+
+[Build to climax]
+
+
+---
+
+[PAYOFF]
+
+[Resolve main tension]
+
+
+[Deliver on teaser]
+
+
+[Circle back to hook]
+
+
+---
+
+[CTA]
+
+[One sentence recap]
+
+
+[Point to next video]
+
+
+I'll see you in the next one.
+
+---
+
+END OF SCRIPT
