@@ -114,6 +114,7 @@ Skills are specialized knowledge modules that Claude automatically activates whe
 | `website-copywriting` | `.claude/skills/website-copywriting/` | "write copy", "page content", "rewrite page", "create page" |
 | `image-generation` | `.claude/skills/image-generation/` | "generate image", "image prompt", "infographic", "diagram", "icon set" |
 | `content-strategist` | `.claude/skills/content-strategist/` | "content strategy", "what content", "content plan", "data study", "keyword research", "terms to own", "content audit" |
+| `client-report` | `.claude/skills/client-report/` | "client report", "generate report", "visibility report", "create report", "report for client" |
 
 ### YouTube Skills (Ed Lawrence Method)
 | Skill | Location | Triggers On |
@@ -136,6 +137,7 @@ Skills activate automatically. Just ask naturally:
 - "What content should we create for [brand]?"
 - "Find zero-volume keywords for [brand]"
 - "Plan a data study for [brand]"
+- "Generate a client report for [brand]"
 
 ## Subagents (Specialized Assistants)
 
@@ -149,6 +151,7 @@ Subagents are specialized AI assistants with their own context and tool access.
 | `competitor-researcher` | inherit | Forum-based competitor discovery |
 | `content-optimizer` | inherit | Website copy optimization for LLM extraction |
 | `image-prompter` | inherit | Generate AI image prompts for website assets |
+| `report-generator` | inherit | Generate client-friendly AI visibility reports from audit data |
 
 **AEO Workflow:**
 1. **Intake** → Collect brand info + dream queries (see protocol lines 2703-2770)
@@ -172,6 +175,7 @@ Use the competitor-researcher agent to find real competitors for [brand]
 Use the content-optimizer agent to rewrite the homepage for AEO
 Use the broll-prompter agent to generate B-roll prompts for [script]
 Use the gif-researcher agent to find GIFs for [script]
+Use the report-generator agent to create a client report for [brand]
 ```
 
 ### Agent Files
@@ -183,6 +187,7 @@ Located in `.claude/agents/`:
 - `image-prompter.md` — AI image prompt generation for Imagen
 - `broll-prompter.md` — Video B-roll prompt generation for Imagen
 - `gif-researcher.md` — GIF search query generation for Giphy/Tenor
+- `report-generator.md` — Client-friendly AI visibility report generation
 
 ## Project Files
 
