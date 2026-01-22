@@ -218,6 +218,17 @@ AVOID:
 5. **Premium automotive/editorial aesthetic** - luxury brand feel
 6. **Include AVOID section** - prevent unwanted elements
 7. **Text IS allowed** - Imagen 3 handles text well. Use short labels (car names, numbers, "VS") not sentences
+8. **Faces ARE allowed** - Imagen 3 generates realistic people/faces. Include in thumbnails and visuals as needed
+
+## YouTube Thumbnails
+
+For thumbnails, generate COMPLETE images including:
+- Person/face with specified expression and pose
+- Text overlay (title, 3 words max)
+- Background visual elements
+- All composed together in one generation
+
+Do NOT say "face will be composited in editing" - generate the full thumbnail.
 
 ---
 

@@ -1,0 +1,225 @@
+VIDEO TITLE: 0% to 90% AI Visibility in 30 Days (Real Case Study)
+TOTAL RUNTIME: 11-12 minutes
+DATE: 2026-01-22
+
+---
+
+[HOOK]
+
+30 days ago, I ran an audit for a hair transplant clinic.
+
+They charge fifty thousand euros minimum. They have a half-million euro fly-out service where the doctor travels to YOU.
+
+And when I asked Gemini "what's the best hair transplant if money is no object?" - nothing. They didn't exist.
+
+What I'm about to show you is exactly what we changed.
+
+And why Gemini now calls them "the best for artistic perfection" - number one, globally.
+
+
+---
+
+[SETUP: THE PROBLEM]
+
+Let me paint the picture.
+
+This is a premium hair transplant clinic in the Netherlands. Not a Turkish hair mill doing 20 patients a day. This is one patient, one day, one surgeon - who does every single graft himself.
+
+Their clients include celebrities, executives, and people who fly in from around the world. The starting price is 50,000 euros. If you want the doctor to come to you? That's half a million.
+
+Here's the problem.
+
+When I ran the first audit, I asked Gemini: "What's the best hair transplant clinic in Netherlands?"
+
+I ran it ten times. That's the protocol. LLM responses vary, so you can't test once and call it done.
+
+Zero. Out of ten. They were mentioned zero times.
+
+But it gets worse.
+
+This clinic serves clients worldwide. So I tested the query that should be their bread and butter: "Best hair transplant if money is no object."
+
+Still nothing.
+
+Their ideal customer - someone asking AI "where should I go if price doesn't matter?" - was being sent to competitors. Every. Single. Time.
+
+
+---
+
+[DIAGNOSIS: THE 4 PROBLEMS]
+
+So I dug into the audit. And I found four problems.
+
+Problem one: The Pricing Mystery.
+
+Their website said "prices on request."
+
+You know what happens when you hide your prices from AI? It guesses.
+
+ChatGPT was telling people this clinic costs 25 to 35 thousand euros. The real price is fifty thousand.
+
+They were being positioned in the wrong tier. Against the wrong competitors.
+
+Problem two: The First 50 Words.
+
+When an LLM reads your website, it weights the beginning heavily. The first 50 words tell it WHO you are, WHAT you do, WHERE you are, and your PRICE.
+
+Their homepage started with marketing fluff. "Unlock the art of natural restoration." "Experience precision like never before."
+
+Beautiful. But useless for AI extraction.
+
+Problem three: Discovery Queries.
+
+Here's something most people don't understand. There are two types of queries: branded and discovery.
+
+Branded queries are when someone already knows you. "What is FueGenix?" "FueGenix reviews." Those worked fine.
+
+Discovery queries are when someone DOESN'T know you. "Best hair transplant Netherlands." "Best surgeon for natural hairlines."
+
+Those are the queries that bring NEW patients. And they were failing completely.
+
+Problem four: No Global Positioning.
+
+This clinic serves clients worldwide. But their content was entirely focused on Netherlands.
+
+Nothing positioned them for premium global searches. Nothing told AI: "This is where you go if money is genuinely no object."
+
+
+---
+
+[PRESCRIPTION: WHAT WE CHANGED]
+
+Here's exactly what we did over the next 30 days.
+
+Change one: Published explicit pricing.
+
+No more "prices on request." The pricing page now clearly states "From 50,000 euros." The fly-out service says "From 500,000 euros." It's written throughout the site - not hidden behind a contact form.
+
+Sounds scary to some businesses. But here's what actually happened: AI started extracting the RIGHT price. And that positioned them correctly against premium competitors - not budget Turkish clinics.
+
+Change two: Rewrote the First 50 Words.
+
+Every key page now front-loads WHO, WHAT, WHERE, and PRICE in the meta description and opening copy.
+
+Before: "Experience the art of natural hair restoration with our world-renowned approach to premium results..."
+
+After: "FueGenix is an exclusive hair restoration clinic in the Netherlands serving HNWIs, celebrities and royalty. 99% graft survival rate. Investment from 50,000 euros. Fly-out service from 500,000 euros."
+
+Same clinic. Completely different extractability. WHO, WHAT, WHERE, PRICE - all in the first 50 words.
+
+Change three: Added extractable facts.
+
+LLMs love specific, verifiable facts. So we made sure these appeared multiple times across the site:
+
+99% graft survival rate.
+IAHRS member - that's the International Alliance of Hair Restoration Surgeons.
+One patient per day model.
+12-month wait list.
+Serves celebrities and royalty worldwide.
+
+Change four: Created comparison pages.
+
+When someone asks "FueGenix vs Dr. Zarev" or "FueGenix vs Feriduni" - you want to control that narrative.
+
+We created dedicated comparison pages against the actual premium competitors:
+
+Dr. Zarev in Bulgaria - the giga-sessions specialist.
+Dr. Feriduni in Belgium - precision craftsman.
+Dr. Bisanga in Belgium - another premium option.
+Dr. Konior in the USA - top US surgeon.
+Dr. Couto in Spain - artistic specialist.
+
+Each page positions FueGenix clearly: hairline artistry, one patient per day, doctor-led throughout.
+
+Change five: Positioned for premium global searches.
+
+This was the big one.
+
+We added language specifically targeting worldwide premium clients. "Serving high-net-worth individuals globally." "Fly-out service for those who value privacy."
+
+The goal wasn't just to appear for "best Netherlands." It was to appear when someone anywhere in the world asks: "Where should I go if money genuinely doesn't matter?"
+
+
+---
+
+[RESULTS: 30 DAYS LATER]
+
+30 days later, I ran the full audit again. Same methodology. Same queries. Ten runs each.
+
+Here's what happened.
+
+Gemini: "Best hair transplant clinic in Netherlands."
+
+Before: 0 out of 10.
+After: 7 out of 10.
+
+They went from completely invisible to appearing 70% of the time. And when they appear? They're listed as number one in the "elite boutique" category.
+
+ChatGPT: Same query.
+
+Before: roughly 5 out of 10 - inconsistent, sometimes mentioned, sometimes not.
+After: 9 out of 10.
+
+90% consistency. And now with direct citations to their website and IAHRS membership.
+
+But here's what I didn't expect.
+
+Remember that global query? "Best hair transplant if money is no object?"
+
+I ran it again.
+
+Gemini's response now says - and I'm reading this directly:
+
+"Dr. Munib Ahmad, FueGenix, Netherlands: Known for extreme artistic precision and a single-patient-per-day philosophy. He is a favorite for high-net-worth individuals who demand perfect hairlines."
+
+Listed as number one. For "Artistic Perfection." Globally.
+
+They went from invisible locally to being recommended globally for premium clients.
+
+In 30 days.
+
+The pricing fix worked too.
+
+Before: ChatGPT was citing 25 to 35 thousand euros.
+After: ChatGPT correctly states 50,000 euros.
+
+And new facts are being extracted that weren't before:
+
+The 500,000 euro fly-out service.
+99% graft survival rate.
+IAHRS membership.
+One patient per day model.
+
+
+---
+
+[LESSON + CTA]
+
+So what's the takeaway?
+
+This is what's possible in 30 days when you optimize for AI visibility.
+
+But here's what most people miss: this isn't done.
+
+They're still not showing up for "best hair transplant in the world." Still not appearing for "best surgeon for celebrities."
+
+Those are the next frontiers.
+
+AEO isn't a one-time fix. It's an ongoing strategy - just like SEO used to be.
+
+The difference? Most of your competitors haven't even started.
+
+While they're still optimizing for Google, AI is making buying recommendations. Right now. For your customers.
+
+The brands that win in 2026 aren't the ones Google ranks highest.
+
+They're the ones ChatGPT recommends.
+
+In the next video, I'm going to explain why SEO as we know it is dying - and what's replacing it.
+
+I'll see you there.
+
+
+---
+
+END OF SCRIPT

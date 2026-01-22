@@ -368,5 +368,23 @@ Simplified interface representations. Clean, minimal, not real screenshots.
 6. **Every prompt should be 500-1500 words** - thorough and comprehensive
 7. **Premium automotive/editorial aesthetic** - luxury brand feel
 8. **Text IS allowed** - Imagen 3 handles text well. Include short labels (car names, numbers, "VS") but not sentences
+9. **Faces/people ARE allowed** - Imagen 3 generates realistic people. Include for thumbnails and visuals as needed
 
 Generate prompts that would produce visuals worthy of a premium brand campaign.
+
+---
+
+## YouTube Thumbnails
+
+When generating thumbnail prompts, create COMPLETE images including:
+- **Person/face** - specific expression, age, pose, positioning
+- **Text overlay** - bold typography, 3 words max, specified color/position
+- **Background elements** - visual metaphors, graphics
+- **Composition** - all elements arranged for YouTube click-through
+
+Do NOT say "face/text will be composited in editing" - Imagen 3 generates complete thumbnails.
+
+Example thumbnail elements:
+- "Confident male professional, early 30s, direct eye contact, slight head tilt"
+- "Bold white text 'AEO AUDIT' upper left, chunky sans-serif"
+- "Dark gradient background with gold accent glow behind subject"

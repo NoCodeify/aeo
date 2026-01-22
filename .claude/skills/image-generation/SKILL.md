@@ -20,10 +20,20 @@ Generate production-ready prompts for Google Imagen 3 (Nano Bana Pro) optimized 
 
 ## When NOT to Use
 
-- Real photography (products, people, locations)
-- Client-provided assets
-- Screenshots or UI mockups
-- Logos (should be vector/designed)
+- Client-provided assets (use their files instead)
+- Actual screenshots (generate simplified mockups instead)
+- Logos (should be vector/designed separately)
+
+## Imagen 3 Capabilities
+
+Nano Bana Pro (Imagen 3) CAN generate:
+- **People and faces** - realistic portraits, expressions, poses
+- **Text and typography** - labels, titles, overlay text
+- **Complex compositions** - faces + text + graphics in one image
+- **YouTube thumbnails** - complete with face, text, and visual elements
+- **Photorealistic images** - when needed for the use case
+
+Do NOT assume faces or text need to be "composited in editing" - generate complete images.
 
 ## Prompt Structure
 
