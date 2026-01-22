@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Search, Wrench, Zap } from "lucide-react";
+import { MagnifyingGlassIcon, WrenchIcon, BoltIcon } from "@heroicons/react/24/outline";
 import { HOW_IT_WORKS } from "../../lib/constants";
 
 const icons = {
-  Search,
-  Wrench,
-  Zap,
+  Search: MagnifyingGlassIcon,
+  Wrench: WrenchIcon,
+  Zap: BoltIcon,
 };
 
 const containerVariants = {

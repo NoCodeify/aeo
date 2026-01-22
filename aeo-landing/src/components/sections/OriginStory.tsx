@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline";
 
 export function OriginStory() {
   return (
@@ -12,7 +12,7 @@ export function OriginStory() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Quote className="w-12 h-12 text-primary/30 mb-6" />
+          <ChatBubbleBottomCenterTextIcon className="w-12 h-12 text-primary/30 mb-6" />
 
           <blockquote className="text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed mb-8 heading-3d">
             I was on my second BMW. Going to buy another one. Asked ChatGPT for advice.{" "}

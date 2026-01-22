@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, ExternalLink } from "lucide-react";
+import { CheckCircleIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { Button } from "../ui/button";
 import { GOOGLE_SHEET_URL } from "../../lib/constants";
 
@@ -27,7 +27,7 @@ export function QuizSuccess({ onClose }: QuizSuccessProps) {
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
         >
-          <CheckCircle className="w-10 h-10 text-success" />
+          <CheckCircleIcon className="w-10 h-10 text-success" />
         </motion.div>
       </div>
 
@@ -40,7 +40,7 @@ export function QuizSuccess({ onClose }: QuizSuccessProps) {
 
       <Button size="lg" className="w-full" onClick={handleAccessChecklist}>
         Access Checklist
-        <ExternalLink className="w-4 h-4 ml-2" />
+        <ArrowTopRightOnSquareIcon className="w-4 h-4 ml-2" />
       </Button>
 
       <p className="text-sm text-muted">

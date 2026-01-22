@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Button } from "../ui/button";
 import { GradientOrb } from "../shared/GradientOrb";
 
@@ -29,7 +29,7 @@ export function FinalCTA({ onOpenQuiz }: FinalCTAProps) {
 
           <Button size="xl" onClick={onOpenQuiz} className="group">
             Get Free Checklist
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRightIcon className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Button>
 
           <p className="text-sm text-muted mt-4">

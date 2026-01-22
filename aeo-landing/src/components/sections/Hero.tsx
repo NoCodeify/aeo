@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { SparklesIcon } from "@heroicons/react/24/outline";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { GradientOrb } from "../shared/GradientOrb";
@@ -22,7 +22,7 @@ export function Hero({ onOpenQuiz }: HeroProps) {
           transition={{ duration: 0.5 }}
         >
           <Badge className="mb-6">
-            <Sparkles className="w-3 h-3 mr-1" />
+            <SparklesIcon className="w-3 h-3 mr-1" />
             300+ Point Checklist - Free
           </Badge>
         </motion.div>

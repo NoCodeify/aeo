@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import {
   Dialog,
   DialogContent,
@@ -142,7 +142,7 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
               onClick={handleBack}
               disabled={currentQuestionIndex === 0 && step === "questions"}
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeftIcon className="w-4 h-4 mr-2" />
               Back
             </Button>
 
@@ -151,7 +151,7 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
                 {currentQuestionIndex < QUIZ_QUESTIONS.length - 1 ? (
                   <>
                     Next
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRightIcon className="w-4 h-4 ml-2" />
                   </>
                 ) : (
                   "Continue"

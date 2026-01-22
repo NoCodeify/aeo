@@ -1,28 +1,28 @@
 import { motion } from "framer-motion";
-import { AlertTriangle, Bot, TrendingDown, Search } from "lucide-react";
+import { ExclamationTriangleIcon, ChatBubbleLeftRightIcon, ArrowTrendingDownIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Card, CardContent } from "../ui/card";
 
 const problems = [
   {
-    icon: Bot,
+    icon: ChatBubbleLeftRightIcon,
     title: "AI is recommending your competitors",
     description:
       "When customers ask ChatGPT for solutions, it's mentioning your competitors - not you.",
   },
   {
-    icon: AlertTriangle,
+    icon: ExclamationTriangleIcon,
     title: "ChatGPT might be making up your pricing",
     description:
       "AI hallucinations mean false information about your business is being shared confidently.",
   },
   {
-    icon: TrendingDown,
+    icon: ArrowTrendingDownIcon,
     title: "Traditional SEO won't save you",
     description:
       "AI assistants don't just use Google. 62% of ChatGPT citations come from sources other than Bing.",
   },
   {
-    icon: Search,
+    icon: MagnifyingGlassIcon,
     title: "Your customers are asking AI, not Google",
     description:
       "AI-assisted search is growing 340% year-over-year. The shift has already begun.",

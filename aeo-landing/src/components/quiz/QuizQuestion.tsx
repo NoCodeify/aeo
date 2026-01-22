@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { CheckIcon } from "@heroicons/react/24/outline";
 import { cn } from "../../lib/utils";
 
 interface QuizQuestionProps {
@@ -36,7 +36,7 @@ export function QuizQuestion({
           >
             <span>{option.label}</span>
             {selectedValue === option.value && (
-              <Check className="w-5 h-5 text-primary" />
+              <CheckIcon className="w-5 h-5 text-primary" />
             )}
           </motion.button>
         ))}

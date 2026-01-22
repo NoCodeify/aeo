@@ -7,7 +7,7 @@ import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { Loader2 } from "lucide-react";
+import { ArrowPathIcon } from "@heroicons/react/24/outline";
 
 const captureSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -118,7 +118,7 @@ export function QuizCapture({ onSubmit, isSubmitting }: QuizCaptureProps) {
         <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
           {isSubmitting ? (
             <>
-              <Loader2 className="w-4 h-4 animate-spin mr-2" />
+              <ArrowPathIcon className="w-4 h-4 animate-spin mr-2" />
               Processing...
             </>
           ) : (

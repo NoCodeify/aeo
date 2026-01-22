@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { StarIcon } from "@heroicons/react/24/solid";
 import { TESTIMONIALS } from "../../lib/constants";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
@@ -55,9 +55,9 @@ export function Testimonials() {
                 <CardContent className="pt-6">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star
+                      <StarIcon
                         key={i}
-                        className="w-4 h-4 fill-warning text-warning"
+                        className="w-4 h-4 text-warning"
                       />
                     ))}
                   </div>

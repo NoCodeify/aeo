@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Lock } from "lucide-react";
+import { CheckIcon, LockClosedIcon } from "@heroicons/react/24/outline";
 import { CHECKLIST_CATEGORIES } from "../../lib/constants";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
@@ -62,12 +62,12 @@ export function ChecklistPreview() {
                   <ul className="space-y-3">
                     {category.items.slice(0, 3).map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
-                        <Check className="w-4 h-4 text-success mt-0.5 shrink-0" />
+                        <CheckIcon className="w-4 h-4 text-success mt-0.5 shrink-0" />
                         <span className="text-muted-foreground">{item}</span>
                       </li>
                     ))}
                     <li className="flex items-start gap-2 text-sm">
-                      <Lock className="w-4 h-4 text-muted mt-0.5 shrink-0" />
+                      <LockClosedIcon className="w-4 h-4 text-muted mt-0.5 shrink-0" />
                       <span className="text-muted">+ more in full checklist...</span>
                     </li>
                   </ul>

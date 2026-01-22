@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Button } from "../ui/button";
 
 interface StickyCTAProps {
@@ -33,7 +33,7 @@ export function StickyCTA({ onOpenQuiz }: StickyCTAProps) {
         >
           <Button className="w-full" size="lg" onClick={onOpenQuiz}>
             Get Free Checklist
-            <ArrowRight className="w-4 h-4 ml-2" />
+            <ArrowRightIcon className="w-4 h-4 ml-2" />
           </Button>
         </motion.div>
       )}
