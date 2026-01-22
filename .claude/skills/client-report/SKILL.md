@@ -101,7 +101,7 @@ export interface KeyFinding {
 
 Additionally export:
 - `brandInfo` - Name, website, location, category, audit date, tagline, key stats
-- `executiveSummary` - headline, subheadline, heroStat (single most dramatic improvement)
+- `executiveSummary` - headline, subheadline, heroStat (averaged across engines for the key query)
 - `headlineResults` - Array of 3 most impactful before/after changes
 - `visibilityScores` - Per-engine branded/discovery scores
 - `engineDetails` - Per-engine narrative detail + strength label
@@ -116,7 +116,7 @@ Additionally export:
 2. **Every `Recommendation` gets a `clientLabel`** - Describes what was done in client terms
 3. **`keyFindings` are synthesized** - Not copied raw from audit; rewritten as insights
 4. **`headlineResults` pick the 3 most impactful** - Best before/after stats
-5. **`executiveSummary.heroStat` uses the single most dramatic improvement** - The one number that tells the story
+5. **`executiveSummary.heroStat` averages across engines** - Average the before/after scores from ChatGPT and Gemini for the key discovery query
 6. **Scores are percentages (0-100)** - Not fractions like 7/10
 7. **`detail` fields use plain language** - "You weren't mentioned" not "0% consistency score"
 
@@ -171,7 +171,7 @@ Before delivering a report, verify:
 - [ ] Every `Recommendation` has a non-empty `clientLabel`
 - [ ] No jargon terms appear in any client-facing strings
 - [ ] `headlineResults` has exactly 3 entries
-- [ ] `heroStat` uses the most dramatic single improvement
+- [ ] `heroStat` averages scores across engines for the key discovery query
 - [ ] All scores are 0-100 percentages
 - [ ] `keyFindings` are synthesized insights, not raw audit data
 - [ ] The page component renders all 8 sections

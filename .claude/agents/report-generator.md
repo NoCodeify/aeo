@@ -136,9 +136,10 @@ Choose the 3 most impactful before/after changes. Prioritize:
 
 ### executiveSummary.heroStat
 
-Pick the single most dramatic number. Usually:
-- The biggest visibility jump (0% -> 70%)
-- Or the most relatable win (not mentioned -> recommended 9/10 times)
+Average the before/after scores across ChatGPT and Gemini for the key discovery query:
+- Before: average of both engines' pre-optimization scores
+- After: average of both engines' post-optimization scores
+- Unit: "ChatGPT & Gemini"
 
 ### keyFindings (synthesize, don't copy)
 

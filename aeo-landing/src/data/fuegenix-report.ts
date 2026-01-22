@@ -51,7 +51,7 @@ export const brandInfo = {
 export const executiveSummary = {
   headline: "AI now recommends FueGenix as a world-class option",
   subheadline: "Before our work, AI platforms barely knew you existed. Now you're recommended 7-9 times out of 10.",
-  heroStat: { before: 0, after: 70, label: "AI Recommendation Rate", unit: "Gemini" },
+  heroStat: { before: 25, after: 80, label: "AI Recommendation Rate", unit: "ChatGPT & Gemini" },
 };
 
 export const headlineResults = [
