@@ -38,7 +38,7 @@ export function ChecklistPreview() {
             What's Inside the Checklist
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            300+ actionable items organized by category. Here's a preview of what you'll get.
+            130+ actionable items organized by category. Here's a preview of what you'll get.
           </p>
         </motion.div>
 

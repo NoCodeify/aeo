@@ -23,7 +23,7 @@ export function Hero({ onOpenQuiz }: HeroProps) {
         >
           <Badge className="mb-6">
             <SparklesIcon className="w-3 h-3 mr-1" />
-            300+ Point Checklist - Free
+            130+ Point Checklist - Free
           </Badge>
         </motion.div>
 

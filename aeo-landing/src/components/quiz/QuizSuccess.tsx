@@ -1,16 +1,18 @@
 import { motion } from "framer-motion";
-import { CheckCircleIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
+import { CheckCircleIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Button } from "../ui/button";
-import { GOOGLE_SHEET_URL } from "../../lib/constants";
 
 interface QuizSuccessProps {
   onClose: () => void;
 }
 
 export function QuizSuccess({ onClose }: QuizSuccessProps) {
+  const navigate = useNavigate();
+
   const handleAccessChecklist = () => {
-    window.open(GOOGLE_SHEET_URL, "_blank");
     onClose();
+    navigate("/checklist");
   };
 
   return (
@@ -39,8 +41,8 @@ export function QuizSuccess({ onClose }: QuizSuccessProps) {
       </div>
 
       <Button size="lg" className="w-full" onClick={handleAccessChecklist}>
-        Access Checklist
-        <ArrowTopRightOnSquareIcon className="w-4 h-4 ml-2" />
+        Access Your Checklist
+        <ArrowRightIcon className="w-4 h-4 ml-2" />
       </Button>
 
       <p className="text-sm text-muted">

@@ -24,7 +24,7 @@ export function FinalCTA({ onOpenQuiz }: FinalCTAProps) {
             Ready to Control What AI Says About You?
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get the complete 300+ point checklist and start optimizing your brand's AI presence today.
+            Get the complete 130+ point checklist and start optimizing your brand's AI presence today.
           </p>
 
           <Button size="xl" onClick={onOpenQuiz} className="group">

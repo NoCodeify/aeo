@@ -22,7 +22,7 @@ export const FAQ_DATA = [
   {
     question: "What format is the checklist?",
     answer:
-      "The checklist is delivered as a comprehensive Google Sheet with 300+ actionable items organized by category: Technical Foundation, Content Optimization, Trust Signals, Cache Management, and platform-specific sections for each major AI assistant.",
+      "The checklist is delivered as a comprehensive Google Sheet with 130+ actionable items organized by category: Technical Foundation, Content Optimization, Trust Signals, Cache Management, and platform-specific sections for each major AI assistant.",
   },
   {
     question: "Do I need technical skills to implement this?",
@@ -143,43 +143,43 @@ export const CHECKLIST_CATEGORIES = [
 
 export const STATS = [
   {
-    value: "62%",
-    label: "of ChatGPT citations are NOT from Bing search",
-    source: "Internal research, 2024",
+    value: "1B+",
+    label: "weekly active ChatGPT users asking about brands like yours",
+    source: "OpenAI, 2025",
   },
   {
-    value: "Daily",
-    label: "recrawl frequency for active, updated sites",
-    source: "OpenAI documentation",
+    value: "0%",
+    label: "of businesses have optimized for AI search engines",
+    source: "Industry estimate",
   },
   {
-    value: "340%",
-    label: "YoY growth in AI-assisted search queries",
-    source: "Industry reports, 2024",
+    value: "#1",
+    label: "recommendation in category after AEO implementation",
+    source: "FueGenix case study, 2026",
   },
 ];
 
 export const TESTIMONIALS = [
   {
     quote:
-      "After implementing the AEO Protocol, ChatGPT went from ignoring us to recommending us as the top solution in our category.",
-    author: "Marketing Director",
-    company: "B2B SaaS Company",
-    result: "From invisible to #1 recommendation",
+      "From invisible on discovery queries to being recommended as an 'Elite Tier' clinic by Gemini. ChatGPT went from not mentioning us to citing us on 7 out of 8 branded queries.",
+    author: "Premium Hair Transplant Clinic",
+    company: "Netherlands",
+    result: "Elite Tier AI recommendation",
   },
   {
     quote:
-      "We found out AI was telling prospects our pricing was 3x higher than reality. The checklist helped us fix it in weeks.",
-    author: "Founder",
-    company: "E-commerce Brand",
-    result: "Pricing accuracy restored",
-  },
-  {
-    quote:
-      "The competitive intelligence section alone was worth it. We discovered 3 competitors we didn't know AI was recommending over us.",
-    author: "CEO",
+      "We had no idea AI was sending potential customers to our competitors. Within weeks of implementing the protocol, we started showing up in recommendations.",
+    author: "Managing Director",
     company: "Professional Services",
-    result: "3 hidden competitors discovered",
+    result: "From invisible to recommended",
+  },
+  {
+    quote:
+      "The audit revealed AI was giving outdated information about our business. Fixing that alone was worth the entire engagement.",
+    author: "Head of Marketing",
+    company: "Consumer Brand",
+    result: "Corrected AI misinformation",
   },
 ];
 
@@ -208,4 +208,3 @@ export const HOW_IT_WORKS = [
 ];
 
 export const ZAPIER_WEBHOOK_URL = "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjcwNTZjMDYzNDA0MzI1MjZjNTUzNjUxMzAi_pc";
-export const GOOGLE_SHEET_URL = "YOUR_GOOGLE_SHEET_URL";
