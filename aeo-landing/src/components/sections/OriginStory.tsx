@@ -23,11 +23,9 @@ export function OriginStory() {
           </blockquote>
 
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-primary-foreground font-bold icon-3d">
-              SL
-            </div>
+            <img src="/sohaib.png" alt="Sohaib Ahmad" className="w-12 h-12 rounded-full object-cover" />
             <div>
-              <p className="font-semibold">Sohaib Lokhandwala</p>
+              <p className="font-semibold">Sohaib Ahmad</p>
               <p className="text-muted-foreground text-sm">Creator of the AEO Protocol</p>
             </div>
           </div>

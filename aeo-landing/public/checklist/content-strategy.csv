@@ -1,0 +1,13 @@
+Done,Item,Example,Evaluation,Importance
+FALSE,Dream queries identified (5-10 per client),"""Best CRM for startups""; ""affordable sales automation""; ""[Brand] vs [Competitor]""",Bad,5
+FALSE,Pillar pages created for main topics,/crm-for-startups with 2000+ words covering the topic comprehensively,Bad,5
+FALSE,Comparison pages for top 5 competitors,/vs/salesforce and /vs/hubspot with feature-by-feature HTML tables,Bad,5
+FALSE,Feature and use case pages created,/features/reporting and /use-cases/saas-companies,Bad,4
+FALSE,/pricing page with clear tiers in HTML text,"Starter $49/mo; Pro $99/mo; Enterprise $299/mo in a table",Bad,5
+FALSE,/features overview page with structured sections,Each feature as H2 with description and specific metrics,Bad,4
+FALSE,Glossary terms for industry keywords,/glossary/sales-automation with clear definitions LLMs can extract,Bad,3
+FALSE,"Zero-volume keywords researched (forums; support tickets; Reddit)",Identify questions people ask but don't search for on Google,Bad,4
+FALSE,Content lifecycle phase identified (Create / Grow / Optimize / Expand),Map each page to its lifecycle stage to prioritize actions,Bad,3
+FALSE,Content decay review scheduled quarterly,Flag pages with declining traffic or outdated information,Bad,3
+FALSE,Data study planned with original research,Survey or analysis producing unique statistics others will cite,Bad,4
+FALSE,Integration partner pages created,/integrations/slack and /integrations/zapier with setup details,Bad,3

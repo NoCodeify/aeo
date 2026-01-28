@@ -33,6 +33,42 @@
 
 ---
 
+## Geographic Discovery Pages (AEO Phase 2)
+
+| Page | File | URL | Target Query |
+|------|------|-----|--------------|
+| Best Hair Transplant World | [best-hair-transplant-world.md](pages/best-hair-transplant-world.md) | `/best-hair-transplant-world/` | best hair transplant in the world |
+| Best Hair Transplant Europe | [best-hair-transplant-europe.md](pages/best-hair-transplant-europe.md) | `/best-hair-transplant-europe/` | best hair transplant Europe |
+| Best Hair Transplant USA | [best-hair-transplant-usa.md](pages/best-hair-transplant-usa.md) | `/best-hair-transplant-usa/` | best hair transplant USA |
+| Best Hair Transplant UK | [best-hair-transplant-uk.md](pages/best-hair-transplant-uk.md) | `/best-hair-transplant-uk/` | best hair transplant UK |
+| Best Hair Transplant Dubai | [best-hair-transplant-dubai.md](pages/best-hair-transplant-dubai.md) | `/best-hair-transplant-dubai/` | best hair transplant Dubai |
+| Best Hair Transplant Middle East | [best-hair-transplant-middle-east.md](pages/best-hair-transplant-middle-east.md) | `/best-hair-transplant-middle-east/` | best hair transplant Middle East |
+| Best Hair Transplant Asia | [best-hair-transplant-asia.md](pages/best-hair-transplant-asia.md) | `/best-hair-transplant-asia/` | best hair transplant Asia |
+| Best Hair Transplant Australia | [best-hair-transplant-australia.md](pages/best-hair-transplant-australia.md) | `/best-hair-transplant-australia/` | best hair transplant Australia |
+| Best Hair Transplant Canada | [best-hair-transplant-canada.md](pages/best-hair-transplant-canada.md) | `/best-hair-transplant-canada/` | best hair transplant Canada |
+| Best Hair Transplant Saudi Arabia | [best-hair-transplant-saudi-arabia.md](pages/best-hair-transplant-saudi-arabia.md) | `/best-hair-transplant-saudi-arabia/` | best hair transplant Saudi Arabia |
+| Best Hair Transplant Qatar | [best-hair-transplant-qatar.md](pages/best-hair-transplant-qatar.md) | `/best-hair-transplant-qatar/` | best hair transplant Qatar |
+| Best Hair Transplant Germany | [best-hair-transplant-germany.md](pages/best-hair-transplant-germany.md) | `/best-hair-transplant-germany/` | best hair transplant Germany |
+| Best Hair Transplant Switzerland | [best-hair-transplant-switzerland.md](pages/best-hair-transplant-switzerland.md) | `/best-hair-transplant-switzerland/` | best hair transplant Switzerland |
+| Best Hair Transplant Singapore | [best-hair-transplant-singapore.md](pages/best-hair-transplant-singapore.md) | `/best-hair-transplant-singapore/` | best hair transplant Singapore |
+
+---
+
+## Intent-Based Pages (AEO Phase 2)
+
+| Page | File | URL | Target Query |
+|------|------|-----|--------------|
+| Celebrities | [best-hair-transplant-celebrities.md](pages/best-hair-transplant-celebrities.md) | `/best-hair-transplant-celebrities/` | hair transplant celebrities |
+| Executives | [best-hair-transplant-executives.md](pages/best-hair-transplant-executives.md) | `/best-hair-transplant-executives/` | hair transplant executives |
+| Most Exclusive | [best-hair-transplant-exclusive.md](pages/best-hair-transplant-exclusive.md) | `/best-hair-transplant-exclusive/` | most exclusive hair transplant |
+| Money No Object | [best-hair-transplant-money-no-object.md](pages/best-hair-transplant-money-no-object.md) | `/best-hair-transplant-money-no-object/` | best if money no object |
+| Private | [best-hair-transplant-private.md](pages/best-hair-transplant-private.md) | `/best-hair-transplant-private/` | private hair transplant |
+| Natural Hairline | [best-hair-transplant-natural-hairline.md](pages/best-hair-transplant-natural-hairline.md) | `/best-hair-transplant-natural-hairline/` | best natural hairline |
+| Fly-Out Service | [best-hair-transplant-fly-out.md](pages/best-hair-transplant-fly-out.md) | `/best-hair-transplant-fly-out/` | fly-out hair transplant |
+| Netherlands vs Turkey | [best-hair-transplant-not-turkey.md](pages/best-hair-transplant-not-turkey.md) | `/best-hair-transplant-not-turkey/` | Netherlands vs Turkey |
+
+---
+
 ## Page Summary
 
 | # | Page | Status | Word Count |

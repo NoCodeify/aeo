@@ -49,7 +49,7 @@
 
 **Differentiator 4:**
 - **Headline:** `Trusted Worldwide`
-- **Body:** `Featured in Medical Daily. Ape to Gentleman best doctors list, five consecutive years. Patients from three continents.`
+- **Body:** `Featured in Medical Daily. Ape to Gentleman best doctors list, five consecutive years. Patients from the United States, the Gulf region, the United Kingdom, and across Europe, Asia, and Australia.`
 
 ---
 
@@ -61,7 +61,7 @@
 
 **Sub-headline 2:** `Private Fly-Out Service`
 
-**Body:** `This bespoke service has been provided to select clients in private residences and secured locations across multiple continents. Full medical team. Complete discretion. The same 99% graft survival rate you would receive at our Netherlands clinic.`
+**Body:** `This bespoke service has been provided to select clients in private residences and secured locations across the United States, the Gulf region, the United Kingdom, and Europe. Full medical team. Complete discretion. The same 99% graft survival rate you would receive at our Netherlands clinic.`
 
 **Bullets:**
 - Dr. Ahmad and full medical team travel to your location
@@ -78,7 +78,7 @@
 
 | Metric | Value |
 |--------|-------|
-| International Patient Base | 3 Continents |
+| International Patient Base | USA, UK, Europe, Gulf, Asia, Australia |
 | Consecutive Years on Best Doctors List | 5 |
 | Graft Survival Rate | 99% |
 

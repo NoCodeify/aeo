@@ -44,6 +44,48 @@ AEO content fills multiple gaps:
 
 ---
 
+## Ed Lawrence Title Performance (Real Data - Past 12 Months)
+
+### Top Performers (3x+ multiplier vs channel average)
+
+| Title | Views | Mult |
+|-------|-------|------|
+| "Copy This Video Style, It'll Blow Up Your Business" | 508K | 26x |
+| "The EXACT System To Go From $0-$1,000,000 On YouTube" | 160K | 8.2x |
+| "Copy This YouTube Strategy, It'll Blow Up Your Business" | 131K | 6.7x |
+| "Copy This YouTube Video, It'll Blow Up Your Business" | 112K | 5.7x |
+| "5 NEW AI That Just Changed YouTube Forever" | 91K | 4.6x |
+| "EXACTLY How To Create A $1,000,000 YouTube Strategy" | 66K | 3.4x |
+| "YouTube's Hard, Until Businesses Do This" | 61K | 3.1x |
+| "I Studied 1,000 YouTubers, This Stops Them Making Money" | 58K | 3x |
+
+### Underperformers (below 1x)
+
+| Title | Views | Mult | Problem |
+|-------|-------|------|---------|
+| "EXACTLY How to make sales from EVERY video" | 10K | 0.5x | No specificity |
+| "Make Videos Like This in 2026" | 11K | 0.6x | Year reference |
+| "How To Make A YouTube Video" | 19K | 1x | Generic how-to |
+| "19 Lessons Learned..." | 15K | 0.8x | Listicle |
+
+### Winning Formulas (Ranked)
+
+1. **"Copy This [X], It'll Blow Up Your Business"** - His signature (26x, 6.7x, 5.7x)
+2. **"The EXACT System To [$ outcome]"** - Must include specific money (8.2x, 3x)
+3. **"I Studied [number], [negative finding]"** - Research + pain (3x)
+4. **"[X]'s Hard, Until [solution]"** - Tension/relief (3.1x)
+5. **"I [contrarian action] & [result]"** - Quit/stopped (2.7x)
+
+### Rules from Data
+
+- **"Copy This" > "How To"** - Command beats educate
+- **Specific $ mandatory** - "$1,000,000" beats "make money"
+- **Negative > positive** - "DESTROYS" outperforms "Improves"
+- **Avoid listicles** - 0.8x average
+- **No year references** - Weakens performance
+
+---
+
 ## 12-Week Content Calendar (Q1)
 
 ### Week 1: Origin Story
@@ -57,54 +99,64 @@ AEO content fills multiple gaps:
 **Goal:** Convert
 
 ### Week 3: Case Study
-**Title:** "How I Got [Hair Clinic] Mentioned in ChatGPT in 30 Days"
+**Title:** "The EXACT System That Got My Client Cited in ChatGPT (In 30 Days)"
 **Type:** Case Study
 **Goal:** Trust
+**Formula:** EXACT System + Time-bound (8.2x pattern)
 
 ### Week 4: Contrarian
-**Title:** "SEO is Dead. Here's What's Replacing It."
+**Title:** "I Stopped Caring About Google Rankings (Here's What Happened)"
 **Type:** Contrarian
 **Goal:** Growth
+**Formula:** Contrarian action + Result (2.7x pattern)
 
 ### Week 5: Deep Dive
-**Title:** "The Complete AEO Guide: Everything You Need to Rank in ChatGPT"
+**Title:** "The EXACT System To Get Your Brand Recommended by ChatGPT"
 **Type:** Deep Dive
 **Goal:** Authority
+**Formula:** EXACT System + Outcome (8.2x pattern)
 
 ### Week 6: Roast
-**Title:** "I Audited [Famous Brand]'s AEO - Here's What I Found"
+**Title:** "I Audited 100 Brands in ChatGPT, This Destroys Their Visibility"
 **Type:** Roast/Audit
 **Goal:** Engagement
+**Formula:** Research + Negative finding (3x pattern)
 
 ### Week 7: Educational
-**Title:** "Why ChatGPT Recommends Some Brands and Ignores Others"
+**Title:** "ChatGPT's Hard to Crack, Until You Do This"
 **Type:** Outcome + System
 **Goal:** Educate
+**Formula:** Hard Until (3.1x pattern)
 
 ### Week 8: Case Study
-**Title:** "How AI Chatbots Took My Client From $5M to $10M"
+**Title:** "The EXACT System That Took My Client From $5M to $10M"
 **Type:** Case Study
 **Goal:** Credibility
+**Formula:** EXACT System + Specific $ (8.2x pattern)
 
 ### Week 9: Experiment
-**Title:** "I Asked ChatGPT About 100 Brands - The Results Were Shocking"
+**Title:** "I Studied 100 Brands in ChatGPT, This Wrecks Their Sales"
 **Type:** Experiment
 **Goal:** Growth
+**Formula:** Research + Negative (3x pattern)
 
 ### Week 10: Pain-First
-**Title:** "Why Your Website is Invisible to AI (5 AEO Mistakes)"
+**Title:** "I Studied 100 Websites, This Stops Them Getting Cited by AI"
 **Type:** Pain-First
 **Goal:** Convert
+**Formula:** Research + Negative (3x pattern)
 
 ### Week 11: Comparison
-**Title:** "AEO vs SEO vs GEO: Which Actually Matters in 2026?"
+**Title:** "AEO vs SEO: I Tested Both For 90 Days (The Results Shocked Me)"
 **Type:** Comparison
 **Goal:** Growth
+**Formula:** Comparison + Time-bound + Curiosity
 
 ### Week 12: Thought Leadership
-**Title:** "The Future of Search: What Happens When Everyone Asks ChatGPT?"
+**Title:** "Copy This AI Search Strategy, It'll Blow Up Your Business"
 **Type:** Thought Leadership
 **Goal:** Authority
+**Formula:** Copy This + Promise (26x pattern)
 
 ---
 

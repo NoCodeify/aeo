@@ -94,10 +94,40 @@
 
 ---
 
-## Checklist
+## Title & Thumbnail Validation (DO NOT SKIP)
 
-- [ ] Title finalized
-- [ ] Thumbnail concept approved
+**Title Options (generate 3-5, kill-list filter, pick winner):**
+
+1. [Option]
+2. [Option]
+3. [Option]
+
+**Winner:** [Selected title]
+
+**Title Checklist:**
+- [ ] Speaks to THEIR problem (not your solution)
+- [ ] Contains ChatGPT/Gemini/AI (positioning keyword)
+- [ ] Creates curiosity gap (need to click to resolve)
+- [ ] Has specificity (number, timeframe, percentage)
+- [ ] Passes scroll test (would YOU stop for this?)
+- [ ] Zero kill-list matches (see production-sop.md)
+
+**Thumbnail Checklist:**
+- [ ] 3 words max, readable on mobile
+- [ ] Creates emotion (not description)
+- [ ] Your face with clear emotion
+- [ ] Visual metaphor present
+- [ ] Text complements title (doesn't repeat)
+- [ ] Passes mute test (curious without reading title?)
+
+**Gut check:** Show title+thumbnail to someone outside your niche. Do they want to click? [ ] Yes [ ] No - redo
+
+---
+
+## Production Checklist
+
+- [ ] Title validated (above)
+- [ ] Thumbnail validated (above)
 - [ ] Key points outlined
 - [ ] Proof elements gathered
 - [ ] CTA video identified

@@ -1,0 +1,15 @@
+Done,Item,Example,Evaluation,Importance
+FALSE,robots.txt allows AI crawlers (GPTBot; OAI-SearchBot; ChatGPT-User; ClaudeBot; PerplexityBot; Applebot; Bytespider),"User-agent: GPTBot / Allow: /",Bad,5
+FALSE,Critical pages server-side rendered (SSR),Homepage and pricing render full HTML without JavaScript,Bad,5
+FALSE,Page load under 3 seconds,Test via PageSpeed Insights or WebPageTest,Bad,4
+FALSE,Schema.org markup on key pages (Organization; Product; FAQ; HowTo; SameAs),"@type: Organization with sameAs linking to LinkedIn; Crunchbase; G2",Bad,5
+FALSE,Sitemap.xml submitted to Google Search Console and Bing Webmaster Tools,sitemap.xml includes all indexable pages with lastmod dates,Bad,4
+FALSE,HTML tables on key pages for Gemini grounding,"<table> with pricing tiers; feature comparisons; stats",Bad,4
+FALSE,HTTPS everywhere,All pages load via https:// with no mixed content warnings,Bad,4
+FALSE,Clean URL structure,/features/reporting not /page?id=47&cat=3,Can be Improved,3
+FALSE,Canonical tags configured on all pages,"<link rel=""canonical"" href=""...""> on every page",Bad,3
+FALSE,llms.txt file created at site root,/llms.txt with brand summary; key facts; and structured data pointers,Bad,4
+FALSE,No critical content hidden behind JS tabs or accordions,Pricing and features visible in page source without JS execution,Bad,4
+FALSE,Mobile rendering verified for AI crawlers,Test with mobile user-agent; ensure same content as desktop,Bad,3
+FALSE,AI crawler log monitoring configured,Server logs filtered for GPTBot; OAI-SearchBot; ClaudeBot user agents,Bad,3
+FALSE,Cache-busting parameters ready for content updates,?v=2024-01 appended to URLs after major content changes,Bad,3

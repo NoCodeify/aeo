@@ -1,0 +1,19 @@
+Done,Item,Example,Evaluation,Importance
+FALSE,ChatGPT: Bing Webmaster Tools verified,Site verified and sitemap submitted in Bing Webmaster Tools,Bad,5
+FALSE,ChatGPT: OAI-SearchBot crawling confirmed in server logs,Log entries showing OAI-SearchBot user agent accessing key pages,Bad,4
+FALSE,ChatGPT: Key pages force-fetched via prompt,"Ask ChatGPT: ""Search [url] and summarize"" for each critical page",Bad,4
+FALSE,ChatGPT: Cache fingerprint checked (utm_source=openai = stale),If ChatGPT cites URL with utm_source=openai the cache is from Bing not fresh,Bad,3
+FALSE,ChatGPT: Cache-busting used after content updates,Append ?v=new to URLs and re-fetch after major content changes,Bad,3
+FALSE,Gemini: Google Search Console verified,Site verified with all sitemaps submitted,Bad,5
+FALSE,Gemini: E-E-A-T signals strong across site,Author bios; about page; credentials; external validation present,Bad,4
+FALSE,Gemini: Grounding Blocks on key pages (HTML tables with stats),"<table> elements with numerical data that Gemini can ground against",Bad,5
+FALSE,Gemini: Top 10 Google ranking for entity queries,Brand name + category query ranks on page 1 of Google,Bad,5
+FALSE,Gemini: Statistics with verifiable sources on key pages,"Numbers cited with source: ""According to [Source]; [Year]""",Bad,4
+FALSE,Perplexity: Top Google results for target queries,Key pages rank well in Google (Perplexity pulls from top results),Bad,4
+FALSE,Perplexity: Citation-friendly content structure,Clear factual statements that are easy to cite with source attribution,Bad,3
+FALSE,Claude: Brave Search presence verified,Key pages appear in Brave Search results for target queries,Bad,3
+FALSE,All LLMs: Force-fetch each updated page individually (per-page not site-wide),"After updating /pricing; specifically prompt each LLM to read that URL",Bad,5
+FALSE,All LLMs: Seeding prompts used after major launches,"Ask each LLM about your brand after content updates to prime the cache",Bad,3
+FALSE,All LLMs: Branded query returns accurate information,"Ask ""What is [Brand]?"" on each LLM and verify accuracy",Bad,5
+FALSE,All LLMs: Non-branded discovery queries tested,"Ask ""Best [category] for [use case]"" and check if brand appears",Bad,5
+FALSE,All LLMs: Per-page force-fetch after ANY content update,Every content change triggers individual page re-fetch across all LLMs,Bad,4

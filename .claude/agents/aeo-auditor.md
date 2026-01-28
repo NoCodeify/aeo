@@ -95,10 +95,13 @@ Use the available MCP tools in sequence:
 | "best [category] for [target audience]" | Audience targeting |
 
 **Process:**
-1. Run each query **10 times** on ChatGPT using `query_chatgpt`
-2. Run each query **10 times** on Gemini using `query_gemini`
-3. Count how many times the brand appears
-4. Calculate consistency score (X/10)
+Use the `run_consistency_test` MCP tool for each query. It runs all queries in parallel and returns mention rate, position, and context automatically.
+
+```
+run_consistency_test(query="best [category] [region]", brand="[brand]", engines="both", runs=10)
+```
+
+The tool handles counting mentions, extracting context, and calculating consistency scores.
 
 **Consistency Scoring:**
 - 9-10/10 = Strong (locked in)

@@ -468,6 +468,157 @@ server.tool(
   }
 );
 
+// Tool: Run 10-run consistency test
+server.tool(
+  "run_consistency_test",
+  "Run a query 10 times in parallel across ChatGPT and/or Gemini to test how consistently a brand is mentioned. Returns mention rate, position analysis, and how the brand was described each time.",
+  {
+    query: z.string().describe("The discovery query to test (e.g., 'Best hair transplant clinic in Europe')"),
+    brand: z.string().describe("The brand name to check for mentions in responses"),
+    engines: z.enum(["both", "chatgpt", "gemini"]).optional().describe("Which engines to test (default: 'both')"),
+    runs: z.number().min(1).max(20).optional().describe("Number of runs per engine (default: 10, max: 20)"),
+  },
+  async ({ query, brand, engines, runs }) => {
+    const numRuns = runs || 10;
+    const engineChoice = engines || "both";
+    const brandLower = brand.toLowerCase();
+
+    interface ConsistencyRun {
+      run: number;
+      mentioned: boolean;
+      position?: string;
+      context?: string;
+      error?: string;
+    }
+
+    interface EngineResult {
+      engine: string;
+      totalRuns: number;
+      mentions: number;
+      mentionRate: string;
+      consistency: string;
+      runs: ConsistencyRun[];
+    }
+
+    const results: EngineResult[] = [];
+
+    // Helper to extract context around brand mention
+    function extractContext(response: string, brandName: string): { position: string; context: string } | null {
+      const lowerResponse = response.toLowerCase();
+      const brandIdx = lowerResponse.indexOf(brandName.toLowerCase());
+      if (brandIdx === -1) return null;
+
+      // Get surrounding context (200 chars)
+      const start = Math.max(0, brandIdx - 50);
+      const end = Math.min(response.length, brandIdx + brandName.length + 150);
+      const context = response.slice(start, end).trim();
+
+      // Try to determine position/tier
+      const beforeBrand = response.slice(0, brandIdx).toLowerCase();
+      let position = "mentioned";
+      if (beforeBrand.includes("## 1") || beforeBrand.includes("### 1") || beforeBrand.includes("top tier") || beforeBrand.includes("elite") || beforeBrand.includes("gold standard")) {
+        position = "top-tier";
+      } else if (beforeBrand.includes("## 2") || beforeBrand.includes("### 2") || beforeBrand.includes("second") || beforeBrand.includes("mid")) {
+        position = "second-tier";
+      } else if (beforeBrand.includes("## 3") || beforeBrand.includes("### 3") || beforeBrand.includes("budget") || beforeBrand.includes("value")) {
+        position = "third-tier";
+      }
+
+      return { position, context };
+    }
+
+    // Run ChatGPT tests
+    if (engineChoice === "both" || engineChoice === "chatgpt") {
+      const chatgptPromises = Array.from({ length: numRuns }, (_, i) =>
+        queryChatGPT(query)
+          .then((result): ConsistencyRun => {
+            const mentioned = result.response.toLowerCase().includes(brandLower);
+            const ctx = mentioned ? extractContext(result.response, brand) : null;
+            return {
+              run: i + 1,
+              mentioned,
+              position: ctx?.position,
+              context: ctx?.context,
+            };
+          })
+          .catch((error): ConsistencyRun => ({
+            run: i + 1,
+            mentioned: false,
+            error: error instanceof Error ? error.message : String(error),
+          }))
+      );
+
+      const chatgptRuns = await Promise.all(chatgptPromises);
+      const mentions = chatgptRuns.filter(r => r.mentioned).length;
+
+      results.push({
+        engine: "ChatGPT (GPT-5.2)",
+        totalRuns: numRuns,
+        mentions,
+        mentionRate: `${mentions}/${numRuns} (${Math.round((mentions / numRuns) * 100)}%)`,
+        consistency: mentions >= 7 ? "STRONG" : mentions >= 4 ? "MODERATE" : mentions >= 1 ? "WEAK" : "INVISIBLE",
+        runs: chatgptRuns,
+      });
+    }
+
+    // Run Gemini tests
+    if (engineChoice === "both" || engineChoice === "gemini") {
+      const geminiPromises = Array.from({ length: numRuns }, (_, i) =>
+        queryGemini(query)
+          .then((result): ConsistencyRun => {
+            const mentioned = result.response.toLowerCase().includes(brandLower);
+            const ctx = mentioned ? extractContext(result.response, brand) : null;
+            return {
+              run: i + 1,
+              mentioned,
+              position: ctx?.position,
+              context: ctx?.context,
+            };
+          })
+          .catch((error): ConsistencyRun => ({
+            run: i + 1,
+            mentioned: false,
+            error: error instanceof Error ? error.message : String(error),
+          }))
+      );
+
+      const geminiRuns = await Promise.all(geminiPromises);
+      const mentions = geminiRuns.filter(r => r.mentioned).length;
+
+      results.push({
+        engine: "Gemini (gemini-3-flash)",
+        totalRuns: numRuns,
+        mentions,
+        mentionRate: `${mentions}/${numRuns} (${Math.round((mentions / numRuns) * 100)}%)`,
+        consistency: mentions >= 7 ? "STRONG" : mentions >= 4 ? "MODERATE" : mentions >= 1 ? "WEAK" : "INVISIBLE",
+        runs: geminiRuns,
+      });
+    }
+
+    const summary = {
+      query,
+      brand,
+      engines: engineChoice,
+      totalRuns: numRuns,
+      results,
+      overall: {
+        totalMentions: results.reduce((acc, r) => acc + r.mentions, 0),
+        totalQueries: results.reduce((acc, r) => acc + r.totalRuns, 0),
+        overallRate: `${results.reduce((acc, r) => acc + r.mentions, 0)}/${results.reduce((acc, r) => acc + r.totalRuns, 0)}`,
+      },
+    };
+
+    return {
+      content: [
+        {
+          type: "text" as const,
+          text: JSON.stringify(summary, null, 2),
+        },
+      ],
+    };
+  }
+);
+
 // Tool: Get suggested audit queries
 server.tool(
   "get_audit_queries",

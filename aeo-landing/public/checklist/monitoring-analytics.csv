@@ -1,0 +1,13 @@
+Done,Item,Example,Evaluation,Importance
+FALSE,Weekly LLM citation check across all major LLMs,"Every Monday: ask branded + discovery queries on ChatGPT; Gemini; Perplexity; Claude",Bad,5
+FALSE,10-run consistency test per key query (monthly),Run each dream query 10x per LLM and track mention rate percentage,Bad,5
+FALSE,"Crawler log monitoring (OAI-SearchBot; ClaudeBot; PerplexityBot; GPTBot)",Server logs filtered and alerting on AI crawler activity,Bad,4
+FALSE,Cache freshness check using utm_source=openai fingerprint,If ChatGPT citations include utm_source=openai the data is stale Bing cache,Bad,3
+FALSE,"GA4 AI referral tracking configured (chatgpt.com; perplexity.ai; anthropic.com)",GA4 referral source report shows traffic from AI platforms,Bad,4
+FALSE,Competitor LLM presence monitored monthly,Track which competitors appear in responses to your category queries,Bad,4
+FALSE,Hallucination baseline documented,Record any inaccurate claims LLMs make about your brand as a baseline,Bad,4
+FALSE,Accuracy scoring per query tracked,Score each LLM response for factual accuracy on a 1-5 scale,Bad,3
+FALSE,Citation source analysis completed,Document which sources LLMs cite when mentioning your brand or category,Bad,3
+FALSE,Sentinel alerts configured for misinformation or competitor dominance,Automated workflow to detect negative changes in LLM responses,Bad,3
+FALSE,Stale page force-fetch workflow documented,Step-by-step runbook for forcing LLMs to re-read updated pages,Bad,4
+FALSE,Quarterly strategy review scheduled,Calendar reminder for full re-audit and strategy adjustment every 90 days,Bad,3

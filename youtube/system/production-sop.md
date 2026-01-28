@@ -28,12 +28,13 @@ Standard Operating Procedure for producing weekly AEO content.
 
 ### Monday (2-3 hours): Scripting
 
-1. **Run ideation skill** to finalize title/angle
-2. **Write script** using script-writer skill
-3. **Run hook tournament** (6 -> 3 -> 1)
-4. **Extract prompter text** (plain text version)
-5. **Identify B-roll needs**
-6. **Identify GIF moments**
+1. **Run ideation skill** to generate 5+ title options
+2. **GATE: Run title/thumbnail validation** (see checklist above - MANDATORY)
+3. **Write script** using script-writer skill
+4. **Run hook tournament** (6 -> 3 -> 1)
+5. **Extract prompter text** (plain text version)
+6. **Identify B-roll needs**
+7. **Identify GIF moments**
 
 ### Tuesday (1-2 hours): Asset Preparation
 
@@ -86,6 +87,63 @@ Standard Operating Procedure for producing weekly AEO content.
 1. **Video goes live**
 2. **Share on socials** (if applicable)
 3. **Start planning next video**
+
+---
+
+## Title & Thumbnail Validation (MANDATORY GATE)
+
+No video gets filmed until the title/thumbnail passes this checklist. Video 2 got 0 clicks because this step was skipped.
+
+### Title Kill List (If your title does any of these, reject it)
+
+| Anti-Pattern | Example (BAD) | Why It Fails |
+|--------------|----------------|--------------|
+| Process-focused | "The 5-Step System I Use" | Viewers don't care about YOUR process |
+| Jargon without context | "AEO Audit System" | They don't know what AEO means yet |
+| "I use with every client" | "...I Use With Every Client" | Positions YOU, not THEIR problem |
+| No number or specificity | "How to Optimize for AI" | Too vague, no curiosity gap |
+| No emotional trigger | "My Complete Audit Framework" | No fear, curiosity, or urgency |
+| Describes content | "5-Step Audit Walkthrough" | Tells them what it IS, not why to CARE |
+| No positioning keyword | "The System That Changed Everything" | Must include ChatGPT/Gemini/AI |
+
+### Title Must-Haves (ALL required)
+
+- [ ] **Speaks to THEIR problem** (not your solution)
+- [ ] **Contains ChatGPT, Gemini, or AI** (positioning keyword)
+- [ ] **Creates a curiosity gap** (they need to click to resolve it)
+- [ ] **Has specificity** (number, timeframe, or percentage)
+- [ ] **Passes Ed's Q1:** Would a business owner understand every word?
+- [ ] **Passes Ed's Q2:** Is it immediately obvious why this matters to them?
+- [ ] **Passes Ed's Q3:** Does it match the problem they think they have?
+- [ ] **The "scroll test":** Would YOU stop scrolling for this?
+
+### Thumbnail Kill List
+
+| Anti-Pattern | Example (BAD) | Why It Fails |
+|--------------|----------------|--------------|
+| Descriptive text | "5-STEP AUDIT" | Describes content, creates no emotion |
+| Too many words | "AEO AUDIT SYSTEM" | Unreadable on mobile, no impact |
+| No face/emotion | Just text on background | No human connection |
+| Matches title exactly | Title: "5 Steps" / Thumb: "5 STEPS" | Redundant, wastes thumbnail real estate |
+| No visual metaphor | Plain text on solid color | Nothing to decode or be curious about |
+
+### Thumbnail Must-Haves (ALL required)
+
+- [ ] **3 words MAX** (readable at mobile size)
+- [ ] **Creates emotion** (shock, fear, curiosity - not description)
+- [ ] **Your face with clear emotion** (surprised, concerned, excited)
+- [ ] **Visual metaphor** (something to decode beyond the text)
+- [ ] **Text ADDS to title** (doesn't repeat it)
+- [ ] **High contrast** (readable in any feed context)
+- [ ] **The "mute test":** Would the thumbnail alone make you curious?
+
+### Validation Process
+
+1. Write 3-5 title options (use ideation skill)
+2. Run each through the kill list - reject any matches
+3. Run survivors through must-haves checklist
+4. Pick winner, then design thumbnail to COMPLEMENT (not repeat) title
+5. Show to someone unfamiliar with AEO - do they want to click?
 
 ---
 
@@ -180,6 +238,8 @@ youtube/
 
 ### Pre-Production Checklist
 - [ ] Video brief completed
+- [ ] **Title validated (kill-list + must-haves)**
+- [ ] **Thumbnail validated (kill-list + must-haves)**
 - [ ] Script written
 - [ ] Hook tournament done
 - [ ] Prompter text extracted

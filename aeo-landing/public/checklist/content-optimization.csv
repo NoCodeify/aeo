@@ -1,0 +1,19 @@
+Done,Item,Example,Evaluation,Importance
+FALSE,First 50 words state WHO / WHAT / WHERE / PRICE,"Acme is a B2B sales platform based in London that helps teams close deals 40% faster. Plans start at $49/mo.",Bad,5
+FALSE,No rhetorical questions as page openers,"Bad: ""Ready to transform your business?"" Good: ""Acme automates invoice processing for mid-market SaaS companies.""",Bad,5
+FALSE,No vague promises in opening copy,"Bad: ""Unlock your potential"" Good: ""Reduce churn by 23% with automated health scoring""",Bad,5
+FALSE,TL;DR or Key Takeaways at top of long-form pages,"TL;DR: Acme processes 10M invoices/year for 2;400 businesses at $49-199/mo",Bad,4
+FALSE,Pricing hard-coded in HTML text (not behind Contact Us),"Plans: Starter $49/mo; Pro $99/mo; Enterprise $299/mo",Bad,5
+FALSE,Specific numbers replace vague claims,"2;400+ businesses not ""Trusted by thousands""",Bad,5
+FALSE,HTML tables for structured data (not images or PDFs),"<table> for pricing; feature comparisons; specs",Bad,4
+FALSE,FAQ section on every key page in Q&A format,"<h3>How much does Acme cost?</h3><p>Plans start at $49/mo...</p>",Bad,4
+FALSE,Hybrid page structure: LLM-optimized first 150 words then sales copy,Factual summary paragraph followed by benefit-driven marketing copy,Bad,5
+FALSE,H2/H3 hierarchy covers features; pricing; use cases,Clear heading structure that LLMs can parse as distinct sections,Bad,4
+FALSE,Alt text on images includes full data context,"alt=""Bar chart: Acme reduced processing time from 4.2 hours to 0.8 hours (81% reduction)""",Bad,3
+FALSE,Comparison content vs top 3 competitors,/vs/competitor-name pages with feature-by-feature HTML tables,Bad,4
+FALSE,Best X and category pages created,/best-crm-for-startups with honest multi-brand comparison,Bad,4
+FALSE,Zero-volume keyword content created,Pages targeting queries from forums and support tickets with no search volume,Bad,3
+FALSE,Content updated quarterly for freshness signals,Last-modified dates within 90 days on key pages,Bad,3
+FALSE,"Conversion phrases replaced with specifics (see Protocol table)","Replace ""Get started"" with ""Start 14-day free trial"" or ""See plans from $49/mo""",Bad,4
+FALSE,Direct customer quotes included on key pages,"Include named testimonials: ""Acme saved us 12 hours/week"" - Jane Smith; VP Ops at TechCo",Bad,3
+FALSE,Statistics cited with verifiable sources,"According to Forrester (2024); companies using Acme see 3.2x ROI",Bad,3

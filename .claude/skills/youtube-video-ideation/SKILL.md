@@ -77,6 +77,43 @@ Every video idea MUST pass these before tournament:
 
 ---
 
+## Step 3b: Title & Thumbnail Kill List (MANDATORY)
+
+**NEVER generate titles that match these anti-patterns. Reject immediately.**
+
+### Title Kill List
+
+| Anti-Pattern | Example (BAD) | Fix |
+|--------------|----------------|-----|
+| Process-focused | "The 5-Step System I Use" | Lead with THEIR problem, not your method |
+| YOUR perspective | "...I Use With Every Client" | Make it about THEM failing/missing out |
+| Jargon alone | "AEO Audit System" | Pair jargon with plain language ("ChatGPT") |
+| No specificity | "How to Optimize for AI" | Add number, timeframe, or percentage |
+| No emotional trigger | "My Complete Audit Framework" | Add fear, curiosity, or urgency |
+| Describes content | "5-Step Audit Walkthrough" | Sell the OUTCOME not the format |
+| Missing positioning keyword | "The System That Changed Everything" | Must include ChatGPT/Gemini/AI |
+| Generic how-to | "How I Audit Brands for Visibility" | Create curiosity gap instead |
+
+### Thumbnail Kill List
+
+| Anti-Pattern | Example (BAD) | Fix |
+|--------------|----------------|-----|
+| Descriptive text | "5-STEP AUDIT" | Use emotional text ("YOU FAILED", "INVISIBLE") |
+| Repeats title | Title has "5 Steps", thumb says "5 STEPS" | Thumbnail adds NEW information |
+| Too many words | "AEO AUDIT SYSTEM" | 3 words max, emotional ones |
+| No face/emotion | Just text on background | Face with clear shock/concern/excitement |
+| No visual metaphor | Plain text on solid color | Add something to decode (red X, ghost, etc.) |
+| Boring colors | Low contrast, muted | High contrast, readable in any feed |
+
+### The Two Tests (Apply to EVERY concept)
+
+1. **Scroll test:** Would a busy business owner stop scrolling for this title?
+2. **Mute test:** Would the thumbnail alone (no title visible) create curiosity?
+
+If either test fails, reject the concept.
+
+---
+
 ## Step 4: Concept Generation
 
 Generate 10 video concepts using these patterns:
@@ -103,6 +140,82 @@ Examples:
 - Include "ChatGPT" or "Gemini" in every title
 - Use "AEO" when audience is aware of term
 - Add business context ("Your Brand", "Your Business")
+
+---
+
+## Ed Lawrence Title Performance Data (Real Results)
+
+**Source:** Ed Lawrence's channel, past 12 months. Multiplier = views vs channel average.
+
+### Top Performers (3x+ multiplier)
+
+| Title | Views | Mult | Pattern |
+|-------|-------|------|---------|
+| "Copy This Video Style, It'll Blow Up Your Business" | 508K | 26x | Copy This + Promise |
+| "The EXACT System To Go From $0-$1,000,000 On YouTube" | 160K | 8.2x | EXACT System + Money |
+| "Copy This YouTube Strategy, It'll Blow Up Your Business" | 131K | 6.7x | Copy This + Promise |
+| "Copy This YouTube Video, It'll Blow Up Your Business" | 112K | 5.7x | Copy This + Promise |
+| "5 NEW AI That Just Changed YouTube Forever" | 91K | 4.6x | News/Trend |
+| "EXACTLY How To Create A $1,000,000 YouTube Strategy" | 66K | 3.4x | EXACTLY + Money |
+| "YouTube's Hard, Until Businesses Do This" | 61K | 3.1x | Hard Until |
+| "The EXACT System To Turn Viewers In To Buyers" | 59K | 3x | EXACT System + Outcome |
+| "I Studied 1,000 YouTubers, This Stops Them Making Money" | 58K | 3x | Research + Negative |
+| "I QUIT social media & grew my business a better way" | 53K | 2.7x | Contrarian/Quitting |
+| "The EXACT Storytelling System That Turns Viewers In To Buyers" | 52K | 2.7x | EXACT System + Outcome |
+
+### Underperformers (below 1x multiplier)
+
+| Title | Views | Mult | Why It Failed |
+|-------|-------|------|---------------|
+| "EXACTLY How to make sales from EVERY video you make" | 10K | 0.5x | Generic promise, no specificity |
+| "Make Videos Like This in 2026, It'll Blow Up Your Business" | 11K | 0.6x | Year reference weakens |
+| "How To Make A YouTube Video (That Blows Up Your Business)" | 19K | 1x | Generic "How To" |
+| "19 Lessons Learned Working With 700 YouTubers" | 15K | 0.8x | Listicle format |
+| "27 Business Lessons I Wish I Knew Sooner" | 15K | 0.8x | Listicle format |
+| "Give Me 5 mins & I'll Stop Your Business Failing On YouTube" | 8.1K | 0.4x | Time promise feels gimmicky |
+
+### Proven Title Formulas (Ranked by Performance)
+
+**Tier 1: Highest performers**
+1. **"Copy This [X], It'll Blow Up Your Business"** - 4 of top 10 videos use this
+2. **"The EXACT System To [specific $ outcome]"** - Needs specific money amount
+3. **"I Studied [large number], [negative finding]"** - Research + pain
+
+**Tier 2: Strong performers**
+4. **"EXACTLY How To [outcome with $ amount]"** - Must include money
+5. **"[X]'s Hard, Until [solution]"** - Tension then relief
+6. **"I [contrarian action] & [positive result]"** - Quit/stopped + grew
+
+**Tier 3: Moderate performers**
+7. **"[Number] [Things] That [Changed/Wrecked] [Outcome]"** - Needs emotional verb
+8. **Negative hooks** - "DESTROYS", "Wrecks", "Stops" outperform positive
+
+**Avoid:**
+- Generic "How To Make..." (performs at 1x or below)
+- Listicles without emotional hook (15K average)
+- Year references in titles (weakens performance)
+- Vague outcomes without specific numbers
+- Time promises ("Give me 5 mins")
+
+### Key Insights
+
+1. **"Copy This" > "How To"** - Command beats educate
+2. **Specific $ amounts are mandatory** - "$1,000,000" beats "make money"
+3. **Negative hooks outperform positive** - "DESTROYS" > "Improves"
+4. **Research-backed adds credibility** - "I Studied 1,000" works
+5. **Time-bound results work** - "In 30 Days", "In 7 Days"
+
+### AEO Title Adaptations
+
+Apply Ed's winning formulas to AEO content:
+
+| Ed's Formula | AEO Adaptation |
+|--------------|----------------|
+| "Copy This Video Style, It'll Blow Up Your Business" | "Copy This AEO Strategy, ChatGPT Will Recommend You" |
+| "The EXACT System To $0-$1M" | "The EXACT System To Get Cited in ChatGPT (In 30 Days)" |
+| "I Studied 1,000 YouTubers, This Stops Them Making Money" | "I Audited 100 Brands in ChatGPT, This Destroys Their Visibility" |
+| "YouTube's Hard, Until Businesses Do This" | "AEO's Confusing, Until You Do This One Thing" |
+| "I QUIT social media & grew my business" | "I Stopped Caring About Google Rankings (Here's What Happened)" |
 
 ---
 

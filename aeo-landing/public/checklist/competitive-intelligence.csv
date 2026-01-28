@@ -1,0 +1,11 @@
+Done,Item,Example,Evaluation,Importance
+FALSE,Top 5 competitors identified via LLM queries,"Ask ""Best [category]"" on each LLM and document which brands appear",Bad,5
+FALSE,Competitor LLM visibility audited,Run same discovery queries for competitors and compare mention rates,Bad,5
+FALSE,Keyword gap analysis completed (DataForSEO or similar),Identify keywords competitors rank for that you don't,Bad,4
+FALSE,vs comparison pages created for each competitor,/vs/competitor-name with honest feature and pricing comparison tables,Bad,5
+FALSE,Competitor weaknesses documented from LLM responses,Note where LLMs mention competitor limitations or negative sentiment,Bad,3
+FALSE,Content gaps identified and prioritized,List topics competitors cover that you don't and rank by impact,Bad,4
+FALSE,Share of voice tracked across LLMs,Percentage of category queries where your brand is mentioned vs competitors,Bad,4
+FALSE,Competitor new pages and features monitored,Monthly check of competitor websites for new content or positioning changes,Bad,3
+FALSE,Sources competitors get cited from identified,Document which external sites LLMs use to cite competitor information,Bad,3
+FALSE,Counter-content created for competitor-dominated queries,Create better content targeting queries where competitors currently dominate,Bad,4

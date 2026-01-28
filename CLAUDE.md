@@ -42,6 +42,7 @@ The MCP server (`aeo-audit-mcp/src/index.ts`) queries three search backends:
 - `compare_llms` — Same query across all 3 engines
 - `run_brand_audit` — Full 8-query audit with analysis summary
 - `get_audit_queries` — Suggested audit queries for a brand
+- `run_consistency_test` — Run a query 10x in parallel, check brand mention rate
 
 ## SEO Agent MCP Server
 
@@ -114,6 +115,7 @@ Skills are specialized knowledge modules that Claude automatically activates whe
 | `website-copywriting` | `.claude/skills/website-copywriting/` | "write copy", "page content", "rewrite page", "create page" |
 | `image-generation` | `.claude/skills/image-generation/` | "generate image", "image prompt", "infographic", "diagram", "icon set" |
 | `content-strategist` | `.claude/skills/content-strategist/` | "content strategy", "what content", "content plan", "data study", "keyword research", "terms to own", "content audit" |
+| `linkedin-content` | `.claude/skills/linkedin-content/` | "LinkedIn post", "LinkedIn banner", "LinkedIn profile", "write a post", "LinkedIn content" |
 | `client-report` | `.claude/skills/client-report/` | "client report", "generate report", "visibility report", "create report", "report for client" |
 
 ### YouTube Skills (Ed Lawrence Method)
@@ -138,6 +140,9 @@ Skills activate automatically. Just ask naturally:
 - "Find zero-volume keywords for [brand]"
 - "Plan a data study for [brand]"
 - "Generate a client report for [brand]"
+- "Write a LinkedIn post about [topic]"
+- "Design a LinkedIn banner"
+- "Optimize my LinkedIn profile"
 
 ## Subagents (Specialized Assistants)
 

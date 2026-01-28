@@ -1,0 +1,16 @@
+Done,Item,Example,Evaluation,Importance
+FALSE,Google Business Profile claimed and fully completed,All fields filled including category; description; hours; photos,Bad,5
+FALSE,Crunchbase profile created with accurate data,Company description matches website positioning exactly,Bad,4
+FALSE,LinkedIn company page created with aligned phrasing,About section uses same category language as website first 50 words,Bad,4
+FALSE,G2 profile created and optimized (B2B),Category listing matches target discovery queries,Bad,4
+FALSE,Capterra profile created with accurate info,Description and category aligned with brand positioning,Bad,3
+FALSE,Trustpilot profile claimed,Active review collection from verified customers,Bad,3
+FALSE,Product Hunt listing created,Launch page with clear product description,Bad,2
+FALSE,AlternativeTo listing created,Listed as alternative to top competitors in category,Bad,3
+FALSE,Wikipedia or Wikidata presence (if brand is notable),Wikidata entity with correct structured data,Bad,2
+FALSE,Phrase alignment verified across all external platforms,Exact same category language on website; G2; LinkedIn; Crunchbase; GBP,Bad,5
+FALSE,3+ external sources repeat core brand claim (Consensus Campaign),"G2; Crunchbase; and industry blog all say ""Acme is a B2B sales platform""",Bad,5
+FALSE,Press release distributed with brand positioning language,PR wire release using exact brand category phrasing,Bad,3
+FALSE,Review acquisition workflow active (7-14 day post-success trigger),Automated email requesting review after successful onboarding milestone,Bad,4
+FALSE,Author credentials displayed on content pages,"Author bios with title; company; and LinkedIn link on blog posts",Bad,3
+FALSE,Backlinks from topically-relevant authoritative sites,"Guest posts or features on industry publications; not random directories",Bad,4

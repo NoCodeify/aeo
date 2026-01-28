@@ -59,6 +59,8 @@ Test queries people use BEFORE knowing the brand:
 
 **LLM responses are non-deterministic.** Single tests are unreliable.
 
+Use the `run_consistency_test` MCP tool to automate this. It runs queries in parallel and returns mention rate, position analysis, and context.
+
 For top 2-3 discovery queries, run each **10 times** per LLM and calculate consistency:
 
 | Score | Interpretation |
