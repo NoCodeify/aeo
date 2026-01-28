@@ -124,6 +124,10 @@ export function QuizCapture({ onSubmit, isSubmitting }: QuizCaptureProps) {
               defaultCountry={country}
               value={phone}
               onChange={setPhone}
+              inputProps={{
+                name: "phone",
+                autoComplete: "tel",
+              }}
             />
           ) : (
             <div className="h-11 rounded-lg border border-card-border bg-surface animate-pulse" />
