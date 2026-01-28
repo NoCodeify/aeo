@@ -28,14 +28,39 @@ export function QuizCapture({ onSubmit, isSubmitting }: QuizCaptureProps) {
   const [phoneError, setPhoneError] = useState("");
 
   useEffect(() => {
-    fetch("https://api.country.is/")
-      .then((res) => res.json())
-      .then((data) => {
-        setCountry(data.country?.toLowerCase() || "us");
-      })
-      .catch(() => {
-        setCountry("us");
-      });
+    // Try multiple geolocation APIs as fallbacks
+    const detectCountry = async () => {
+      // Try ipapi.co first (has good CORS support)
+      try {
+        const res = await fetch("https://ipapi.co/country/", {
+          headers: { "Accept": "text/plain" }
+        });
+        if (res.ok) {
+          const country = await res.text();
+          if (country && country.length === 2) {
+            setCountry(country.toLowerCase());
+            return;
+          }
+        }
+      } catch {}
+
+      // Fallback to country.is
+      try {
+        const res = await fetch("https://api.country.is/");
+        if (res.ok) {
+          const data = await res.json();
+          if (data.country) {
+            setCountry(data.country.toLowerCase());
+            return;
+          }
+        }
+      } catch {}
+
+      // Default to US
+      setCountry("us");
+    };
+
+    detectCountry();
   }, []);
 
   const {
