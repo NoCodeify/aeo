@@ -22,7 +22,7 @@ export const FAQ_DATA = [
   {
     question: "What format is the checklist?",
     answer:
-      "The checklist is delivered as a comprehensive Google Sheet with 130+ actionable items organized by category: Technical Foundation, Content Optimization, Trust Signals, Cache Management, and platform-specific sections for each major AI assistant.",
+      "The checklist is delivered as a comprehensive Google Sheet with 130+ actionable items across 9 categories: Client Intake, Technical Foundation, Content Optimization, Trust & Authority, LLM-Specific, Monitoring, Content Strategy, Competitive Intelligence, and Seeding.",
   },
   {
     question: "Do I need technical skills to implement this?",
@@ -80,63 +80,84 @@ export const QUIZ_QUESTIONS = [
 
 export const CHECKLIST_CATEGORIES = [
   {
+    title: "Client Intake & Baseline",
+    count: "10",
+    items: [
+      "Dream queries collected (5-10)",
+      "Truth file with pricing, features, facts",
+      "Baseline scorecard before optimization",
+    ],
+  },
+  {
     title: "Technical Foundation",
-    count: "20+",
+    count: "14",
     items: [
       "robots.txt AI crawler configuration",
       "Server-side rendering (SSR) setup",
-      "Structured data markup",
-      "Sitemap optimization for AI crawlers",
+      "Schema.org markup on key pages",
     ],
   },
   {
     title: "Content Optimization",
-    count: "50+",
+    count: "20",
     items: [
-      "First 50 words optimization",
-      "Question-answer content patterns",
-      "Entity establishment",
-      "Citation-friendly formatting",
+      "First 50 words state WHO/WHAT/WHERE/PRICE",
+      "Pricing in HTML text (not behind Contact Us)",
+      "FAQ section on every key page",
     ],
   },
   {
-    title: "Trust Signals",
-    count: "30+",
+    title: "Trust & Authority",
+    count: "17",
     items: [
-      "Author credentials setup",
-      "Source validation links",
-      "Third-party verification",
-      "Review platform presence",
+      "Google Business Profile claimed",
+      "Crunchbase, LinkedIn, G2 profiles aligned",
+      "3+ external sources repeat core brand claim",
     ],
   },
   {
-    title: "Cache Management",
-    count: "40+",
+    title: "LLM-Specific Optimization",
+    count: "20",
     items: [
-      "Update frequency signals",
-      "Content freshness markers",
-      "Cache forcing techniques",
-      "Monitoring dashboard setup",
-    ],
-  },
-  {
-    title: "LLM-Specific",
-    count: "100+",
-    items: [
-      "ChatGPT optimization (Bing backend)",
-      "Gemini grounding signals (Google)",
-      "Perplexity citation patterns",
-      "Claude knowledge cutoff considerations",
+      "ChatGPT: Bing Webmaster Tools verified",
+      "Gemini: E-E-A-T signals and grounding blocks",
+      "Force-fetch each updated page individually",
     ],
   },
   {
     title: "Monitoring & Analytics",
-    count: "60+",
+    count: "15",
     items: [
-      "Weekly visibility tracking",
-      "Competitor mention alerts",
-      "Accuracy scoring framework",
-      "Citation source analysis",
+      "Weekly LLM citation check",
+      "10-run consistency test per key query",
+      "Competitor LLM presence monitored",
+    ],
+  },
+  {
+    title: "Content Strategy",
+    count: "14",
+    items: [
+      "Comparison pages for top 5 competitors",
+      "Zero-volume keyword content created",
+      "Data study planned with original research",
+    ],
+  },
+  {
+    title: "Competitive Intelligence",
+    count: "13",
+    items: [
+      "Top 5 competitors identified via LLM queries",
+      "Keyword gap analysis completed",
+      "Forum/Reddit research for real competitors",
+    ],
+  },
+  {
+    title: "Seeding & Amplification",
+    count: "8",
+    items: [
+      "Per-page force-fetch runbook created",
+      "LinkedIn article with brand positioning",
+      "Reddit/forum presence established",
     ],
   },
 ];

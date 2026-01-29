@@ -1,0 +1,57 @@
+# AEO Protocol - Answer Engine Optimization Experts
+
+> AEO Protocol is the methodology for optimizing brands to be recommended by ChatGPT, Gemini, and AI assistants. Founded by Sohaib Ahmad, who scaled a hair transplant clinic from 0% to 90% AI visibility using these techniques.
+
+## What We Do
+
+AEO Protocol helps brands become the answer when users ask AI assistants for recommendations. Our methodology is based on auditing 100+ brands across ChatGPT and Gemini.
+
+### Core Services
+- AEO Audits: Measure your AI visibility with 10-run consistency tests across ChatGPT and Gemini
+- Content Optimization: Apply the First 50 Words Rule and Hybrid Page Structure
+- LLM Visibility Consulting: Full implementation of AEO methodology
+
+### Key Statistics
+- 53% of well-known brands are invisible to AI assistants
+- Healthcare brands: 90% invisible to ChatGPT
+- Consulting firms: 80% visible to ChatGPT
+- Our case study: 0% to 90% visibility improvement in 30 days
+
+## Proprietary Frameworks
+
+### The First 50 Words Rule
+LLMs process text sequentially and weight the beginning heavily. Every page must include WHO, WHAT, WHERE, and PRICE in the first 50 words.
+
+### The 10-Run Consistency Test
+LLM responses vary. Testing once is like flipping a coin. Run each query 10 times per LLM to measure true visibility. Score: 9-10/10 = strong, 0-4/10 = invisible.
+
+### The 3-Layer ChatGPT Architecture
+ChatGPT retrieves information through: Layer 1 (Bing Index), Layer 2 (OAI-SearchBot persistent cache), Layer 3 (user-triggered fetches). Most citations come from Layer 2.
+
+## Key Resources
+
+- /learn - Overview of all AEO resources and guides
+
+### Educational Guides
+- /what-is-aeo - Complete guide to Answer Engine Optimization
+- /aeo-vs-seo - How AEO differs from traditional SEO
+- /how-to-optimize-for-chatgpt - Step-by-step ChatGPT optimization guide
+
+### Proprietary Methodologies
+- /first-50-words-rule - The critical opening content rule for LLM extraction
+- /10-run-consistency-test - How to measure AI visibility accurately
+
+### Proof & Case Studies
+- /case-study/fuegenix - 0% to 90% visibility case study with full methodology
+
+### Tools
+- /checklist - Interactive 130+ point AEO checklist (free)
+
+## About the Founder
+
+Sohaib Ahmad is the creator of AEO Protocol. His origin story: ChatGPT convinced him to buy a Porsche instead of a BMW. That moment revealed how AI is reshaping purchase decisions. He then applied these insights to scale a premium hair transplant clinic (EUR 50,000+ procedures) from zero AI visibility to being called "the best for artistic perfection" by Gemini.
+
+## Contact
+
+Website: https://aeoprotocol.ai
+Checklist: https://aeoprotocol.ai/checklist

@@ -1,0 +1,212 @@
+HOOK
+
+Most people think ChatGPT just searches the web. It doesn't.
+
+There are three layers between your brand and getting recommended. Most businesses never make it past layer one.
+
+I've spent the last year auditing brands and figuring out how to crack all three.
+
+Today I'm giving you the complete system - the exact steps I use with every client.
+
+By the end, you'll know exactly why ChatGPT is ignoring you - and how to fix it this week.
+
+---
+
+SETUP
+
+Here's what's actually happening when you ask ChatGPT a question.
+
+You type "what's the best CRM for small businesses?" and ChatGPT gives you an answer. Feels like magic. Like it's searching the entire internet in real-time.
+
+It's not.
+
+ChatGPT is reading from a cache. A snapshot of information that was crawled days or weeks ago.
+
+And here's the part nobody tells you: if your website isn't structured in a very specific way, that cache doesn't include you. At all.
+
+So when someone asks ChatGPT for a recommendation in your category, you're not even in the running.
+
+You haven't lost the race. You weren't invited to the race.
+
+That's what I'm going to fix today. Let me show you the three layers - and exactly how to crack each one.
+
+---
+
+POINT 1: THE 3-LAYER ARCHITECTURE
+
+Here's how ChatGPT actually retrieves information.
+
+Layer 1: The Bing Index.
+
+ChatGPT's web search is powered by Bing. So standard Bing SEO applies. If Bing can't find you, neither can ChatGPT.
+
+This is where most people stop. They think: "I'm indexed in Google, I'm probably in Bing too." Maybe. Maybe not.
+
+Layer 2: The OAI-SearchBot Index.
+
+This is OpenAI's own crawler. It visits your site, reads your pages, and stores that information in a persistent cache.
+
+Here's the key: this is where most citations come from. When ChatGPT recommends your brand and actually links to your website? That's Layer 2.
+
+Layer 3: User-Triggered Fetches.
+
+When someone asks ChatGPT about your brand specifically, it might fetch your site in real-time. This is the least reliable layer.
+
+So here's the takeaway: Layer 2 is the game.
+
+Most brands are stuck in Layer 1. They're indexed in Bing, but OAI-SearchBot either can't read their site or doesn't find anything worth caching.
+
+And there's a specific reason for that. Which brings me to the most important rule in AEO.
+
+---
+
+POINT 2: THE FIRST 50 WORDS RULE
+
+LLMs have a problem: they lose focus.
+
+When an AI reads your website, it weights the beginning heavily. The first 50 words tell it WHO you are, WHAT you do, WHERE you operate, and your PRICE.
+
+Most websites fail this immediately.
+
+Here's a real example. Before:
+
+"Unlock the power of natural restoration. Experience precision like never before. Our world-renowned approach delivers results that speak for themselves."
+
+Sounds nice. Completely useless for AI.
+
+Here's the after:
+
+"FueGenix is an exclusive hair restoration clinic in the Netherlands. We serve high-net-worth individuals with a 99% graft survival rate. Investment from €50,000. One patient per day."
+
+WHO: FueGenix, exclusive clinic.
+WHAT: Hair restoration, 99% graft survival.
+WHERE: Netherlands.
+PRICE: €50,000.
+
+Same brand. Completely different extractability.
+
+When I audit websites, this is the first thing I check. Pull up your homepage right now. Read the first 50 words. Does it say WHO, WHAT, WHERE, and PRICE?
+
+If not, you've got work to do.
+
+---
+
+POINT 3: THE 10-RUN CONSISTENCY TEST
+
+Here's something that trips up almost everyone.
+
+You ask ChatGPT "what's the best hair transplant clinic in Netherlands?" and your brand shows up. Great. Done, right?
+
+Wrong.
+
+LLM responses are non-deterministic. They vary every single time. You might appear in one response and not the next.
+
+So I never test once. I test ten times.
+
+Same query, ten runs. Then I count: how many times did the brand appear? What position? Was it cited?
+
+Here's the scoring scale:
+
+9-10 out of 10: You're locked in. Strong visibility.
+7-8 out of 10: Good, but gaps to fix.
+5-6 out of 10: Weak. You're appearing but inconsistent.
+1-4 out of 10: Poor. Major work needed.
+0 out of 10: Invisible. You don't exist to AI.
+
+When I ran FueGenix's audit, they were 0 out of 10 on key queries. Zero.
+
+30 days later, after implementing the system? 9 out of 10.
+
+That's the difference between invisible and locked in.
+
+But consistency isn't just about appearing. It's about appearing correctly. Which brings me to the next step.
+
+---
+
+POINT 4: THE HYBRID PAGE STRUCTURE
+
+Here's how most websites are structured:
+
+Big hero image. Marketing headline. Story about the founder. Testimonials. And somewhere at the bottom, maybe some actual facts.
+
+LLMs read top to bottom. By the time they get to the facts, they've already moved on.
+
+Here's the structure that actually works:
+
+Above the Fold: Facts.
+
+First 100-150 words: WHO, WHAT, WHERE, PRICE. Features. Outcomes. Numbers.
+
+This is what LLMs extract. Put your most important information here.
+
+Middle Section: Sales Copy.
+
+Now you can tell your story. Your differentiators. Your testimonials. Humans read this. LLMs skim past it.
+
+Bottom Section: Structured Data.
+
+Features in bullet points. Pricing tables. FAQ section.
+
+LLMs LOVE FAQs. They're pre-formatted question-and-answer pairs. Exactly how people ask ChatGPT questions.
+
+Think of it like a sandwich. Facts on top, facts on bottom - that's what AI eats. Marketing in the middle for humans.
+
+---
+
+POINT 5: THE ORIGINAL DATA RULE
+
+Here's why most content never gets cited.
+
+LLMs don't cite generic advice. They already know generic advice. "Why AEO matters." "How to optimize your website." ChatGPT can generate that itself.
+
+What they cite is unique data. Information they couldn't have known without reading your specific page.
+
+Here's the rule: If ChatGPT could write it without you, it won't cite you.
+
+So how do you create content that forces citations?
+
+Original research. "We analyzed 500 ChatGPT responses and found..."
+
+Proprietary data. "Our customers report an average 340% increase in..."
+
+Specific case studies. "Here's what happened when we implemented this with FueGenix..."
+
+When users ask ChatGPT a specific question - "What's the failure rate for hair transplants?" - and you're the only source with that data, the LLM HAS to cite you.
+
+That's how you go from mentioned to cited. From recommended to linked.
+
+---
+
+PAYOFF
+
+So let me bring this together.
+
+The 3-Layer Stack: Understand how ChatGPT actually retrieves information. Layer 2 is the game.
+
+The First 50 Words: WHO, WHAT, WHERE, PRICE - front-loaded on every key page.
+
+The 10-Run Test: Never test once. Test ten times. Track consistency, not single responses.
+
+The Hybrid Page: Facts above fold, marketing in middle, structured data at bottom.
+
+Original Data: Create content ChatGPT couldn't write without you.
+
+Remember at the beginning when I said most brands never make it past layer one?
+
+Now you know why. And you know exactly how to fix it.
+
+This isn't theory. This is the exact system I used to take a €50,000 clinic from zero visibility to being called "the best for artistic perfection" - globally.
+
+---
+
+CTA
+
+Now, if you want the full checklist - every step, every test, every metric to track - I've put it all in one place.
+
+Head to aeoprotocol.ai and grab the free AEO checklist. It's the exact framework I use with clients.
+
+Link's in the description.
+
+And if this helped, subscribe. I'm posting new videos on AI visibility every week.
+
+I'll see you in the next one.

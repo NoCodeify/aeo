@@ -8,6 +8,7 @@ This repository contains the AEO (Answer Engine Optimization) Protocol toolkit:
 - **aeo-protocol-sop.md** — Internal strategy document for LLM search optimization
 - **aeo-audit-mcp/** — MCP server for running AEO audits across ChatGPT, Gemini, and Google
 - **seo-agent-mcp/** — MCP server for DataForSEO API (keyword research, competitor analysis, content gaps)
+- **imagen-mcp/** — MCP server for AI image generation using Gemini (generates 3 variations per prompt)
 
 ## Build & Run Commands
 
@@ -18,13 +19,18 @@ cd aeo-audit-mcp && npm run build
 # Build the SEO Agent MCP server
 cd seo-agent-mcp && npm run build
 
+# Build the Imagen MCP server
+cd imagen-mcp && npm run build
+
 # Run in development mode
 cd aeo-audit-mcp && npm run dev
 cd seo-agent-mcp && npm run dev
+cd imagen-mcp && npm run dev
 
 # Start the MCP servers
 cd aeo-audit-mcp && npm start
 cd seo-agent-mcp && npm start
+cd imagen-mcp && npm start
 ```
 
 ## MCP Server Architecture
@@ -61,6 +67,28 @@ The SEO Agent MCP server (`seo-agent-mcp/src/index.ts`) provides DataForSEO API 
 - Auto-detects location/language from TLD (.com → US, .co.uk → UK, etc.)
 - Returns clean, transformed data (not raw API response)
 - Handles errors gracefully
+
+## Imagen MCP Server
+
+The Imagen MCP server (`imagen-mcp/src/index.ts`) generates AI images using Gemini's image generation model:
+
+**Exposed MCP Tools:**
+| Tool | Purpose |
+|------|---------|
+| `generate_images` | Generate multiple image variations from a prompt (default: 3) |
+| `batch_generate_images` | Generate images for multiple prompts in sequence |
+| `generate_broll_from_file` | Parse a broll-prompts.md file and generate all images |
+
+**Key Features:**
+- Generates 3 variations per prompt so you can pick the best
+- Saves images to specified output directory
+- Supports batch generation from markdown prompt files
+- Uses Gemini's `gemini-3-pro-image-preview` model at 4K resolution
+
+**Usage Example:**
+```
+Generate images for the 3-layer diagram from the b-roll prompts file
+```
 
 ## Environment Variables
 
@@ -117,6 +145,7 @@ Skills are specialized knowledge modules that Claude automatically activates whe
 | `content-strategist` | `.claude/skills/content-strategist/` | "content strategy", "what content", "content plan", "data study", "keyword research", "terms to own", "content audit" |
 | `linkedin-content` | `.claude/skills/linkedin-content/` | "LinkedIn post", "LinkedIn banner", "LinkedIn profile", "write a post", "LinkedIn content" |
 | `client-report` | `.claude/skills/client-report/` | "client report", "generate report", "visibility report", "create report", "report for client" |
+| `aeo-site-content` | `.claude/skills/aeo-site-content/` | "write page for aeoprotocol", "create site content", "add page to aeo site" |
 
 ### YouTube Skills (Ed Lawrence Method)
 | Skill | Location | Triggers On |
@@ -157,6 +186,7 @@ Subagents are specialized AI assistants with their own context and tool access.
 | `content-optimizer` | inherit | Website copy optimization for LLM extraction |
 | `image-prompter` | inherit | Generate AI image prompts for website assets |
 | `report-generator` | inherit | Generate client-friendly AI visibility reports from audit data |
+| `aeo-site-writer` | inherit | Write content pages for aeoprotocol.ai (React TSX components) |
 
 **AEO Workflow:**
 1. **Intake** → Collect brand info + dream queries (see protocol lines 2703-2770)
@@ -170,6 +200,7 @@ Subagents are specialized AI assistants with their own context and tool access.
 ### YouTube Agents
 | Agent | Model | Purpose |
 |-------|-------|---------|
+| `thumbnail-prompter` | inherit | Generate YouTube thumbnail concepts + Imagen prompts (Ed Lawrence method) |
 | `broll-prompter` | inherit | Generate Imagen prompts for video B-roll |
 | `gif-researcher` | inherit | Generate Giphy/Tenor search queries for GIFs |
 
@@ -178,9 +209,11 @@ Subagents are specialized AI assistants with their own context and tool access.
 Use the aeo-auditor agent to audit [brand]
 Use the competitor-researcher agent to find real competitors for [brand]
 Use the content-optimizer agent to rewrite the homepage for AEO
+Use the thumbnail-prompter agent to generate thumbnail concepts for [video]
 Use the broll-prompter agent to generate B-roll prompts for [script]
 Use the gif-researcher agent to find GIFs for [script]
 Use the report-generator agent to create a client report for [brand]
+Use the aeo-site-writer agent to write the /aeo-vs-seo page
 ```
 
 ### Agent Files
@@ -190,9 +223,11 @@ Located in `.claude/agents/`:
 - `competitor-researcher.md` — Reddit/forum research methodology
 - `content-optimizer.md` — Content optimization patterns
 - `image-prompter.md` — AI image prompt generation for Imagen
+- `thumbnail-prompter.md` — YouTube thumbnail concepts + Imagen prompts (tournament selection)
 - `broll-prompter.md` — Video B-roll prompt generation for Imagen
 - `gif-researcher.md` — GIF search query generation for Giphy/Tenor
 - `report-generator.md` — Client-friendly AI visibility report generation
+- `aeo-site-writer.md` — AEO Protocol site content pages (React TSX)
 
 ## Project Files
 
