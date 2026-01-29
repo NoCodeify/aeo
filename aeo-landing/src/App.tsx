@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { ScrollToTop } from "./components/ScrollToTop";
 import { LandingPage } from "./pages/LandingPage";
 import { FuegenixReport } from "./pages/FuegenixReport";
 import { LinkedInBanner } from "./pages/LinkedInBanner";
@@ -19,7 +20,9 @@ import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/learn" element={<Learn />} />
       <Route path="/checklist" element={<ChecklistPage />} />
@@ -38,6 +41,7 @@ function App() {
       <Route path="/banner" element={<LinkedInBanner />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </>
   );
 }
 
