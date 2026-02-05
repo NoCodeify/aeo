@@ -1,0 +1,401 @@
+You searched "AI search visibility."
+
+Here's the answer:
+
+To get recommended by ChatGPT and Gemini, you need three things:
+
+[SLIDE-01: TRIFECTA]
+
+Category leadership.
+
+Clear positioning.
+
+Third-party validation.
+
+Without all three, you're invisible.
+
+---
+
+But here's what most people miss:
+
+53% of well-known brands have NONE of these.
+
+They're completely invisible to AI right now.
+
+I just audited 100 brands to prove it.
+
+And at minute 7, I'll show you the exact pattern that separates winners from losers.
+
+Including a $100 billion company that AI completely ignores.
+
+---
+
+[SECTION 2: YOU'RE EXPOSED]
+
+Let me show you what invisible looks like.
+
+[SCREEN RECORDING: ChatGPT query]
+
+Watch this. I'm asking ChatGPT for the best payment processor.
+
+[Show results]
+
+Stripe.
+
+$100 billion valuation.
+
+Powers Amazon, Google, Shopify.
+
+Half the internet runs on Stripe.
+
+[SLIDE-02: STRIPE REVEAL]
+
+Zero mentions.
+
+Or buried at the bottom.
+
+---
+
+This isn't a bug.
+
+This is how AI search works.
+
+And your brand might be in the same situation right now.
+
+I tested this across 100 brands.
+
+10 categories.
+
+Asked ChatGPT and Gemini the same question:
+
+"What's the best [category]?"
+
+[SLIDE-03: 53% INVISIBLE]
+
+53% never got mentioned.
+
+Not once.
+
+But here's what's interesting.
+
+It wasn't random.
+
+There's a clear pattern.
+
+---
+
+[SECTION 3: IT'S WORSE THAN YOU THINK]
+
+Let me show you the data.
+
+[SLIDE-04: CATEGORY CHART]
+
+I ranked all 10 categories by visibility.
+
+Look at the gap.
+
+Consulting firms? 80% visible.
+
+McKinsey, BCG, Bain - ChatGPT knows them all.
+
+SaaS? 70%.
+
+HubSpot, Notion, Monday - category leaders show up.
+
+---
+
+Now look at the bottom.
+
+Healthcare?
+
+10% visible.
+
+[SLIDE-05: HEALTHCARE]
+
+One out of ten healthcare brands got mentioned.
+
+Cleveland Clinic. Mayo Clinic.
+
+Some of the best hospitals in the world.
+
+Invisible.
+
+[SLIDE-06: 8X GAP]
+
+The gap between best and worst is 8x.
+
+Same effort. Same brand awareness.
+
+Completely different outcomes.
+
+---
+
+And it gets worse.
+
+These aren't small brands.
+
+These are companies spending millions on marketing.
+
+Companies with SEO teams.
+
+Companies that rank #1 on Google.
+
+None of that matters if ChatGPT doesn't know you exist.
+
+---
+
+[SECTION 4: HERE'S WHY]
+
+So what separates winners from losers?
+
+I found three patterns.
+
+Every visible brand had all three.
+
+Every invisible brand was missing at least one.
+
+---
+
+[SLIDE-07: LADDER]
+
+Pattern 1: Category Leadership.
+
+Think of it like a ladder.
+
+AI only sees the top three rungs.
+
+When I asked "best CRM software" - HubSpot showed up.
+
+Salesforce showed up.
+
+Zoho showed up.
+
+Pipedrive? Sometimes.
+
+Freshsales? Never.
+
+If you're not top 3 in your category, AI doesn't know you exist.
+
+---
+
+[SLIDE-08: POSITIONING LIST]
+
+Pattern 2: Clear Positioning.
+
+Every visible brand had a "best for" statement.
+
+HubSpot: "best for SMBs who want all-in-one."
+
+Notion: "best for docs and light project management."
+
+Wealthfront: "best robo-advisor for passive investors."
+
+They didn't try to be everything.
+
+They owned a specific use case.
+
+---
+
+[SLIDE-09: HUB & SPOKE]
+
+Pattern 3: Third-Party Validation.
+
+This surprised me.
+
+The visible brands have reviews on G2, Clutch, Gartner.
+
+They've won awards.
+
+They're mentioned in "best of" articles.
+
+[Show G2 screenshot]
+
+AI isn't making recommendations from scratch.
+
+It's pulling from what OTHER sources say about you.
+
+No third-party mentions?
+
+No AI mentions.
+
+---
+
+[SECTION 5: THE CLIMAX]
+
+Now here's the pattern nobody talks about.
+
+I saved this for last because it changes everything.
+
+---
+
+[SLIDE-10: ICEBERG]
+
+The B2B Blindspot.
+
+Remember Stripe?
+
+$100 billion company.
+
+Every startup uses them.
+
+But when real people ask ChatGPT "best payment processor for my store" - Stripe barely shows up.
+
+Why?
+
+B2B companies have relied on word of mouth.
+
+Sales teams.
+
+Integrations.
+
+They never needed consumer-facing content.
+
+---
+
+But now decisions START with AI.
+
+Your buyers are asking ChatGPT before they ever talk to sales.
+
+[PAUSE - LET IT LAND]
+
+And if you're not showing up in those queries?
+
+You're not in the consideration set.
+
+---
+
+[SLIDE-11: WARBY VS CASPER]
+
+The "Me Too" Problem.
+
+Look at DTC brands.
+
+Warby Parker? Visible.
+
+Glossier? Visible.
+
+Casper? Invisible.
+
+Bombas? Invisible.
+
+Same category. Same size.
+
+Completely different visibility.
+
+---
+
+The difference?
+
+Warby Parker DEFINED "DTC eyewear."
+
+Casper was one of many mattress companies.
+
+If you're "another option" instead of "THE option" - AI doesn't bother mentioning you.
+
+---
+
+[SLIDE-12: VENN DIAGRAM]
+
+And here's the third reveal.
+
+ChatGPT and Gemini disagree.
+
+A lot.
+
+[Show side-by-side screenshots]
+
+Same query. Different recommendations.
+
+SoFi appeared on ChatGPT but not Gemini.
+
+Robinhood on Gemini but not ChatGPT.
+
+Each AI has different training data.
+
+Different sources.
+
+If you're only optimizing for one AI, you're missing half the market.
+
+---
+
+[SECTION 6: THE FIX]
+
+[SLIDE-13: WINNERS VS LOSERS]
+
+So here's exactly what to do about this.
+
+---
+
+Step 1: Check your visibility right now.
+
+Go to ChatGPT.
+
+Ask "What's the best [your category]?"
+
+Do the same on Gemini.
+
+Do it 10 times - responses vary.
+
+If you're not showing up, you have work to do.
+
+---
+
+Step 2: Nail your positioning.
+
+Write a "best for" statement.
+
+One sentence.
+
+Who are you best for, and why?
+
+Not "we help businesses grow."
+
+That's everyone.
+
+"Best CRM for SMBs who want marketing and sales in one platform."
+
+That's HubSpot.
+
+That's what AI can extract.
+
+---
+
+Step 3: Get third-party validation.
+
+G2. Clutch. Industry awards. "Best of" lists.
+
+PR mentions on sites AI trusts.
+
+This is what AI pulls from.
+
+If you're not there, you don't exist.
+
+---
+
+I put together a free checklist that walks through all of this.
+
+Same framework I use with clients.
+
+Link in the description. No email required.
+
+---
+
+[SECTION 7: CTA]
+
+If you remember one thing from this video:
+
+[SLIDE-14: HEADPHONES]
+
+The brands that ignore AI visibility are shouting into a room where everyone is wearing noise-canceling headphones.
+
+The brands that figure this out first will dominate the next decade of search.
+
+Which one are you going to be?
+
+---
+
+Watch this video next where I show you exactly how one clinic went from invisible to Gemini calling them "the gold standard" in 30 days.
+
+[POINT TO NEXT VIDEO]
+
+I'll see you there.

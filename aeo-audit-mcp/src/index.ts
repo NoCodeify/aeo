@@ -52,8 +52,16 @@ interface AuditResult {
 async function queryChatGPT(query: string): Promise<SearchResult> {
   try {
     const response = await openaiClient.responses.create({
-      model: "gpt-5.2",
-      tools: [{ type: "web_search_preview" }],
+      model: "gpt-5-chat-latest",
+      tools: [
+        {
+          type: "web_search",
+          user_location: {
+            type: "approximate",
+          },
+          search_context_size: "medium",
+        },
+      ],
       input: query,
     });
 
@@ -96,8 +104,8 @@ async function queryChatGPT(query: string): Promise<SearchResult> {
       query,
       response: response.output_text || "No response generated",
       citations: [...new Set(citations)], // Deduplicate
-      model: "gpt-5.2",
-      searchEngine: "Bing",
+      model: "gpt-5-chat-latest",
+      searchEngine: "OpenAI Web Search",
     };
   } catch (error) {
     throw new Error(`ChatGPT query failed: ${error instanceof Error ? error.message : String(error)}`);
@@ -249,7 +257,7 @@ const server = new McpServer({
 // Tool: Query ChatGPT with web search
 server.tool(
   "query_chatgpt",
-  "Query ChatGPT (GPT-5.2) with Bing web search enabled. Returns the response and any citations.",
+  "Query ChatGPT (gpt-5-chat-latest) with web search enabled. Returns the response and any citations.",
   {
     query: z.string().describe("The search query to send to ChatGPT"),
   },
@@ -552,7 +560,7 @@ server.tool(
       const mentions = chatgptRuns.filter(r => r.mentioned).length;
 
       results.push({
-        engine: "ChatGPT (GPT-5.2)",
+        engine: "ChatGPT (gpt-5-chat-latest)",
         totalRuns: numRuns,
         mentions,
         mentionRate: `${mentions}/${numRuns} (${Math.round((mentions / numRuns) * 100)}%)`,

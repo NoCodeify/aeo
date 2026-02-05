@@ -1,0 +1,155 @@
+[SLIDE 01: RANK #1 IN CHATGPT]
+
+So you want to rank in ChatGPT. Not just get mentioned somewhere. You want to be THE recommendation. The one ChatGPT tells people to go with.
+
+Well here's the thing. I've been obsessing over this for the past year. Audited over 100 brands. And I figured out exactly what makes ChatGPT recommend one business over another.
+
+[SLIDE 02: 3 THINGS]
+
+And it comes down to three things. Three things that have nothing to do with your Google ranking, nothing to do with how good your website looks, nothing to do with how long you've been in business.
+
+But before I tell you what they are, let me show you why this matters.
+
+[SLIDE 03: 100 BRANDS AUDITED]
+
+So I audited 100 brands across 10 different industries. Big companies, small companies, B2B, B2C. I asked ChatGPT questions like "best CRM software" or "best marketing agency in London" - questions that should mention these brands.
+
+Guess what I found?
+
+[SLIDE 04: 53% INVISIBLE]
+
+53 percent were completely invisible. Not ranking low. Gone. ChatGPT has no idea they exist.
+
+And here's the crazy part - some of these are companies doing 50, 100 million in revenue. Exposed companies. And when someone asks ChatGPT for a recommendation in their space? Silence. Nothing.
+
+[SLIDE 05: COMPETITORS WINNING]
+
+But here's what makes it worse. While you're invisible, your competitors are getting recommended. With glowing descriptions. ChatGPT is basically telling your potential customers exactly why they should choose someone else.
+
+It's like showing up to a party and everyone's talking about your competitor, and nobody even knows you're in the room.
+
+[SLIDE 06: 100M USERS]
+
+And this is happening at scale. 100 million people use ChatGPT every week. That's 100 million people asking for recommendations. And if you're not in those answers, you're missing all of them.
+
+So how do you fix this?
+
+[SLIDE 07: GOOGLE RANKING?]
+
+Well you might be thinking, I rank well on Google, I should be fine. Right?
+
+Here's the thing. Your Google ranking has nothing to do with ChatGPT. They're completely different systems with completely different rules.
+
+[SLIDE 08: #1 GOOGLE = 0 CHATGPT]
+
+I've seen companies ranking number one on Google that ChatGPT completely ignores. Doesn't mention them at all. And I've seen companies buried on page three of Google that ChatGPT recommends first.
+
+It's a different game.
+
+[SLIDE 09: DIFFERENT SOURCES]
+
+Think about it like this. Google is like a librarian who organizes books by popularity and links. ChatGPT is like a friend who's read everything and forms opinions based on what sources they trust.
+
+Your friend doesn't care which book is on the front shelf. They care about which book is actually good and which authors are credible.
+
+[SLIDE 10: WHAT AI CARES ABOUT]
+
+So what does ChatGPT actually care about when deciding who to recommend?
+
+Three things.
+
+[SLIDE 11: THING 1 - WHO YOU ARE]
+
+First, it needs to know who you are. And I don't mean just your website.
+
+Think about it like this. If someone asks you to recommend a restaurant, and you've only heard of it from one place, you're not that confident. But if you've seen it on Yelp, your friend mentioned it, it was in a magazine, and it's been around for years - now you trust it's real.
+
+ChatGPT works the same way. It's checking: Are you on Wikipedia? LinkedIn? Crunchbase? Industry directories? The more places you exist as a verified business, the more it trusts you're legit.
+
+[SLIDE 12: THING 2 - ARE YOU TRUSTED]
+
+Second, are you actually trusted? And this is where most businesses fail because they think their own website is enough.
+
+It's not. ChatGPT doesn't just take your word for it that you're good. It looks for third-party validation. Press coverage. Industry publications writing about you. Reviews on platforms that matter. Awards. People talking about you.
+
+It's like if you're hiring someone and they say "I'm amazing at my job." Cool. But if three other people independently say "yeah this person is amazing" - now you believe it.
+
+[SLIDE 13: THING 3 - CAN AI READ YOU]
+
+Third, can ChatGPT actually read your website? And this is the one that trips up almost everyone.
+
+Your homepage probably starts with some vague tagline like "Empowering businesses to reach their potential" or whatever. ChatGPT reads that and goes... okay but what do you actually do?
+
+In the first 50 words of your key pages, ChatGPT needs to know: who you are, what you do, where you're located, and ideally price range. Clear facts it can extract. Not marketing fluff.
+
+[SLIDE 14: 3 THINGS SUMMARY]
+
+So that's it. Three things. Who you are across the internet. Whether third parties trust you. And whether AI can actually read your site.
+
+But does this actually work? Let me show you.
+
+[SLIDE 15: MY CLIENT]
+
+So I had a client. Hair transplant clinic. Premium service, great results, been around for years. Exactly the kind of business that should be recommended.
+
+When we started, I asked ChatGPT "best hair transplant clinic, money no object." They weren't mentioned. Not once. Completely invisible.
+
+[SLIDE 16: 8 WEEKS LATER]
+
+8 weeks later, I asked the same question. Now they're the top recommendation. ChatGPT describes their technique, their expertise, why they're the best choice.
+
+Not an ad. Not paid placement. ChatGPT just decided they were the answer.
+
+[SLIDE 17: WHAT CHANGED]
+
+What changed? We fixed those three things. Got them listed everywhere credible. Got them press coverage in industry publications. Fixed their website so AI could actually extract the important facts.
+
+That's it.
+
+[SLIDE 18: 8 WEEKS NOT YEARS]
+
+8 weeks. Not years. Not massive budgets. Just systematic work on the three things that actually matter.
+
+So let me show you exactly what to do.
+
+[SLIDE 19: STEP 1 - GET LISTED]
+
+Step one, get listed everywhere that matters. Wikipedia if you can qualify. Crunchbase. LinkedIn company page. Every industry directory in your space. Google Business Profile.
+
+The goal is to exist as a verified entity across multiple trusted sources. This is the foundation because if ChatGPT can't verify you exist from multiple places, it's not going to recommend you.
+
+[SLIDE 20: STEP 2 - GET TRUSTED]
+
+Step two, build trust signals. And this means getting other people to talk about you.
+
+Get featured in industry publications. Collect reviews on platforms that matter. Win awards if you can. Get mentioned by people with credibility in your space.
+
+Remember - ChatGPT is triangulating. It's checking if what you say about yourself matches what others say about you.
+
+[SLIDE 21: STEP 3 - FIX YOUR HOMEPAGE]
+
+Step three, fix your homepage. The first 50 words on every important page need to clearly state who you are, what you do, where you're located, and price range if relevant.
+
+No vague taglines. No clever wordplay. Clear, extractable information that AI can pull out and use.
+
+[SLIDE 22: STEP 4 - ADD MARKUP]
+
+Step four, add schema markup. This is the technical bit but it's not complicated.
+
+Organization schema, LocalBusiness schema if you're local, Product schema for what you sell. This helps AI understand your structured data. Any developer can add this in an hour.
+
+[SLIDE 23: STEP 5 - COMPARISON PAGES]
+
+Step five, create comparison pages. You versus your competitors.
+
+This is where you explicitly position yourself against alternatives. AI loves clear comparisons because it helps it understand where you fit in the market and why someone should choose you over the other options.
+
+[SLIDE 24: THE TAKEAWAY]
+
+So if you remember one thing from this video, it's this: ChatGPT doesn't care about your Google ranking. It cares about who you are, whether you're trusted, and whether it can read your site.
+
+Fix those three things and you'll start appearing in AI recommendations.
+
+[SLIDE 25: AEOPROTOCOL.AI]
+
+And if you want the complete framework, the full system I use with clients, go to aeoprotocol dot ai.

@@ -9,6 +9,10 @@ node_modules/
 # Build outputs
 dist/
 
+# Video files (large)
+*.mp4
+tools/video-editor-remotion/out/
+
 # OS files
 .DS_Store
 

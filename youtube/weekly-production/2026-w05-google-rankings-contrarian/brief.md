@@ -1,8 +1,9 @@
 # Video Brief: I Stopped Caring About Google Rankings (Here's What Happened)
 
 **Date Created:** 2026-01-25
-**Target Publish Date:** Week 4 (late January 2026)
-**Video Number:** Week 4 of content calendar
+**Updated:** 2026-01-30 (Thumbnail style guide applied)
+**Target Publish Date:** Week 5
+**Video Number:** Week 5 of content calendar
 
 ---
 
@@ -18,14 +19,27 @@
 
 **Title:** "I Stopped Caring About Google Rankings (Here's What Happened)"
 
+**Why this title works:**
+- Universal hook: Everyone in business cares about Google rankings
+- Contrarian: "I stopped" challenges their assumption
+- Curiosity: "Here's What Happened" creates need to click
+- Personal story format (Ed's 2.7x pattern)
+
 **Thumbnail Concept:**
-- Face/Emotion: Relaxed/unbothered expression, slight smirk
-- Text (3 words max): "RANKINGS DON'T MATTER"
-- Visual metaphor: Google logo fading out, AI logos (ChatGPT/Gemini) bright
+- Text: "I TRACK THIS NOW"
+- Face/emotion: Relaxed smirk, unbothered
+- Visual metaphor: Google logo faded/crossed out, new metric glowing
+- Background: Dark navy (#0A1628)
+- Text color: White
 
-**Angle:** Personal confession - I used to obsess over Google rankings like everyone else. Then I discovered that AI is where buying decisions happen. Now I track something completely different.
+**1+1=3 Check:**
+- Title = what I stopped doing (Google rankings)
+- Thumbnail = what I do instead (track something else)
+- Together = "He stopped tracking Google and tracks something else now - what is it?"
 
-**Type:** [X] Contrarian (2.7x pattern from Ed's data)
+**Angle:** Personal confession - I used to obsess over Google rankings like everyone else. Then I discovered AI is where buying decisions happen. Now I track something completely different.
+
+**Type:** [X] Contrarian
 
 ---
 
@@ -45,51 +59,47 @@
 ## Key Points to Cover
 
 1. **Point 1: The Wake-Up Call (Porsche Story)**
-   - Story/example: I was buying my third BMW. Asked ChatGPT for advice. It convinced me to buy a Porsche Boxster instead. A $35K decision changed by AI.
-   - Visual metaphor: BMW vs Porsche split screen, ChatGPT interface recommending
+   - Story: I was buying my third BMW. Asked ChatGPT for advice. It convinced me to buy a Porsche. A $50K decision changed by AI.
+   - Visual: BMW vs Porsche split screen, ChatGPT interface
 
 2. **Point 2: The Data That Changed Everything (FueGenix Case)**
-   - Story/example: After the Porsche realization, I audited my own main project - the hair clinic I'd scaled to $10M. They ranked #3 on Google for "best hair transplant Netherlands" - great SEO. But when I ran consistency tests, Gemini didn't mention them at all for discovery queries. Google ranking stayed the same. AI visibility went from 0% to 70% after optimization.
-   - Visual metaphor: Two charts - flat Google ranking line vs steep AI visibility climb
+   - Story: I audited my main project - the hair clinic I'd scaled to $10M. They ranked #3 on Google. But Gemini didn't mention them at all.
+   - Visual: Two charts - flat Google ranking vs steep AI visibility climb
 
 3. **Point 3: What I Track Now (The New Game)**
-   - Story/example: Instead of checking Google rankings, I run 10-run consistency tests. I track: Do LLMs mention the brand? How often? In what position? With what context? This is AEO.
-   - Visual metaphor: Dashboard showing consistency scores, mention rates, citation tracking
+   - Story: Instead of checking Google rankings, I run 10-run consistency tests. Do LLMs mention the brand? How often? In what position?
+   - Visual: Dashboard showing consistency scores, mention rates
 
 ---
 
 ## Proof Elements
 
 **Numbers to share:**
-- $35K Porsche purchase decision influenced by ChatGPT
-- Client Google ranking: #3 (unchanged throughout)
-- Client Gemini visibility: 0% to 70% for discovery queries
+- $50K Porsche purchase decision influenced by ChatGPT
+- Client Google ranking: #3 (unchanged)
+- Client Gemini visibility: 0% to 70%
 - Hair clinic scaled $0 to $5M to $10M (credibility)
-- 10-run consistency test methodology
 
 **Screenshots/recordings needed:**
-- ChatGPT interface recommending Porsche (recreation or example)
-- ChatGPT/Gemini answering "best hair transplant" queries (before/after)
+- ChatGPT interface recommending Porsche
+- ChatGPT/Gemini answering "best hair transplant" queries
 - Google SERP showing #3 ranking
 - Consistency test results dashboard
-
-**Client examples:**
-- FueGenix Hair Clinic - your own project you scaled $0->$10M (can reference as "premium hair clinic in Netherlands")
 
 ---
 
 ## CTA Strategy
 
-**Next video to point to:** "The EXACT System To Get Your Brand Recommended by ChatGPT" (Week 5)
+**Next video to point to:** "If I Had To Rebuild My Business In 2026, I'd Do This First" (Week 6)
 
-**End screen setup:** Point directly to Week 5 video. Setup line: "Now that you understand WHY Google rankings don't tell the full story, watch this next video where I show you THE EXACT SYSTEM to get your brand recommended by ChatGPT and Gemini."
+**End screen setup:** "Now that you understand WHY Google rankings don't tell the full story, watch this next video where I show you exactly what to do about it."
 
 ---
 
 ## Production Notes
 
 **B-roll needs:**
-- BMW vs Porsche visual (AI-generated)
+- BMW vs Porsche visual
 - ChatGPT interface mockup
 - Google ranking chart (flat line)
 - AI visibility chart (0% to 70% growth)
@@ -97,55 +107,72 @@
 - Old SEO vs New AEO comparison
 
 **GIF moments:**
-- After Porsche story reveal (~2:00) - "mind blown" reaction
+- After Porsche story reveal (~2:00) - "mind blown"
 - After showing Google ranking stayed same (~5:00) - "so what?" shrug
-- After showing AI visibility spike (~7:00) - celebration/surprise
-
-**Special requirements:**
-- Screen recordings of actual ChatGPT/Gemini responses
-- May need to anonymize client data (use "premium clinic" framing)
+- After showing AI visibility spike (~7:00) - celebration
 
 ---
 
 ## Title & Thumbnail Validation (DO NOT SKIP)
 
-**Title Options (generate 3-5, kill-list filter, pick winner):**
+### Universal Hook Check (MOST CRITICAL)
+
+**The Question:** Would a business owner who has NEVER heard of AEO stop scrolling for this?
+
+**Answer:** YES - Everyone cares about Google rankings. Someone STOPPING is contrarian gold.
+
+---
+
+### Title Options:
 
 1. "I Stopped Caring About Google Rankings (Here's What Happened)" - WINNER
 2. "Why I Stopped Checking Google Rankings (And What I Track Instead)"
 3. "Google Rankings Don't Matter Anymore (Here's Proof)"
 4. "I Quit Obsessing Over SEO (This Happened)"
-5. "The Day I Stopped Caring About Google (A Confession)"
 
 **Winner:** "I Stopped Caring About Google Rankings (Here's What Happened)"
 
 **Title Checklist:**
+- [X] Would someone OUTSIDE your niche click? (YES - contrarian)
 - [X] Speaks to THEIR problem (obsessing over rankings)
-- [X] Creates curiosity gap (what happened? need to click)
-- [X] Has specificity (Google rankings - concrete)
-- [X] Passes scroll test (controversial statement demands attention)
-- [X] Zero kill-list matches (no "I use", no jargon, not process-focused)
-- [ ] Contains ChatGPT/Gemini/AI - NOT directly, but AI is the payoff
+- [X] Creates curiosity gap (what happened?)
+- [X] Has specificity (Google rankings = concrete)
+- [X] Passes scroll test (controversial statement)
+- [X] Zero kill-list matches
 
-**Note on positioning keyword:** Title doesn't contain ChatGPT/Gemini directly, but this is intentional for a GROWTH video. The contrarian hook ("stopped caring about rankings") is the draw. AI is revealed as the answer. This follows Ed's contrarian pattern (2.7x).
+---
+
+### Thumbnail: The 1+1=3 Rule
+
+| Title Does | Thumbnail Does |
+|------------|----------------|
+| What I stopped (Google rankings) | What I do instead |
+
+**Thumbnail Concept:**
+- Text (3 words max): "I TRACK THIS NOW"
+- Face/emotion: Relaxed smirk, unbothered
+- Visual metaphor: Google logo faded, new metric glowing
+- Background: Dark navy (#0A1628)
+- Text color: White
 
 **Thumbnail Checklist:**
-- [X] 3 words max ("RANKINGS DON'T MATTER" or "I STOPPED CHECKING")
-- [X] Creates emotion (relief, provocation, curiosity)
-- [X] Your face with clear emotion (relaxed/unbothered)
-- [X] Visual metaphor present (fading Google logo)
-- [X] Text complements title (doesn't repeat "Google Rankings")
-- [X] Passes mute test (unbothered face + fading Google = curiosity)
+- [X] 3-5 words max, readable on mobile
+- [X] Text does NOT repeat title words
+- [X] Creates emotion (curiosity)
+- [X] Your face with clear emotion (right side)
+- [X] Visual metaphor present
+- [X] Passes mute test
+- [X] Uses brand colors
 
-**Gut check:** Show title+thumbnail to someone outside your niche. Do they want to click? [X] Yes - the contrarian statement about ignoring something "everyone" cares about creates instant curiosity.
+**Gut check:** [X] Yes
 
 ---
 
 ## Production Checklist
 
-- [X] Title validated (above)
-- [X] Thumbnail validated (above)
+- [X] Title validated
+- [X] Thumbnail validated
 - [X] Key points outlined
 - [X] Proof elements gathered
-- [X] CTA video identified (Week 5)
+- [X] CTA video identified
 - [X] Ready for scripting

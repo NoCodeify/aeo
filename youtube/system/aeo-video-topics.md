@@ -1,6 +1,8 @@
-# AEO Video Topics Bank
+# AEO Video Content Calendar
 
-Organized by Ed Lawrence's gap strategy and title format effectiveness.
+**Strategy:** Search-first. Every video targets a specific keyword with measurable search volume.
+
+**Source of Truth:** `aeo-keyword-data.md`
 
 ---
 
@@ -21,253 +23,247 @@ Organized by Ed Lawrence's gap strategy and title format effectiveness.
 
 ---
 
-## Gap Strategy Analysis
+## Search-First Content Calendar
 
-AEO content fills multiple gaps:
-- **Topic Gap**: AEO/LLM optimization is barely covered on YouTube
-- **Skill Gap**: Pro-level insights (not "what is SEO" beginner content)
-- **Credibility Gap**: Real results ($0->$10M), real audits, real data
-- **Contrarian Gap**: "SEO is dead, AEO is the future"
-
----
-
-## Title Format Effectiveness (Ed Lawrence Data)
-
-| Rank | Type | Sales % | Use For |
-|------|------|---------|---------|
-| 1 | Outcome | 55% | Buyer videos |
-| 2 | System/Method | 40% | Buyer videos |
-| 3 | Story | 35% | Both |
-| 4 | Contrarian | 25% | Growth videos |
-| 5 | Pain-First | 20% | Buyer videos |
-| 6 | Listicle | 15% | Views only |
+### Priority Order
+1. **Exploding keywords** (+900% or higher) - ride the wave
+2. **Emerging keywords** (+∞, didn't exist) - first-mover advantage
+3. **High volume** (10K-100K) - capture existing demand
+4. **High CPC** (€100+) - buyer intent
 
 ---
 
-## Ed Lawrence Title Performance (Real Data - Past 12 Months)
+## Q1 2026: 12-Week Calendar (Keyword-First)
 
-### Top Performers (3x+ multiplier vs channel average)
-
-| Title | Views | Mult |
-|-------|-------|------|
-| "Copy This Video Style, It'll Blow Up Your Business" | 508K | 26x |
-| "The EXACT System To Go From $0-$1,000,000 On YouTube" | 160K | 8.2x |
-| "Copy This YouTube Strategy, It'll Blow Up Your Business" | 131K | 6.7x |
-| "Copy This YouTube Video, It'll Blow Up Your Business" | 112K | 5.7x |
-| "5 NEW AI That Just Changed YouTube Forever" | 91K | 4.6x |
-| "EXACTLY How To Create A $1,000,000 YouTube Strategy" | 66K | 3.4x |
-| "YouTube's Hard, Until Businesses Do This" | 61K | 3.1x |
-| "I Studied 1,000 YouTubers, This Stops Them Making Money" | 58K | 3x |
-
-### Underperformers (below 1x)
-
-| Title | Views | Mult | Problem |
-|-------|-------|------|---------|
-| "EXACTLY How to make sales from EVERY video" | 10K | 0.5x | No specificity |
-| "Make Videos Like This in 2026" | 11K | 0.6x | Year reference |
-| "How To Make A YouTube Video" | 19K | 1x | Generic how-to |
-| "19 Lessons Learned..." | 15K | 0.8x | Listicle |
-
-### Winning Formulas (Ranked)
-
-1. **"Copy This [X], It'll Blow Up Your Business"** - His signature (26x, 6.7x, 5.7x)
-2. **"The EXACT System To [$ outcome]"** - Must include specific money (8.2x, 3x)
-3. **"I Studied [number], [negative finding]"** - Research + pain (3x)
-4. **"[X]'s Hard, Until [solution]"** - Tension/relief (3.1x)
-5. **"I [contrarian action] & [result]"** - Quit/stopped (2.7x)
-
-### Rules from Data
-
-- **"Copy This" > "How To"** - Command beats educate
-- **Specific $ mandatory** - "$1,000,000" beats "make money"
-- **Negative > positive** - "DESTROYS" outperforms "Improves"
-- **Avoid listicles** - 0.8x average
-- **No year references** - Weakens performance
+### Week 1: Origin Story (Views)
+**Target:** Brand awareness (no keyword - hook video)
+**Title:** "ChatGPT Convinced Me To Buy a Porsche (I'm Not Mad)"
+**Thumbnail:** "$50K DECISION" + smirking face + Porsche silhouette
+**1+1=3:** Title = story, Thumbnail = stakes
+**Goal:** Hook new audience, establish credibility
 
 ---
 
-## 12-Week Content Calendar (Q1)
-
-### Week 1: Origin Story
-**Title:** "ChatGPT Made Me Buy a Porsche (Why Your Brand Needs AEO Now)"
-**Type:** Story + Contrarian
-**Goal:** Establish + Hook
-
-### Week 2: The System
-**Title:** "The 5-Step AEO Audit System I Use With Every Client"
-**Type:** System/Method
-**Goal:** Convert
-
-### Week 3: Case Study
-**Title:** "The EXACT System That Got My Client Cited in ChatGPT (In 30 Days)"
-**Type:** Case Study
-**Goal:** Trust
-**Formula:** EXACT System + Time-bound (8.2x pattern)
-
-### Week 4: Contrarian
-**Title:** "I Stopped Caring About Google Rankings (Here's What Happened)"
-**Type:** Contrarian
-**Goal:** Growth
-**Formula:** Contrarian action + Result (2.7x pattern)
-
-### Week 5: Deep Dive
-**Title:** "The EXACT System To Get Your Brand Recommended by ChatGPT"
-**Type:** Deep Dive
-**Goal:** Authority
-**Formula:** EXACT System + Outcome (8.2x pattern)
-
-### Week 6: Roast
-**Title:** "I Audited 100 Brands in ChatGPT, This Destroys Their Visibility"
-**Type:** Roast/Audit
-**Goal:** Engagement
-**Formula:** Research + Negative finding (3x pattern)
-
-### Week 7: Educational
-**Title:** "ChatGPT's Hard to Crack, Until You Do This"
-**Type:** Outcome + System
-**Goal:** Educate
-**Formula:** Hard Until (3.1x pattern)
-
-### Week 8: Case Study
-**Title:** "The EXACT System That Took My Client From $5M to $10M"
-**Type:** Case Study
-**Goal:** Credibility
-**Formula:** EXACT System + Specific $ (8.2x pattern)
-
-### Week 9: Experiment
-**Title:** "I Studied 100 Brands in ChatGPT, This Wrecks Their Sales"
-**Type:** Experiment
-**Goal:** Growth
-**Formula:** Research + Negative (3x pattern)
-
-### Week 10: Pain-First
-**Title:** "I Studied 100 Websites, This Stops Them Getting Cited by AI"
-**Type:** Pain-First
-**Goal:** Convert
-**Formula:** Research + Negative (3x pattern)
-
-### Week 11: Comparison
-**Title:** "AEO vs SEO: I Tested Both For 90 Days (The Results Shocked Me)"
-**Type:** Comparison
-**Goal:** Growth
-**Formula:** Comparison + Time-bound + Curiosity
-
-### Week 12: Thought Leadership
-**Title:** "Copy This AI Search Strategy, It'll Blow Up Your Business"
-**Type:** Thought Leadership
-**Goal:** Authority
-**Formula:** Copy This + Promise (26x pattern)
+### Week 2: Core Term (Authority)
+**Target Keyword:** "answer engine optimization" (1K-10K, +900%)
+**Title:** "Answer Engine Optimization: Complete Guide 2026"
+**Thumbnail:** "THE NEW SEO" + confident face + old SEO crossed out
+**1+1=3:** Title = keyword, Thumbnail = positioning
+**Goal:** Own the category term
 
 ---
 
-## Topic Bank by Category
-
-### Buyer Videos (75% of content)
-
-**Case Studies:**
-- "How [Hair Clinic] Went From 0 to 15M with AI" (Story #146)
-- "This Brand's ChatGPT Ranking Doubled Their Leads"
-- "How I Got [Client] Cited in Gemini in 30 Days"
-
-**Systems/Methods:**
-- "The 5-Step AEO Audit System"
-- "My AEO Visibility Framework"
-- "The ChatGPT Citation Checklist"
-
-**Deep Dives:**
-- "The Complete AEO Guide"
-- "How LLMs Actually Retrieve Information (RAG Explained)"
-- "Schema.org for AEO: The Technical Deep Dive"
-
-**Roasts/Audits:**
-- "I Audited [Famous Brand]'s AEO"
-- "Your Website vs ChatGPT: Live Audit"
-- "Rating Brand's AEO Visibility (Tier List)"
-
-**Short Process:**
-- "5 AEO Fixes You Can Do Today"
-- "How to Check if ChatGPT Knows Your Brand (3 Steps)"
-- "The 10-Minute AEO Quick Win"
-
-### Viewer Videos (25% of content)
-
-**Contrarian:**
-- "SEO is Dead. Here's What's Replacing It."
-- "Why I Tell My Clients to Forget Google Rankings"
-- "The SEO Industry Doesn't Want You to Know This"
-
-**Experiments:**
-- "I Asked ChatGPT About 100 Brands"
-- "What Happens When You Optimize for AI vs Google"
-- "I Tracked ChatGPT Recommendations for 30 Days"
-
-**Comparisons:**
-- "AEO vs SEO vs GEO: The Ultimate Comparison"
-- "ChatGPT vs Gemini: Which Recommends More Brands?"
-- "Optimizing for Google vs Optimizing for AI"
-
-**Thought Leadership:**
-- "The Future of Search"
-- "What Happens When Everyone Uses AI for Decisions"
-- "Why Every Brand Will Need AEO in 2026"
+### Week 3: System/Method (Sales)
+**Target Keyword:** "ai visibility audit" / "aeo audit"
+**Title:** "How I Find Out If AI Knows Your Business Exists"
+**Thumbnail:** "ARE YOU INVISIBLE?" + concerned face + ghost effect
+**1+1=3:** Title = promise, Thumbnail = fear
+**Goal:** Drive audit requests
 
 ---
 
-## Story Integration Guide
-
-### Key Stories to Use
-
-**#147 - BMW to Porsche (Origin Story)**
-- Use in: Week 1 hook, channel trailer, about section
-- Purpose: Establish personal connection to AEO
-
-**#146 - Hair Clinic 0 to 15M**
-- Use in: Case study videos, proof of results
-- Purpose: Credibility and social proof
-
-**#145 - DM Champ Too Good at Selling**
-- Use in: AI sales discussions, qualification content
-- Purpose: Show depth of AI understanding
-
-**#30 - $250K Lost Week**
-- Use in: Pain point content, cost of inaction
-- Purpose: Create urgency
+### Week 4: Tutorial (First-Mover)
+**Target Keyword:** "rank in chatgpt" (10-100, +∞)
+**Title:** "How to Rank in ChatGPT (Step-by-Step)"
+**Thumbnail:** "#1 IN AI" + pointing at ChatGPT logo + checklist
+**1+1=3:** Title = how-to, Thumbnail = outcome
+**Goal:** Own emerging search term
 
 ---
 
-## Franchise Opportunities
-
-### Series 1: "AEO Audits"
-- Audit different brands each episode
-- Repeatable format
-- High engagement potential
-
-### Series 2: "ChatGPT Said What?"
-- Test what ChatGPT recommends in different categories
-- Curiosity-driven
-- Easy to produce
-
-### Series 3: "AEO Mistakes"
-- Common errors businesses make
-- Pain-first format
-- Strong conversion potential
-
-### Series 4: "Before & After"
-- Show transformations
-- Case study format
-- Proof-heavy
+### Week 5: Comparison (Growth)
+**Target Keyword:** "seo vs geo" (1K-10K, +900%)
+**Title:** "SEO vs GEO: What Actually Matters in 2026"
+**Thumbnail:** "PICK ONE" + split face (confused/confident) + SEO vs GEO visual
+**1+1=3:** Title = comparison, Thumbnail = decision pressure
+**Goal:** Capture comparison searches
 
 ---
 
-## Content Mix Formula
+### Week 6: Research/Data (Growth)
+**Target Keyword:** "ai search optimization" (1K-10K, +9,900%)
+**Title:** "I Audited 100 Brands: AI Search Optimization Results"
+**Thumbnail:** "53% INVISIBLE" + shocked face + brand logos faded
+**1+1=3:** Title = research, Thumbnail = shocking stat
+**Goal:** Capture fastest-growing keyword
 
-**Per Month (4 videos):**
-- 3 Buyer videos (case study, system, roast)
-- 1 Viewer video (contrarian, experiment)
+---
 
-**Per Quarter (12 videos):**
-- 4 Case Studies
-- 3 Systems/Methods
-- 2 Contrarian/Growth
-- 2 Deep Dives
-- 1 Thought Leadership
+### Week 7: Fear/Problem (Growth)
+**Target Keyword:** "is seo dead" (1K-10K, stable)
+**Title:** "Is SEO Dead? I Tested Both for 90 Days"
+**Thumbnail:** "R.I.P. SEO?" + funeral imagery + test results visual
+**1+1=3:** Title = question, Thumbnail = provocative answer
+**Goal:** Capture fear searches
+
+---
+
+### Week 8: Feature-Specific (Authority)
+**Target Keyword:** "google ai overviews" (10K-100K, +900%)
+**Title:** "Google AI Overviews: How to Get Featured"
+**Thumbnail:** "GET FEATURED" + finger pointing at AI Overview box
+**1+1=3:** Title = how-to, Thumbnail = outcome
+**Goal:** Capture high-volume feature search
+
+---
+
+### Week 9: High Volume (Authority)
+**Target Keyword:** "ai seo" (10K-100K, +900%)
+**Title:** "AI SEO: The Complete 2026 Strategy"
+**Thumbnail:** "NEW RULES" + confident pose + AI icons
+**1+1=3:** Title = guide, Thumbnail = authority
+**Goal:** Capture high-volume generic term
+
+---
+
+### Week 10: Case Study (Sales)
+**Target Keyword:** "chatgpt visibility" (10-100, +∞)
+**Title:** "ChatGPT Visibility: How I Got My Client Mentioned in 30 Days"
+**Thumbnail:** "30 DAYS" + before/after + client result
+**1+1=3:** Title = outcome, Thumbnail = timeframe
+**Goal:** Prove results, drive sales
+
+---
+
+### Week 11: Contrarian (Growth)
+**Target Keyword:** "ai killing seo" (10-100, +∞)
+**Title:** "AI is Killing SEO (Here's What to Do Instead)"
+**Thumbnail:** "ADAPT OR DIE" + dramatic face + SEO tombstone
+**1+1=3:** Title = problem, Thumbnail = urgency
+**Goal:** Capture fear searches with solution
+
+---
+
+### Week 12: Thought Leadership (Authority)
+**Target Keyword:** "future of seo" (100-1K, stable)
+**Title:** "The Future of SEO: Why AI Changes Everything"
+**Thumbnail:** "2026 → 2030" + timeline visual + confident expert pose
+**1+1=3:** Title = thought leadership, Thumbnail = vision
+**Goal:** Position as industry authority
+
+---
+
+## Q2 2026: 12-Week Calendar
+
+### Week 13: Tutorial Sequel
+**Target Keyword:** "optimize for chatgpt" (10-100, +∞)
+**Title:** "Optimize for ChatGPT: 7 Things That Actually Work"
+**Thumbnail:** "WHAT WORKS" + checklist visual + checkmarks
+
+### Week 14: Tool/List
+**Target Keyword:** "best ai for seo" (100-1K, +900%)
+**Title:** "Best AI for SEO: 5 Tools I Actually Use"
+**Thumbnail:** "MY STACK" + tool icons + ranking numbers
+
+### Week 15: Deep Dive
+**Target Keyword:** "ai search visibility" (100-1K, +∞, €184 CPC)
+**Title:** "AI Search Visibility: The Technical Deep Dive"
+**Thumbnail:** "UNDER THE HOOD" + technical diagram + expert pose
+
+### Week 16: Comparison Sequel
+**Target Keyword:** "seo vs aeo" (100-1K, stable)
+**Title:** "SEO vs AEO: I Tested Both (Clear Winner)"
+**Thumbnail:** "THE WINNER" + split screen + one side glowing
+
+### Week 17: Platform Specific
+**Target Keyword:** "gemini seo" (10-100, stable)
+**Title:** "Gemini SEO: How Google's AI Ranks Brands"
+**Thumbnail:** "GOOGLE'S AI" + Gemini logo + ranking visual
+
+### Week 18: Platform Specific
+**Target Keyword:** "perplexity seo" (10-100, stable)
+**Title:** "Perplexity SEO: The Forgotten AI Search Engine"
+**Thumbnail:** "HIDDEN GEM" + Perplexity logo + opportunity visual
+
+### Week 19: Case Study Sequel
+**Target Keyword:** "llm optimization"
+**Title:** "LLM Optimization: From $0 to $5M (Full Case Study)"
+**Thumbnail:** "$5M" + growth chart + client success
+
+### Week 20: Research Sequel
+**Target Keyword:** "chatgpt google search" (1K-10K, +900%)
+**Title:** "ChatGPT vs Google Search: Which Recommends Better?"
+**Thumbnail:** "HEAD TO HEAD" + both logos + boxing gloves
+
+### Week 21: Tutorial Advanced
+**Target Keyword:** "schema for ai"
+**Title:** "Schema.org for AI: Make ChatGPT Understand You"
+**Thumbnail:** "SPEAK AI" + code visual + connection lines
+
+### Week 22: Roast/Audit
+**Target Keyword:** "ai audit"
+**Title:** "Live AI Audit: Rating Famous Brands' Visibility"
+**Thumbnail:** "TIER LIST" + brand logos + rating scale
+
+### Week 23: Problem/Solution
+**Target Keyword:** "invisible to ai"
+**Title:** "Why Your Brand is Invisible to AI (And How to Fix It)"
+**Thumbnail:** "GHOST MODE" + faded brand + fix arrow
+
+### Week 24: Authority Recap
+**Target Keyword:** "generative engine optimization" (1K-10K, +900%)
+**Title:** "Generative Engine Optimization: Everything You Need"
+**Thumbnail:** "GEO MASTERY" + comprehensive visual + expert pose
+
+---
+
+## Keyword → Video Mapping
+
+| Priority | Keyword | Volume | Growth | Video Week |
+|----------|---------|--------|--------|------------|
+| 1 | answer engine optimization | 1K-10K | +900% | W2 |
+| 2 | ai search optimization | 1K-10K | +9,900% | W6 |
+| 3 | rank in chatgpt | 10-100 | +∞ | W4 |
+| 4 | seo vs geo | 1K-10K | +900% | W5 |
+| 5 | google ai overviews | 10K-100K | +900% | W8 |
+| 6 | ai seo | 10K-100K | +900% | W9 |
+| 7 | is seo dead | 1K-10K | stable | W7 |
+| 8 | optimize for chatgpt | 10-100 | +∞ | W13 |
+| 9 | chatgpt visibility | 10-100 | +∞ | W10 |
+| 10 | ai killing seo | 10-100 | +∞ | W11 |
+| 11 | generative engine optimization | 1K-10K | +900% | W24 |
+| 12 | ai search visibility | 100-1K | +∞ | W15 |
+
+---
+
+## Title Rules (Search-First)
+
+1. **Keyword in first 5 words** - always
+2. **No year in title** - weakens performance
+3. **Colon format for guides** - "Keyword: Subtitle"
+4. **Question format for fear** - "Is X Dead?"
+5. **Outcome format for tutorials** - "How to [Keyword]"
+
+---
+
+## Thumbnail Rules (1+1=3)
+
+1. **Never repeat title words** - title and thumbnail must complement
+2. **2-4 words max** - short, punchy
+3. **One emotion per thumbnail** - confused OR confident, not both
+4. **Visual metaphor > literal** - ghost for invisible, tombstone for dead
+5. **Your face = trust** - always include, right side
+
+---
+
+## Content Mix (Per Month)
+
+| Type | Count | Purpose |
+|------|-------|---------|
+| Keyword-targeted guide | 2 | Authority + search traffic |
+| Case study | 1 | Proof + sales |
+| Contrarian/fear | 1 | Growth + virality |
+
+---
+
+## Quarterly Keyword Review
+
+- [ ] Q2 2026: Re-pull keyword data, adjust calendar
+- [ ] Q3 2026: Re-pull keyword data, adjust calendar
+- [ ] Q4 2026: Re-pull keyword data, adjust calendar
+
+**Watch for:**
+- New emerging terms
+- Volume changes on target keywords
+- Competitors ranking for our terms
+- CPC changes (competition signals)

@@ -8,7 +8,8 @@ This repository contains the AEO (Answer Engine Optimization) Protocol toolkit:
 - **aeo-protocol-sop.md** — Internal strategy document for LLM search optimization
 - **aeo-audit-mcp/** — MCP server for running AEO audits across ChatGPT, Gemini, and Google
 - **seo-agent-mcp/** — MCP server for DataForSEO API (keyword research, competitor analysis, content gaps)
-- **imagen-mcp/** — MCP server for AI image generation using Gemini (generates 3 variations per prompt)
+- **imagen-mcp/** — MCP server for AI image generation using Gemini
+- **tools/video-editor-remotion/** — React-based video editor for YouTube content (WIP)
 
 ## Build & Run Commands
 
@@ -39,9 +40,11 @@ The MCP server (`aeo-audit-mcp/src/index.ts`) queries three search backends:
 
 | Function | Backend | API |
 |----------|---------|-----|
-| `queryChatGPT()` | Bing | OpenAI Responses API (GPT-5.2 + web_search_preview) |
+| `queryChatGPT()` | Bing (via OpenAI) | OpenAI Responses API (gpt-5-chat-latest + web_search) |
 | `queryGemini()` | Google Grounding | Google GenAI (gemini-3-flash-preview + googleSearch) |
 | `queryGoogle()` | Google SERP | ScrapingBee (organic results + AI Overview) |
+
+> **Note:** ChatGPT's web search is powered by Bing. Ranking #1 on Bing for a query correlates strongly with ChatGPT visibility for that query.
 
 **Exposed MCP Tools:**
 - `query_chatgpt` / `query_gemini` / `query_google` — Individual engine queries
@@ -75,12 +78,11 @@ The Imagen MCP server (`imagen-mcp/src/index.ts`) generates AI images using Gemi
 **Exposed MCP Tools:**
 | Tool | Purpose |
 |------|---------|
-| `generate_images` | Generate multiple image variations from a prompt (default: 3) |
+| `generate_images` | Generate an image from a prompt |
 | `batch_generate_images` | Generate images for multiple prompts in sequence |
 | `generate_broll_from_file` | Parse a broll-prompts.md file and generate all images |
 
 **Key Features:**
-- Generates 3 variations per prompt so you can pick the best
 - Saves images to specified output directory
 - Supports batch generation from markdown prompt files
 - Uses Gemini's `gemini-3-pro-image-preview` model at 4K resolution
@@ -147,12 +149,13 @@ Skills are specialized knowledge modules that Claude automatically activates whe
 | `client-report` | `.claude/skills/client-report/` | "client report", "generate report", "visibility report", "create report", "report for client" |
 | `aeo-site-content` | `.claude/skills/aeo-site-content/` | "write page for aeoprotocol", "create site content", "add page to aeo site" |
 
-### YouTube Skills (Ed Lawrence Method)
+### YouTube Skills (Search-First + Stakes-Based)
 | Skill | Location | Triggers On |
 |-------|----------|-------------|
-| `youtube-script-writer` | `.claude/skills/youtube-script-writer/` | "write script", "video script", "hook", "tension" |
-| `youtube-video-ideation` | `.claude/skills/youtube-video-ideation/` | "video idea", "title", "thumbnail", "video concept" |
+| `youtube-script-writer` | `.claude/skills/youtube-script-writer/` | "write script", "video script" - search-first opening, stakes structure, mid-video climax |
+| `youtube-video-ideation` | `.claude/skills/youtube-video-ideation/` | "video idea", "title", "thumbnail" - keyword targeting, 1+1=3 thumbnails |
 | `youtube-video-editor` | `.claude/skills/youtube-video-editor/` | "editing guide", "retention edit", "thumbnail tournament" |
+| `excalidraw-slides` | `.claude/skills/excalidraw-slides/` | "slides", "whiteboard", "excalidraw", "diagram" - Hormozi-style hand-drawn visuals |
 | `broll-prompting` | `.claude/skills/broll-prompting/` | "b-roll", "broll", "video visuals", "imagen for video" |
 | `gif-search` | `.claude/skills/gif-search/` | "gif", "reaction gif", "meme", "retention beat" |
 
@@ -200,8 +203,10 @@ Subagents are specialized AI assistants with their own context and tool access.
 ### YouTube Agents
 | Agent | Model | Purpose |
 |-------|-------|---------|
-| `thumbnail-prompter` | inherit | Generate YouTube thumbnail concepts + Imagen prompts (Ed Lawrence method) |
-| `broll-prompter` | inherit | Generate Imagen prompts for video B-roll |
+| `video-timeline` | inherit | Generate timeline.json from script/prompter for video editor |
+| `slide-prompter` | inherit | Generate Excalidraw-style whiteboard slides (Hormozi look) |
+| `thumbnail-prompter` | inherit | Transform freeze frames into professional thumbnails (text effects, color grade, visual elements) |
+| `broll-prompter` | inherit | Generate Imagen prompts for video B-roll (premium dark style) |
 | `gif-researcher` | inherit | Generate Giphy/Tenor search queries for GIFs |
 
 ### Usage
@@ -212,6 +217,7 @@ Use the content-optimizer agent to rewrite the homepage for AEO
 Use the thumbnail-prompter agent to generate thumbnail concepts for [video]
 Use the broll-prompter agent to generate B-roll prompts for [script]
 Use the gif-researcher agent to find GIFs for [script]
+Use the video-timeline agent to generate timeline.json for [video]
 Use the report-generator agent to create a client report for [brand]
 Use the aeo-site-writer agent to write the /aeo-vs-seo page
 ```
@@ -223,8 +229,10 @@ Located in `.claude/agents/`:
 - `competitor-researcher.md` — Reddit/forum research methodology
 - `content-optimizer.md` — Content optimization patterns
 - `image-prompter.md` — AI image prompt generation for Imagen
+- `video-timeline.md` — Generate timeline.json for video editor from script/prompter
+- `slide-prompter.md` — Excalidraw-style whiteboard slides for videos (Hormozi look)
 - `thumbnail-prompter.md` — YouTube thumbnail concepts + Imagen prompts (tournament selection)
-- `broll-prompter.md` — Video B-roll prompt generation for Imagen
+- `broll-prompter.md` — Video B-roll prompt generation for Imagen (premium dark style)
 - `gif-researcher.md` — GIF search query generation for Giphy/Tenor
 - `report-generator.md` — Client-friendly AI visibility report generation
 - `aeo-site-writer.md` — AEO Protocol site content pages (React TSX)
@@ -295,31 +303,77 @@ youtube/
 │   ├── shot-list-template.md
 │   ├── editing-guide-template.md
 │   ├── work-log-template.md
-│   └── brain-dump-template.md
+│   ├── brain-dump-template.md
+│   └── thumbnail-style-guide.md  # Brand colors, layout, text rules
 ├── system/              # SOPs and topic bank
 │   ├── production-sop.md
-│   └── aeo-video-topics.md
+│   ├── aeo-video-topics.md
+│   └── aeo-keyword-data.md      # KEYWORD SOURCE OF TRUTH
 ├── stories/             # Story inventory (146+ stories)
 │   └── inventory/
 ├── weekly-production/   # Active video production
 └── published-videos/    # Completed archives
 ```
 
+### Keyword Data (Source of Truth)
+**Location:** `youtube/system/aeo-keyword-data.md`
+
+All content decisions MUST reference this file:
+- Video titles → must contain target keyword
+- Search volume → prioritize growing terms (+900% YoY)
+- CPC → high CPC = commercial intent
+
+**Key Terms (Jan 2026):**
+| Keyword | Volume | Growth |
+|---------|--------|--------|
+| answer engine optimization | 1K-10K | +900% |
+| ai search optimization | 1K-10K | +9,900% |
+| rank in chatgpt | 10-100 | +∞ |
+| seo vs geo | 1K-10K | +900% |
+
 ### YouTube Quick Start
 
-1. **Plan video**: Check `youtube/system/aeo-video-topics.md` for content calendar
-2. **Write script**: "Write a script for [video topic]" (uses youtube-script-writer skill)
-3. **Generate B-roll**: "Generate B-roll prompts for this script" (uses broll-prompter agent)
-4. **Find GIFs**: "Find GIFs for this script" (uses gif-researcher agent)
-5. **Create shot list**: Use `youtube/templates/shot-list-template.md`
+1. **Select keyword**: Check `youtube/system/aeo-keyword-data.md` for target terms
+2. **Create brief**: Use `youtube/templates/video-brief-template.md`
+3. **Write script**: "Write a script for [keyword]" (uses youtube-script-writer skill)
+4. **Generate B-roll**: "Generate B-roll prompts for this script" (uses broll-prompter agent)
+5. **Find GIFs**: "Find GIFs for this script" (uses gif-researcher agent)
 
-### Key YouTube Principles
+### Key YouTube Principles (Search-First Strategy)
 
-- **Scripts are non-negotiable** - Use hook tournament (6 -> 3 -> 1)
-- **Visual every 10-15 seconds** - B-roll supports talking head
-- **GIF every 45-60 seconds** - Retention beats
+- **Keyword first** - Select from aeo-keyword-data.md BEFORE writing
+- **Search-optimized titles** - Keyword in first 5 words
+- **Answer query in 30 seconds** - Satisfy search intent immediately
+- **Stakes-based structure** - Order by urgency, not logic
+- **Mid-video climax** - "Holy shit" moment at 7-9 minutes
+- **Show, don't explain** - Delete 40% of explanations
+- **1+1=3 rule** - Title and thumbnail COMPLEMENT, don't repeat
 - **Video-to-video CTA** - No external links, point to next video
-- **Talking head + B-roll style** - Not cinematic/no-face style
+
+### Title & Thumbnail Rules (CRITICAL FOR CTR)
+
+**Search-First Titles:** Target keywords people actually search for. The AEO category is exploding (+900% YoY).
+
+| Target Keyword | Search-Optimized Title |
+|----------------|----------------------|
+| answer engine optimization | "Answer Engine Optimization: Complete Guide 2026" |
+| rank in chatgpt | "How to Rank in ChatGPT (Step-by-Step)" |
+| seo vs geo | "SEO vs GEO: What Actually Matters in 2026" |
+
+**The 1+1=3 Rule:** Title and thumbnail must COMPLEMENT, not repeat.
+- Title = targets the search keyword
+- Thumbnail = creates emotional reaction (does NOT repeat title words)
+
+**Thumbnail Workflow:**
+1. Extract freeze frame from video (with correct expression)
+2. Run through Imagen - adds text, effects, color grade ON TOP of freeze frame
+3. Result: Cinematic, professional thumbnail
+
+**Thumbnail Style:**
+- Text: Heavy stroke (4-6px black), drop shadow, outer glow - NOT flat amateur text
+- Color grade: Crush blacks to navy, add contrast/vignette - NOT raw footage
+- Layout: You on right 40%, text upper-left, visual metaphor as accent
+- See `youtube/templates/thumbnail-style-guide.md` for full specs
 
 ### Origin Story
 > "I was on my second BMW. Going to buy another one. Asked ChatGPT for advice. It convinced me to buy a Porsche Boxster instead. If AI can change MY buying decision, what's it doing to my clients' businesses?"

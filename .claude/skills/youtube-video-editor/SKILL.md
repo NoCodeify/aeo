@@ -19,6 +19,179 @@ The editing process follows these steps:
 
 ---
 
+## Video Editor Tool (`tools/video-editor-remotion/`)
+
+**Status:** Work in progress - core layouts working, more animations coming.
+
+Claude can programmatically edit videos using the Remotion-based video editor. This generates a `timeline.json` that drives React-based rendering.
+
+### Why Remotion (not MoviePy)
+
+| Feature | MoviePy (old) | Remotion (current) |
+|---------|---------------|-------------------|
+| Styling | PIL drawing, complex math | CSS - just works |
+| Borders | Manual superellipse paths | `border-radius` + `corner-shape` |
+| Shadows | Complex compositing | `box-shadow` |
+| Preview | Render to test | Live browser preview |
+
+**Key discovery:** CSS `corner-shape: superellipse(2)` creates true iOS-style squircles.
+
+### Available Layouts
+
+| Layout | Description | Use Case |
+|--------|-------------|----------|
+| `speaker_full` | Speaker fills entire frame | Intro, personal stories, transitions |
+| `slide_full` | Slide fills frame, speaker audio continues | Teaching, CTA slides, complex diagrams |
+| `split_right` | Slide ~76% left, speaker ~24% right (squircle) | Teaching with speaker visible |
+| `split_left` | Speaker ~24% left, slide ~76% right | Teaching with speaker (variety) |
+| `jump_zoom_in` | Animated zoom punch (15-25%) | End of powerful statements, key reveals |
+| `jump_zoom_out` | Animated zoom back to normal | After hold period |
+| `jump_cut_in` | Instant zoom (no animation) | HOLD after jump_zoom_in |
+| `jump_cut_out` | Instant back to normal | Hard cut reset |
+| `zoom_transition_in` | Slide → Speaker with continuous zoom | Smooth transition to speaker |
+| `zoom_transition_out` | Speaker → Slide with continuous zoom | Smooth transition to slide |
+| `gradual_zoom` | Slow drift zoom over entire segment (10-15%) | Speaker segments, subtle movement |
+
+### Layout Distribution (~20% each)
+
+| Layout | % of Video | When to Use |
+|--------|------------|-------------|
+| `speaker_full` | ~20% | Intro, personal stories, trust-building, transitions |
+| `slide_full` | ~20% | Teaching, complex diagrams, CTA slides |
+| `split_right` | ~20% | Teaching with speaker visible |
+| `split_left` | ~20% | Teaching with speaker visible (variety) |
+| `jump_zoom` + `gradual_zoom` | ~20% | Emphasis, energy, movement |
+
+**No single layout dominates** - keeps visual variety throughout the video.
+
+### Timeline Format
+
+```json
+[
+  {"type": "speaker_full", "start": 0, "end": 3.0},
+  {"type": "split_right", "start": 3.0, "end": 25.0, "content": "slides/slide-01.jpg"},
+  {"type": "jump_zoom_in", "start": 25.0, "end": 26.5, "zoom": 1.20},
+  {"type": "jump_zoom_out", "start": 26.5, "end": 28.0},
+  {"type": "slide_full", "start": 28.0, "end": 35.0, "content": "slides/slide-02.jpg"}
+]
+```
+
+### Zoom Guidelines
+
+**Minimum 10% Rule:** All zooms must be at least 10% to be noticeable.
+
+| Zoom Type | Amount | Duration | Use Case |
+|-----------|--------|----------|----------|
+| Jump zoom (standard) | 15-20% (1.15-1.20) | 0.3-0.5s | Emphasis, reveals |
+| Jump zoom (major) | 20-25% (1.20-1.25) | 0.3-0.5s | Surprising numbers, breaking misconceptions |
+| Gradual zoom in | 10-15% (1.10-1.15) | 4-10s | Energy, excitement |
+| Gradual zoom out | 10-15% | 4-10s | Calm, reflective |
+
+### Emphasis Hierarchy
+
+| Level | Technique | Frequency |
+|-------|-----------|-----------|
+| **Subtle** | Layout change, gradual zoom | Frequent |
+| **Moderate** | 15% jump zoom | Regular |
+| **Strong** | 20% jump zoom | Sparingly |
+| **Maximum** | 25% jump zoom | Rarely |
+
+### When to Use Each Layout
+
+**speaker_full:**
+- Video introduction/welcome
+- Personal stories
+- Building trust moments
+- Transitions between major sections
+
+**slide_full:**
+- Teaching content
+- CTA slides (aeoprotocol.ai)
+- Complex diagrams that need full attention
+
+**split_right / split_left:**
+- Teaching content with speaker visible
+- Bullet points, lists, diagrams
+- Alternate between right/left for variety
+
+**jump_zoom_in → jump_cut_in → jump_zoom_out:**
+- End of powerful statements
+- Surprising numbers or results
+- Key value propositions
+- **Always HOLD with jump_cut_in before zooming out**
+
+**zoom_transition_in/out:**
+Smooth transitions between any layouts with continuous motion.
+
+| Transition | Direction | Duration | What Happens |
+|------------|-----------|----------|--------------|
+| `zoom_transition_out` | Any → Slide-focused | 1-2s | Zooms OUT, cuts to slide_full or split |
+| `zoom_transition_in` | Any → Speaker-focused | 1-2s | Zooms IN, cuts to speaker_full |
+
+**Critical Rules:**
+1. **Never zoom IN to slides** - cuts off content
+2. **Match zoom levels** - Previous segment's zoom MUST match transition's starting zoom
+
+**Zoom Level Matching (IMPORTANT):**
+
+Before transitions: ramp UP to match starting zoom.
+After `zoom_transition_in`: next segment must be zoomed in, then zoom out.
+
+```json
+// WRONG (jump before):
+{"type": "speaker_full", ...},
+{"type": "zoom_transition_out", "zoom": 1.15, ...}
+
+// WRONG (jump after zoom_transition_in):
+{"type": "zoom_transition_in", "zoom": 1.15, ...},
+{"type": "speaker_full", ...}
+
+// CORRECT (before):
+{"type": "gradual_zoom", "zoomStart": 1.0, "zoomEnd": 1.15},
+{"type": "zoom_transition_out", "zoom": 1.15, ...}
+
+// CORRECT (after zoom_transition_in):
+{"type": "zoom_transition_in", "zoom": 1.15, ...},
+{"type": "jump_cut_in", "zoom": 1.15},
+{"type": "jump_zoom_out", "zoom": 1.15},
+{"type": "speaker_full", ...}
+```
+
+**Jump Zoom Emphasis Rules:**
+- Key statistic: 20% zoom, 0.3-0.5s
+- Surprising claim: 20-25%, 0.3-0.5s
+- Word punch: 15-20%, 0.2-0.3s
+- Max 1 per 30-60 seconds
+- Never back-to-back
+
+**Supported Transitions:**
+- `speaker_full` → `slide_full` (default)
+- `speaker_full` → `split_right/left` (use `"toLayout": "split_right"`)
+- `split_right/left` → `speaker_full` (use `"fromLayout": "split_right"`)
+- `split_right/left` → `slide_full` (use `"fromLayout": "split_right"`)
+- `slide_full` → `speaker_full` (default)
+
+**gradual_zoom:**
+- Applied over entire speaker segment
+- Alternates in/out for variety
+- Adds subtle movement/energy
+
+### Split Layout Details
+
+The split layout uses:
+- Grid background video (`public/grid-loop.mp4`)
+- Glass borders: 16px width, `rgba(120, 140, 160, 0.6)`
+- Slide: 16:9 aspect ratio, rounded corners (`border-radius: 32px`)
+- Speaker: True squircle shape using CSS:
+  ```css
+  border-radius: 50%;  /* Half the width */
+  corner-shape: superellipse(2);  /* iOS-style continuous curve */
+  ```
+- Drop shadow: `0 8px 32px rgba(0, 0, 0, 0.4)`
+- Padding: 64px edges, 32px gap between elements
+
+---
+
 ## Core Principle: Edit for Retention, Not Perfection
 
 **What viewers care about:**
@@ -243,104 +416,116 @@ Ed's secret: **"Make the invisible visible."**
 
 ---
 
-## Step 4: Thumbnail Tournament (5 → 3 → 1)
+## Step 4: Professional Thumbnail Creation
 
-Thumbnail = 50% of video success. Use tournament to find the winner.
+Thumbnail = 50% of video success. Must look like Netflix, not webcam.
 
-### Generate 5 Thumbnail Variations
+### Workflow
 
-Using your video's positioning and title, create 5 distinct approaches:
+1. **Extract freeze frame** from video with correct expression
+2. **Run through Imagen** with prompt (adds text, effects, color grade)
+3. **Review at mobile size** (160x90px)
+4. **Export** JPEG under 2MB
 
-**Variation 1: Face + Bold Text**
-- Your face with strong emotion (surprised/serious/excited)
-- 3 words max in HUGE text
-- High contrast background
+### The 1+1=3 Rule
 
-**Variation 2: Before/After Split**
-- Left side: Problem/before state
-- Right side: Solution/after state
-- Your face on one side or both
+Title and thumbnail must COMPLEMENT, not repeat:
 
-**Variation 3: Visual Metaphor Front**
-- Lead with the metaphor (house of cards, leaking funnel)
-- Your face smaller in corner
-- Text reinforces metaphor
+| Title Does | Thumbnail Does |
+|------------|----------------|
+| Creates curiosity about WHAT | Creates emotion about WHY IT MATTERS |
+| Story setup | Stakes or payoff |
 
-**Variation 4: Numbers/Results Focus**
-- Big number front and center ("$100k")
-- Your face reacting to the number
-- Minimal text, number does the work
+**Test:** If thumbnail text appears in title, you've failed.
 
-**Variation 5: Minimalist/Contrarian**
-- Simple design, one focal point
-- "Boring" aesthetic (Ed's secret weapon)
-- Face + 2 words + clean background
+### Professional Text Effects (MANDATORY)
 
-### Ed's "Boring Thumbnails" Philosophy
+Every text element needs this effects stack:
 
-**Why "boring" works:**
-- Stands out from clickbait chaos
-- Feels more credible/trustworthy
-- Business audience appreciates substance over flash
-- Pattern interrupt (everyone else is screaming, you're calm)
+| Effect | Hero Text | Secondary Text |
+|--------|-----------|----------------|
+| **Stroke** | 6px black | 4px black |
+| **Drop Shadow** | 12px, 25px blur, 90% black | 8px, 15px blur, 80% black |
+| **Outer Glow** | 40px, 25% opacity | 20px, 15% opacity |
 
-**Elements of "boring" thumbnails:**
-- Clean, simple design
-- Minimal text (2-3 words)
-- Professional but not corporate
-- Your face, serious expression
-- Readable font, high contrast
-- No crazy colors or effects
+**Text that looks amateur:** Flat, no stroke, no shadow
+**Text that looks pro:** Stroke + shadow + glow, pops off any background
 
-**Example "boring" thumbnails that work:**
-- Your face + "Make Boring Thumbnails" in bold
-- Clean background + "$100k" + your face
-- Simple split screen + minimal text
+### Text Sizing
 
-### Round 1: Thumbnail Elimination (5 → 3)
+| Element | Size (% of frame height) |
+|---------|--------------------------|
+| **Hero word** | 25-40% |
+| **Secondary** | 12-18% |
 
-Compare pairwise on:
+### Color Palette
 
-**Mobile Readability (35%):** Can you read text on phone screen?
-**Pattern Interrupt (25%):** Stops scrolling in feed?
-**Brand Consistency (20%):** Fits your channel's look?
-**Title Alignment (20%):** Matches video title promise?
+| Use Case | Color | Hex |
+|----------|-------|-----|
+| Default/success | Yellow | #FFE135 |
+| Warning/loss | Red | #FF4444 |
+| Achievement | Gold | #C9A86C |
+| Tech/new | Teal | #00D4FF |
+| Secondary text | White | #FFFFFF |
+| All strokes | Black | #000000 |
 
-Advance 3 winners.
+### Cinematic Color Grade
 
-### Round 2: Final Selection (3 → 1)
+Apply to EVERY freeze frame:
 
-Compare remaining 3 on:
+1. Crush blacks to navy (#0A1628)
+2. Increase contrast 15-20%
+3. Desaturate midtones 10-15%
+4. Add subtle teal to shadows
+5. Add dark vignette
 
-**Click Worthiness (40%):** Would your avatar click this?
-**Authenticity (30%):** Looks like YOU, not clickbait?
-**Proof Elements (20%):** Shows credibility (numbers, results)?
-**Franchise Potential (10%):** Can use this style repeatedly?
+**Result:** Netflix thumbnail, not webcam screenshot.
 
-Select winner and document reasoning.
+### Layout
 
-### Thumbnail Creation Technical Requirements
+```
++---------------------------------------+
+|  [HERO TEXT - yellow]           [YOU] |
+|  [Secondary - white]            RIGHT |
+|                                  40%  |
+|  [Visual Metaphor]                    |
+|  (subtle accent)                      |
+|                          [TIMESTAMP]  |
++---------------------------------------+
+```
 
-**Dimensions:** 1280x720 pixels (16:9 ratio)
+### Visual Metaphors
 
-**Safe zones:**
-- Keep face and text in center 2/3
-- Avoid edges (cut off in some views)
-- Test how it looks at different sizes
+ONE per thumbnail (maximum), subtle accent:
 
-**File format:** JPG or PNG, under 2MB
+| Concept | Visual | Opacity |
+|---------|--------|---------|
+| Money | Dollar amount, car | 40-50% |
+| Invisible | Fading logo | 30-60% |
+| Success | Trophy, #1 | 40-50% |
+| Decline | Downward graph | 50-60% |
 
-**Text guidelines:**
-- Minimum 80pt font for mobile readability
-- Maximum 3 words (2 is better)
-- High contrast (white on dark or dark on light)
-- Bold, sans-serif fonts
+### Freeze Frame Selection
 
-**Face guidelines:**
-- Close-up (head and shoulders)
-- Clear emotion/expression
-- Eye contact with camera
-- Well-lit face (doesn't need pro lighting, just clear)
+| Video Type | Expression |
+|------------|------------|
+| Confidence | Slight smirk |
+| Concern | Furrowed brow |
+| Success | Eyebrows raised |
+| Authority | Serious, pointing |
+
+**Technical:** Eyes open, not mid-word, sharp focus.
+
+### Never Do
+
+- Flat text without effects (amateur)
+- Shocked/screaming face (clickbait)
+- Red arrows and circles (2015)
+- Ungraded raw footage
+- Text repeating the title
+- More than 5 words
+
+See `youtube/templates/thumbnail-style-guide.md` for full specifications.
 
 ---
 
@@ -386,22 +571,23 @@ Select winner and document reasoning.
 
 ### Export Settings
 
-**Resolution:** 1080p (1920x1080) minimum
-- 4K is nice but not necessary
-- 1080p is the sweet spot
+| Setting | Value |
+|---------|-------|
+| Resolution | 3840×2160 (4K) |
+| FPS | 30 |
+| Codec | H.264 |
+| Format | MP4 |
+| Bitrate | 35-45 Mbps |
 
-**Frame rate:** 24fps or 30fps
-- 24fps = more cinematic
-- 30fps = standard YouTube
-- Pick one, be consistent
+**Why 4K at 40Mbps:**
+- YouTube re-encodes everything - higher source = better result
+- 4K gets VP9 codec on YouTube (better quality per bit)
+- 35-45 Mbps is YouTube's recommended range for 4K
 
-**Bitrate:** 8-12 Mbps for 1080p
-- High enough for quality
-- Not so high it's bloated
-
-**Format:** MP4 (H.264 codec)
-- Universal compatibility
-- YouTube's preferred format
+**Remotion render command:**
+```bash
+npx remotion render MainVideo out/video.mp4 --video-bitrate=40M --props='{"config":{...}}'
+```
 
 ---
 

@@ -14,7 +14,7 @@
     "@modelcontextprotocol/sdk": "^1.0.0",
     "axios": "^1.13.2",
     "dotenv": "^17.2.3",
-    "openai": "^4.80.0",
+    "openai": "^6.17.0",
     "zod": "^3.24.0"
   },
   "devDependencies": {
