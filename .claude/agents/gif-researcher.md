@@ -2,6 +2,9 @@
 name: gif-researcher
 description: "Generate search queries for finding reaction GIFs and memes for YouTube video retention. Use PROACTIVELY when adding humor, pattern interrupts, or emotional beats to video content. Creates optimized search queries for Giphy and Tenor."
 model: inherit
+tools: Read, Grep, Glob, Write, Bash
+mcpServers:
+  - giphy
 ---
 
 # GIF Researcher Agent

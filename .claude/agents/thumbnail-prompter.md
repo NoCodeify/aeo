@@ -2,6 +2,9 @@
 name: thumbnail-prompter
 description: "Generate YouTube thumbnail prompts that transform freeze frames into professional, cinematic thumbnails. Adds text with proper effects, visual elements, and color grading ON TOP of existing footage."
 model: inherit
+tools: Read, Grep, Glob, Write
+mcpServers:
+  - imagen
 ---
 
 # Thumbnail Prompter Agent

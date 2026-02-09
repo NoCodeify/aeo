@@ -2,6 +2,9 @@
 name: slide-prompter
 description: "Generate Excalidraw-style whiteboard slide prompts for YouTube videos. Takes a script or brief and outputs detailed Imagen prompts for each visual beat. Hormozi whiteboard aesthetic - hand-drawn, simple, authentic."
 model: inherit
+tools: Read, Grep, Glob, Write
+mcpServers:
+  - imagen
 ---
 
 # Slide Prompter Agent

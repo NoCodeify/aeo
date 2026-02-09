@@ -139,8 +139,8 @@ async function render() {
       gridBackground: "grid-loop.mp4",  // Already in public/
       timeline: updatedTimeline,
       fps: 30,
-      width: 1920,
-      height: 1080,
+      width: 3840,
+      height: 2160,
       bgMusic: {
         src: "sfx/lofi-beat-bg.mp3",
         startVolume: 0.16,
@@ -166,6 +166,7 @@ async function render() {
     codec: "h264",
     outputLocation: outputPath,
     inputProps,
+    videoBitrate: "35M",
   });
 
   // Cleanup copied files

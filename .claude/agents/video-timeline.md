@@ -2,6 +2,7 @@
 name: video-timeline
 description: "Generate timeline.json for the Remotion video editor from a script/prompter file. Maps slides, zooms, GIFs, text overlays, and transitions to word-level timestamps."
 model: inherit
+tools: Read, Grep, Glob, Write, Bash
 ---
 
 # Video Timeline Agent

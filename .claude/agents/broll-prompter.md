@@ -2,6 +2,9 @@
 name: broll-prompter
 description: "Generate detailed AI image prompts for YouTube video B-roll using Imagen. Creates premium, sophisticated visuals for talking head videos targeting 30+ business owners. NOT cinematic footage - clean minimal graphics."
 model: inherit
+tools: Read, Grep, Glob, Write
+mcpServers:
+  - imagen
 ---
 
 # B-Roll Prompter Agent

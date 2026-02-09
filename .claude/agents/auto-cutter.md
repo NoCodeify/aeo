@@ -2,6 +2,7 @@
 name: auto-cutter
 description: "Analyze a speaker video's transcript to intelligently cut silences, filler words, and mistakes while preserving dramatic pauses and natural speech rhythm. Generates cuts.json then runs autocut.ts."
 model: inherit
+tools: Read, Grep, Glob, Write, Bash
 ---
 
 # Auto-Cutter Agent

@@ -1,6 +1,7 @@
 ---
 name: linkedin-content
 description: Design LinkedIn posts, banners, and profile content. Creates text posts with hooks, visual banners as React components, and profile optimization.
+disable-model-invocation: true
 ---
 
 # LinkedIn Content Creation
