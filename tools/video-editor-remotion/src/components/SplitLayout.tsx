@@ -22,10 +22,7 @@ const GAP = 32;
 // Border styling - glass effect like Screen Studio
 const BORDER_WIDTH = 16;
 const BORDER_COLOR = "rgba(120, 140, 160, 0.6)"; // Semi-transparent gray glass
-const BORDER_RADIUS = 32; // Squircle-ish rounded corners
-
-// Shadow
-const SHADOW = "0 8px 32px rgba(0, 0, 0, 0.4)";
+const BORDER_RADIUS = 64; // Squircle-ish rounded corners
 
 export const SplitLayout: React.FC<SplitLayoutProps> = ({
   speakerSrc,
@@ -66,6 +63,7 @@ export const SplitLayout: React.FC<SplitLayoutProps> = ({
       <AbsoluteFill>
         <OffthreadVideo
           src={staticFile(gridSrc)}
+          pauseWhenBuffering
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </AbsoluteFill>
@@ -80,9 +78,10 @@ export const SplitLayout: React.FC<SplitLayoutProps> = ({
           height: slideHeight,
           borderRadius: BORDER_RADIUS,
           border: `${BORDER_WIDTH}px solid ${BORDER_COLOR}`,
-          boxShadow: SHADOW,
           overflow: "hidden",
           boxSizing: "border-box",
+          zIndex: 1,
+          filter: "drop-shadow(0 16px 128px rgba(0, 0, 0, 0.5))",
         }}
       >
         <Img
@@ -106,9 +105,10 @@ export const SplitLayout: React.FC<SplitLayoutProps> = ({
           height: speakerHeight,
           borderRadius: speakerWidth * 0.5, // 50% of width for squircle
           border: `${BORDER_WIDTH}px solid ${BORDER_COLOR}`,
-          boxShadow: SHADOW,
           overflow: "hidden",
           boxSizing: "border-box",
+          zIndex: 2,
+          filter: "drop-shadow(0 16px 128px rgba(0, 0, 0, 0.5))",
           // @ts-ignore - experimental CSS property for true squircle
           "cornerShape": "superellipse(2)",
         } as React.CSSProperties}
@@ -116,6 +116,7 @@ export const SplitLayout: React.FC<SplitLayoutProps> = ({
         <OffthreadVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom}
+          pauseWhenBuffering
           style={{
             width: "100%",
             height: "100%",

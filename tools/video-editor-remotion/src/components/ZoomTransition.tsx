@@ -10,7 +10,7 @@ import {
   staticFile,
 } from "remotion";
 
-type LayoutType = "speaker_full" | "slide_full" | "split_right" | "split_left";
+type LayoutType = "speaker_full" | "slide_full" | "split_right" | "split_left" | "split_5050_left" | "split_5050_right" | "broll_full";
 
 interface ZoomTransitionProps {
   speakerSrc: string;
@@ -28,8 +28,7 @@ const PADDING = 64;
 const GAP = 32;
 const BORDER_WIDTH = 16;
 const BORDER_COLOR = "rgba(120, 140, 160, 0.6)";
-const BORDER_RADIUS = 32;
-const SHADOW = "0 8px 32px rgba(0, 0, 0, 0.4)";
+const BORDER_RADIUS = 64;
 
 export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
   speakerSrc,
@@ -84,6 +83,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
     <OffthreadVideo
       src={staticFile(speakerSrc)}
       startFrom={startFrom}
+      pauseWhenBuffering
       style={{
         width: "100%",
         height: "100%",
@@ -117,6 +117,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
         <AbsoluteFill>
           <OffthreadVideo
             src={staticFile(gridSrc)}
+            pauseWhenBuffering
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </AbsoluteFill>
@@ -141,9 +142,10 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
               height: slideHeightCalc,
               borderRadius: BORDER_RADIUS,
               border: `${BORDER_WIDTH}px solid ${BORDER_COLOR}`,
-              boxShadow: SHADOW,
               overflow: "hidden",
               boxSizing: "border-box",
+              zIndex: 1,
+              filter: "drop-shadow(0 16px 128px rgba(0, 0, 0, 0.5))",
             }}
           >
             <Img
@@ -167,9 +169,10 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
               height: speakerHeightCalc,
               borderRadius: speakerWidthCalc * 0.5,
               border: `${BORDER_WIDTH}px solid ${BORDER_COLOR}`,
-              boxShadow: SHADOW,
               overflow: "hidden",
               boxSizing: "border-box",
+              zIndex: 2,
+              filter: "drop-shadow(0 16px 128px rgba(0, 0, 0, 0.5))",
               // @ts-ignore
               "cornerShape": "superellipse(2)",
             } as React.CSSProperties}
@@ -177,6 +180,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
             <OffthreadVideo
               src={staticFile(speakerSrc)}
               startFrom={startFrom}
+              pauseWhenBuffering
               style={{
                 width: "100%",
                 height: "100%",
@@ -189,6 +193,88 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
     );
   };
 
+  // Render 5050 full-bleed split layout
+  const renderSplit5050 = (side: "left" | "right") => {
+    const halfWidth = width / 2;
+    const speakerX = side === "left" ? 0 : halfWidth;
+    const slideX = side === "left" ? halfWidth : 0;
+
+    return (
+      <>
+        {/* Container for zoom transform */}
+        <div
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            transform: `scale(${currentZoom})`,
+            transformOrigin: "center center",
+          }}
+        >
+          {/* Slide half */}
+          <div
+            style={{
+              position: "absolute",
+              left: slideX,
+              top: 0,
+              width: halfWidth,
+              height,
+              overflow: "hidden",
+              backgroundColor: "#ffffff",
+            }}
+          >
+            <Img
+              src={staticFile(slideSrc)}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+              }}
+            />
+          </div>
+
+          {/* Speaker half */}
+          <div
+            style={{
+              position: "absolute",
+              left: speakerX,
+              top: 0,
+              width: halfWidth,
+              height,
+              overflow: "hidden",
+            }}
+          >
+            <OffthreadVideo
+              src={staticFile(speakerSrc)}
+              startFrom={startFrom}
+              pauseWhenBuffering
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  // Render broll_full
+  const renderBrollFull = () => (
+    <OffthreadVideo
+      src={staticFile(slideSrc)}
+      muted
+      pauseWhenBuffering
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        transform: `scale(${currentZoom})`,
+      }}
+    />
+  );
+
   // Render the appropriate layout
   const renderLayout = (layout: LayoutType) => {
     switch (layout) {
@@ -200,6 +286,12 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
         return renderSplit("right");
       case "split_left":
         return renderSplit("left");
+      case "split_5050_left":
+        return renderSplit5050("left");
+      case "split_5050_right":
+        return renderSplit5050("right");
+      case "broll_full":
+        return renderBrollFull();
       default:
         return renderSpeakerFull();
     }

@@ -27,6 +27,7 @@ export const SlideFull: React.FC<SlideFullProps> = ({
       <OffthreadVideo
         src={staticFile(speakerSrc)}
         startFrom={startFrom}
+        pauseWhenBuffering
         style={{ display: "none" }}
       />
     </AbsoluteFill>

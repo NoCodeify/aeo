@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "description": "Remotion-based video editor for talking head + slides",
   "scripts": {
-    "dev": "remotion studio",
+    "dev": "remotion studio --scale=0.5",
     "build": "remotion bundle",
     "render": "remotion render MainVideo out/video.mp4",
-    "render:test": "remotion render MainVideo out/test.mp4 --frames=0-450"
+    "render:test": "remotion render MainVideo out/test.mp4 --frames=0-450",
+    "transcribe": "ts-node transcribe.ts",
+    "autocut": "ts-node autocut.ts"
   },
   "dependencies": {
     "@remotion/bundler": "^4.0.417",
     "@remotion/cli": "^4.0.417",
+    "@remotion/google-fonts": "^4.0.417",
     "@remotion/renderer": "^4.0.417",
+    "openai": "^6.17.0",
     "remotion": "^4.0.417",
     "ts-node": "^10.9.2"
   },

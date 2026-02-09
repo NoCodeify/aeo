@@ -48,6 +48,7 @@ export const GradualZoom: React.FC<GradualZoomProps> = ({
         <OffthreadVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom}
+          pauseWhenBuffering
           style={{
             width: "100%",
             height: "100%",

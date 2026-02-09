@@ -374,6 +374,41 @@ Generate prompts that would produce visuals worthy of a premium brand campaign.
 
 ---
 
+## Stock Video B-Roll (Pexels)
+
+In addition to Imagen static images, you can also suggest **stock video B-roll** from Pexels. Output a separate section with Pexels search queries.
+
+**When to suggest video B-roll instead of static images:**
+- Establishing shots (cityscape, office, technology)
+- Abstract motion (data flowing, particles, light)
+- Ambient footage (typing on keyboard, scrolling screen, meeting room)
+- Anything that benefits from movement
+
+**Output format for Pexels queries:**
+```markdown
+## Video B-Roll (Pexels)
+
+### Clip 1: [description]
+- **Search query:** "abstract data visualization dark"
+- **Filename:** data-flow
+- **Orientation:** landscape
+- **Duration:** 5-10s
+
+### Clip 2: [description]
+- **Search query:** "business professional laptop modern office"
+- **Filename:** office-work
+- **Orientation:** landscape
+- **Duration:** 3-8s
+```
+
+**Pexels search tips:**
+- Use 2-4 descriptive words (too many = no results)
+- Add style words: "dark", "modern", "minimal", "abstract"
+- Landscape orientation for `broll_full` layout
+- Keep clips 3-15 seconds (longer gives more flexibility in editing)
+
+---
+
 ## YouTube Thumbnails
 
 When generating thumbnail prompts, create COMPLETE images including:

@@ -51,6 +51,9 @@ Claude can programmatically edit videos using the Remotion-based video editor. T
 | `zoom_transition_in` | Slide → Speaker with continuous zoom | Smooth transition to speaker |
 | `zoom_transition_out` | Speaker → Slide with continuous zoom | Smooth transition to slide |
 | `gradual_zoom` | Slow drift zoom over entire segment (10-15%) | Speaker segments, subtle movement |
+| `gif_overlay` | GIF on top of speaker video | Reaction GIFs, humor beats (1-3s) |
+| `gif_full` | GIF fills frame (speaker audio continues) | Big meme moments (2-4s) |
+| `text_overlay` | Text on speaker video (Syne font, off-white) | Key words, stats, framework names (1-3 words) |
 
 ### Layout Distribution (~20% each)
 
@@ -162,7 +165,7 @@ After `zoom_transition_in`: next segment must be zoomed in, then zoom out.
 - Surprising claim: 20-25%, 0.3-0.5s
 - Word punch: 15-20%, 0.2-0.3s
 - Max 1 per 30-60 seconds
-- Never back-to-back
+- **Never back-to-back zoom sequences** - minimum 1s `speaker_full` breather between any two zoom sequences. A zoom-out immediately followed by a zoom-in feels abrupt and jarring.
 
 **Supported Transitions:**
 - `speaker_full` → `slide_full` (default)
@@ -246,6 +249,16 @@ Document before cutting.
 
 Ed's editing philosophy: **"Boring but informative beats flashy but empty"**
 
+### Hook Editing (First 60 Seconds)
+
+The hook decides if viewers stay. Edit aggressively.
+
+**First 30s:** Max 5 seconds per segment. Something must change every 3-5 seconds — layout, zoom, text, GIF. All types fair game. At least 1 text overlay + 1 jump zoom.
+
+**30-60s:** Max 7 seconds per segment. Still faster than the rest. Introduce first slides/teaching.
+
+**60s+:** Normal pacing (5-15s segments).
+
 ### The Jump Cut System
 
 **Ed's Approach:**
@@ -263,6 +276,39 @@ Ed's editing philosophy: **"Boring but informative beats flashy but empty"**
 - 1-2 second pauses: Keep (natural rhythm)
 - 2-3 second pauses: Consider cutting
 - 3+ second pauses: Always cut (unless intentional dramatic pause)
+
+### Text Overlay Rules
+
+Text overlays use Syne font, off-white (`#e8e4e0`) by default, with pop animation.
+
+**CRITICAL:** Text overlays go ONLY on `speaker_full` segments. NEVER on slides or splits.
+
+| Style | Position | Use Case |
+|-------|----------|----------|
+| `caption` | Bottom | Supporting emphasis |
+| `center` | Big center | Framework names, key stats, impact moments |
+| `heading` | Top area | Section headers |
+
+**Rules:**
+- 1-3 words max (power words: "AEO", "$100K", "THIS IS KEY")
+- Duration 1.5-3 seconds
+- Max 1 per 30-60 seconds
+- Timed to when speaker says the word
+
+### GIF Rules
+
+GIFs add humor beats and pattern interrupts.
+
+| Type | Use | Duration |
+|------|-----|----------|
+| `gif_overlay` | Reaction on speaker video | 1-3s |
+| `gif_full` | Full screen meme moment | 2-4s |
+
+**Rules:**
+- Max 1 GIF per 45-60 seconds
+- Always AFTER the statement (punctuate, don't interrupt)
+- Never during: important explanations or data on screen
+- 6-10 GIFs per 10-minute video
 
 ### When to Let It Breathe
 

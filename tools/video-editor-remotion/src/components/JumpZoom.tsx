@@ -66,6 +66,7 @@ export const JumpZoom: React.FC<JumpZoomProps> = ({
         <OffthreadVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom}
+          pauseWhenBuffering
           style={{
             width: "100%",
             height: "100%",

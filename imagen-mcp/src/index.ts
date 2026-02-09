@@ -30,19 +30,28 @@ interface GenerationResult {
   errors: string[];
 }
 
+// Valid aspect ratios for Gemini image generation
+type AspectRatio = "1:1" | "3:4" | "4:3" | "9:16" | "16:9";
+
 // Generate a single image
 async function generateImage(
   prompt: string,
   outputDir: string,
   baseName: string,
-  index: number
+  index: number,
+  aspectRatio?: AspectRatio
 ): Promise<GeneratedImage | null> {
   try {
+    const imageConfig: Record<string, string> = {
+      imageSize: "4K",
+    };
+    if (aspectRatio) {
+      imageConfig.aspectRatio = aspectRatio;
+    }
+
     const config = {
       responseModalities: ["IMAGE", "TEXT"],
-      imageConfig: {
-        imageSize: "4K",
-      },
+      imageConfig,
     };
 
     const contents = [
@@ -92,7 +101,8 @@ async function generateImages(
   prompt: string,
   outputDir: string,
   baseName: string,
-  count: number = 3
+  count: number = 3,
+  aspectRatio?: AspectRatio
 ): Promise<GenerationResult> {
   // Ensure output directory exists
   if (!existsSync(outputDir)) {
@@ -104,7 +114,7 @@ async function generateImages(
 
   // Generate images in parallel
   const promises = Array.from({ length: count }, (_, i) =>
-    generateImage(prompt, outputDir, baseName, i + 1)
+    generateImage(prompt, outputDir, baseName, i + 1, aspectRatio)
       .then((result) => {
         if (result) {
           images.push(result);
@@ -142,10 +152,11 @@ server.tool(
     output_dir: z.string().describe("Directory path to save the generated images"),
     name: z.string().describe("Base name for the output files (e.g., '3-layer-diagram')"),
     count: z.number().min(1).max(5).optional().describe("Number of image variations to generate (default: 3, max: 5)"),
+    aspect_ratio: z.enum(["1:1", "3:4", "4:3", "9:16", "16:9"]).optional().describe("Aspect ratio for generated images (default: unset/square-ish). Use '1:1' for 50/50 video layouts."),
   },
-  async ({ prompt, output_dir, name, count }) => {
+  async ({ prompt, output_dir, name, count, aspect_ratio }) => {
     try {
-      const result = await generateImages(prompt, output_dir, name, count || 3);
+      const result = await generateImages(prompt, output_dir, name, count || 3, aspect_ratio as AspectRatio | undefined);
 
       const summary = {
         success: result.images.length > 0,
@@ -196,8 +207,9 @@ server.tool(
       .describe("Array of prompts with their output names"),
     output_dir: z.string().describe("Directory path to save all generated images"),
     count_per_prompt: z.number().min(1).max(5).optional().describe("Variations per prompt (default: 3)"),
+    aspect_ratio: z.enum(["1:1", "3:4", "4:3", "9:16", "16:9"]).optional().describe("Aspect ratio for all generated images (default: unset). Use '1:1' for 50/50 video layouts."),
   },
-  async ({ prompts, output_dir, count_per_prompt }) => {
+  async ({ prompts, output_dir, count_per_prompt, aspect_ratio }) => {
     const results: Array<{
       name: string;
       success: boolean;
@@ -207,7 +219,7 @@ server.tool(
 
     for (const { prompt, name } of prompts) {
       try {
-        const result = await generateImages(prompt, output_dir, name, count_per_prompt || 3);
+        const result = await generateImages(prompt, output_dir, name, count_per_prompt || 3, aspect_ratio as AspectRatio | undefined);
         results.push({
           name,
           success: result.images.length > 0,
@@ -254,8 +266,9 @@ server.tool(
     file_path: z.string().describe("Path to the broll-prompts.md file"),
     output_dir: z.string().describe("Directory to save generated images"),
     count_per_prompt: z.number().min(1).max(5).optional().describe("Variations per prompt (default: 3)"),
+    aspect_ratio: z.enum(["1:1", "3:4", "4:3", "9:16", "16:9"]).optional().describe("Aspect ratio for all generated images (default: unset). Use '1:1' for 50/50 video layouts."),
   },
-  async ({ file_path, output_dir, count_per_prompt }) => {
+  async ({ file_path, output_dir, count_per_prompt, aspect_ratio }) => {
     try {
       // Read the file
       const { readFile } = await import("fs/promises");
@@ -320,7 +333,7 @@ server.tool(
 
       for (const { name, prompt } of prompts) {
         try {
-          const result = await generateImages(prompt, output_dir, name, count_per_prompt || 3);
+          const result = await generateImages(prompt, output_dir, name, count_per_prompt || 3, aspect_ratio as AspectRatio | undefined);
           results.push({
             name,
             success: result.images.length > 0,

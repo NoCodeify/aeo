@@ -1,0 +1,2629 @@
+{
+  "duration": 161.72000122070312,
+  "language": "english",
+  "words": [
+    {
+      "word": "So",
+      "start": 0,
+      "end": 0.22
+    },
+    {
+      "word": "you",
+      "start": 0.22,
+      "end": 0.4
+    },
+    {
+      "word": "want",
+      "start": 0.4,
+      "end": 0.72
+    },
+    {
+      "word": "to",
+      "start": 0.72,
+      "end": 1.08
+    },
+    {
+      "word": "rank",
+      "start": 1.08,
+      "end": 1.12
+    },
+    {
+      "word": "on",
+      "start": 1.12,
+      "end": 1.34
+    },
+    {
+      "word": "chat",
+      "start": 1.34,
+      "end": 1.56
+    },
+    {
+      "word": "GPT",
+      "start": 1.56,
+      "end": 2.04
+    },
+    {
+      "word": "or",
+      "start": 2.04,
+      "end": 2.32
+    },
+    {
+      "word": "Gemini",
+      "start": 2.32,
+      "end": 2.62
+    },
+    {
+      "word": "or",
+      "start": 2.62,
+      "end": 2.94
+    },
+    {
+      "word": "any",
+      "start": 2.94,
+      "end": 3.2
+    },
+    {
+      "word": "other",
+      "start": 3.2,
+      "end": 3.48
+    },
+    {
+      "word": "of",
+      "start": 3.48,
+      "end": 3.72
+    },
+    {
+      "word": "these",
+      "start": 3.72,
+      "end": 4.32
+    },
+    {
+      "word": "new",
+      "start": 4.32,
+      "end": 4.64
+    },
+    {
+      "word": "AI",
+      "start": 4.64,
+      "end": 5.1
+    },
+    {
+      "word": "platforms",
+      "start": 5.1,
+      "end": 5.64
+    },
+    {
+      "word": "that",
+      "start": 5.64,
+      "end": 5.94
+    },
+    {
+      "word": "people",
+      "start": 5.94,
+      "end": 6.12
+    },
+    {
+      "word": "use",
+      "start": 6.12,
+      "end": 6.38
+    },
+    {
+      "word": "to",
+      "start": 6.38,
+      "end": 7.02
+    },
+    {
+      "word": "ask",
+      "start": 7.02,
+      "end": 7.24
+    },
+    {
+      "word": "the",
+      "start": 7.24,
+      "end": 7.4
+    },
+    {
+      "word": "questions",
+      "start": 7.4,
+      "end": 7.64
+    },
+    {
+      "word": "now",
+      "start": 7.64,
+      "end": 8.04
+    },
+    {
+      "word": "instead",
+      "start": 8.04,
+      "end": 8.24
+    },
+    {
+      "word": "of",
+      "start": 8.24,
+      "end": 8.56
+    },
+    {
+      "word": "like",
+      "start": 8.56,
+      "end": 9.16
+    },
+    {
+      "word": "they",
+      "start": 9.16,
+      "end": 9.3
+    },
+    {
+      "word": "used",
+      "start": 9.3,
+      "end": 9.4
+    },
+    {
+      "word": "to",
+      "start": 9.4,
+      "end": 9.54
+    },
+    {
+      "word": "back",
+      "start": 9.54,
+      "end": 9.7
+    },
+    {
+      "word": "in",
+      "start": 9.7,
+      "end": 9.78
+    },
+    {
+      "word": "the",
+      "start": 9.78,
+      "end": 9.94
+    },
+    {
+      "word": "day",
+      "start": 9.94,
+      "end": 10.2
+    },
+    {
+      "word": "search",
+      "start": 10.44,
+      "end": 10.7
+    },
+    {
+      "word": "for",
+      "start": 10.7,
+      "end": 11.08
+    },
+    {
+      "word": "answers",
+      "start": 11.08,
+      "end": 11.28
+    },
+    {
+      "word": "on",
+      "start": 11.28,
+      "end": 11.54
+    },
+    {
+      "word": "Google",
+      "start": 11.54,
+      "end": 11.66
+    },
+    {
+      "word": "Well",
+      "start": 12.36,
+      "end": 12.88
+    },
+    {
+      "word": "it's",
+      "start": 12.88,
+      "end": 13.4
+    },
+    {
+      "word": "actually",
+      "start": 13.4,
+      "end": 13.74
+    },
+    {
+      "word": "pretty",
+      "start": 13.74,
+      "end": 14.2
+    },
+    {
+      "word": "simple",
+      "start": 14.2,
+      "end": 14.58
+    },
+    {
+      "word": "and",
+      "start": 14.58,
+      "end": 15.28
+    },
+    {
+      "word": "it's",
+      "start": 15.28,
+      "end": 15.5
+    },
+    {
+      "word": "not",
+      "start": 15.5,
+      "end": 15.74
+    },
+    {
+      "word": "very",
+      "start": 15.74,
+      "end": 16.04
+    },
+    {
+      "word": "different",
+      "start": 16.1,
+      "end": 16.62
+    },
+    {
+      "word": "from",
+      "start": 16.62,
+      "end": 17.14
+    },
+    {
+      "word": "SEO",
+      "start": 17.14,
+      "end": 17.14
+    },
+    {
+      "word": "except",
+      "start": 17.14,
+      "end": 18.16
+    },
+    {
+      "word": "it",
+      "start": 18.16,
+      "end": 19.56
+    },
+    {
+      "word": "changes",
+      "start": 19.56,
+      "end": 19.82
+    },
+    {
+      "word": "where",
+      "start": 19.82,
+      "end": 20.04
+    },
+    {
+      "word": "you",
+      "start": 20.04,
+      "end": 20.18
+    },
+    {
+      "word": "need",
+      "start": 20.18,
+      "end": 20.3
+    },
+    {
+      "word": "to",
+      "start": 20.3,
+      "end": 20.78
+    },
+    {
+      "word": "focus",
+      "start": 20.78,
+      "end": 20.78
+    },
+    {
+      "word": "your",
+      "start": 20.78,
+      "end": 21.36
+    },
+    {
+      "word": "SEO",
+      "start": 21.36,
+      "end": 21.36
+    },
+    {
+      "word": "So",
+      "start": 22.1,
+      "end": 22.18
+    },
+    {
+      "word": "to",
+      "start": 22.18,
+      "end": 23.24
+    },
+    {
+      "word": "summarize",
+      "start": 23.24,
+      "end": 23.24
+    },
+    {
+      "word": "first",
+      "start": 23.58,
+      "end": 23.7
+    },
+    {
+      "word": "of",
+      "start": 23.7,
+      "end": 23.86
+    },
+    {
+      "word": "all",
+      "start": 23.86,
+      "end": 23.86
+    },
+    {
+      "word": "you",
+      "start": 23.86,
+      "end": 23.92
+    },
+    {
+      "word": "need",
+      "start": 23.92,
+      "end": 24.1
+    },
+    {
+      "word": "to",
+      "start": 24.1,
+      "end": 24.34
+    },
+    {
+      "word": "have",
+      "start": 24.34,
+      "end": 24.88
+    },
+    {
+      "word": "your",
+      "start": 25.82,
+      "end": 25.96
+    },
+    {
+      "word": "website",
+      "start": 25.96,
+      "end": 26.18
+    },
+    {
+      "word": "of",
+      "start": 26.18,
+      "end": 26.4
+    },
+    {
+      "word": "course",
+      "start": 26.4,
+      "end": 26.52
+    },
+    {
+      "word": "needs",
+      "start": 26.52,
+      "end": 26.7
+    },
+    {
+      "word": "to",
+      "start": 26.7,
+      "end": 26.8
+    },
+    {
+      "word": "be",
+      "start": 26.8,
+      "end": 26.98
+    },
+    {
+      "word": "up",
+      "start": 26.98,
+      "end": 27.08
+    },
+    {
+      "word": "to",
+      "start": 27.08,
+      "end": 27.16
+    },
+    {
+      "word": "date",
+      "start": 27.16,
+      "end": 27.32
+    },
+    {
+      "word": "with",
+      "start": 27.32,
+      "end": 27.58
+    },
+    {
+      "word": "the",
+      "start": 27.58,
+      "end": 28.02
+    },
+    {
+      "word": "facts",
+      "start": 28.02,
+      "end": 28.36
+    },
+    {
+      "word": "that",
+      "start": 28.36,
+      "end": 28.56
+    },
+    {
+      "word": "you",
+      "start": 28.56,
+      "end": 28.64
+    },
+    {
+      "word": "want",
+      "start": 28.64,
+      "end": 28.82
+    },
+    {
+      "word": "to",
+      "start": 28.82,
+      "end": 29.3
+    },
+    {
+      "word": "present",
+      "start": 29.3,
+      "end": 29.3
+    },
+    {
+      "word": "I",
+      "start": 30.5,
+      "end": 30.9
+    },
+    {
+      "word": "like",
+      "start": 30.9,
+      "end": 31.1
+    },
+    {
+      "word": "to",
+      "start": 31.1,
+      "end": 31.3
+    },
+    {
+      "word": "call",
+      "start": 31.3,
+      "end": 31.34
+    },
+    {
+      "word": "these",
+      "start": 31.34,
+      "end": 31.86
+    },
+    {
+      "word": "the",
+      "start": 33.12,
+      "end": 33.52
+    },
+    {
+      "word": "facts",
+      "start": 33.52,
+      "end": 33.66
+    },
+    {
+      "word": "that",
+      "start": 33.66,
+      "end": 33.82
+    },
+    {
+      "word": "you",
+      "start": 33.82,
+      "end": 33.9
+    },
+    {
+      "word": "want",
+      "start": 33.9,
+      "end": 33.98
+    },
+    {
+      "word": "to",
+      "start": 33.98,
+      "end": 34.08
+    },
+    {
+      "word": "represent",
+      "start": 34.08,
+      "end": 34.32
+    },
+    {
+      "word": "that",
+      "start": 34.32,
+      "end": 34.56
+    },
+    {
+      "word": "will",
+      "start": 34.56,
+      "end": 34.74
+    },
+    {
+      "word": "show",
+      "start": 34.74,
+      "end": 34.88
+    },
+    {
+      "word": "up",
+      "start": 34.88,
+      "end": 35.06
+    },
+    {
+      "word": "when",
+      "start": 35.06,
+      "end": 35.26
+    },
+    {
+      "word": "people",
+      "start": 35.26,
+      "end": 35.94
+    },
+    {
+      "word": "query",
+      "start": 35.94,
+      "end": 36.14
+    },
+    {
+      "word": "stuff",
+      "start": 36.14,
+      "end": 36.56
+    },
+    {
+      "word": "Your",
+      "start": 36.7,
+      "end": 36.96
+    },
+    {
+      "word": "so",
+      "start": 36.96,
+      "end": 37.14
+    },
+    {
+      "word": "called",
+      "start": 37.14,
+      "end": 37.28
+    },
+    {
+      "word": "dream",
+      "start": 37.28,
+      "end": 37.56
+    },
+    {
+      "word": "queries",
+      "start": 37.56,
+      "end": 37.82
+    },
+    {
+      "word": "what",
+      "start": 37.94,
+      "end": 38.04
+    },
+    {
+      "word": "do",
+      "start": 38.04,
+      "end": 38.16
+    },
+    {
+      "word": "you",
+      "start": 38.16,
+      "end": 38.2
+    },
+    {
+      "word": "want",
+      "start": 38.2,
+      "end": 38.28
+    },
+    {
+      "word": "to",
+      "start": 38.28,
+      "end": 38.6
+    },
+    {
+      "word": "rank",
+      "start": 38.6,
+      "end": 38.6
+    },
+    {
+      "word": "for",
+      "start": 38.6,
+      "end": 38.92
+    },
+    {
+      "word": "For",
+      "start": 39.16,
+      "end": 39.56
+    },
+    {
+      "word": "example",
+      "start": 39.56,
+      "end": 39.56
+    },
+    {
+      "word": "the",
+      "start": 39.58,
+      "end": 39.76
+    },
+    {
+      "word": "best",
+      "start": 39.76,
+      "end": 40.02
+    },
+    {
+      "word": "XYZ",
+      "start": 40.56,
+      "end": 40.96
+    },
+    {
+      "word": "in",
+      "start": 40.96,
+      "end": 41.32
+    },
+    {
+      "word": "a",
+      "start": 41.32,
+      "end": 42.18
+    },
+    {
+      "word": "certain",
+      "start": 42.18,
+      "end": 42.22
+    },
+    {
+      "word": "city",
+      "start": 42.22,
+      "end": 42.58
+    },
+    {
+      "word": "So",
+      "start": 43.9,
+      "end": 44.3
+    },
+    {
+      "word": "traditionally",
+      "start": 44.3,
+      "end": 44.68
+    },
+    {
+      "word": "you",
+      "start": 44.68,
+      "end": 44.98
+    },
+    {
+      "word": "would",
+      "start": 44.98,
+      "end": 45.2
+    },
+    {
+      "word": "have",
+      "start": 45.2,
+      "end": 45.68
+    },
+    {
+      "word": "all",
+      "start": 45.68,
+      "end": 46.28
+    },
+    {
+      "word": "kinds",
+      "start": 46.28,
+      "end": 46.34
+    },
+    {
+      "word": "of",
+      "start": 46.34,
+      "end": 47.02
+    },
+    {
+      "word": "fancy",
+      "start": 47.02,
+      "end": 47.52
+    },
+    {
+      "word": "storytelling",
+      "start": 47.52,
+      "end": 48.08
+    },
+    {
+      "word": "and",
+      "start": 48.1,
+      "end": 48.5
+    },
+    {
+      "word": "copywriting",
+      "start": 48.5,
+      "end": 48.82
+    },
+    {
+      "word": "on",
+      "start": 48.82,
+      "end": 49.04
+    },
+    {
+      "word": "your",
+      "start": 49.04,
+      "end": 49.12
+    },
+    {
+      "word": "website",
+      "start": 49.12,
+      "end": 49.38
+    },
+    {
+      "word": "LLMs",
+      "start": 50.08,
+      "end": 50.2
+    },
+    {
+      "word": "hate",
+      "start": 50.2,
+      "end": 50.48
+    },
+    {
+      "word": "this",
+      "start": 50.48,
+      "end": 50.8
+    },
+    {
+      "word": "So",
+      "start": 50.8,
+      "end": 51.02
+    },
+    {
+      "word": "in",
+      "start": 51.02,
+      "end": 51.12
+    },
+    {
+      "word": "your",
+      "start": 51.12,
+      "end": 51.22
+    },
+    {
+      "word": "first",
+      "start": 51.22,
+      "end": 51.44
+    },
+    {
+      "word": "50",
+      "start": 51.44,
+      "end": 51.68
+    },
+    {
+      "word": "words",
+      "start": 51.68,
+      "end": 51.92
+    },
+    {
+      "word": "who",
+      "start": 51.94,
+      "end": 52.34
+    },
+    {
+      "word": "what",
+      "start": 52.5,
+      "end": 52.58
+    },
+    {
+      "word": "why",
+      "start": 52.64,
+      "end": 53.58
+    },
+    {
+      "word": "and",
+      "start": 53.58,
+      "end": 54.02
+    },
+    {
+      "word": "your",
+      "start": 54.02,
+      "end": 54.18
+    },
+    {
+      "word": "price",
+      "start": 54.18,
+      "end": 54.46
+    },
+    {
+      "word": "try",
+      "start": 54.48,
+      "end": 54.7
+    },
+    {
+      "word": "to",
+      "start": 54.7,
+      "end": 54.82
+    },
+    {
+      "word": "keep",
+      "start": 54.82,
+      "end": 54.86
+    },
+    {
+      "word": "that",
+      "start": 54.86,
+      "end": 55.04
+    },
+    {
+      "word": "in",
+      "start": 55.04,
+      "end": 55.12
+    },
+    {
+      "word": "there",
+      "start": 55.12,
+      "end": 55.3
+    },
+    {
+      "word": "And",
+      "start": 55.3,
+      "end": 55.66
+    },
+    {
+      "word": "then",
+      "start": 55.66,
+      "end": 55.72
+    },
+    {
+      "word": "you",
+      "start": 55.72,
+      "end": 55.78
+    },
+    {
+      "word": "can",
+      "start": 55.78,
+      "end": 55.9
+    },
+    {
+      "word": "do",
+      "start": 55.9,
+      "end": 56
+    },
+    {
+      "word": "some",
+      "start": 56,
+      "end": 56.18
+    },
+    {
+      "word": "hybrid",
+      "start": 56.18,
+      "end": 56.46
+    },
+    {
+      "word": "work",
+      "start": 56.46,
+      "end": 56.74
+    },
+    {
+      "word": "where",
+      "start": 56.74,
+      "end": 56.96
+    },
+    {
+      "word": "you",
+      "start": 56.96,
+      "end": 57.16
+    },
+    {
+      "word": "start",
+      "start": 57.16,
+      "end": 57.42
+    },
+    {
+      "word": "telling",
+      "start": 57.42,
+      "end": 57.7
+    },
+    {
+      "word": "your",
+      "start": 57.7,
+      "end": 57.9
+    },
+    {
+      "word": "story",
+      "start": 57.9,
+      "end": 58.1
+    },
+    {
+      "word": "and",
+      "start": 58.1,
+      "end": 58.28
+    },
+    {
+      "word": "do",
+      "start": 58.28,
+      "end": 58.36
+    },
+    {
+      "word": "the",
+      "start": 58.36,
+      "end": 58.48
+    },
+    {
+      "word": "usual",
+      "start": 58.48,
+      "end": 58.72
+    },
+    {
+      "word": "copywriting",
+      "start": 58.72,
+      "end": 59.18
+    },
+    {
+      "word": "But",
+      "start": 59.52,
+      "end": 59.62
+    },
+    {
+      "word": "those",
+      "start": 59.62,
+      "end": 59.78
+    },
+    {
+      "word": "first",
+      "start": 59.78,
+      "end": 60.08
+    },
+    {
+      "word": "50",
+      "start": 60.08,
+      "end": 60.34
+    },
+    {
+      "word": "words",
+      "start": 60.34,
+      "end": 60.48
+    },
+    {
+      "word": "are",
+      "start": 60.48,
+      "end": 60.68
+    },
+    {
+      "word": "crucial",
+      "start": 60.68,
+      "end": 61.02
+    },
+    {
+      "word": "for",
+      "start": 61.02,
+      "end": 61.32
+    },
+    {
+      "word": "LLMs",
+      "start": 61.32,
+      "end": 61.64
+    },
+    {
+      "word": "and",
+      "start": 61.64,
+      "end": 62.4
+    },
+    {
+      "word": "you",
+      "start": 62.4,
+      "end": 63.02
+    },
+    {
+      "word": "need",
+      "start": 63.02,
+      "end": 63.12
+    },
+    {
+      "word": "to",
+      "start": 63.12,
+      "end": 63.24
+    },
+    {
+      "word": "have",
+      "start": 63.24,
+      "end": 63.34
+    },
+    {
+      "word": "all",
+      "start": 63.34,
+      "end": 63.5
+    },
+    {
+      "word": "your",
+      "start": 63.5,
+      "end": 63.66
+    },
+    {
+      "word": "facts",
+      "start": 63.66,
+      "end": 63.84
+    },
+    {
+      "word": "in",
+      "start": 63.84,
+      "end": 64.14
+    },
+    {
+      "word": "there",
+      "start": 64.14,
+      "end": 64.34
+    },
+    {
+      "word": "That's",
+      "start": 64.4,
+      "end": 64.66
+    },
+    {
+      "word": "one",
+      "start": 64.66,
+      "end": 64.86
+    },
+    {
+      "word": "thing",
+      "start": 64.86,
+      "end": 65.08
+    },
+    {
+      "word": "Because",
+      "start": 65.12,
+      "end": 65.5
+    },
+    {
+      "word": "what",
+      "start": 65.5,
+      "end": 66
+    },
+    {
+      "word": "AI",
+      "start": 66,
+      "end": 66.2
+    },
+    {
+      "word": "does",
+      "start": 66.2,
+      "end": 66.5
+    },
+    {
+      "word": "is",
+      "start": 66.5,
+      "end": 66.86
+    },
+    {
+      "word": "it",
+      "start": 66.86,
+      "end": 67.28
+    },
+    {
+      "word": "triangulates",
+      "start": 67.28,
+      "end": 67.86
+    },
+    {
+      "word": "meaning",
+      "start": 68.54,
+      "end": 69.06
+    },
+    {
+      "word": "it",
+      "start": 69.06,
+      "end": 69.58
+    },
+    {
+      "word": "checks",
+      "start": 69.58,
+      "end": 69.96
+    },
+    {
+      "word": "these",
+      "start": 69.96,
+      "end": 70.32
+    },
+    {
+      "word": "facts",
+      "start": 70.32,
+      "end": 70.54
+    },
+    {
+      "word": "across",
+      "start": 70.54,
+      "end": 70.84
+    },
+    {
+      "word": "different",
+      "start": 70.84,
+      "end": 71.64
+    },
+    {
+      "word": "sources",
+      "start": 72.52,
+      "end": 73.04
+    },
+    {
+      "word": "while",
+      "start": 73.04,
+      "end": 73.56
+    },
+    {
+      "word": "heavily",
+      "start": 73.56,
+      "end": 74.34
+    },
+    {
+      "word": "relying",
+      "start": 74.34,
+      "end": 75.76
+    },
+    {
+      "word": "or",
+      "start": 75.76,
+      "end": 76.3
+    },
+    {
+      "word": "giving",
+      "start": 76.3,
+      "end": 76.6
+    },
+    {
+      "word": "extra",
+      "start": 76.6,
+      "end": 76.94
+    },
+    {
+      "word": "points",
+      "start": 76.94,
+      "end": 77.2
+    },
+    {
+      "word": "to",
+      "start": 77.2,
+      "end": 77.4
+    },
+    {
+      "word": "the",
+      "start": 77.4,
+      "end": 77.6
+    },
+    {
+      "word": "facts",
+      "start": 77.6,
+      "end": 77.78
+    },
+    {
+      "word": "that",
+      "start": 77.78,
+      "end": 77.94
+    },
+    {
+      "word": "are",
+      "start": 77.94,
+      "end": 78.02
+    },
+    {
+      "word": "on",
+      "start": 78.02,
+      "end": 78.1
+    },
+    {
+      "word": "your",
+      "start": 78.1,
+      "end": 78.24
+    },
+    {
+      "word": "website",
+      "start": 78.24,
+      "end": 78.54
+    },
+    {
+      "word": "So",
+      "start": 78.56,
+      "end": 78.96
+    },
+    {
+      "word": "it's",
+      "start": 78.96,
+      "end": 79.02
+    },
+    {
+      "word": "going",
+      "start": 79.02,
+      "end": 79.06
+    },
+    {
+      "word": "to",
+      "start": 79.06,
+      "end": 79.28
+    },
+    {
+      "word": "check",
+      "start": 79.28,
+      "end": 79.3
+    },
+    {
+      "word": "your",
+      "start": 79.3,
+      "end": 79.5
+    },
+    {
+      "word": "website",
+      "start": 79.5,
+      "end": 79.82
+    },
+    {
+      "word": "and",
+      "start": 79.82,
+      "end": 80.2
+    },
+    {
+      "word": "it's",
+      "start": 80.2,
+      "end": 80.4
+    },
+    {
+      "word": "going",
+      "start": 80.4,
+      "end": 80.44
+    },
+    {
+      "word": "to",
+      "start": 80.44,
+      "end": 80.72
+    },
+    {
+      "word": "check",
+      "start": 80.72,
+      "end": 80.78
+    },
+    {
+      "word": "some",
+      "start": 80.78,
+      "end": 81.14
+    },
+    {
+      "word": "other",
+      "start": 81.14,
+      "end": 81.76
+    },
+    {
+      "word": "websites",
+      "start": 81.76,
+      "end": 82.96
+    },
+    {
+      "word": "as",
+      "start": 82.96,
+      "end": 83.26
+    },
+    {
+      "word": "well",
+      "start": 83.26,
+      "end": 83.42
+    },
+    {
+      "word": "That's",
+      "start": 83.42,
+      "end": 83.94
+    },
+    {
+      "word": "why",
+      "start": 83.94,
+      "end": 84.12
+    },
+    {
+      "word": "when",
+      "start": 84.12,
+      "end": 84.26
+    },
+    {
+      "word": "you",
+      "start": 84.26,
+      "end": 84.44
+    },
+    {
+      "word": "write",
+      "start": 84.44,
+      "end": 84.94
+    },
+    {
+      "word": "for",
+      "start": 85.62,
+      "end": 85.62
+    },
+    {
+      "word": "example",
+      "start": 85.62,
+      "end": 85.62
+    },
+    {
+      "word": "traditionally",
+      "start": 86.38,
+      "end": 86.8
+    },
+    {
+      "word": "you",
+      "start": 86.8,
+      "end": 87.08
+    },
+    {
+      "word": "would",
+      "start": 87.08,
+      "end": 87.22
+    },
+    {
+      "word": "be",
+      "start": 87.22,
+      "end": 87.36
+    },
+    {
+      "word": "writing",
+      "start": 87.36,
+      "end": 87.64
+    },
+    {
+      "word": "articles",
+      "start": 87.64,
+      "end": 88.16
+    },
+    {
+      "word": "very",
+      "start": 88.2,
+      "end": 88.72
+    },
+    {
+      "word": "broad",
+      "start": 88.72,
+      "end": 88.98
+    },
+    {
+      "word": "articles",
+      "start": 88.98,
+      "end": 89.4
+    },
+    {
+      "word": "like",
+      "start": 89.4,
+      "end": 89.96
+    },
+    {
+      "word": "how",
+      "start": 89.96,
+      "end": 90.5
+    },
+    {
+      "word": "to",
+      "start": 90.5,
+      "end": 90.64
+    },
+    {
+      "word": "do",
+      "start": 90.64,
+      "end": 90.82
+    },
+    {
+      "word": "XYZ",
+      "start": 90.82,
+      "end": 92.08
+    },
+    {
+      "word": "or",
+      "start": 92.36,
+      "end": 92.88
+    },
+    {
+      "word": "how",
+      "start": 92.88,
+      "end": 93.4
+    },
+    {
+      "word": "to",
+      "start": 93.4,
+      "end": 93.52
+    },
+    {
+      "word": "get",
+      "start": 93.52,
+      "end": 93.7
+    },
+    {
+      "word": "rid",
+      "start": 93.7,
+      "end": 93.78
+    },
+    {
+      "word": "of",
+      "start": 93.78,
+      "end": 94.42
+    },
+    {
+      "word": "hair",
+      "start": 94.42,
+      "end": 94.66
+    },
+    {
+      "word": "loss",
+      "start": 94.66,
+      "end": 94.78
+    },
+    {
+      "word": "And",
+      "start": 95.94,
+      "end": 96.18
+    },
+    {
+      "word": "that",
+      "start": 96.18,
+      "end": 96.76
+    },
+    {
+      "word": "way",
+      "start": 96.76,
+      "end": 97.16
+    },
+    {
+      "word": "for",
+      "start": 97.42,
+      "end": 97.48
+    },
+    {
+      "word": "example",
+      "start": 97.48,
+      "end": 97.58
+    },
+    {
+      "word": "for",
+      "start": 97.62,
+      "end": 97.78
+    },
+    {
+      "word": "a",
+      "start": 97.78,
+      "end": 97.84
+    },
+    {
+      "word": "hair",
+      "start": 97.84,
+      "end": 97.98
+    },
+    {
+      "word": "clinic",
+      "start": 97.98,
+      "end": 98.06
+    },
+    {
+      "word": "how",
+      "start": 98.06,
+      "end": 98.3
+    },
+    {
+      "word": "to",
+      "start": 98.3,
+      "end": 98.4
+    },
+    {
+      "word": "get",
+      "start": 98.4,
+      "end": 98.5
+    },
+    {
+      "word": "rid",
+      "start": 98.5,
+      "end": 98.58
+    },
+    {
+      "word": "of",
+      "start": 98.58,
+      "end": 98.72
+    },
+    {
+      "word": "hair",
+      "start": 98.72,
+      "end": 99.04
+    },
+    {
+      "word": "loss",
+      "start": 99.04,
+      "end": 99.04
+    },
+    {
+      "word": "which",
+      "start": 99.2,
+      "end": 99.3
+    },
+    {
+      "word": "hair",
+      "start": 99.3,
+      "end": 99.56
+    },
+    {
+      "word": "loss",
+      "start": 99.92,
+      "end": 100.44
+    },
+    {
+      "word": "products",
+      "start": 100.44,
+      "end": 100.96
+    },
+    {
+      "word": "work",
+      "start": 100.96,
+      "end": 101.56
+    },
+    {
+      "word": "Very",
+      "start": 101.84,
+      "end": 101.94
+    },
+    {
+      "word": "broad",
+      "start": 101.94,
+      "end": 102.38
+    },
+    {
+      "word": "blog",
+      "start": 102.38,
+      "end": 102.92
+    },
+    {
+      "word": "posts",
+      "start": 102.92,
+      "end": 103.4
+    },
+    {
+      "word": "But",
+      "start": 104.18,
+      "end": 104.44
+    },
+    {
+      "word": "what",
+      "start": 104.44,
+      "end": 104.72
+    },
+    {
+      "word": "AI",
+      "start": 104.72,
+      "end": 104.94
+    },
+    {
+      "word": "really",
+      "start": 104.94,
+      "end": 105.76
+    },
+    {
+      "word": "likes",
+      "start": 105.76,
+      "end": 106.02
+    },
+    {
+      "word": "is",
+      "start": 106.02,
+      "end": 107.22
+    },
+    {
+      "word": "factual",
+      "start": 107.22,
+      "end": 107.58
+    },
+    {
+      "word": "data",
+      "start": 107.58,
+      "end": 107.92
+    },
+    {
+      "word": "and",
+      "start": 108.28,
+      "end": 108.8
+    },
+    {
+      "word": "for",
+      "start": 108.8,
+      "end": 109.12
+    },
+    {
+      "word": "example",
+      "start": 109.12,
+      "end": 109.4
+    },
+    {
+      "word": "if",
+      "start": 109.5,
+      "end": 109.72
+    },
+    {
+      "word": "you",
+      "start": 109.72,
+      "end": 109.74
+    },
+    {
+      "word": "want",
+      "start": 109.74,
+      "end": 109.8
+    },
+    {
+      "word": "to",
+      "start": 109.8,
+      "end": 109.88
+    },
+    {
+      "word": "rank",
+      "start": 109.88,
+      "end": 110.16
+    },
+    {
+      "word": "for",
+      "start": 110.16,
+      "end": 110.42
+    },
+    {
+      "word": "best",
+      "start": 110.42,
+      "end": 110.82
+    },
+    {
+      "word": "hair",
+      "start": 110.82,
+      "end": 111.18
+    },
+    {
+      "word": "transplant",
+      "start": 111.18,
+      "end": 111.26
+    },
+    {
+      "word": "clinic",
+      "start": 111.26,
+      "end": 111.52
+    },
+    {
+      "word": "in",
+      "start": 111.52,
+      "end": 111.8
+    },
+    {
+      "word": "XYZ",
+      "start": 111.8,
+      "end": 112.16
+    },
+    {
+      "word": "you",
+      "start": 112.16,
+      "end": 112.62
+    },
+    {
+      "word": "need",
+      "start": 112.62,
+      "end": 112.8
+    },
+    {
+      "word": "to",
+      "start": 112.8,
+      "end": 113
+    },
+    {
+      "word": "have",
+      "start": 113,
+      "end": 113
+    },
+    {
+      "word": "an",
+      "start": 113,
+      "end": 113.32
+    },
+    {
+      "word": "article",
+      "start": 113.32,
+      "end": 113.32
+    },
+    {
+      "word": "on",
+      "start": 113.32,
+      "end": 113.52
+    },
+    {
+      "word": "your",
+      "start": 113.52,
+      "end": 113.64
+    },
+    {
+      "word": "website",
+      "start": 113.64,
+      "end": 113.94
+    },
+    {
+      "word": "where",
+      "start": 113.94,
+      "end": 114.28
+    },
+    {
+      "word": "you",
+      "start": 114.28,
+      "end": 114.4
+    },
+    {
+      "word": "have",
+      "start": 114.4,
+      "end": 114.56
+    },
+    {
+      "word": "a",
+      "start": 114.56,
+      "end": 114.74
+    },
+    {
+      "word": "list",
+      "start": 114.74,
+      "end": 114.86
+    },
+    {
+      "word": "of",
+      "start": 114.86,
+      "end": 115.22
+    },
+    {
+      "word": "the",
+      "start": 115.22,
+      "end": 115.22
+    },
+    {
+      "word": "best",
+      "start": 115.22,
+      "end": 115.74
+    },
+    {
+      "word": "hair",
+      "start": 115.74,
+      "end": 115.9
+    },
+    {
+      "word": "transplant",
+      "start": 115.9,
+      "end": 116.16
+    },
+    {
+      "word": "clinics",
+      "start": 116.16,
+      "end": 116.44
+    },
+    {
+      "word": "for",
+      "start": 116.44,
+      "end": 116.78
+    },
+    {
+      "word": "XYZ",
+      "start": 116.78,
+      "end": 116.92
+    },
+    {
+      "word": "And",
+      "start": 117.34,
+      "end": 117.36
+    },
+    {
+      "word": "of",
+      "start": 117.36,
+      "end": 117.58
+    },
+    {
+      "word": "course",
+      "start": 117.58,
+      "end": 117.58
+    },
+    {
+      "word": "you're",
+      "start": 117.58,
+      "end": 117.76
+    },
+    {
+      "word": "going",
+      "start": 117.76,
+      "end": 117.76
+    },
+    {
+      "word": "to",
+      "start": 117.76,
+      "end": 117.88
+    },
+    {
+      "word": "put",
+      "start": 117.88,
+      "end": 117.9
+    },
+    {
+      "word": "yourself",
+      "start": 117.9,
+      "end": 118.2
+    },
+    {
+      "word": "at",
+      "start": 118.2,
+      "end": 118.4
+    },
+    {
+      "word": "number",
+      "start": 118.4,
+      "end": 118.5
+    },
+    {
+      "word": "one",
+      "start": 118.5,
+      "end": 118.74
+    },
+    {
+      "word": "But",
+      "start": 119.02,
+      "end": 119.18
+    },
+    {
+      "word": "that's",
+      "start": 119.18,
+      "end": 119.34
+    },
+    {
+      "word": "not",
+      "start": 119.34,
+      "end": 119.7
+    },
+    {
+      "word": "enough",
+      "start": 119.7,
+      "end": 119.96
+    },
+    {
+      "word": "You",
+      "start": 120.06,
+      "end": 120.1
+    },
+    {
+      "word": "also",
+      "start": 120.1,
+      "end": 120.34
+    },
+    {
+      "word": "need",
+      "start": 120.34,
+      "end": 120.52
+    },
+    {
+      "word": "to",
+      "start": 120.52,
+      "end": 121.42
+    },
+    {
+      "word": "publish",
+      "start": 121.42,
+      "end": 121.74
+    },
+    {
+      "word": "this",
+      "start": 121.74,
+      "end": 122.42
+    },
+    {
+      "word": "article",
+      "start": 122.42,
+      "end": 122.42
+    },
+    {
+      "word": "or",
+      "start": 122.42,
+      "end": 122.72
+    },
+    {
+      "word": "a",
+      "start": 122.72,
+      "end": 123
+    },
+    {
+      "word": "variation",
+      "start": 123,
+      "end": 123.2
+    },
+    {
+      "word": "of",
+      "start": 123.2,
+      "end": 123.4
+    },
+    {
+      "word": "this",
+      "start": 123.4,
+      "end": 123.7
+    },
+    {
+      "word": "article",
+      "start": 123.7,
+      "end": 123.88
+    },
+    {
+      "word": "on",
+      "start": 123.9,
+      "end": 124.34
+    },
+    {
+      "word": "news",
+      "start": 124.34,
+      "end": 124.78
+    },
+    {
+      "word": "sites",
+      "start": 124.78,
+      "end": 125.08
+    },
+    {
+      "word": "And",
+      "start": 125.58,
+      "end": 126.02
+    },
+    {
+      "word": "it",
+      "start": 126.02,
+      "end": 126.38
+    },
+    {
+      "word": "doesn't",
+      "start": 126.38,
+      "end": 126.48
+    },
+    {
+      "word": "matter",
+      "start": 126.48,
+      "end": 126.62
+    },
+    {
+      "word": "if",
+      "start": 126.62,
+      "end": 126.76
+    },
+    {
+      "word": "they're",
+      "start": 126.76,
+      "end": 127.04
+    },
+    {
+      "word": "sponsored",
+      "start": 127.04,
+      "end": 127.1
+    },
+    {
+      "word": "or",
+      "start": 127.1,
+      "end": 127.32
+    },
+    {
+      "word": "not",
+      "start": 127.32,
+      "end": 127.66
+    },
+    {
+      "word": "So",
+      "start": 127.82,
+      "end": 127.92
+    },
+    {
+      "word": "for",
+      "start": 127.92,
+      "end": 128.18
+    },
+    {
+      "word": "SEO",
+      "start": 128.18,
+      "end": 128.32
+    },
+    {
+      "word": "it",
+      "start": 128.32,
+      "end": 128.68
+    },
+    {
+      "word": "doesn't",
+      "start": 128.68,
+      "end": 128.88
+    },
+    {
+      "word": "matter",
+      "start": 128.88,
+      "end": 129.14
+    },
+    {
+      "word": "So",
+      "start": 129.36,
+      "end": 129.46
+    },
+    {
+      "word": "they",
+      "start": 129.46,
+      "end": 129.62
+    },
+    {
+      "word": "need",
+      "start": 129.62,
+      "end": 129.96
+    },
+    {
+      "word": "to",
+      "start": 129.96,
+      "end": 130.04
+    },
+    {
+      "word": "be",
+      "start": 130.04,
+      "end": 130.24
+    },
+    {
+      "word": "non",
+      "start": 130.24,
+      "end": 130.44
+    },
+    {
+      "word": "sponsored",
+      "start": 130.44,
+      "end": 130.66
+    },
+    {
+      "word": "So",
+      "start": 130.8,
+      "end": 130.88
+    },
+    {
+      "word": "they",
+      "start": 130.88,
+      "end": 131.02
+    },
+    {
+      "word": "have",
+      "start": 131.02,
+      "end": 131.18
+    },
+    {
+      "word": "a",
+      "start": 131.18,
+      "end": 131.38
+    },
+    {
+      "word": "do",
+      "start": 131.38,
+      "end": 131.52
+    },
+    {
+      "word": "follow",
+      "start": 131.52,
+      "end": 131.84
+    },
+    {
+      "word": "backlink",
+      "start": 132.18,
+      "end": 132.62
+    },
+    {
+      "word": "to",
+      "start": 132.62,
+      "end": 132.78
+    },
+    {
+      "word": "your",
+      "start": 132.78,
+      "end": 132.94
+    },
+    {
+      "word": "website",
+      "start": 132.94,
+      "end": 133.14
+    },
+    {
+      "word": "Well",
+      "start": 133.48,
+      "end": 133.7
+    },
+    {
+      "word": "for",
+      "start": 133.7,
+      "end": 134.18
+    },
+    {
+      "word": "LLMs",
+      "start": 134.18,
+      "end": 134.4
+    },
+    {
+      "word": "this",
+      "start": 134.4,
+      "end": 134.66
+    },
+    {
+      "word": "doesn't",
+      "start": 134.66,
+      "end": 134.82
+    },
+    {
+      "word": "matter",
+      "start": 134.82,
+      "end": 135.06
+    },
+    {
+      "word": "They",
+      "start": 135.26,
+      "end": 135.26
+    },
+    {
+      "word": "just",
+      "start": 135.26,
+      "end": 135.62
+    },
+    {
+      "word": "check",
+      "start": 136.06,
+      "end": 136.5
+    },
+    {
+      "word": "websites",
+      "start": 136.5,
+      "end": 136.9
+    },
+    {
+      "word": "with",
+      "start": 136.9,
+      "end": 137.2
+    },
+    {
+      "word": "high",
+      "start": 137.2,
+      "end": 137.44
+    },
+    {
+      "word": "authority",
+      "start": 137.44,
+      "end": 137.8
+    },
+    {
+      "word": "So",
+      "start": 140.88,
+      "end": 141.46
+    },
+    {
+      "word": "traditional",
+      "start": 141.46,
+      "end": 142.04
+    },
+    {
+      "word": "SEO",
+      "start": 142.04,
+      "end": 142.18
+    },
+    {
+      "word": "is",
+      "start": 142.18,
+      "end": 142.36
+    },
+    {
+      "word": "all",
+      "start": 142.36,
+      "end": 142.52
+    },
+    {
+      "word": "about",
+      "start": 142.52,
+      "end": 142.7
+    },
+    {
+      "word": "you",
+      "start": 142.7,
+      "end": 143.28
+    },
+    {
+      "word": "ranking",
+      "start": 143.28,
+      "end": 143.28
+    },
+    {
+      "word": "in",
+      "start": 143.28,
+      "end": 143.5
+    },
+    {
+      "word": "the",
+      "start": 143.5,
+      "end": 143.66
+    },
+    {
+      "word": "search",
+      "start": 143.66,
+      "end": 143.76
+    },
+    {
+      "word": "engines",
+      "start": 143.76,
+      "end": 144.3
+    },
+    {
+      "word": "right",
+      "start": 144.36,
+      "end": 145.38
+    },
+    {
+      "word": "With",
+      "start": 145.38,
+      "end": 145.7
+    },
+    {
+      "word": "AI",
+      "start": 145.7,
+      "end": 145.98
+    },
+    {
+      "word": "what's",
+      "start": 145.98,
+      "end": 146.28
+    },
+    {
+      "word": "the",
+      "start": 146.28,
+      "end": 146.6
+    },
+    {
+      "word": "difference",
+      "start": 146.6,
+      "end": 146.6
+    },
+    {
+      "word": "is",
+      "start": 146.6,
+      "end": 146.94
+    },
+    {
+      "word": "you",
+      "start": 146.94,
+      "end": 148.66
+    },
+    {
+      "word": "don't",
+      "start": 148.66,
+      "end": 148.9
+    },
+    {
+      "word": "per",
+      "start": 148.9,
+      "end": 149.2
+    },
+    {
+      "word": "se",
+      "start": 149.2,
+      "end": 149.2
+    },
+    {
+      "word": "want",
+      "start": 149.2,
+      "end": 149.52
+    },
+    {
+      "word": "to",
+      "start": 149.52,
+      "end": 149.78
+    },
+    {
+      "word": "rank",
+      "start": 149.78,
+      "end": 149.78
+    },
+    {
+      "word": "in",
+      "start": 149.78,
+      "end": 149.92
+    },
+    {
+      "word": "the",
+      "start": 149.92,
+      "end": 150.1
+    },
+    {
+      "word": "search",
+      "start": 150.1,
+      "end": 150.18
+    },
+    {
+      "word": "engine",
+      "start": 150.18,
+      "end": 150.54
+    },
+    {
+      "word": "You",
+      "start": 150.98,
+      "end": 151.1
+    },
+    {
+      "word": "want",
+      "start": 151.1,
+      "end": 151.46
+    },
+    {
+      "word": "articles",
+      "start": 151.46,
+      "end": 152.12
+    },
+    {
+      "word": "or",
+      "start": 152.12,
+      "end": 152.44
+    },
+    {
+      "word": "results",
+      "start": 152.44,
+      "end": 152.68
+    },
+    {
+      "word": "to",
+      "start": 152.68,
+      "end": 153.1
+    },
+    {
+      "word": "rank",
+      "start": 153.1,
+      "end": 153.1
+    },
+    {
+      "word": "in",
+      "start": 153.1,
+      "end": 153.24
+    },
+    {
+      "word": "the",
+      "start": 153.24,
+      "end": 153.4
+    },
+    {
+      "word": "search",
+      "start": 153.4,
+      "end": 153.6
+    },
+    {
+      "word": "engine",
+      "start": 153.6,
+      "end": 153.84
+    },
+    {
+      "word": "wherein",
+      "start": 153.84,
+      "end": 154.2
+    },
+    {
+      "word": "you",
+      "start": 154.2,
+      "end": 154.44
+    },
+    {
+      "word": "are",
+      "start": 154.44,
+      "end": 154.62
+    },
+    {
+      "word": "mentioned",
+      "start": 154.62,
+      "end": 154.94
+    },
+    {
+      "word": "It's",
+      "start": 155.26,
+      "end": 155.48
+    },
+    {
+      "word": "actually",
+      "start": 155.48,
+      "end": 155.7
+    },
+    {
+      "word": "pretty",
+      "start": 155.7,
+      "end": 156.16
+    },
+    {
+      "word": "easy",
+      "start": 156.16,
+      "end": 156.38
+    },
+    {
+      "word": "to",
+      "start": 156.38,
+      "end": 157.02
+    },
+    {
+      "word": "manipulate",
+      "start": 157.02,
+      "end": 157.02
+    },
+    {
+      "word": "these",
+      "start": 157.02,
+      "end": 157.42
+    },
+    {
+      "word": "results",
+      "start": 157.42,
+      "end": 157.78
+    }
+  ],
+  "segments": [
+    {
+      "start": 0,
+      "end": 4.32,
+      "text": "So you want to rank on chat GPT or Gemini or any other of these"
+    },
+    {
+      "start": 4.32,
+      "end": 8.04,
+      "text": "new AI platforms that people use to ask the questions now"
+    },
+    {
+      "start": 8.04,
+      "end": 11.66,
+      "text": "instead of like they used to back in the day, search for answers on Google."
+    },
+    {
+      "start": 12.36,
+      "end": 16.04,
+      "text": "Well, it's actually pretty simple and it's not very"
+    },
+    {
+      "start": 16.1,
+      "end": 19.82,
+      "text": "different from SEO except it changes"
+    },
+    {
+      "start": 19.82,
+      "end": 23.86,
+      "text": "where you need to focus your SEO. So to summarize, first of all"
+    },
+    {
+      "start": 23.86,
+      "end": 28.02,
+      "text": "you need to have, your website of course needs to be up to date with the"
+    },
+    {
+      "start": 28.02,
+      "end": 31.86,
+      "text": "facts that you want to present. I like to call these"
+    },
+    {
+      "start": 33.12,
+      "end": 35.94,
+      "text": "the facts that you want to represent that will show up when people"
+    },
+    {
+      "start": 35.94,
+      "end": 40.02,
+      "text": "query stuff. Your so-called dream queries, what do you want to rank for? For example, the best"
+    },
+    {
+      "start": 40.56,
+      "end": 44.3,
+      "text": "XYZ in a certain city. So"
+    },
+    {
+      "start": 44.3,
+      "end": 48.08,
+      "text": "traditionally you would have all kinds of fancy storytelling"
+    },
+    {
+      "start": 48.1,
+      "end": 51.92,
+      "text": "and copywriting on your website. LLMs hate this. So in your first 50 words"
+    },
+    {
+      "start": 51.94,
+      "end": 56,
+      "text": "who, what, why and your price, try to keep that in there. And then you can do"
+    },
+    {
+      "start": 56,
+      "end": 60.08,
+      "text": "some hybrid work where you start telling your story and do the usual copywriting. But those first"
+    },
+    {
+      "start": 60.08,
+      "end": 63.84,
+      "text": "50 words are crucial for LLMs and you need to have all your facts"
+    },
+    {
+      "start": 63.84,
+      "end": 67.86,
+      "text": "in there. That's one thing. Because what AI does is it triangulates"
+    },
+    {
+      "start": 68.54,
+      "end": 71.64,
+      "text": "meaning it checks these facts across different"
+    },
+    {
+      "start": 72.52,
+      "end": 76.3,
+      "text": "sources while heavily relying or"
+    },
+    {
+      "start": 76.3,
+      "end": 79.82,
+      "text": "giving extra points to the facts that are on your website. So it's going to check your website"
+    },
+    {
+      "start": 79.82,
+      "end": 84.12,
+      "text": "and it's going to check some other websites as well. That's why"
+    },
+    {
+      "start": 84.12,
+      "end": 88.16,
+      "text": "when you write, for example, traditionally you would be writing articles"
+    },
+    {
+      "start": 88.2,
+      "end": 92.08,
+      "text": "very broad articles like how to do XYZ"
+    },
+    {
+      "start": 92.36,
+      "end": 94.78,
+      "text": "or how to get rid of hair loss."
+    },
+    {
+      "start": 95.94,
+      "end": 99.56,
+      "text": "And that way, for example, for a hair clinic how to get rid of hair loss, which hair"
+    },
+    {
+      "start": 99.92,
+      "end": 103.4,
+      "text": "loss products work. Very broad blog posts."
+    },
+    {
+      "start": 104.18,
+      "end": 107.92,
+      "text": "But what AI really likes is factual data"
+    },
+    {
+      "start": 108.28,
+      "end": 112.16,
+      "text": "and for example, if you want to rank for best hair transplant clinic in XYZ"
+    },
+    {
+      "start": 112.16,
+      "end": 115.74,
+      "text": "you need to have an article on your website where you have a list of the best"
+    },
+    {
+      "start": 115.74,
+      "end": 119.96,
+      "text": "hair transplant clinics for XYZ. And of course you're going to put yourself at number one. But that's not enough."
+    },
+    {
+      "start": 120.06,
+      "end": 123.88,
+      "text": "You also need to publish this article or a variation of this article"
+    },
+    {
+      "start": 123.9,
+      "end": 128.18,
+      "text": "on news sites. And it doesn't matter if they're sponsored or not. So for"
+    },
+    {
+      "start": 128.18,
+      "end": 131.84,
+      "text": "SEO it doesn't matter. So they need to be non-sponsored. So they have a do follow"
+    },
+    {
+      "start": 132.18,
+      "end": 135.62,
+      "text": "backlink to your website. Well for LLMs this doesn't matter. They just"
+    },
+    {
+      "start": 136.06,
+      "end": 137.8,
+      "text": "check websites with high authority."
+    },
+    {
+      "start": 140.88,
+      "end": 142.04,
+      "text": "So traditional"
+    },
+    {
+      "start": 142.04,
+      "end": 145.98,
+      "text": "SEO is all about you ranking in the search engines, right? With AI"
+    },
+    {
+      "start": 145.98,
+      "end": 150.1,
+      "text": "what's the difference is you don't per se want to rank in the"
+    },
+    {
+      "start": 150.1,
+      "end": 153.84,
+      "text": "search engine. You want articles or results to rank in the search engine"
+    },
+    {
+      "start": 153.84,
+      "end": 157.78,
+      "text": "wherein you are mentioned. It's actually pretty easy to manipulate these results."
+    }
+  ],
+  "text": "So you want to rank on chat GPT or Gemini or any other of these new AI platforms that people use to ask the questions now instead of like they used to back in the day, search for answers on Google. Well, it's actually pretty simple and it's not very different from SEO except it changes where you need to focus your SEO. So to summarize, first of all you need to have, your website of course needs to be up to date with the facts that you want to present. I like to call these the facts that you want to represent that will show up when people query stuff. Your so-called dream queries, what do you want to rank for? For example, the best XYZ in a certain city. So traditionally you would have all kinds of fancy storytelling and copywriting on your website. LLMs hate this. So in your first 50 words who, what, why and your price, try to keep that in there. And then you can do some hybrid work where you start telling your story and do the usual copywriting. But those first 50 words are crucial for LLMs and you need to have all your facts in there. That's one thing. Because what AI does is it triangulates meaning it checks these facts across different sources while heavily relying or giving extra points to the facts that are on your website. So it's going to check your website and it's going to check some other websites as well. That's why when you write, for example, traditionally you would be writing articles very broad articles like how to do XYZ or how to get rid of hair loss. And that way, for example, for a hair clinic how to get rid of hair loss, which hair loss products work. Very broad blog posts. But what AI really likes is factual data and for example, if you want to rank for best hair transplant clinic in XYZ you need to have an article on your website where you have a list of the best hair transplant clinics for XYZ. And of course you're going to put yourself at number one. But that's not enough. You also need to publish this article or a variation of this article on news sites. And it doesn't matter if they're sponsored or not. So for SEO it doesn't matter. So they need to be non-sponsored. So they have a do follow backlink to your website. Well for LLMs this doesn't matter. They just check websites with high authority. So traditional SEO is all about you ranking in the search engines, right? With AI what's the difference is you don't per se want to rank in the search engine. You want articles or results to rank in the search engine wherein you are mentioned. It's actually pretty easy to manipulate these results."
+}

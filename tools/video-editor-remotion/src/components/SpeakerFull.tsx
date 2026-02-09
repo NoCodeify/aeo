@@ -15,6 +15,7 @@ export const SpeakerFull: React.FC<SpeakerFullProps> = ({
       <OffthreadVideo
         src={staticFile(speakerSrc)}
         startFrom={startFrom}
+        pauseWhenBuffering
         style={{
           width: "100%",
           height: "100%",

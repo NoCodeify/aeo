@@ -10,7 +10,7 @@ Generate comprehensive search queries for reaction GIFs and memes that boost ret
 
 ## Mission
 
-Analyze video scripts and identify optimal GIF placement opportunities, then generate targeted search queries to find the perfect GIFs for each moment.
+Analyze video scripts, identify optimal GIF placement opportunities, search Giphy for the best matches, and download them ready for the Remotion video editor.
 
 ---
 
@@ -38,31 +38,52 @@ For each GIF opportunity, generate:
    - Script quote it follows
    - Emotional beat purpose
 
-2. **Multiple search queries** (3-5 per opportunity)
-   - Primary query (most likely to work)
-   - Alternative queries (backup options)
-   - Platform-specific variations
+2. **Primary search query** (most likely to find a good match)
 
 3. **Usage guidance**
-   - Recommended duration
-   - Placement timing
-   - Transition notes
+   - Recommended duration (1-3 seconds)
+   - Placement: `gif_overlay` (on top of speaker) or `gif_full` (full screen moment)
+   - Position for overlays: `bottom-right`, `bottom-left`, `top-right`, `top-left`, `center`
 
-### Phase 3: Quality Guidelines
+### Phase 3: Search & Download via Giphy MCP
 
-For each recommendation, note:
-- Look for high resolution
-- Prefer smooth loops
-- Avoid watermarks
-- Check appropriateness
-- Verify it matches the tone
+**Use the `batch_search_and_download` MCP tool** to search and download all GIFs in one call.
 
-### Phase 4: Compile Output
+Build the queries array from Phase 2:
+```json
+{
+  "queries": [
+    {"query": "mind blown gif", "filename": "gif-01-mind-blown"},
+    {"query": "frustrated typing", "filename": "gif-02-frustrated"},
+    {"query": "surprised pikachu", "filename": "gif-03-surprised"}
+  ],
+  "output_dir": "<video_dir>/gifs"
+}
+```
 
-Organize all queries in a production-ready document:
-- Summary of all GIF opportunities
-- Individual GIF cards with queries
-- Production notes
+**Filename convention:** `gif-XX-[moment].gif` (zero-padded, descriptive)
+
+If `batch_search_and_download` returns poor results for any query, use `search_gifs` to try alternative queries and `download_gif` to save the best match.
+
+### Phase 4: Generate Timeline Entries
+
+For each downloaded GIF, output the timeline entry for the video-timeline agent:
+
+```json
+{"type": "gif_overlay", "start": 45.0, "end": 47.5, "content": "gifs/gif-01-mind-blown.gif", "position": "bottom-right", "size": 0.3}
+```
+
+Or for full-screen GIF moments:
+```json
+{"type": "gif_full", "start": 120.0, "end": 122.0, "content": "gifs/gif-02-frustrated.gif"}
+```
+
+### Phase 5: Compile Output
+
+Organize results in a production-ready document:
+- Summary table of all GIFs with timestamps
+- Downloaded file paths
+- Timeline entries ready to merge into timeline.json
 
 ---
 
@@ -73,14 +94,14 @@ Organize all queries in a production-ready document:
 
 ## Summary Table
 
-| # | Moment | Emotion | Timestamp | Primary Query |
-|---|--------|---------|-----------|---------------|
-| 1 | [Moment] | [Emotion] | 0:45 | "[Query]" |
-| 2 | [Moment] | [Emotion] | 1:30 | "[Query]" |
-...
+| # | Moment | Emotion | Timestamp | Layout | File |
+|---|--------|---------|-----------|--------|------|
+| 1 | [Moment] | [Emotion] | 0:45 | gif_overlay | gif-01-[name].gif |
+| 2 | [Moment] | [Emotion] | 1:30 | gif_full | gif-02-[name].gif |
 
 **Total GIFs:** [X]
 **Average spacing:** [Every X seconds]
+**Output directory:** `<video_dir>/gifs/`
 
 ---
 
@@ -89,16 +110,12 @@ Organize all queries in a production-ready document:
 **Timestamp:** [e.g., 0:45]
 **Script Context:** "[Quote from script this follows]"
 **Emotional Beat:** [What emotion you're creating]
-**Category:** [Surprise/Frustration/Anticipation/etc.]
+**File:** `gifs/gif-01-[name].gif`
 
-### Search Queries (try in order):
-1. **Giphy:** "[Primary query]"
-2. **Tenor:** "[Secondary query]"
-3. **Alternative:** "[Backup query]"
-
-**Duration:** [1-3 seconds]
-**Placement:** [After statement / During pause / etc.]
-**Notes:** [Any specific guidance]
+**Timeline Entry:**
+```json
+{"type": "gif_overlay", "start": 45.0, "end": 47.5, "content": "gifs/gif-01-[name].gif", "position": "bottom-right", "size": 0.3}
+```
 
 ---
 
@@ -107,14 +124,14 @@ Organize all queries in a production-ready document:
 
 ---
 
-## Production Checklist
+## Timeline Entries (copy into timeline.json)
 
-- [ ] All GIFs sourced and downloaded
-- [ ] Resolution check (720p minimum)
-- [ ] No watermarks
-- [ ] Loops smoothly
-- [ ] Appropriate for audience
-- [ ] File naming: gif-01-[moment].gif
+```json
+[
+  {"type": "gif_overlay", "start": 45.0, "end": 47.5, "content": "gifs/gif-01-[name].gif", "position": "bottom-right", "size": 0.3},
+  {"type": "gif_full", "start": 90.0, "end": 92.0, "content": "gifs/gif-02-[name].gif"}
+]
+```
 ```
 
 ---

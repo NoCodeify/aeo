@@ -1,0 +1,113 @@
+{
+  "originalDuration": 161.72,
+  "cleanDuration": 147.48,
+  "savedSeconds": 14.24,
+  "keepSegments": [
+    {"start": 0, "end": 21.51},
+    {"start": 22.05, "end": 25.03},
+    {"start": 25.77, "end": 29.45},
+    {"start": 30.45, "end": 32.01},
+    {"start": 33.07, "end": 42.73},
+    {"start": 44.25, "end": 71.79},
+    {"start": 72.47, "end": 85.77},
+    {"start": 86.33, "end": 94.93},
+    {"start": 95.89, "end": 137.95},
+    {"start": 141.41, "end": 158.00}
+  ],
+  "cuts": [
+    {
+      "start": 21.51,
+      "end": 22.05,
+      "type": "silence",
+      "reason": "0.74s dead air between 'SEO' and 'So to summarize', trimmed to 0.15s"
+    },
+    {
+      "start": 25.03,
+      "end": 25.77,
+      "type": "silence",
+      "reason": "0.94s mid-sentence pause after 'have', speaker searching for words"
+    },
+    {
+      "start": 29.45,
+      "end": 30.45,
+      "type": "silence",
+      "reason": "1.2s gap between 'present' and 'I like to call these', trimmed to 0.15s"
+    },
+    {
+      "start": 32.01,
+      "end": 33.07,
+      "type": "silence",
+      "reason": "1.26s pause after 'I like to call these', speaker searching for words before continuation"
+    },
+    {
+      "start": 42.73,
+      "end": 44.25,
+      "type": "filler",
+      "words": ["So"],
+      "reason": "1.32s dead air after 'city' + sentence-start 'So' removed — 'Traditionally' works without it"
+    },
+    {
+      "start": 71.79,
+      "end": 72.47,
+      "type": "silence",
+      "reason": "0.88s pause between 'different' and 'sources', speaker finding the word"
+    },
+    {
+      "start": 85.77,
+      "end": 86.33,
+      "type": "silence",
+      "reason": "0.76s dead air between 'for example' and 'traditionally'"
+    },
+    {
+      "start": 94.93,
+      "end": 95.89,
+      "type": "silence",
+      "reason": "1.16s gap between 'hair loss' and 'And that way', trimmed to 0.15s"
+    },
+    {
+      "start": 137.95,
+      "end": 141.41,
+      "type": "filler",
+      "words": ["So"],
+      "reason": "3.08s dead air (speaker break/reset) + sentence-start 'So' removed — 'Traditional SEO' works without it"
+    },
+    {
+      "start": 158.00,
+      "end": 161.72,
+      "type": "silence",
+      "reason": "3.72s trailing dead air after last word 'results'"
+    }
+  ],
+  "kept": [
+    {
+      "start": 11.66,
+      "end": 12.36,
+      "type": "dramatic_pause",
+      "reason": "0.70s pause before 'Well it's actually pretty simple' — natural sentence boundary after opening hook"
+    },
+    {
+      "start": 49.38,
+      "end": 50.08,
+      "type": "dramatic_pause",
+      "reason": "0.70s pause before 'LLMs hate this' — dramatic reveal, key statement of the video"
+    },
+    {
+      "start": 67.86,
+      "end": 68.54,
+      "type": "emphasis_pause",
+      "reason": "0.68s pause after 'triangulates' before explanation — emphasis on key technical term"
+    },
+    {
+      "start": 84.94,
+      "end": 85.62,
+      "type": "emphasis_pause",
+      "reason": "0.68s pause after 'write' before 'for example' — natural mid-thought breath at clause boundary"
+    },
+    {
+      "start": 103.40,
+      "end": 104.18,
+      "type": "dramatic_pause",
+      "reason": "0.78s pause before 'But what AI really likes is factual data' — key pivot from traditional SEO to AI-specific strategy"
+    }
+  ]
+}

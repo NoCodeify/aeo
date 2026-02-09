@@ -38,11 +38,14 @@ AEO is a category term like SEO - nobody owns it. Kasim Aslam has AEO.co but tha
 - No other Skool community focused on AI visibility/GEO
 - Liam's 290K community is general AI automation - too broad for AEO-specific learning
 
-### SaaS: THE EMPTY QUADRANT
-| | Cheap | Expensive |
+### SaaS: THE EMPTY QUADRANT (Updated Feb 7 with Instagram ad research)
+| | Cheap ($49-299) | Expensive ($500+) |
 |---|---|---|
-| **Tracking only** | Otterly, LLMrefs, Ahrefs | Peec, Profound |
-| **Tracking + Implementation** | **NOBODY** | GrackerAI ($2K+), AEO Engine ($797+) |
+| **Tracking only** | Otterly, Nimt.ai ($79-179), LLMrefs, Ahrefs | Peec, Profound, PromptWatch |
+| **Content autopilot** | AutoSEO (~$99), RankPill ($99), BabyLoveGrowth (GBP99) | GrackerAI ($2K+) |
+| **Tracking + Implementation** | **MentionedIn.ai ($49-299)** | AEO Engine ($797+) |
+
+> **14 competitors found via Instagram ads** (Feb 7, 2026). Full analysis: `systems/instagram-competitor-analysis.md`
 
 ---
 
@@ -65,7 +68,28 @@ AEO is a category term like SEO - nobody owns it. Kasim Aslam has AEO.co but tha
 - AEO Engine: $70K MRR, agency-in-a-box ($797-2.4K/mo)
 - GrackerAI: $2K-9.5K/mo, auto-content generation
 
-### NONE of them combine: affordable + white-label + implementation guidance + multi-client
+### Instagram Ad Competitors (Feb 7, 2026 — 14 companies actively running IG ads)
+
+**AI Visibility Trackers (Direct):**
+- Nimt.ai: $79-179/mo, pure AI visibility tracking across ChatGPT/Gemini/Claude/Perplexity. No white-label, no implementation.
+- Briljant.nl: EUR39-99/mo, Dutch GEO platform. White-label but Dutch market only. Technical tools (SSR scan, LLMs.txt generator).
+- PromptWatch: Enterprise pricing (hidden), 880M+ citations analyzed. 9 AI engines. Agency white-label.
+- AnswerRank: Unknown (JS-blocked). Name implies direct competitor.
+
+**Content Autopilots (Indirect):**
+- AutoSEO: ~$99/mo, 30 articles/mo + backlinks. "Agency-quality SEO without $5K bill." No white-label.
+- RankPill: $99/mo, 30 articles/mo, auto-publish. "Fire your $3K/mo agency." No white-label.
+- BabyLoveGrowth: GBP99/mo, articles + backlinks + LLM tracking. Agency white-label plan.
+- Outrank: Unknown pricing, SEO content automation. No AI search focus.
+
+**Traditional SEO (Tangential):**
+- HikeSEO: $90-749/mo, AI agent "Kit" for small agencies. Extensive white-label. Traditional SEO not AEO.
+- Climbo: $1,497-2,997 lifetime, review management + GEO bolt-on. Full white-label.
+- Soogle: $67/mo, automated backlinks. Mentions ChatGPT in positioning.
+
+### NONE of them combine: affordable + white-label + implementation playbooks + consistency testing + "business in a box"
+
+> Full 14-competitor analysis with ad messaging patterns: `systems/instagram-competitor-analysis.md`
 
 ---
 
@@ -88,8 +112,8 @@ Auto-generate URL-specific playbook: "Rewrite homepage first 50 words to include
 ### 2. 10-Run Statistical Consistency Testing
 Run each query 10x per LLM. Report mention rate (7/10 = 70%), position variance, sentiment distribution. Every competitor runs 1x. Agencies can show "you went from 30% to 80% mention rate."
 
-### 3. Affordable White-Label ($49-149/client/mo)
-Branded client dashboard (agency logo, custom domain). Otterly has no white-label. GrackerAI costs $2K+. We sit in the middle.
+### 3. Affordable White-Label ($149-299 per org (15-50 clients))
+Branded client dashboard (agency logo, custom domain). Otterly has no white-label. Nimt.ai has no white-label. Briljant charges per-site (EUR39-99). HikeSEO charges per-site ($90-749). GrackerAI costs $2K+. MentionedIn.ai charges per-org (with client seat limits) and includes implementation.
 
 ### 4. First 50 Words Technical Audit
 Automated check: does every key page have WHO/WHAT/WHERE/PRICE in first 50 words? Plus robots.txt AI crawler check, SSR/SSG verification, schema markup, llms.txt. Zero competitors do this.
@@ -121,7 +145,7 @@ When audit finds brand NOT mentioned for a query, generate a "Battle Card": exac
 - Keyword data, basic classroom modules
 - Goal: 1,000+ members in 90 days
 
-### Layer 2: Paid Skool Tier ($49-97/month)
+### Layer 2: Paid Skool Tier ($97/month)
 - Full AEO methodology course (based on protocol SOP)
 - Implementation playbooks and templates
 - Weekly coaching call with Q&A
@@ -129,20 +153,22 @@ When audit finds brand NOT mentioned for a query, generate a "Battle Card": exac
 - 30-day challenge with refund on completion
 - Goal: 50-100 paid members in 90 days
 
-### Layer 3: White-Label SaaS ($49-149/client/month)
-- Branded client dashboards
-- Automated 10-run consistency testing
-- Audit-to-playbook engine
-- Battle cards for missing queries
-- White-label PDF reports
-- Technical AEO audit (robots.txt, schema, first 50 words)
+### Layer 3: White-Label SaaS (MentionedIn.ai — per-org subscription)
+- $49/mo Starter (3 clients) → $99/mo Pro (8 clients) → $149/mo Agency (15 clients) → $299/mo Scale (50 clients)
+- White-label branding (subdomains at launch, custom domains Phase 4 (MVP))
+- Automated 10-run consistency testing (capped: 5/25/50/200 per tier)
+- Basic playbooks in MVP, full Sonnet-generated playbooks post-MVP
+- Web-based shareable reports (PDF export post-MVP)
+- AI features powered by Claude Sonnet 4.5 (5x cheaper than Opus)
 - Goal: 10-20 agency customers in 90 days
 
-### Revenue Projections (Conservative, Month 6)
-- 50 paid Skool members x $79/mo = $3,950/mo
-- 15 agencies x 5 clients avg x $99/client = $7,425/mo
-- 2 direct B2B clients x $5K = $10,000/mo
-- **Total: ~$21K/mo**
+### Revenue Projections (Conservative, Month 6 — updated Feb 7)
+- 30 paid Skool members x $97/mo = $2,910/mo
+- 29 SaaS agencies avg $99/mo = $2,871/mo (mix of Starter/Pro/Agency tiers)
+- 3 concierge SaaS clients x $699/mo = $2,097/mo (SaaS + monthly strategy call)
+- **Total: ~$7,878/mo**
+
+> Note: Pricing is per-org subscription with client seat limits, NOT per-client. An agency on the $149 Agency tier gets up to 15 clients included. See `systems/saas-mvp-spec.md` Section 10 for full pricing table.
 
 ---
 
@@ -266,7 +292,7 @@ Examples:
 - Monthly open Q&A call
 - Weekly "brand audit" challenge
 
-### Paid Tier ($49-97/mo)
+### Paid Tier ($97/mo)
 **Additional Classroom:**
 - Full AEO Protocol methodology (12+ modules)
 - Client pitch deck templates
@@ -289,29 +315,31 @@ Examples:
 
 ## 90-DAY ACTION PLAN
 
-### Phase 1: Foundation (Weeks 1-4)
-- [ ] Launch free Skool community
-- [ ] Create 4 classroom modules (free tier)
-- [ ] Build white-label audit report template (PDF)
-- [ ] Start LinkedIn: 3 posts/week
-- [ ] Record first 2 YouTube videos
-- [ ] Set up email list / lead magnet
+### Phase 1: Foundation (Weeks 1-4) — updated Feb 7 (D20: SaaS build starts week 1)
+- [ ] **SaaS: Phase 1-2 build starts** (foundation + audit engine)
+- [ ] Build free audit landing page (2-3 days, MCP tools + Next.js form)
+- [ ] Launch free Skool community + 4 classroom modules
+- [ ] Start LinkedIn: 3-5 posts/week + manual audit outreach via MCP tools
+- [ ] Record + publish first 2 YouTube videos
+- [ ] Set up email list / lead magnet (free audit = primary lead capture)
+- [ ] **Target 1st concierge SaaS client** ($699/mo Concierge SaaS tier) via LinkedIn
 
 ### Phase 2: Content + Community (Weeks 5-8)
-- [ ] Publish 4 YouTube videos (weekly cadence)
+- [ ] **SaaS: Phase 3 build** (client management + playbooks + monitoring)
+- [ ] Publish 4 more YouTube videos (weekly cadence)
 - [ ] Grow Skool to 200+ free members
-- [ ] LinkedIn: 5 posts/week, start DM outreach
-- [ ] Begin building SaaS MVP (dashboard + auth + Stripe)
-- [ ] Run 5-10 free audits for LinkedIn prospects
-- [ ] Create paid tier classroom content
+- [ ] LinkedIn: 5 posts/week, scale DM outreach (free audit page as hook)
+- [ ] Launch paid Skool tier ($97/mo)
+- [ ] Start Instagram ads ($500-1K/mo, free audit CTA)
+- [ ] Recruit 3-5 SaaS beta agencies from Skool
 
 ### Phase 3: Monetize (Weeks 9-12)
-- [ ] Launch paid Skool tier ($49-97/mo)
+- [ ] **SaaS: Phase 4 build** (white-label + polish + launch)
 - [ ] Launch SaaS MVP (beta, 5-10 agencies)
 - [ ] YouTube at 8+ videos published
 - [ ] First paying Skool members
 - [ ] First SaaS customers
-- [ ] First B2B service client from LinkedIn
+- [ ] 2-3 concierge SaaS clients from LinkedIn ($699/mo tier)
 
 ### Targets at Day 90
 - [ ] 500+ free Skool members
@@ -331,7 +359,7 @@ Examples:
 | AEO gets absorbed into SEO tools | Focus on implementation layer, not monitoring |
 | Market too early | Keyword data shows +900% YoY growth, timing is right |
 | YouTube too slow to grow | LinkedIn provides immediate lead gen while channel builds |
-| SaaS too complex to build | Start with white-label PDF reports, add dashboard later |
+| SaaS too complex to build | Start with web reports (shareable links), add PDF later |
 | Measurement problem unsolved | 10-run consistency testing is more rigorous than competitors |
 
 ---

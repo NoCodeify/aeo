@@ -1,3 +1,9 @@
+---
+name: video-timeline
+description: "Generate timeline.json for the Remotion video editor from a script/prompter file. Maps slides, zooms, GIFs, text overlays, and transitions to word-level timestamps."
+model: inherit
+---
+
 # Video Timeline Agent
 
 Generate timeline.json for the Remotion video editor from a script/prompter file.
@@ -9,9 +15,22 @@ Read a video script or prompter with slide markers and generate a complete `time
 ## Input Required
 
 1. **Prompter file** with `[SLIDE XX: name]` markers
-2. **SRT subtitle file** with timestamps
-3. **Slides directory** with slide images (slide-01.jpg, slide-02.jpg, etc.)
-4. **Speaker video** to get total duration
+2. **transcript-clean.json** with word-level timestamps (PRIMARY — from auto-cutter)
+3. **transcript.json** (fallback if no auto-cut was run)
+4. **SRT subtitle file** with timestamps (fallback if no transcript.json)
+5. **Slides directory** with slide images (slide-01.jpg, slide-02.jpg, etc.)
+6. **Speaker video** — `speaker-clean.mp4` if auto-cut was run, otherwise original
+7. **GIFs directory** (optional) with downloaded GIFs from gif-researcher agent
+
+**Priority:** transcript-clean.json > transcript.json > SRT file
+
+### Generating transcript.json
+
+Run from `tools/video-editor-remotion/`:
+```bash
+OPENAI_API_KEY=sk-... npx ts-node transcribe.ts <video_dir>
+```
+This extracts audio, sends to Whisper API, outputs `<video_dir>/video/transcript.json` with per-word timestamps.
 
 ## Output
 
@@ -36,6 +55,8 @@ A `timeline.json` file with edit decisions:
 | `slide_full` | Slide fills frame | Teaching, CTA slides, complex diagrams |
 | `split_right` | Slide left ~76%, speaker right ~24% | Teaching with speaker visible |
 | `split_left` | Speaker left ~24%, slide right ~76% | Teaching (variety) |
+| `split_5050_left` | Speaker left 50%, slide right 50% (full-bleed, no borders) | Equal emphasis, 1:1 slides |
+| `split_5050_right` | Slide left 50%, speaker right 50% (full-bleed, no borders) | Equal emphasis, 1:1 slides |
 | `jump_zoom_in` | Animated zoom punch (15-25%) | Key reveals, powerful statements |
 | `jump_cut_in` | Instant zoom (no animation) | HOLD after jump_zoom_in |
 | `jump_zoom_out` | Animated zoom back | After hold period |
@@ -43,6 +64,11 @@ A `timeline.json` file with edit decisions:
 | `zoom_transition_in` | Slide → Speaker with zoom | Smooth transition to speaker |
 | `zoom_transition_out` | Speaker → Slide with zoom | Smooth transition to slide |
 | `gradual_zoom` | Slow drift zoom (10-15%) | Speaker segments, 4-10s |
+| `gif_overlay` | GIF on top of speaker video | Reaction GIFs, humor beats (1-3s) |
+| `gif_full` | GIF fills frame (speaker audio continues) | Big meme moments (2-4s) |
+| `text_overlay` | Text on top of speaker video | Key words, statistics, framework names (1-3 words) |
+| `broll_full` | Stock video B-roll fills frame (no loop, speaker audio continues) | Visual metaphors, establishing shots, supporting claims (3-15s) |
+| `sfx` | Sound effect overlay (audio-only, no visual) | Subtle boop/click on reveals, transitions (max 4-6 per video) |
 
 ## Layout Distribution (~20% each)
 
@@ -50,11 +76,76 @@ A `timeline.json` file with edit decisions:
 |--------|------------|---------|
 | `speaker_full` | ~20% | Intro, personal stories, trust-building, transitions |
 | `slide_full` | ~20% | Teaching, complex diagrams, CTA slides |
-| `split_right` | ~20% | Teaching with speaker visible |
-| `split_left` | ~20% | Teaching with speaker visible (variety) |
+| `split_right` / `split_left` | ~15% | Teaching with speaker visible (glass border style) |
+| `split_5050_left` / `split_5050_right` | ~5% | Equal emphasis on speaker + slide (full-bleed, 1:1 slides) |
+| `broll_full` | ~5% | Stock video B-roll (visual metaphors, establishing shots) |
 | `jump_zoom` + `gradual_zoom` | ~20% | Emphasis, energy, movement |
+| `sfx` | 4-6 total | Sound effects: "boop" (reveals) or "click" (transitions). Overlaps visuals. |
 
 **No single layout dominates** - keeps visual variety throughout the video.
+
+### SFX Placement Rules
+
+SFX edits are **audio-only overlays** - they don't replace the visual. Place them at the same timestamp as visual edits.
+
+| Sound | When to Use |
+|-------|-------------|
+| `boop` | text_overlay reveals, soft emphasis moments |
+| `click` | Layout changes to slides/splits, slide transitions |
+
+**Rules:**
+- Max **4-6 per 10-min video** - sparse and deliberate
+- Volume `0.3-0.5` (never above `0.7`)
+- SFX `start`/`end` = sound duration (0.5-1s)
+- OK to overlap with any visual edit at the same timestamp
+
+```json
+{"type": "text_overlay", "start": 10.0, "end": 12.0, "text": "KEY STAT", "style": "center"},
+{"type": "sfx", "start": 10.0, "end": 10.5, "content": "boop", "volume": 0.5}
+```
+
+## Hook Editing Rules (CRITICAL)
+
+The first 60 seconds decide if people stay. Edit aggressively.
+
+### First 30 seconds — Max 5s per segment
+- **Something must happen every 3-5 seconds** — layout change, zoom punch, text overlay, GIF, anything
+- **No segment longer than 5 seconds**
+- **All layout types are fair game** — face, splits, slides, zooms, text, GIFs
+- **At least 1 text overlay** with the key stat/hook word
+- **At least 1 jump zoom** to punch a key statement
+- **Visual variety is the priority** — don't repeat the same layout back-to-back
+
+### 30-60 seconds — Max 7s per segment
+- Still faster than the rest of the video
+- **No segment longer than 7 seconds**
+- Introduce the main teaching content (first slides)
+- Keep the energy with zoom punches and layout changes
+
+### Rest of video (60s+) — Normal pacing
+- Segments can be 5-15 seconds
+- Follow standard layout distribution rules below
+
+### Hook Example (first 30s)
+```json
+[
+  {"type": "speaker_full", "start": 0, "end": 3.0},
+  {"type": "jump_zoom_in", "start": 3.0, "end": 3.3, "zoom": 1.20},
+  {"type": "jump_cut_in", "start": 3.3, "end": 5.5, "zoom": 1.20},
+  {"type": "jump_zoom_out", "start": 5.5, "end": 5.8, "zoom": 1.20},
+  {"type": "text_overlay", "start": 5.8, "end": 8.0, "text": "$100K", "style": "center"},
+  {"type": "split_right", "start": 8.0, "end": 13.0, "content": "slides/slide-01.jpg"},
+  {"type": "gif_overlay", "start": 13.0, "end": 15.0, "content": "gifs/mind-blown.mp4", "position": "bottom-right", "size": 0.3},
+  {"type": "gradual_zoom", "start": 15.0, "end": 19.0, "zoomStart": 1.0, "zoomEnd": 1.15},
+  {"type": "zoom_transition_out", "start": 19.0, "end": 20.5, "content": "slides/slide-02.jpg", "zoom": 1.15, "toLayout": "split_left"},
+  {"type": "split_left", "start": 20.5, "end": 25.0, "content": "slides/slide-02.jpg"},
+  {"type": "jump_zoom_in", "start": 25.0, "end": 25.3, "zoom": 1.15},
+  {"type": "jump_cut_in", "start": 25.3, "end": 27.5, "zoom": 1.15},
+  {"type": "jump_zoom_out", "start": 27.5, "end": 27.8, "zoom": 1.15},
+  {"type": "speaker_full", "start": 27.8, "end": 30.0}
+]
+```
+10 visual changes in 30 seconds — that's the energy level for the hook.
 
 ## Zoom Rules
 
@@ -131,7 +222,7 @@ Zoom transitions create smooth cuts between layouts with continuous motion.
 
 **Rules:**
 - Max 1 jump zoom per 30-60 seconds
-- Never back-to-back (needs breathing room)
+- **Never back-to-back zoom sequences** - minimum 1s `speaker_full` breather between any two zoom sequences. A zoom-out immediately followed by a zoom-in feels abrupt and jarring.
 - Save 25% zooms for 1-2 moments per video
 
 #### Supported Transitions (fromLayout → toLayout)
@@ -146,6 +237,12 @@ Zoom transitions create smooth cuts between layouts with continuous motion.
 | `split_right` | `slide_full` | `zoom_transition_out` | `"fromLayout": "split_right"` |
 | `split_left` | `slide_full` | `zoom_transition_out` | `"fromLayout": "split_left"` |
 | `slide_full` | `speaker_full` | `zoom_transition_in` | default |
+| `speaker_full` | `split_5050_left` | `zoom_transition_out` | `"toLayout": "split_5050_left"` |
+| `speaker_full` | `split_5050_right` | `zoom_transition_out` | `"toLayout": "split_5050_right"` |
+| `split_5050_left` | `speaker_full` | `zoom_transition_in` | `"fromLayout": "split_5050_left"` |
+| `split_5050_right` | `speaker_full` | `zoom_transition_in` | `"fromLayout": "split_5050_right"` |
+| `speaker_full` | `broll_full` | `zoom_transition_out` | `"toLayout": "broll_full"` |
+| `broll_full` | `speaker_full` | `zoom_transition_in` | `"fromLayout": "broll_full"` |
 
 #### Transition Flow Examples
 
@@ -188,11 +285,126 @@ Place layout changes at natural speech breaks - tied to spoken words.
 5:30-5:40   slide_full slide-25       (CTA - full attention)
 ```
 
+## GIF Layout Rules
+
+### gif_overlay
+GIF appears as a floating element on top of the speaker video. Used for reaction GIFs and humor beats.
+
+```json
+{"type": "gif_overlay", "start": 45.0, "end": 47.5, "content": "gifs/gif-01-mind-blown.gif", "position": "bottom-right", "size": 0.3}
+```
+
+| Property | Default | Options |
+|----------|---------|---------|
+| `position` | `bottom-right` | `bottom-right`, `bottom-left`, `top-right`, `top-left`, `center` |
+| `size` | `0.3` | Fraction of frame width (0.2-0.5) |
+
+**Animations:** Scale bounce on entrance, fade on exit (automatic).
+
+### gif_full
+GIF fills the entire frame. Speaker audio continues underneath. Used for big meme moments.
+
+```json
+{"type": "gif_full", "start": 120.0, "end": 122.0, "content": "gifs/gif-02-frustrated.gif"}
+```
+
+### GIF Placement Rules
+- **Maximum 1 GIF per 45-60 seconds** (pattern interrupt, not constant)
+- **Duration:** 1-3 seconds for overlays, 2-4 seconds for full
+- **Placement:** Always AFTER the statement (punctuate, don't interrupt)
+- **Never place during:** Important explanations, data/diagrams on screen
+- **Typical count:** 6-10 GIFs per 10-minute video
+- GIF files are in `gifs/` folder (parallel to `slides/`)
+
+### Example Timeline with GIFs
+```json
+[
+  {"type": "speaker_full", "start": 0, "end": 5.0},
+  {"type": "split_right", "start": 5.0, "end": 25.0, "content": "slides/slide-01.jpg"},
+  {"type": "jump_zoom_in", "start": 25.0, "end": 25.4, "zoom": 1.20},
+  {"type": "jump_cut_in", "start": 25.4, "end": 28.0, "zoom": 1.20},
+  {"type": "jump_zoom_out", "start": 28.0, "end": 28.4, "zoom": 1.20},
+  {"type": "gif_overlay", "start": 28.4, "end": 30.5, "content": "gifs/gif-01-mind-blown.gif", "position": "bottom-right", "size": 0.3},
+  {"type": "split_left", "start": 30.5, "end": 50.0, "content": "slides/slide-02.jpg"},
+  {"type": "gif_full", "start": 50.0, "end": 52.0, "content": "gifs/gif-02-frustrated.gif"},
+  {"type": "speaker_full", "start": 52.0, "end": 60.0}
+]
+```
+
+## Text Overlay Rules
+
+### text_overlay
+Text appears on top of the speaker video with pop animation (scale bounce entrance).
+
+```json
+{"type": "text_overlay", "start": 16.4, "end": 19.0, "text": "AEO", "style": "center"}
+```
+
+| Property | Default | Options |
+|----------|---------|---------|
+| `text` | (required) | 1-3 words max |
+| `style` | `caption` | `caption` (bottom), `center` (big center), `heading` (top) |
+| `color` | `#e8e4e0` | Any hex color (off-white default) |
+| `glow` | `true` | Glow effect around text |
+
+**Font:** Always Syne (bold). No other fonts.
+
+### Text Overlay Placement Rules
+- **ONLY on speaker_full segments** — NEVER place text_overlay on slides, splits, or GIF layouts
+- **Duration:** 1.5-3 seconds per overlay
+- **Placement:** Timed to when the speaker says the word
+- **Max 1-3 words** — single power words work best ("AEO", "THIS IS KEY", "$100K")
+- **Frequency:** Max 1 per 30-60 seconds (like jump zooms — emphasis, not spam)
+- **Use `center` style** for big impact moments (framework names, key stats)
+- **Use `caption` style** for supporting emphasis (smaller, bottom of frame)
+
+## Using Word-Level Timestamps (transcript.json)
+
+When `transcript.json` exists in the video directory, use it as the **PRIMARY timing source** instead of the SRT file. It contains per-word `start`/`end` timestamps from Whisper API.
+
+### Format
+```json
+{
+  "words": [
+    {"word": "invisible", "start": 23.45, "end": 23.82},
+    {"word": "to", "start": 23.82, "end": 23.96},
+    {"word": "AI", "start": 23.96, "end": 24.38}
+  ],
+  "segments": [
+    {"start": 22.1, "end": 25.5, "text": "Your business is invisible to AI."}
+  ]
+}
+```
+
+### How to Use Word Timestamps
+
+- **Jump zooms**: Find the exact word to punch, use its `start` timestamp
+  ```json
+  // Zoom on "invisible" at 23.45s
+  {"type": "jump_zoom_in", "start": 23.45, "end": 23.75, "zoom": 1.20}
+  ```
+- **Text overlays**: Time to when the speaker SAYS the word (`word.start`)
+  ```json
+  // Text appears as speaker says "invisible"
+  {"type": "text_overlay", "start": 23.45, "end": 25.5, "text": "INVISIBLE", "style": "center"}
+  ```
+- **Layout changes**: Place at natural speech breaks (gaps between words > 0.3s)
+- **Slide transitions**: Align with the first word of a new topic section
+
+### Finding Speech Gaps
+
+Look for gaps > 0.3s between consecutive words - these are natural break points for layout changes and transitions. Example: if word N ends at 15.2s and word N+1 starts at 15.6s, that's a 0.4s gap - good place for a cut.
+
+### Matching Prompter to Timestamps
+
+Cross-reference the prompter's `[SLIDE XX]` markers with the transcript words to find exactly when each slide topic begins. Search the `words` array for the first few words after each slide marker to get precise timing.
+
 ## Technical Notes
 
 - All timestamps in seconds (float)
 - Content paths relative to `public/` folder
 - Slide files named slide-XX.jpg (zero-padded)
+- GIF files in `gifs/` folder, named gif-XX-[moment].gif
 - Background video: `grid-loop.mp4` in `public/`
 
 ## Render Settings
@@ -232,3 +444,24 @@ The agent will:
 3. Match slides to timestamps
 4. Generate creative edit decisions with ~20% distribution per layout type
 5. Output timeline.json
+6. **Run validation pass** (see checklist below)
+
+## Post-Generation Validation (MANDATORY)
+
+After writing timeline.json, re-read it and verify every item. Do NOT skip this.
+
+- [ ] First segment has motion (no static `speaker_full`)
+- [ ] Every `jump_zoom_in` is followed by `jump_cut_in` then `jump_zoom_out`
+- [ ] Minimum 1s `speaker_full` breather between any two zoom sequences
+- [ ] Zoom levels match: `gradual_zoom` end value = next `zoom_transition_out` zoom param
+- [ ] No `gradual_zoom` directly into `jump_zoom_in` (snap from drift zoom to 1.0 looks like a glitch — put a `speaker_full` reset between them)
+- [ ] `zoom_transition_in` is always followed by `jump_cut_in` at the same zoom level
+- [ ] Text overlays only on speaker_full segments
+- [ ] No timestamps overlap or have gaps
+- [ ] Slide sections use at least 2 different transition patterns (not all identical)
+- [ ] Mix instant cuts (`jump_cut_in` → `jump_cut_out`) with animated zooms (`jump_zoom_in` → `jump_cut_in` → `jump_zoom_out`). Not every zoom should be animated.
+- [ ] No section has more than one zoom sequence within 5 seconds (zooming in/out/in/out feels frantic)
+- [ ] Every `zoom_transition_in` has `fromLayout` matching the previous segment's layout type (default is `slide_full` which is wrong if previous was a split)
+- [ ] No segment shorter than 0.2s or longer than 15s
+- [ ] Uses ALL available layout types: splits, 5050, broll, gifs, sfx, text overlays. If any are missing, add them.
+- [ ] GIFs placed based on transcript moments (1 per 45-60s, AFTER the statement they punctuate). Can overlay any layout type.

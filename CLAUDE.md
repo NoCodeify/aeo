@@ -9,6 +9,8 @@ This repository contains the AEO (Answer Engine Optimization) Protocol toolkit:
 - **aeo-audit-mcp/** — MCP server for running AEO audits across ChatGPT, Gemini, and Google
 - **seo-agent-mcp/** — MCP server for DataForSEO API (keyword research, competitor analysis, content gaps)
 - **imagen-mcp/** — MCP server for AI image generation using Gemini
+- **giphy-mcp/** — MCP server for searching and downloading GIFs from Giphy
+- **pexels-mcp/** — MCP server for searching and downloading stock videos from Pexels
 - **tools/video-editor-remotion/** — React-based video editor for YouTube content (WIP)
 
 ## Build & Run Commands
@@ -23,15 +25,25 @@ cd seo-agent-mcp && npm run build
 # Build the Imagen MCP server
 cd imagen-mcp && npm run build
 
+# Build the Giphy MCP server
+cd giphy-mcp && npm run build
+
+# Build the Pexels MCP server
+cd pexels-mcp && npm run build
+
 # Run in development mode
 cd aeo-audit-mcp && npm run dev
 cd seo-agent-mcp && npm run dev
 cd imagen-mcp && npm run dev
+cd giphy-mcp && npm run dev
+cd pexels-mcp && npm run dev
 
 # Start the MCP servers
 cd aeo-audit-mcp && npm start
 cd seo-agent-mcp && npm start
 cd imagen-mcp && npm start
+cd giphy-mcp && npm start
+cd pexels-mcp && npm start
 ```
 
 ## MCP Server Architecture
@@ -92,6 +104,50 @@ The Imagen MCP server (`imagen-mcp/src/index.ts`) generates AI images using Gemi
 Generate images for the 3-layer diagram from the b-roll prompts file
 ```
 
+## Giphy MCP Server
+
+The Giphy MCP server (`giphy-mcp/src/index.ts`) searches and downloads GIFs from Giphy:
+
+**Exposed MCP Tools:**
+| Tool | Purpose |
+|------|---------|
+| `search_gifs` | Search GIFs by query, returns previews and download URLs |
+| `download_gif` | Download a GIF to a local directory for Remotion |
+| `batch_search_and_download` | Search + download top result for multiple queries at once |
+| `trending_gifs` | Get currently trending GIFs |
+
+**Key Features:**
+- Integrates with gif-researcher agent output (batch_search_and_download)
+- Downloads GIFs to video project directories for Remotion rendering
+- Content rating filter (G, PG, PG-13, R)
+
+**Pipeline:**
+```
+Script → gif-researcher (queries) → giphy-mcp (search + download) → Remotion (render)
+```
+
+## Pexels MCP Server
+
+The Pexels MCP server (`pexels-mcp/src/index.ts`) searches and downloads stock videos from Pexels:
+
+**Exposed MCP Tools:**
+| Tool | Purpose |
+|------|---------|
+| `search_videos` | Search stock videos by query, returns thumbnails, duration, download URLs |
+| `download_video` | Download a video to a local directory for Remotion |
+| `batch_search_and_download` | Search + download top result for multiple queries at once |
+
+**Key Features:**
+- Free API (200 req/hr, 20k/month)
+- HD/4K quality selection (prefers 1080p by default)
+- Orientation filter (landscape for full-screen B-roll)
+- Integrates with broll-prompter agent output (batch_search_and_download)
+
+**Pipeline:**
+```
+Script → broll-prompter (search terms) → pexels-mcp (search + download) → Remotion (render)
+```
+
 ## Environment Variables
 
 Required in `.env` or MCP config:
@@ -100,6 +156,9 @@ Required in `.env` or MCP config:
 - `SCRAPINGBEE_API_KEY` — ScrapingBee API key
 - `DATAFORSEO_LOGIN` — DataForSEO API login
 - `DATAFORSEO_PASSWORD` — DataForSEO API password
+- `GIPHY_API_KEY` — Giphy API key (from developers.giphy.com)
+- `PEXELS_API_KEY` — Pexels API key (from pexels.com/api)
+- `ASSEMBLYAI_API_KEY` — AssemblyAI API key for video transcription (filler detection enabled)
 
 ## AEO Protocol Reference
 

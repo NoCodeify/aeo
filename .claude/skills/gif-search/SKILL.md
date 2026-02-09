@@ -1,11 +1,22 @@
 ---
 name: gif-search
-description: Generate search queries for finding reaction GIFs and memes for YouTube video retention. Use when adding humor, pattern interrupts, or emotional beats to video content. Creates optimized search queries for Giphy and Tenor.
+description: Search and download reaction GIFs from Giphy for YouTube video retention. Use when adding humor, pattern interrupts, or emotional beats to video content. Uses the Giphy MCP to search and download GIFs directly.
 ---
 
 # GIF Search for YouTube Video Retention
 
-Generate search queries to find the perfect GIFs for retention beats in talking head videos.
+Search and download the perfect GIFs for retention beats in talking head videos.
+
+## Giphy MCP Tools
+
+Use these MCP tools to search and download GIFs:
+
+| Tool | When to Use |
+|------|-------------|
+| `search_gifs` | Search for a single query, browse results |
+| `download_gif` | Download a specific GIF by URL |
+| `batch_search_and_download` | Search + download top result for multiple queries (best for bulk) |
+| `trending_gifs` | Browse trending GIFs for inspiration |
 
 ## Core Principle
 
@@ -232,19 +243,33 @@ For each GIF opportunity in a script, provide:
 **Timestamp:** [When in video - e.g., 3:45]
 **Script Context:** "[Quote from script this follows]"
 **Emotional Beat:** [What emotion/reaction you're creating]
+**File:** `gifs/gif-XX-[name].gif`
 
-**Category:** [Surprise/Frustration/Anticipation/etc.]
-**Duration:** [1-3 seconds typically]
-
-**Search Queries (try in order):**
-1. "[Primary query]" - Giphy
-2. "[Secondary query]" - Tenor
-3. "[Alternative query]" - Either
-
-**Usage Note:** [Brief note on timing/placement]
+**Timeline Entry:**
+```json
+{"type": "gif_overlay", "start": 45.0, "end": 47.5, "content": "gifs/gif-01-[name].gif", "position": "bottom-right", "size": 0.3}
+```
 
 ---
 ```
+
+## Remotion Timeline Types
+
+GIFs use two layout types in the Remotion video editor:
+
+| Type | Description | When to Use |
+|------|-------------|-------------|
+| `gif_overlay` | GIF appears on top of speaker video | Reaction GIFs, quick beats (1-3s) |
+| `gif_full` | GIF fills entire frame (speaker audio continues) | Big meme moments (2-4s) |
+
+### gif_overlay options
+- `position`: `bottom-right` (default), `bottom-left`, `top-right`, `top-left`, `center`
+- `size`: fraction of frame width (default `0.3` = 30%)
+
+### Workflow
+1. Identify GIF opportunities in script
+2. Use `batch_search_and_download` to download all GIFs to `<video_dir>/gifs/`
+3. Output timeline entries ready to merge into timeline.json
 
 ---
 

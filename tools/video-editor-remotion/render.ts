@@ -27,14 +27,22 @@ async function render() {
   const slidesDir = path.join(videoDir, "slides");
   const publicDir = path.resolve(__dirname, "public");
 
-  // Find speaker video
+  // Find speaker video (prefer speaker-clean.mp4 from auto-cutter)
   const videoSubdir = path.join(videoDir, "video");
-  const videoFiles = fs.readdirSync(videoSubdir).filter(f => f.endsWith(".mp4") && !f.includes("test") && !f.includes("output"));
-  if (videoFiles.length === 0) {
-    console.error("No speaker video found in", videoSubdir);
-    process.exit(1);
+  const cleanVideoPath = path.join(videoSubdir, "speaker-clean.mp4");
+  let speakerVideoPath: string;
+
+  if (fs.existsSync(cleanVideoPath)) {
+    speakerVideoPath = cleanVideoPath;
+    console.log("Using auto-cut speaker video");
+  } else {
+    const videoFiles = fs.readdirSync(videoSubdir).filter(f => f.endsWith(".mp4") && !f.includes("test") && !f.includes("output") && !f.includes("clean"));
+    if (videoFiles.length === 0) {
+      console.error("No speaker video found in", videoSubdir);
+      process.exit(1);
+    }
+    speakerVideoPath = path.join(videoSubdir, videoFiles[0]);
   }
-  const speakerVideoPath = path.join(videoSubdir, videoFiles[0]);
 
   // Read timeline
   if (!fs.existsSync(timelinePath)) {
@@ -72,11 +80,46 @@ async function render() {
   }
   console.log(`  Copied ${slideFiles.length} slides`);
 
+  // Copy GIFs folder (if it exists)
+  const gifsDir = path.join(videoDir, "gifs");
+  const gifsDest = path.join(publicDir, "gifs");
+  if (fs.existsSync(gifsDir)) {
+    if (fs.existsSync(gifsDest)) fs.rmSync(gifsDest, { recursive: true, force: true });
+    fs.mkdirSync(gifsDest, { recursive: true });
+    const gifFiles = fs.readdirSync(gifsDir).filter(f => f.endsWith('.gif') || f.endsWith('.mp4'));
+    for (const file of gifFiles) {
+      fs.copyFileSync(path.join(gifsDir, file), path.join(gifsDest, file));
+    }
+    console.log(`  Copied ${gifFiles.length} GIFs`);
+  }
+
+  // Copy B-roll folder (if it exists)
+  const brollDir = path.join(videoDir, "broll");
+  const brollDest = path.join(publicDir, "broll");
+  if (fs.existsSync(brollDir)) {
+    if (fs.existsSync(brollDest)) fs.rmSync(brollDest, { recursive: true, force: true });
+    fs.mkdirSync(brollDest, { recursive: true });
+    const brollFiles = fs.readdirSync(brollDir).filter(f => f.endsWith('.mp4'));
+    for (const file of brollFiles) {
+      fs.copyFileSync(path.join(brollDir, file), path.join(brollDest, file));
+    }
+    console.log(`  Copied ${brollFiles.length} B-roll clips`);
+  }
+
   // Update timeline to use relative paths (via staticFile)
   const updatedTimeline = timeline.map((edit: any) => {
     if (edit.content) {
-      // Convert absolute path to relative path in public/slides/
       const filename = path.basename(edit.content);
+      // GIF types use gifs/ prefix, B-roll uses broll/ prefix, SFX keeps original, everything else uses slides/
+      if (edit.type === "gif_overlay" || edit.type === "gif_full") {
+        return { ...edit, content: `gifs/${filename}` };
+      }
+      if (edit.type === "broll_full") {
+        return { ...edit, content: `broll/${filename}` };
+      }
+      if (edit.type === "sfx") {
+        return edit;
+      }
       return { ...edit, content: `slides/${filename}` };
     }
     return edit;
@@ -98,6 +141,12 @@ async function render() {
       fps: 30,
       width: 1920,
       height: 1080,
+      bgMusic: {
+        src: "sfx/lofi-beat-bg.mp3",
+        startVolume: 0.16,
+        mainVolume: 0.08,
+        fadeDuration: 10,
+      },
     },
   };
 
@@ -123,6 +172,8 @@ async function render() {
   console.log("Cleaning up...");
   fs.unlinkSync(speakerDest);
   fs.rmSync(slidesDest, { recursive: true, force: true });
+  if (fs.existsSync(gifsDest)) fs.rmSync(gifsDest, { recursive: true, force: true });
+  if (fs.existsSync(brollDest)) fs.rmSync(brollDest, { recursive: true, force: true });
 
   console.log();
   console.log("=== Done! ===");

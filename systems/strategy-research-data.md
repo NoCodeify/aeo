@@ -83,6 +83,29 @@
 - LLMrefs: Free-$79/mo
 - AIclicks: $39-499/mo
 
+**Instagram Ad Competitors (Feb 7, 2026 — 14 companies actively spending on IG ads):**
+
+*AI Visibility Trackers:*
+- Nimt.ai: $79-179/mo (Starter/Pro/Enterprise), ChatGPT + Gemini + Claude + Perplexity, share of voice tracking, no white-label, no implementation
+- Briljant.nl: EUR39-99/mo (Pro/Agency), Dutch GEO platform, 6 AI engines, white-label with partner badges, technical GEO scanner + LLMs.txt generator
+- PromptWatch: Enterprise pricing (hidden), 880M+ citations analyzed, 9 engines (incl. DeepSeek, Mistral), agency white-label, content generation focus
+- AnswerRank: Unknown (JS-blocked landing page)
+
+*Content Autopilots:*
+- AutoSEO: ~$99/mo ($1 trial), 30 articles/mo + backlinks, 98 languages, no white-label. "Agency-quality SEO without $5K bill"
+- RankPill: $99/mo (from $198), 30 articles/mo + auto-publish to 5 CMS platforms, no white-label. "Fire your $3K/mo agency"
+- BabyLoveGrowth: GBP99/mo (from GBP247), articles + 2,500 backlink partners + LLM visibility tracking + Reddit AI agent, agency white-label plan
+- Outrank: Unknown pricing (freemium?), SEO content + backlinks, no AI search focus
+
+*Traditional SEO:*
+- HikeSEO: $90-749/mo (per site, 40% annual discount), AI agent "Kit" for small agencies, extensive white-label (custom domain + rebrandable AI), lead-gen audit widget
+- Climbo: $1,497-2,997 lifetime, white-label review management, GEO Agent bolt-on for LLM content
+- Soogle: $67/mo, 25 backlinks/month via partner marketplace
+- Bazoom: Pay-per-link from 80K+ outlets
+- RankingMasters: Dutch SEO/ads agency (not SaaS)
+
+*Key takeaway: 14 companies spending on IG ads = proven demand. MentionedIn.ai's moat: 10-run consistency testing + audit-to-playbook engine + affordable white-label per-org + "business in a box" for beginners.*
+
 ### TrustMRR Leaderboard (Top 100)
 - #1 Gumroad: $878M all-time
 - #3 Stan: $69M all-time
@@ -142,15 +165,16 @@
 
 1. **Audit-to-Playbook Engine** - Auto-generate URL-specific implementation plans
 2. **10-Run Consistency Testing** - Statistical validity (competitors run 1x)
-3. **Affordable White-Label** - $49-149/client (vs $2K+ competitors)
+3. **Affordable White-Label** - $149/mo for 15 clients (vs $2K+ competitors). Per-org subscription, not per-client.
 4. **First 50 Words Audit** - Unique methodology (WHO/WHAT/WHERE/PRICE check)
 5. **Battle Cards** - Specific fix per missing query
 
-### Empty Quadrant
-| | Cheap | Expensive |
+### Empty Quadrant (Updated Feb 7 with IG ad research)
+| | Cheap ($49-299) | Expensive ($500+) |
 |---|---|---|
-| **Tracking only** | Otterly, LLMrefs, Ahrefs | Peec, Profound |
-| **Tracking + Implementation** | **NOBODY (OUR POSITION)** | GrackerAI ($2K+), AEO Engine ($797+) |
+| **Tracking only** | Otterly, Nimt.ai ($79-179), LLMrefs, Ahrefs | Peec, Profound, PromptWatch |
+| **Content autopilot** | AutoSEO (~$99), RankPill ($99), BabyLoveGrowth (GBP99) | GrackerAI ($2K+) |
+| **Tracking + Implementation** | **MentionedIn.ai ($49-299)** | AEO Engine ($797+) |
 
 ### Skool Community Best Practices
 
@@ -195,7 +219,13 @@
 | Nico Gorrono (AI Ranking) | TikTok + Meta ads | $47/mo | DIY business owners | Short-form + paid |
 | Ethan Smith (Graphite) | Podcast guest | Agency services | Enterprise | Consulting |
 | Kevin Indig | Newsletter | Free/consulting | Marketers | Thought leadership |
-| **Us** | **YouTube + LinkedIn** | **$79-97/mo + SaaS** | **Agencies** | **Open** |
+| **MentionedIn.ai** | **YouTube + LinkedIn** | **$49-299/mo per org SaaS + $97/mo Skool** | **Agencies + beginners** | **Open** |
+
+**Note:** MentionedIn.ai pricing tiers are per-org subscriptions with client seat caps:
+- Starter: $49/mo (3 clients)
+- Pro: $99/mo (8 clients)
+- Agency: $149/mo (15 clients)
+- Scale: $299/mo (50 clients)
 
 ---
 

@@ -29,6 +29,7 @@ export const JumpCut: React.FC<JumpCutProps> = ({
         <OffthreadVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom}
+          pauseWhenBuffering
           style={{
             width: "100%",
             height: "100%",
