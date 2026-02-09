@@ -183,7 +183,7 @@ async function autocut() {
 
   for (let i = 0; i < cuts.keepSegments.length; i++) {
     const seg = cuts.keepSegments[i];
-    const segFile = path.join(tempDir, `seg_${String(i).padStart(4, "0")}.mp4`);
+    const segFile = path.join(tempDir, `seg_${String(i).padStart(4, "0")}.mkv`);
     segmentFiles.push(segFile);
 
     // Only pad start after silence cuts (filler cuts have exact word boundaries)
@@ -200,7 +200,7 @@ async function autocut() {
 
     try {
       execSync(
-        `ffmpeg -ss ${paddedStart} -to ${paddedEnd} -i "${speakerVideoPath}" -c:v libx264 -preset ultrafast -b:v 35M -c:a aac -b:a 192k -avoid_negative_ts make_zero -y "${segFile}"`,
+        `ffmpeg ${paddedStart > 0 ? `-ss ${paddedStart} ` : ""}-i "${speakerVideoPath}" -t ${paddedEnd - paddedStart} -c:v libx264 -preset ultrafast -b:v 35M -c:a pcm_s16le -avoid_negative_ts make_zero -y "${segFile}"`,
         { stdio: "pipe", timeout: 120000 }
       );
     } catch (err: any) {
@@ -223,7 +223,7 @@ async function autocut() {
   console.log("Concatenating...");
   try {
     execSync(
-      `ffmpeg -f concat -safe 0 -i "${concatFile}" -c copy -movflags +faststart -y "${outputVideoPath}"`,
+      `ffmpeg -f concat -safe 0 -i "${concatFile}" -c:v copy -c:a aac -b:a 192k -movflags +faststart -y "${outputVideoPath}"`,
       { stdio: "pipe", timeout: 300000 }
     );
   } catch (err: any) {
