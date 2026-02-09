@@ -21,7 +21,7 @@ Write content pages for aeoprotocol.ai that:
 ### Step 1: Read the Skill
 
 ```bash
-cat .claude/skills/aeo-site-content/SKILL.md
+cat .claude/skills/aeo-site-page/SKILL.md
 ```
 
 This contains:
@@ -88,7 +88,7 @@ import { PageName } from "./pages/PageName";
 
 ### Step 7: Update Skill Status
 
-Edit `.claude/skills/aeo-site-content/SKILL.md` to mark the page as DONE in the status column.
+Edit `.claude/skills/aeo-site-page/SKILL.md` to mark the page as DONE in the status column.
 
 ### Step 8: Update Sitemap (if not already listed)
 
