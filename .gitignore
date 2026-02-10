@@ -12,6 +12,10 @@ dist/
 # Video files (large)
 *.mp4
 tools/video-editor-remotion/out/
+tools/video-editor-remotion/public/timeline.json
+
+# Test video project
+test-video/
 
 # OS files
 .DS_Store
