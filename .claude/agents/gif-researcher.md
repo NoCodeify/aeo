@@ -70,7 +70,7 @@ If `batch_search_and_download` returns poor results for any query, use `search_g
 
 ### Phase 4: Generate Timeline Entries
 
-For each downloaded GIF, output the timeline entry for the video-timeline agent:
+For each downloaded GIF, output the timeline entry for the timeline-builder agent:
 
 ```json
 {"type": "gif_overlay", "start": 45.0, "end": 47.5, "content": "gifs/gif-01-mind-blown.gif", "position": "bottom-right", "size": 0.3}

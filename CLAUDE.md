@@ -79,7 +79,6 @@ Domain-specific rules load automatically based on what files you're working with
 | `/image-generation` | Website image prompts | image-prompter |
 | `/client-report` | Client visibility report | report-generator |
 | `/forum-research` | Reddit/forum competitor research | competitor-researcher |
-| `/video-timeline` | Generate timeline.json | video-timeline |
 | `/auto-cutter` | Intelligent silence removal | auto-cutter |
 | `/thumbnail` | YouTube thumbnails | thumbnail-prompter |
 | `/playbook` | Audit to playbook conversion | playbook-creator |
@@ -90,9 +89,10 @@ Domain-specific rules load automatically based on what files you're working with
 ### Pipeline Skills (agent teams)
 | Skill | Purpose |
 |-------|---------|
+| `/video-timeline` | Generate + validate timeline.json (builder + validator team, max 3 rounds) |
 | `/video-produce` | Full video pipeline: visuals + GIFs + timeline (parallel workers, persistent context) |
 | `/aeo-deliver` | Full client delivery: audit + playbook + content + report (sequential, persistent context) |
 
 ## Agents (`.claude/agents/`)
 
-13 specialized agents with isolated context, tool restrictions, and MCP access. Skills delegate to agents via `context: fork`. See individual agent files for full system prompts.
+14 specialized agents with isolated context, tool restrictions, and MCP access. Skills delegate to agents via `context: fork`. See individual agent files for full system prompts.

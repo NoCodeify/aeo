@@ -34,7 +34,7 @@ cd tools/video-editor-remotion && npx tsx autocut.ts
 
 ## ALWAYS use dedicated agents for video tasks
 
-- Video timelines: `/video-timeline` skill (forks to video-timeline agent)
+- Video timelines: `/video-timeline` skill (pipeline: timeline-builder + timeline-validator agents)
 - Auto-cut: `/auto-cutter` skill (forks to auto-cutter agent)
 - B-roll prompts: `/broll-prompting` skill (forks to broll-prompter agent)
 - GIF search: `/gif-search` skill (forks to gif-researcher agent)

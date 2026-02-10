@@ -147,6 +147,7 @@ async function autocut() {
   // the start BACK into the filler word (causing audible filler bleed).
   // FILLER_TAIL_TRIM was removed — it clipped the last word of segments.
   const ONSET_PADDING = 0.10; // 100ms pre-roll for silence cuts only
+  const AUDIO_FADE_MS = 0.015; // 15ms crossfade to prevent audio pops and echo at splice points
 
   // Filler-type cuts have exact word boundaries — no onset padding needed
   const FILLER_CUT_TYPES = new Set([
@@ -198,10 +199,14 @@ async function autocut() {
       ? seg.end - FILLER_ONSET_GUARD
       : seg.end;
 
+    const segDuration = paddedEnd - paddedStart;
+    const fadeOutStart = Math.max(segDuration - AUDIO_FADE_MS, 0).toFixed(4);
+    const fadeFilter = `-af "afade=t=in:st=0:d=${AUDIO_FADE_MS},afade=t=out:st=${fadeOutStart}:d=${AUDIO_FADE_MS}"`;
+
     try {
       execSync(
-        `ffmpeg ${paddedStart > 0 ? `-ss ${paddedStart} ` : ""}-i "${speakerVideoPath}" -t ${paddedEnd - paddedStart} -c:v libx264 -preset ultrafast -b:v 35M -c:a pcm_s16le -avoid_negative_ts make_zero -y "${segFile}"`,
-        { stdio: "pipe", timeout: 120000 }
+        `ffmpeg ${paddedStart > 0 ? `-ss ${paddedStart} ` : ""}-i "${speakerVideoPath}" -t ${segDuration} -c:v h264_videotoolbox -b:v 35M ${fadeFilter} -c:a pcm_s16le -avoid_negative_ts make_zero -y "${segFile}"`,
+        { stdio: "pipe", timeout: 300000 }
       );
     } catch (err: any) {
       console.error(

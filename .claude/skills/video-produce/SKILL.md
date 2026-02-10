@@ -37,7 +37,7 @@ Create an agent team called "video-production" with these teammates:
 
 ### timeline-builder (general-purpose agent)
 **Role:** Generate timeline.json from script + assets.
-**Skills to preload:** Load the video-timeline agent instructions.
+**Skills to preload:** Load the timeline-builder agent instructions.
 **Tasks (run AFTER visual-designer and gif-curator finish):**
 1. Read the script/prompter file and transcript
 2. Read what visual-designer and gif-curator created (message them if unclear)

@@ -8,7 +8,7 @@ How to update CLAUDE.md, rules, skills, agents, memory, and pipelines in this pr
 CLAUDE.md                          # Concise index (~100 lines). Loads EVERY session.
 .claude/rules/                     # Modular rules. Path-scoped ones load on demand.
 .claude/skills/                    # 23 skills. 8 auto-trigger, 15 manual-only.
-.claude/agents/                    # 13 agents. Full system prompts, tool restrictions.
+.claude/agents/                    # 14 agents. Full system prompts, tool restrictions.
 ~/.claude/projects/.../memory/     # Auto memory. MEMORY.md loads every session (first 200 lines).
 ```
 
@@ -141,7 +141,7 @@ Task description for the agent.
 Input: $ARGUMENTS
 ```
 
-**Use for:** Heavy tasks with side effects. Things like `/broll-prompting`, `/video-timeline`, `/auto-cutter`.
+**Use for:** Heavy tasks with side effects. Things like `/broll-prompting`, `/auto-cutter`, `/thumbnail`.
 
 ### 3. Pipeline skills (agent teams)
 
@@ -158,7 +158,7 @@ disable-model-invocation: true
 Create an agent team with these workers...
 ```
 
-**Use for:** Multi-step workflows where context loss is costly. Currently: `/video-produce`, `/aeo-deliver`.
+**Use for:** Multi-step workflows where context loss is costly. Currently: `/video-timeline`, `/video-produce`, `/aeo-deliver`.
 
 ### Creating a new skill
 
