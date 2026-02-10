@@ -167,6 +167,10 @@ async function render() {
     outputLocation: outputPath,
     inputProps,
     videoBitrate: "35M",
+    ffmpegOverride: ({ args }) => {
+      // Use Apple VideoToolbox hardware encoder on macOS (M-series chips)
+      return args.map((a) => (a === "libx264" ? "h264_videotoolbox" : a));
+    },
   });
 
   // Cleanup copied files
