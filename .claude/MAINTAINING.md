@@ -52,6 +52,27 @@ CLAUDE.md                          # Concise index (~100 lines). Loads EVERY ses
 
 ---
 
+## Per-Folder CLAUDE.md vs Centralized Rules
+
+Claude Code supports two ways to scope instructions to folders. Use the right one:
+
+**Centralized rules (`.claude/rules/` with `paths:`)** - use for this project.
+- One rule can target multiple paths (e.g., video editing loads for both `tools/video-editor-remotion/**` and `test-video/**`)
+- All rules visible in one place
+- Better when one person maintains everything
+
+**Per-folder CLAUDE.md** - use for monorepo/SaaS projects with self-contained feature folders.
+- Drop a `CLAUDE.md` in `auth/`, `billing/`, `payments/` etc.
+- Works as a mini-README: feature status, ownership, local patterns
+- Better when different people/teams own different folders
+- Limited to one directory (can't target multiple paths)
+
+**Can combine both:** Per-folder CLAUDE.md for status/context ("this feature is WIP, migration pending"), centralized rules for cross-cutting patterns ("always use Zod", "all API routes follow X"). They're not mutually exclusive.
+
+**This project uses centralized rules only.** No per-folder CLAUDE.md files.
+
+---
+
 ## Adding/Updating Rules (`.claude/rules/`)
 
 Rules are markdown files with optional YAML frontmatter for path scoping.
@@ -321,3 +342,4 @@ If the topic needs more detail, create a separate file in the memory directory a
 | Adding `memory: project` to every agent | Only for agents that benefit from cross-session learning |
 | Adding tools an agent doesn't need | Restrict to minimum required tools |
 | Forgetting to update CLAUDE.md tables | After adding any skill, agent, or rule |
+| Adding per-folder CLAUDE.md for rules | Use `.claude/rules/` with `paths:` instead (centralized, multi-path) |

@@ -7,7 +7,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 AEO (Answer Engine Optimization) Protocol toolkit: consulting methodology, MCP servers, YouTube production, and client delivery.
 
 - `aeo-protocol-sop.md` - Master AEO methodology (3500+ lines, source of truth)
-- `aeo-audit-mcp/` / `seo-agent-mcp/` / `imagen-mcp/` / `giphy-mcp/` / `pexels-mcp/` - MCP servers
+- `aeo-audit-mcp/` / `seo-agent-mcp/` / `imagen-mcp/` / `giphy-mcp/` / `pexels-mcp/` / `scrapingbee-mcp/` - MCP servers
 - `tools/video-editor-remotion/` - React-based video editor (Remotion)
 - `youtube/` - Video production framework
 - `clients/` - Client project files
@@ -22,7 +22,7 @@ cd [server]-mcp && npm run build
 # Dev mode
 cd [server]-mcp && npm run dev
 
-# Servers: aeo-audit-mcp, seo-agent-mcp, imagen-mcp, giphy-mcp, pexels-mcp
+# Servers: aeo-audit-mcp, seo-agent-mcp, imagen-mcp, giphy-mcp, pexels-mcp, scrapingbee-mcp
 ```
 
 ## Environment Variables

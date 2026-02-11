@@ -41,3 +41,18 @@ Stock video search and download. Free API (200 req/hr, 20k/month). HD/4K quality
 **Tools:** `search_videos`, `download_video`, `batch_search_and_download`
 
 **Pipeline:** Script -> broll-prompter (search terms) -> pexels-mcp (search + download) -> Remotion (render)
+
+## ScrapingBee MCP (`scrapingbee-mcp/src/index.ts`)
+
+Web fetch fallback and Google Search via ScrapingBee. Use when built-in WebFetch fails on JS-heavy or bot-protected sites.
+
+| Function | Endpoint | Purpose |
+|----------|----------|---------|
+| `fetchUrl()` | HTML API (`/api/v1/`) | Headless browser fetch with proxy rotation |
+| `searchGoogle()` | Google API (`/api/v1/google`) | Structured SERP with AI Overview, PAA |
+| `screenshotUrl()` | HTML API (screenshot mode) | Full-page PNG screenshots |
+| `checkUsage()` | Usage API (`/api/v1/usage`) | Credit balance check |
+
+> Credit costs: 1 (no JS) / 5 (JS render) / 10 (premium proxy) / 25 (premium + JS)
+
+**Tools:** `fetch_url`, `search_google`, `screenshot_url`, `check_usage`
