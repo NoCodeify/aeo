@@ -42,7 +42,7 @@ Run all checks in order. Track pass/fail for each.
 12. **Transition fromLayout accuracy** - Every `zoom_transition_in` has `fromLayout` matching the actual previous layout type
 13. **Segment duration bounds** - No segment shorter than 0.5s (except `jump_zoom_in`/`jump_zoom_out`/`jump_cut_out` at 0.3s) or longer than 15s
 14. **Speaker breather duration** - `speaker_full` breather segments are at least 1.0s
-15. **Layout type coverage** - Uses ALL available layout types: splits, 5050, broll, gifs, sfx, text overlays. Flag any missing type.
+15. **Layout type coverage** - Uses a variety of layout types across all categories: core layouts (splits, 5050, broll, gifs, sfx, text overlays), speaker overlays (newspaper, counter, callout, check, etc.), speaker effects (glitch, freeze, light_leak, screen_shake), and full-screen data viz (charts, lists, tables, flow_diagram, etc.). Flag if any entire category is missing.
 16. **GIF placement timing** - GIFs are placed AFTER the statement they punctuate (not during)
 17. **File reference validity** - All `content` paths reference files that actually exist in the project directory
 
@@ -57,6 +57,8 @@ Count each element type and compare against minimums. Scale proportionally based
 | Text overlays | 4 | ~1 per 38s |
 | SFX (boop + click) | 5 | ~1 per 30s |
 | Zoom transitions (in + out) | 3 | ~1 per 50s |
+| Speaker overlays (newspaper, counter, callout, check, etc.) | 2 | ~1 per 75s |
+| Full-screen data viz (charts, lists, tables, etc.) | 1 | ~1 per 150s |
 
 **To compute minimums for a given video:** `minimum = max(2, floor(duration_seconds / rate))`
 

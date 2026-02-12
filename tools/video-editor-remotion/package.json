@@ -8,16 +8,23 @@
     "render": "remotion render MainVideo out/video.mp4",
     "render:test": "remotion render MainVideo out/test.mp4 --frames=0-450",
     "transcribe": "ts-node transcribe.ts",
-    "autocut": "ts-node autocut.ts"
+    "autocut": "ts-node autocut.ts",
+    "proxy": "bash -c 'for f in public/speaker.mp4 public/grid-loop.mp4; do out=\"${f%.mp4}-proxy.mp4\"; [ -f \"$out\" ] && echo \"Skip $out (exists)\" || (echo \"Creating $out...\" && ffmpeg -i \"$f\" -vf scale=1280:720 -c:v libx264 -crf 28 -preset fast -c:a aac -b:a 128k -movflags +faststart \"$out\" && echo \"Done: $out\"); done'",
+    "proxy:force": "bash -c 'for f in public/speaker.mp4 public/grid-loop.mp4; do out=\"${f%.mp4}-proxy.mp4\"; echo \"Creating $out...\" && ffmpeg -i \"$f\" -vf scale=1280:720 -c:v libx264 -crf 28 -preset fast -c:a aac -b:a 128k -movflags +faststart \"$out\" && echo \"Done: $out\"; done'"
   },
   "dependencies": {
     "@remotion/bundler": "^4.0.417",
     "@remotion/cli": "^4.0.417",
     "@remotion/google-fonts": "^4.0.417",
+    "@remotion/light-leaks": "^4.0.417",
+    "@remotion/paths": "^4.0.417",
     "@remotion/renderer": "^4.0.417",
+    "@remotion/shapes": "^4.0.417",
+    "@remotion/transitions": "^4.0.417",
     "openai": "^6.17.0",
     "remotion": "^4.0.417",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "zod": "^3.22.3"
   },
   "devDependencies": {
     "@types/node": "^25.2.0",

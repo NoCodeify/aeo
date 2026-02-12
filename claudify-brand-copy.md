@@ -4,18 +4,18 @@
 Claudify
 
 ## Tagline
-What used to take a team now takes a subscription.
+What used to take a team or an expert now takes a subscription.
 
 ## Transformation phrase
-From needing a team to being the team.
+From needing a team and an expert to being both.
 
 ## Short Description (Skool discovery / bio)
 
-Run a consulting agency. Ship a $100K SaaS. Deliver services that used to need a dev team. All from one person with Claude Code. Claudify is where professionals and business owners learn what's actually possible - and how to build it.
+Run a consulting agency. Ship a $100K SaaS. Deliver services that used to need a dev team or a specialist. All from one person with Claude Code. Claudify is where professionals and business owners learn what's actually possible - and how to do it.
 
 ## About Section (Skool community page)
 
-Ready to build things in 2026 that used to require a dev team or a six-figure budget?
+Ready to do things in 2026 that used to require a dev team, a specialist, or a six-figure budget?
 
 Built a $100K/yr SaaS, a self-healing CI/CD pipeline, and a full consulting delivery system with Claude Code. Zero dev background. Now teaching others to do the same. First working system in 21 days or your money back.
 
@@ -47,11 +47,11 @@ Not productivity hacks. Not "automate your email." Real capabilities:
 
 - Run a consulting agency where Claude Code handles the delivery
 - Ship a SaaS that generates real revenue
-- Offer services you could never afford to staff
+- Offer services you'd normally need an expert or a team to deliver
 - Replace SaaS tools that do 80% of what you need with ones that do exactly 100%
 - Launch an entire business line from a single subscription
 
-The gap between "I'd need a team for that" and "I did it myself" is closed. Most people just don't know it yet.
+The gap between "I'd need a team for that" and "I did it myself" is closed. The gap between "I'd need an expert" and "I figured it out" is closed. Most people just don't know it yet.
 
 ---
 
@@ -95,7 +95,7 @@ Build your first working Claude Code system - a custom agent, a CLAUDE.md-powere
 - Consultants who want to deliver 5x more work without 5x more hours
 - Business owners paying for SaaS tools that don't quite fit and want to build exactly what they need
 - Professionals who see what Claude Code can do and want to go from "that's cool" to "I built that"
-- Anyone who has a business idea but thought they needed a technical co-founder to make it real
+- Anyone who has a business idea but thought they needed a technical co-founder or an expensive specialist to make it real
 
 **Who is this NOT for?**
 
@@ -117,10 +117,10 @@ Book a quick call or DM us directly. No pressure, no pitch - just answers.
 Claudify
 
 **Subheadline:**
-What used to take a team now takes a subscription.
+What used to take a team or an expert now takes a subscription.
 
 **One-liner (below subheadline):**
-From needing a team to being the team. First working system in 21 days or your money back.
+From needing a team and an expert to being both. First working system in 21 days or your money back.
 
 **Body:**
 

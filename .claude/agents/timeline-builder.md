@@ -57,6 +57,8 @@ A `timeline.json` file with edit decisions:
 
 ## Available Layouts
 
+### Core Layouts
+
 | Layout | Description | When to Use |
 |--------|-------------|-------------|
 | `speaker_full` | Speaker fills frame | Intro, personal stories, transitions |
@@ -78,19 +80,122 @@ A `timeline.json` file with edit decisions:
 | `broll_full` | Stock video B-roll fills frame (no loop, speaker audio continues) | Visual metaphors, establishing shots, supporting claims (3-15s) |
 | `sfx` | Sound effect overlay (audio-only, no visual) | Subtle boop/click on reveals, transitions (max 4-6 per video) |
 
-## Layout Distribution (~20% each)
+### Speaker Overlays (on top of speaker video)
+
+| Layout | Description | When to Use | Duration |
+|--------|-------------|-------------|----------|
+| `newspaper_flash` | Stacked newspaper clippings with keyword highlighted | Breaking news moments, trend emphasis | 2-4s |
+| `lower_third` | Name/title bar overlay | Speaker introduction (once per video, early) | 3-5s |
+| `counter_ticker` | Animated counting number (e.g. $0 → $100K) | Statistics, revenue numbers, growth metrics | 2-4s |
+| `social_proof_flash` | Stacked tweet/post cards with keyword highlighted | Social proof, community buzz, testimonials | 2-4s |
+| `callout` | Arrow + text label pointing to something | Drawing attention to specific detail on screen | 2-4s |
+| `check_x_mark` | Green check or red X SVG overlay | Confirming/denying a claim, yes/no moments | 1-2s |
+| `circle_timer` | Countdown circle draining over segment | Urgency, time-limited offers, countdowns | 3-5s |
+| `text_reveal_wipe` | Clip-path text reveal (left/right/top/bottom wipe) | Dramatic text reveals, framework names | 1-2s |
+| `confetti_burst` | Colorful particle explosion overlay | Celebration moments, milestones, wins | 2-3s |
+| `screen_shake` | Camera shake transform (impact/earthquake/subtle) | Emphasis on shocking statements, impact moments | 0.5-1s |
+
+### Speaker Effects (brief transforms)
+
+| Layout | Description | When to Use | Duration |
+|--------|-------------|-------------|----------|
+| `glitch` | Digital distortion effect | Pattern interrupt, topic shift, error/mistake moment | 3-5 frames |
+| `freeze_frame` | Hold speaker with desaturation + optional text | "Wait what?" moments, record scratch | 1-2s |
+| `light_leak` | Cinematic light leak overlay | Transition sweetener, mood shift | 1-2s |
+| `kinetic_type` | Words appear one at a time (big, bold) | Key phrases, memorable quotes | 3-6s |
+
+### Full-Screen Data Viz (dark bg, optional 50/50 split)
+
+Use these when you need to SHOW data, not just talk about it. By default, speaker video is replaced with animated graphics on a dark background.
+
+All data viz types support an optional `layout` property:
+- `"full"` (default) - Full-screen dark background, speaker audio hidden
+- `"split_left"` - Speaker on left, data viz on right (50/50)
+- `"split_right"` - Speaker on right, data viz on left (50/50)
+
+Use split layout for simpler visualizations (bullet lists, stat cards, quotes) where maintaining speaker presence adds value. Use full-screen for complex visuals (flow diagrams, treasure maps, detailed charts) that need the space.
+
+| Layout | Description | When to Use | Duration |
+|--------|-------------|-------------|----------|
+| `comparison_table` | Two-column side-by-side | Comparing two approaches (SEO vs AEO, before/after) | 4-6s |
+| `quote_card` | Stylized quote with attribution | Expert quotes, research citations, testimonials | 3-5s |
+| `progress_bars` | Horizontal stat bars with animated fill | Scoring, ratings, benchmark comparisons | 3-5s |
+| `typewriter_text` | Monospace text typing out character by character | Key statements, code snippets, definitions | 3-6s |
+| `bar_chart` | Vertical bars with spring animation | Revenue by channel, category comparisons | 4-6s |
+| `line_chart` | SVG line drawing left-to-right with dots | Growth over time, trend data | 4-6s |
+| `bullet_list` | Animated checklist items staggering in | Feature lists, what-you-get, action items | 4-6s |
+| `stat_cards` | Grid of metric cards (value + label + trend) | KPI dashboards, multiple stats at once (2-4 cards) | 3-5s |
+| `pie_chart` | Animated pie/donut segments with legend | Revenue breakdown, market share, distribution | 4-6s |
+| `flow_diagram` | Linear node flow (A → B → C → D) | Process steps, workflows, methodologies | 4-6s |
+| `treasure_map` | Winding dashed path with X marks the spot | Roadmaps, journey visualization, step sequences | 4-6s |
+
+### Data Viz JSON Examples
+
+```json
+{"type": "bar_chart", "start": 63.0, "end": 68.0, "title": "Revenue by Channel", "bars": [{"label": "YouTube", "value": 4200, "color": "#e63946"}, {"label": "LinkedIn", "value": 8500, "color": "#457b9d"}]}
+
+{"type": "pie_chart", "start": 83.0, "end": 88.0, "title": "Revenue Breakdown", "segments": [{"label": "Consulting", "value": 45, "color": "#e63946"}, {"label": "Community", "value": 30, "color": "#457b9d"}]}
+
+{"type": "bullet_list", "start": 73.0, "end": 78.0, "title": "What You Get", "items": ["Weekly live calls", "Custom agents", "Community access"], "icon": "check", "color": "#22c55e"}
+
+{"type": "stat_cards", "start": 78.0, "end": 83.0, "cards": [{"value": "$10.2K", "label": "Monthly Revenue", "trend": "up", "trendValue": "+23%", "color": "#22c55e"}, {"value": "439", "label": "Paid Members"}]}
+
+{"type": "flow_diagram", "start": 88.0, "end": 93.0, "nodes": [{"label": "Audit"}, {"label": "Playbook"}, {"label": "Execute"}], "accentColor": "#e63946", "direction": "horizontal"}
+
+{"type": "treasure_map", "start": 93.0, "end": 98.0, "title": "THE ROADMAP", "nodes": [{"label": "Step 1", "description": "Start here"}, {"label": "Goal!", "description": "X marks the spot"}], "accentColor": "#e63946"}
+
+{"type": "bullet_list", "start": 73.0, "end": 78.0, "layout": "split_right", "title": "What You Get", "items": ["Weekly live calls", "Custom agents"], "icon": "check", "color": "#22c55e"}
+
+{"type": "stat_cards", "start": 78.0, "end": 83.0, "layout": "split_left", "cards": [{"value": "$10.2K", "label": "Revenue", "trend": "up", "trendValue": "+23%"}]}
+
+{"type": "comparison_table", "start": 59.0, "end": 65.0, "leftLabel": "Old Way", "rightLabel": "New Way", "rows": [{"left": "Slow", "right": "Fast", "rightWins": true}]}
+
+{"type": "counter_ticker", "start": 24.0, "end": 27.0, "from": 0, "to": 100000, "prefix": "$", "suffix": "/yr", "label": "Revenue at Risk"}
+
+{"type": "screen_shake", "start": 30.0, "end": 30.5, "intensity": 0.7, "style": "impact"}
+
+{"type": "confetti_burst", "start": 33.0, "end": 36.0, "density": 1.0, "colors": ["#e63946", "#457b9d", "#2a9d8f"]}
+
+{"type": "check_x_mark", "start": 38.0, "end": 39.5, "markType": "check", "position": "center"}
+```
+
+## Layout Distribution
 
 | Layout | % of Video | Purpose |
 |--------|------------|---------|
-| `speaker_full` | ~20% | Intro, personal stories, trust-building, transitions |
-| `slide_full` | ~20% | Teaching, complex diagrams, CTA slides |
-| `split_right` / `split_left` | ~15% | Teaching with speaker visible (glass border style) |
+| `speaker_full` | ~15% | Intro, personal stories, trust-building, transitions |
+| `slide_full` | ~15% | Teaching, complex diagrams, CTA slides |
+| `split_right` / `split_left` | ~12% | Teaching with speaker visible (glass border style) |
 | `split_5050_left` / `split_5050_right` | ~5% | Equal emphasis on speaker + slide (full-bleed, 1:1 slides) |
 | `broll_full` | ~5% | Stock video B-roll (visual metaphors, establishing shots) |
-| `jump_zoom` + `gradual_zoom` | ~20% | Emphasis, energy, movement |
+| `jump_zoom` + `gradual_zoom` | ~15% | Emphasis, energy, movement |
+| Speaker overlays | ~15% | newspaper_flash, counter_ticker, callout, check_x_mark, etc. |
+| Full-screen data viz | ~12% | bar_chart, pie_chart, bullet_list, stat_cards, flow_diagram, etc. |
+| Speaker effects | ~3% | glitch, freeze_frame, light_leak, screen_shake |
 | `sfx` | 4-6 total | Sound effects: "boop" (reveals) or "click" (transitions). Overlaps visuals. |
 
 **No single layout dominates** - keeps visual variety throughout the video.
+
+### Data Viz Selection Guide
+
+Pick the right visualization for the content:
+
+| Data Type | Best Layout | Recommended Layout | Example |
+|-----------|-------------|-------------------|---------|
+| Comparing two things | `comparison_table` | full | SEO vs AEO, Before vs After |
+| Multiple metrics at once | `stat_cards` | split or full | $10.2K revenue, 439 members, 97% retention |
+| Ranked/scored items | `progress_bars` or `bar_chart` | full | LLM visibility scores, revenue by channel |
+| Trend over time | `line_chart` | full | Growth month over month |
+| Distribution/breakdown | `pie_chart` | full | Revenue sources, time allocation |
+| Process/workflow | `flow_diagram` or `treasure_map` | full | Audit → Playbook → Execute → Monitor |
+| Feature list / benefits | `bullet_list` | split or full | What you get, action items |
+| Expert quote / citation | `quote_card` | split or full | Research stats, testimonials |
+| Key statement | `typewriter_text` or `kinetic_type` | full | Memorable phrases, definitions |
+| Counting up to a number | `counter_ticker` | full (overlay) | $0 → $100K revenue |
+
+**When to use split vs full:**
+- **Use split** (`split_left`/`split_right`) for simple visuals (bullet lists, stat cards, quotes) where the speaker is actively explaining - keeps the personal connection
+- **Use full** for complex or detailed visuals (charts, diagrams, tables, maps) that need the screen real estate to be readable
 
 ### SFX Placement Rules
 

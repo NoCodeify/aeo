@@ -1,6 +1,8 @@
 import React from "react";
 import { Audio, Sequence, staticFile, useVideoConfig } from "remotion";
-import { Edit, VideoConfig, BgMusicConfig } from "../types/timeline";
+import { Edit, VideoConfig, BgMusicConfig, DataVizLayout } from "../types/timeline";
+import { DataVizSplit } from "./DataVizSplit";
+import { proxyVideo } from "../use-proxy";
 import { SpeakerFull } from "./SpeakerFull";
 import { SlideFull } from "./SlideFull";
 import { SplitLayout } from "./SplitLayout";
@@ -13,6 +15,31 @@ import { GifOverlay } from "./GifOverlay";
 import { GifFull } from "./GifFull";
 import { BrollFull } from "./BrollFull";
 import { TextOverlay } from "./TextOverlay";
+import { NewspaperFlash } from "./NewspaperFlash";
+import { LowerThird } from "./LowerThird";
+import { CounterTicker } from "./CounterTicker";
+import { ComparisonTable } from "./ComparisonTable";
+import { QuoteCard } from "./QuoteCard";
+import { ProgressBars } from "./ProgressBars";
+import { SocialProofFlash } from "./SocialProofFlash";
+import { CalloutAnnotation } from "./CalloutAnnotation";
+import { GlitchEffect } from "./GlitchEffect";
+import { FreezeFrame } from "./FreezeFrame";
+import { KineticType } from "./KineticType";
+import { LightLeakOverlay } from "./LightLeakOverlay";
+import { ScreenShake } from "./ScreenShake";
+import { ConfettiBurst } from "./ConfettiBurst";
+import { TypewriterText } from "./TypewriterText";
+import { CheckXMark } from "./CheckXMark";
+import { CircleTimer } from "./CircleTimer";
+import { TextRevealWipe } from "./TextRevealWipe";
+import { BarChart } from "./BarChart";
+import { LineChart } from "./LineChart";
+import { BulletList } from "./BulletList";
+import { StatCards } from "./StatCards";
+import { PieChart } from "./PieChart";
+import { FlowDiagram } from "./FlowDiagram";
+import { TreasureMap } from "./TreasureMap";
 
 interface MainVideoProps {
   config: VideoConfig;
@@ -21,6 +48,8 @@ interface MainVideoProps {
 export const MainVideo: React.FC<MainVideoProps> = ({ config }) => {
   const { fps } = useVideoConfig();
   const { speakerVideo, gridBackground, timeline } = config;
+  const resolvedSpeaker = proxyVideo(speakerVideo);
+  const resolvedGrid = proxyVideo(gridBackground);
 
   return (
     <>
@@ -56,7 +85,7 @@ export const MainVideo: React.FC<MainVideoProps> = ({ config }) => {
             name={`${edit.type}-${index}`}
             premountFor={30}
           >
-            {renderEdit(edit, speakerVideo, gridBackground, speakerStartFrom)}
+            {renderEdit(edit, resolvedSpeaker, resolvedGrid, speakerStartFrom)}
           </Sequence>
         );
       })}
@@ -64,6 +93,28 @@ export const MainVideo: React.FC<MainVideoProps> = ({ config }) => {
     </>
   );
 };
+
+// Wrap data viz in 50/50 split with speaker when layout is split_left/split_right
+function withSplitLayout(
+  layout: DataVizLayout | undefined,
+  speakerVideo: string,
+  speakerStartFrom: number,
+  renderViz: (speakerSrc?: string) => React.ReactNode,
+): React.ReactNode {
+  const isSplit = layout && layout !== "full";
+  // In split mode, don't pass speakerSrc to viz (wrapper handles speaker + audio)
+  const viz = renderViz(isSplit ? undefined : speakerVideo);
+  if (!isSplit) return viz;
+  return (
+    <DataVizSplit
+      speakerSrc={speakerVideo}
+      startFrom={speakerStartFrom}
+      side={layout === "split_left" ? "left" : "right"}
+    >
+      {viz}
+    </DataVizSplit>
+  );
+}
 
 function renderEdit(
   edit: Edit,
@@ -257,6 +308,283 @@ function renderEdit(
           volume={edit.volume ?? 0.5}
         />
       );
+
+    case "newspaper_flash":
+      return (
+        <NewspaperFlash
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          keyword={edit.keyword}
+          headlines={edit.headlines}
+          highlightColor={edit.highlightColor}
+        />
+      );
+
+    case "lower_third":
+      return (
+        <LowerThird
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          title={edit.title}
+          subtitle={edit.subtitle}
+          accentColor={edit.accentColor}
+        />
+      );
+
+    case "counter_ticker":
+      return (
+        <CounterTicker
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          from={edit.from}
+          to={edit.to}
+          prefix={edit.prefix}
+          suffix={edit.suffix}
+          label={edit.label}
+          color={edit.color}
+        />
+      );
+
+    case "comparison_table":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <ComparisonTable
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          leftLabel={edit.leftLabel}
+          rightLabel={edit.rightLabel}
+          rows={edit.rows}
+          accentColor={edit.accentColor}
+        />
+      ));
+
+    case "quote_card":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <QuoteCard
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          quote={edit.quote}
+          attribution={edit.attribution}
+          role={edit.role}
+          accentColor={edit.accentColor}
+        />
+      ));
+
+    case "progress_bars":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <ProgressBars
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          bars={edit.bars}
+          title={edit.title}
+        />
+      ));
+
+    case "social_proof_flash":
+      return (
+        <SocialProofFlash
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          keyword={edit.keyword}
+          posts={edit.posts}
+          platform={edit.platform}
+          highlightColor={edit.highlightColor}
+        />
+      );
+
+    case "callout":
+      return (
+        <CalloutAnnotation
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          text={edit.text}
+          position={edit.position}
+          arrowDirection={edit.arrowDirection}
+          color={edit.color}
+        />
+      );
+
+    case "glitch":
+      return (
+        <GlitchEffect
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          intensity={edit.intensity}
+        />
+      );
+
+    case "freeze_frame":
+      return (
+        <FreezeFrame
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          text={edit.text}
+          style={edit.style}
+        />
+      );
+
+    case "kinetic_type":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <KineticType
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          words={edit.words}
+          color={edit.color}
+          size={edit.size}
+        />
+      ));
+
+    case "light_leak":
+      return (
+        <LightLeakOverlay
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          seed={edit.seed}
+          hueShift={edit.hueShift}
+        />
+      );
+
+    case "screen_shake":
+      return (
+        <ScreenShake
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          intensity={edit.intensity}
+          style={edit.style}
+        />
+      );
+
+    case "confetti_burst":
+      return (
+        <ConfettiBurst
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          colors={edit.colors}
+          density={edit.density}
+        />
+      );
+
+    case "typewriter_text":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <TypewriterText
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          text={edit.text}
+          speed={edit.speed}
+          cursorColor={edit.cursorColor}
+        />
+      ));
+
+    case "check_x_mark":
+      return (
+        <CheckXMark
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          markType={edit.markType}
+          color={edit.color}
+          size={edit.size}
+          position={edit.position}
+        />
+      );
+
+    case "circle_timer":
+      return (
+        <CircleTimer
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          color={edit.color}
+          label={edit.label}
+          showNumbers={edit.showNumbers}
+        />
+      );
+
+    case "text_reveal_wipe":
+      return (
+        <TextRevealWipe
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          text={edit.text}
+          direction={edit.direction}
+          style={edit.style}
+          color={edit.color}
+        />
+      );
+
+    case "bar_chart":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <BarChart
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          bars={edit.bars}
+          title={edit.title}
+          maxValue={edit.maxValue}
+        />
+      ));
+
+    case "line_chart":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <LineChart
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          points={edit.points}
+          title={edit.title}
+          lineColor={edit.lineColor}
+          showDots={edit.showDots}
+        />
+      ));
+
+    case "bullet_list":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <BulletList
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          items={edit.items}
+          icon={edit.icon}
+          title={edit.title}
+          color={edit.color}
+        />
+      ));
+
+    case "stat_cards":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <StatCards
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          cards={edit.cards}
+        />
+      ));
+
+    case "pie_chart":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <PieChart
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          segments={edit.segments}
+          title={edit.title}
+          donut={edit.donut}
+        />
+      ));
+
+    case "flow_diagram":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <FlowDiagram
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          nodes={edit.nodes}
+          accentColor={edit.accentColor}
+          direction={edit.direction}
+        />
+      ));
+
+    case "treasure_map":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <TreasureMap
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          nodes={edit.nodes}
+          accentColor={edit.accentColor}
+          title={edit.title}
+        />
+      ));
 
     default:
       return null;

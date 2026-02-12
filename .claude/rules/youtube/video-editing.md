@@ -31,6 +31,9 @@ paths:
 cd tools/video-editor-remotion
 npm install
 
+# 0. Generate proxy videos for smooth preview (one-time, ~10MB vs 705MB)
+npm run proxy
+
 # 1. Transcribe speaker video (word-level timestamps + filler detection)
 ASSEMBLYAI_API_KEY=... npx ts-node transcribe.ts ../../youtube/weekly-production/2026-w08-rank-in-chatgpt
 
@@ -38,14 +41,16 @@ ASSEMBLYAI_API_KEY=... npx ts-node transcribe.ts ../../youtube/weekly-production
 # Say: "use the auto-cutter agent on the w08 video"
 # → generates cuts.json → runs autocut.ts → speaker-clean.mp4 + transcript-clean.json
 
-# 3. Preview in browser
+# 3. Preview in browser (uses proxy videos automatically)
 npm run dev
 
-# 4. Render video (auto-detects speaker-clean.mp4 if available)
+# 4. Render video (uses full 4K source automatically)
 npx ts-node render.ts ../../youtube/weekly-production/2026-w08-rank-in-chatgpt
 ```
 
 ## Layouts
+
+### Core Layouts (speaker video)
 
 | Type | Description |
 |------|-------------|
@@ -67,6 +72,51 @@ npx ts-node render.ts ../../youtube/weekly-production/2026-w08-rank-in-chatgpt
 | `zoom_transition_out` | Speaker → Slide with continuous zoom OUT |
 | `gradual_zoom` | Slow drift zoom over entire segment |
 | `sfx` | Sound effect overlay (audio-only, no visual). "boop" or "click" |
+
+### Speaker Overlays (render on top of speaker video)
+
+| Type | Description | Duration |
+|------|-------------|----------|
+| `newspaper_flash` | Stacked newspaper clippings with keyword highlighted | 2-4s |
+| `lower_third` | Name/title bar overlay | 3-5s |
+| `counter_ticker` | Animated counting number (e.g. $0 → $100K) | 2-4s |
+| `social_proof_flash` | Stacked tweet/post cards with keyword highlighted | 2-4s |
+| `callout` | Arrow + text label pointing to something | 2-4s |
+| `check_x_mark` | Green check or red X SVG overlay | 1-2s |
+| `circle_timer` | Countdown circle draining over segment | 3-5s |
+| `text_reveal_wipe` | Clip-path text reveal (left/right/top/bottom wipe) | 1-2s |
+| `confetti_burst` | Colorful particle explosion overlay | 2-3s |
+| `screen_shake` | Camera shake transform (impact/earthquake/subtle) | 0.5-1s |
+
+### Speaker Effects (brief transforms)
+
+| Type | Description | Duration |
+|------|-------------|----------|
+| `glitch` | Digital distortion effect | 3-5 frames |
+| `freeze_frame` | Hold speaker with desaturation + optional text | 1-2s |
+| `light_leak` | Cinematic light leak overlay | 1-2s |
+
+### Full-Screen Data Viz (dark bg, optional 50/50 split)
+
+All data viz types support an optional `layout` property:
+- `"full"` (default) - Full-screen dark background, speaker audio hidden
+- `"split_left"` - Speaker on left, data viz on right (50/50)
+- `"split_right"` - Speaker on right, data viz on left (50/50)
+
+| Type | Description | Duration |
+|------|-------------|----------|
+| `comparison_table` | Two-column side-by-side (e.g. SEO vs AEO) | 4-6s |
+| `quote_card` | Stylized quote with attribution | 3-5s |
+| `progress_bars` | Horizontal stat bars with animated fill | 3-5s |
+| `typewriter_text` | Monospace text typing out character by character | 3-6s |
+| `kinetic_type` | Words appear one at a time (big, bold) | 3-6s |
+| `bar_chart` | Vertical bars with spring animation | 4-6s |
+| `line_chart` | SVG line drawing left-to-right with dots | 4-6s |
+| `bullet_list` | Animated checklist items staggering in | 4-6s |
+| `stat_cards` | Grid of metric cards (value + label + trend) | 3-5s |
+| `pie_chart` | Animated pie/donut segments with legend | 4-6s |
+| `flow_diagram` | Linear node flow (A → B → C → D) horizontal or vertical | 4-6s |
+| `treasure_map` | Winding dashed path with numbered waypoints, X marks the spot | 4-6s |
 
 ---
 
@@ -428,26 +478,60 @@ npx ts-node autocut.ts <video_dir>
 video-editor-remotion/
 ├── src/
 │   ├── components/
+│   │   ├── MainVideo.tsx        # Timeline renderer (43 layout types)
+│   │   ├── backgrounds.tsx      # DarkGradientBg, MeshGradientBg, BlurredSpeakerBg
+│   │   ├── premium-utils.ts     # Shared animation utilities (springs, glow, particles)
+│   │   ├── # Core layouts
+│   │   ├── SpeakerFull.tsx      # Full frame speaker
+│   │   ├── SlideFull.tsx        # Full frame slide
 │   │   ├── SplitLayout.tsx      # Split view with glass borders + squircle
 │   │   ├── Split5050.tsx        # 50/50 full-bleed split (no borders)
 │   │   ├── BrollFull.tsx        # Full-screen stock video B-roll
-│   │   ├── SpeakerFull.tsx      # Full frame speaker
-│   │   ├── SlideFull.tsx        # Full frame slide
-│   │   ├── JumpZoom.tsx         # Animated zoom (configurable duration)
-│   │   ├── JumpCut.tsx          # Instant zoom (no animation)
+│   │   ├── JumpZoom.tsx         # Animated zoom
+│   │   ├── JumpCut.tsx          # Instant zoom
 │   │   ├── ZoomTransition.tsx   # Zoom across speaker↔slide cut
 │   │   ├── GradualZoom.tsx      # Slow drift zoom
-│   │   ├── GifOverlay.tsx       # GIF overlay on speaker (reaction memes)
-│   │   ├── GifFull.tsx          # Full-screen GIF moment
-│   │   ├── TextOverlay.tsx      # Text on speaker (Syne font, pop animation)
-│   │   └── MainVideo.tsx        # Timeline renderer
+│   │   ├── GifOverlay.tsx       # GIF overlay on speaker
+│   │   ├── GifFull.tsx          # Full-screen GIF
+│   │   ├── TextOverlay.tsx      # Text on speaker
+│   │   ├── # Speaker overlays
+│   │   ├── NewspaperFlash.tsx    # Stacked newspaper clippings
+│   │   ├── LowerThird.tsx       # Name/title bar
+│   │   ├── CounterTicker.tsx    # Animated counting number
+│   │   ├── SocialProofFlash.tsx # Stacked tweet/post cards
+│   │   ├── CalloutAnnotation.tsx # Arrow + text label
+│   │   ├── CheckXMark.tsx       # Green check / red X
+│   │   ├── CircleTimer.tsx      # Countdown circle
+│   │   ├── TextRevealWipe.tsx   # Clip-path text reveal
+│   │   ├── ConfettiBurst.tsx    # Particle explosion
+│   │   ├── ScreenShake.tsx      # Camera shake transform
+│   │   ├── # Speaker effects
+│   │   ├── GlitchEffect.tsx     # Digital distortion
+│   │   ├── FreezeFrame.tsx      # Hold + desaturation
+│   │   ├── LightLeakOverlay.tsx # Cinematic light leak
+│   │   ├── KineticType.tsx      # Words one at a time
+│   │   ├── DataVizSplit.tsx      # 50/50 wrapper for data viz + speaker
+│   │   ├── # Full-screen data viz
+│   │   ├── ComparisonTable.tsx  # Two-column comparison
+│   │   ├── QuoteCard.tsx        # Stylized quote
+│   │   ├── ProgressBars.tsx     # Horizontal stat bars
+│   │   ├── TypewriterText.tsx   # Monospace typing
+│   │   ├── BarChart.tsx         # Vertical bar chart
+│   │   ├── LineChart.tsx        # SVG line chart
+│   │   ├── BulletList.tsx       # Animated checklist
+│   │   ├── StatCards.tsx        # Metric cards grid
+│   │   ├── PieChart.tsx         # Animated pie/donut
+│   │   ├── FlowDiagram.tsx      # Linear node flow
+│   │   └── TreasureMap.tsx      # Winding path + X marks spot
 │   ├── types/
 │   │   └── timeline.ts          # TypeScript types
 │   ├── Root.tsx
 │   └── index.ts
 ├── public/
 │   ├── grid-loop.mp4
+│   ├── grid-loop-proxy.mp4  # 720p proxy (generated via npm run proxy)
 │   ├── speaker.mp4
+│   ├── speaker-proxy.mp4    # 720p proxy (generated via npm run proxy)
 │   ├── slides/
 │   ├── gifs/                    # Downloaded GIFs (from gif-researcher)
 │   ├── broll/                   # Stock video B-roll (from pexels-mcp)
