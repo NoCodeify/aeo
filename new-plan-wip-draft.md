@@ -146,28 +146,15 @@ The critical insight: high-ticket comes FIRST. You do not need an audience to se
 - Small group cohort: $2,500 per person, 4-week sprint, 8-10 people
 - Monthly retainer: $500-1,000/mo ongoing advisory
 
-### Layer 2: YouTube (Awareness Engine) - MONTH 1, PARALLEL
+### Layer 2: YouTube (Awareness Engine + Free Content) - MONTH 1, PARALLEL
 
 - **Cost:** Free
-- **Purpose:** Build audience, establish authority, drive to Skool
-- **CTA on every video:** "Join the free community" (Skool link)
+- **Purpose:** Build audience, establish authority, drive to paid Skool
+- **CTA on every video:** "Join Claudify" (paid Skool link)
 - **Starts Month 1** but takes 3-6 months to compound. Not the revenue driver early on.
+- **YouTube IS the free tier.** No free Skool community. All community content is behind $97/mo.
 
-### Layer 3: Free Skool Community (Top of Funnel) - MONTH 2-3
-
-- **Cost:** Free
-- **Purpose:** Capture YouTube audience, build trust, demonstrate value
-- **Target:** 300-500 members in first 60 days after launch
-- **What's inside:**
-  - Welcome video: "What Claude Code Actually Is (and isn't)"
-  - Module 1: "Getting Started" - installation, first session, mental model
-  - Module 2: "Your First Automation" - pick a real task from your work, do it with Claude Code
-  - Module 3: "CLAUDE.md & Project Memory" - teach Claude Code about your business
-  - Module 4: "What Can You Build?" - showcase of real use cases across industries
-  - Weekly "Show & Tell" challenge: members share what they built
-  - Community feed: wins, Q&A, resources, troubleshooting
-
-### Layer 4: Paid Skool Community ($97/month) - MONTH 3-4
+### Layer 3: Paid Skool Community ($97/month) - MONTH 3-4
 
 - **Purpose:** Core recurring revenue (launches when YouTube has traction)
 - **Target:** 50-100 members by Month 5, 200-400 by Month 9
@@ -176,43 +163,51 @@ The critical insight: high-ticket comes FIRST. You do not need an audience to se
   - **Annual:** $970/yr (~17% discount) - locks in retention, reduces churn significantly
   - **Future VIP (Month 6+):** $297/mo, limited to 20 seats - small group coaching, personalized project reviews, direct founder access. Mirrors KubeCraft's ascension model ($47/mo -> $99/mo -> $4,800/yr application-only).
 - **Unit economics:** At $97/mo with 10% churn: LTV = $970. At 5% churn (achievable with annual pricing): LTV = $1,940.
-- **What's inside (beyond free tier):**
-  - **Full Claude Code Mastery Curriculum (16+ modules):**
-    - **Foundations:**
-      - Module 5: Custom Slash Commands & Skills
-      - Module 6: Building Agents (specialized AI workers)
-      - Module 7: MCP Servers (connect Claude Code to any API)
-      - Module 8: Multi-Agent Teams (orchestrating complex workflows)
-      - Module 9: Hooks & Automation Triggers
-    - **Applied Skills:**
-      - Module 10: Claude Code for Research & Analysis
-      - Module 11: Claude Code for Content & Marketing (YouTube, LinkedIn, landing pages)
-      - Module 12: Claude Code for Client Delivery
-      - Module 13: Building Internal Tools & Dashboards
-    - **Real-World Case Studies (each based on founder's actual projects):**
-      - Module 14: CASE STUDY - Building a $100K SaaS with Claude Code (DMChamp deep dive)
-      - Module 15: CASE STUDY - Agentic CI/CD Pipelines (auto bug-fix -> customer notification -> ClickUp integration)
-      - Module 16: CASE STUDY - The AEO Consulting Business (14 agents, 23 skills, full client delivery)
-      - Module 17: CASE STUDY - Hardware Projects with Claude Code (NFC smart lock system)
-      - Module 18: CASE STUDY - Cold Outreach & Sales Automation
-    - **Advanced:**
-      - Module 19: Advanced Patterns (git worktrees, parallel sessions, subagent orchestration)
-      - Module 20: "Build Your System" - design your personal Claude Code infrastructure
-      - Module 21: Selling Claude Code Implementation Services (packages, pricing, client delivery)
+- **What's inside:**
+  - **21-Day Quick Start (6 modules, the onboarding path):**
+    - Module 1: Welcome + Setup
+    - Module 2: Your First Session
+    - Module 3: CLAUDE.md: Your Project's Brain
+    - Module 4: Your First Real System (the key module - members build ONE real thing)
+    - Module 5: When Things Go Wrong
+    - Module 6: Pick Your Track
+  - **FoundationKit (added 1-2/month based on demand):**
+    - Module 7: Custom Slash Commands & Skills
+    - Module 8: Building Agents
+    - Module 9: MCP Servers
+    - Module 10: Multi-Agent Teams
+    - Module 11: Hooks & Automation Triggers
+    - Module 12: Claude Code for Research & Analysis
+    - Module 13: Claude Code for Content & Marketing
+    - Module 14: Building Internal Tools & Dashboards
+    - Module 15: Advanced Patterns (git worktrees, parallel sessions)
+  - **CaseStudyOS (released 1 per month):**
+    - CS1: DMChamp - $100K SaaS lifecycle
+    - CS2: Agentic CI/CD Pipeline
+    - CS3: AEO Consulting Business
+    - CS4: NFC Smart Lock
+    - CS5: Video Production & Outreach Stack
+  - **ServiceKit (for Track C members):**
+    - SK1: The Claude Code Service Menu
+    - SK2: Scoping & Discovery
+    - SK3: Pricing & Packaging
+    - SK4: Client Delivery
+    - SK5: Finding & Closing Clients
+  - **The Vault:** CLAUDE.md templates, agent configs, skill templates, project starters
   - **Weekly live coaching call** (screen-share, build together, debug live)
   - **Template library:** CLAUDE.md templates, agent templates, skill templates for different industries
   - **1-on-1 implementation help** (async in community, not unlimited calls)
   - **Monthly masterclass:** Deep dive on one topic (e.g., "Building MCP Servers from Scratch")
   - **Private channel:** Paid members only, higher signal
 
-**Guarantee:**
-- "Build your first working Claude Code automation - a custom agent, a CLAUDE.md-powered workflow, or a slash command that saves you real time - in 21 days or money back"
-- NOT an income guarantee (unverifiable, high churn)
-- This is an OUTCOME guarantee (specific enough to be verifiable, broad enough to be achievable, builds confidence)
+**21-Day Milestone:**
+- "Build your first working Claude Code system in 21 days" - a structured onboarding path, not a refund promise
+- The 21-Day Quick Start (6 modules) + weekly coaching calls + founder DM check-ins at Day 7 and Day 14
+- NOT a refund guarantee. It is a milestone: follow the path, do the work, have a working system by Day 21
 
 **Retention mechanisms:**
 - **Weekly live coaching calls** - universally cited as the #1 retention driver in every successful Skool community. Screen-share, debug live, build together.
-- 21-day Quick Start challenge (with refund guarantee on completion)
+- 21-day Quick Start milestone (structured onboarding path with founder check-ins)
 - Leaderboard + gamification (Skool built-in) - communities report 3-4x increase in daily posts after leaderboard contests
 - Progressive content unlocks tied to engagement levels
 - Weekly Loom updates showing what YOU built that week with Claude Code
@@ -354,10 +349,10 @@ Only 5-8 creators consistently make Claude Code content. View potential: 20K-90K
 Three proven models with real data:
 
 1. **"Incomplete Tutorial" (Rourke Heath model)** - The Zeigarnik Effect. Give 30 minutes of genuine, valuable tutorial on YouTube. Mention the complete workflow, templates, and support live in the community. Rourke has only ~10K YouTube subscribers but converts to 439 paid Skool members at $97/mo (~$42.6K MRR). Proof you do NOT need a massive following.
-2. **"Template Giveaway" (Nate Herk model)** - Free downloads (CLAUDE.md templates, cheat sheets, starter kits) available exclusively through the free Skool community. Nate drives 400+ daily signups with this approach. The download is the hook, the community is the net.
-3. **"Video Notes" (Julian Goldie model)** - Join the free community to get notes, resources, and links from the video. Generates 400 leads/day at ~5% conversion to paid. Low-friction ask ("want the notes?") that captures email/community membership.
+2. **"Template Giveaway" (Nate Herk model)** - Free downloads (CLAUDE.md templates, cheat sheets, starter kits) available as lead magnets. The download is the hook, the paid community CTA is the next step.
+3. **"Video Notes" (Julian Goldie model)** - Notes, resources, and links from the video available as a free download with CTA to the paid community. Low-friction lead capture.
 
-The founder should use a hybrid of all three: Zeigarnik for case study videos (Pillar 3), template giveaways for tutorial videos (Pillar 2), and video notes for trending content (Pillar 1).
+The founder should use a hybrid of all three: Zeigarnik for case study videos (Pillar 3), template giveaways for tutorial videos (Pillar 2), and video notes for trending content (Pillar 1). All CTAs drive to the paid Skool directly (no free tier).
 
 ### Non-Developer Content Angles
 
@@ -370,8 +365,8 @@ The founder should use a hybrid of all three: Zeigarnik for case study videos (P
 5. **Confidence gap** - AI writes broken code, and non-devs cannot tell. Teaching "how to verify Claude Code's work" is a unique angle nobody covers.
 
 ### CTA Structure (every video)
-- Mid-roll: "If you want to learn this, I teach it step-by-step in my free community - link in description"
-- End screen: "Join [X] professionals already learning Claude Code" (Skool link)
+- Mid-roll: "If you want to learn this, I teach it step-by-step inside Claudify - link in description"
+- End screen: "Join [X] professionals already learning Claude Code" (paid Skool link)
 - Pinned comment: Community link + "What would YOU automate with Claude Code?"
 
 ---
@@ -443,8 +438,7 @@ The AEO methodology itself (3,771-line SOP, audit tools, playbook system) become
 | Layer | Price | Timeline | Target Members | Revenue |
 |-------|-------|----------|---------------|---------|
 | High-ticket (LinkedIn) | $2,500-5,000 | Month 1 | 2-3/month | $5,000-15,000/mo |
-| YouTube | Free | Month 1 | Growth engine | $0 (drives everything) |
-| Free Skool | Free | Month 2-3 | 300-500 by Day 90 after launch | $0 (builds list) |
+| YouTube | Free | Month 1 | Growth engine (this IS the free content) | $0 (drives everything) |
 | Paid Skool (Monthly) | $97/mo | Month 3-4 | 100+ by Month 6 | $9,700+/mo |
 | Paid Skool (Annual) | $970/yr (~$81/mo) | Month 3-4 | Included above | ~17% discount, better retention |
 | VIP Tier (Future) | $297/mo | Month 6+ | Limited to 20 seats | Up to $5,940/mo |
@@ -505,11 +499,11 @@ This is an extremely low-overhead business model. No employees, no office, no in
 - [ ] Publish Videos #3-5 (weekly cadence)
 - [ ] React to trending Claude/AI news
 
-**Community:**
-- [ ] Launch free Skool community with 4 free modules
-- [ ] Announce in relevant communities (without spamming)
-- [ ] Daily or 3x/week Loom updates in community
-- [ ] Target: 200-300 free members
+**Community prep:**
+- [ ] Record 21-Day Quick Start modules (6 videos)
+- [ ] Record CS1: DMChamp case study
+- [ ] Record SK1: Service Menu overview
+- [ ] Prepare Vault templates (5 CLAUDE.md templates, 3 agent configs)
 
 ### Phase 3: Paid Tier + Growth (Weeks 9-12)
 
@@ -522,18 +516,17 @@ This is an extremely low-overhead business model. No employees, no office, no in
 - [ ] Weekly cadence locked in
 
 **Community:**
-- [ ] Launch paid Skool tier ($97/mo) with first 6 paid modules
+- [ ] Launch paid Skool ($97/mo) with 8 launch modules (Quick Start 6 + CS1 + SK1) + Vault templates
+- [ ] Set up community spaces (Announcements, Wins, Help & Debug, Show Your Work, Ideas & Requests, Coaching Call Replays, Introductions)
 - [ ] First weekly coaching call
-- [ ] Target: 300-500 free members, 20-50 paid members
-- [ ] Complete curriculum through Module 10
+- [ ] Target: 20-50 paid members
 
 ### Day 90 Targets
 - [ ] 4-6 high-ticket clients closed ($10,000-30,000 total revenue from services)
 - [ ] 8+ YouTube videos published
-- [ ] 300-500 free Skool members (300 = minimum acceptable, 500 = stretch)
 - [ ] 20-50 paid Skool members ($1,940-4,850/mo recurring)
 - [ ] LinkedIn: 60+ posts, active DM pipeline
-- [ ] ~$7K monthly revenue (high-ticket + Skool combined, per conservative projections)
+- [ ] ~$7K new monthly revenue (high-ticket + Skool combined, per conservative projections)
 
 ---
 
@@ -549,13 +542,13 @@ The 90-day plan above assumes the machine is running. This section addresses the
 - LinkedIn posts that link to YouTube (every LinkedIn post should drive to the latest video)
 - The Rourke Heath proof point: even 10K subscribers can convert to 400+ paid community members. Subscriber count is a vanity metric - conversion rate is what matters.
 
-### First 100 Free Skool Members
+### First 50 Paid Skool Members
 
-- YouTube CTA on every video (mid-roll + end screen + pinned comment + description link)
-- Lead magnet: "Claude Code Starter Kit" (CLAUDE.md template + cheat sheet + "first 5 things to try" guide) - available only through the free Skool
-- Cross-promote in free AI communities with genuine helpful posts (not "join my community" spam)
-- Template giveaway model (Nate Herk): exclusive downloads only available in Skool. This drives 400+ daily signups for Nate.
-- Julian Goldie's "video notes" tactic: join the free community to get notes/resources from each video. Generates 400 leads/day at ~5% conversion.
+- YouTube CTA on every video drives directly to paid Skool (mid-roll + end screen + pinned comment + description link)
+- Lead magnet: "Claude Code Starter Kit" (CLAUDE.md template + cheat sheet) as a free download, with CTA to join the community for the full curriculum
+- Cross-promote in relevant AI communities with genuine helpful posts (not "join my community" spam)
+- Rourke Heath's Zeigarnik tactic: give 30 minutes of genuine tutorial on YouTube, mention the complete workflow and templates live in the community
+- Founding member pricing ($67/mo for first 20 members, locked in permanently) creates urgency
 
 ### First High-Ticket Client (Non-Fuegenix)
 
@@ -568,7 +561,7 @@ The 90-day plan above assumes the machine is running. This section addresses the
 ### First 10 Paid Skool Members
 
 - Offer early-bird "founding member" pricing ($67/mo for the first 20 members, locked in permanently)
-- Personal outreach to the most engaged free community members (people who post, comment, share wins)
+- Personal outreach to the most engaged YouTube viewers and LinkedIn connections
 - "Founding member" positioning: help shape the curriculum, get direct access to the founder, have input on what gets built
 - The first 10 members are the seed of the culture. Handpick them.
 
@@ -583,7 +576,7 @@ The 90-day plan above assumes the machine is running. This section addresses the
 | High-ticket client work | 15-20 | 2 clients x 8-10 hrs each |
 | YouTube content creation | 10-15 | Scripting, recording, editing (1 video/week) |
 | LinkedIn content + outreach | 5-8 | 5 posts/week + DM conversations |
-| Community management | 3-5 | Free Skool: posts, replies, Looms |
+| Community management | 3-5 | Skool: posts, replies, Looms (pre-launch prep) |
 | Admin/planning | 2-3 | |
 | **Total** | **35-51** | Manageable for a solo founder |
 
@@ -611,8 +604,8 @@ The 90-day plan above assumes the machine is running. This section addresses the
 |---------|-------------|---------|
 | Personal brand | YouTube + LinkedIn | Content + authority + lead gen |
 | High-ticket offer | Via LinkedIn | Premium implementation service (Layer 1 revenue) |
-| Free community | Skool (free tier) | Top of funnel, email capture |
-| Paid community | Skool (paid tier, $97/mo) | Core recurring revenue, education, coaching |
+| YouTube | Free content | Top of funnel (replaces free Skool tier) |
+| Paid community | Skool ($97/mo) | Core recurring revenue, education, coaching |
 | AEO methodology | The AEO Protocol | One service package + case study module |
 | Future SaaS | MentionedIn.ai | Community build-along project (Month 6+) |
 
@@ -644,7 +637,6 @@ Specific checkpoints to evaluate progress and course-correct early.
 |--------|-------------|-------------|---------------|
 | YouTube subscribers | 100+ | 500+ | 1,000+ |
 | YouTube avg views (last 5 videos) | 500+ | 1,000+ | 2,500+ |
-| Free Skool members | - | 100+ | 300+ |
 | Paid Skool members | - | - | 20+ |
 | High-ticket conversations started | 10+ | 25+ | 40+ |
 | High-ticket clients closed | 0-1 | 2-3 total | 4-6 total |
@@ -665,12 +657,12 @@ Specific checkpoints to evaluate progress and course-correct early.
 - Create a productized service offer (fixed scope, fixed price, no custom scoping)
 - Consider a "mini engagement" at $500-1,000 as a foot-in-the-door offer
 
-**If Skool conversion is below 1% at Week 12:**
-- Survey free members: what would make them upgrade?
-- Add more exclusive content to paid tier
+**If Skool sign-ups are below target at Week 12:**
+- Survey existing members: what would make them stay/recommend?
+- Add more exclusive content or increase coaching frequency
 - Run a limited-time founding member offer
 - Consider lowering price to $49/mo to test price sensitivity
-- Compare against benchmarks: Nate Herk converts at ~1.6% (241K free -> 3.5K paid), Stephen G. Pope at ~2.9% (13.8K free -> 400 paid). Smaller communities tend to convert better.
+- Review YouTube-to-Skool conversion rate and optimize CTAs
 
 ---
 
@@ -736,7 +728,7 @@ Note: High-ticket numbers reflect individual engagements, not monthly recurring.
 ### Documents to write:
 1. **New business strategy document** (`systems/claude-code-community-strategy.md`) - this plan, formalized
 2. **Update MEMORY.md** - reflect the new direction
-3. **Skool community outline** - detailed module-by-module curriculum
+3. ~~**Skool community outline**~~ - DONE: see `claudify-community-plan.md` (launch content, monthly roadmap, onboarding flow, retention mechanics)
 4. **YouTube content calendar** - first 12 videos with titles, keywords, scripts
 5. **LinkedIn content templates** - 10 post templates ready to customize
 6. **High-ticket offer page** - one-pager describing the done-with-you package

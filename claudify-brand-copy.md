@@ -17,7 +17,7 @@ Run a consulting agency. Ship a $100K SaaS. Deliver services that used to need a
 
 Ready to do things in 2026 that used to require a dev team, a specialist, or a six-figure budget?
 
-Built a $100K/yr SaaS, a self-healing CI/CD pipeline, and a full consulting delivery system with Claude Code. Zero dev background. Now teaching others to do the same. First working system in 21 days or your money back.
+Built a $100K/yr SaaS, a self-healing CI/CD pipeline, and a full consulting delivery system with Claude Code. Zero dev background. Now teaching others to do the same. First working system in 21 days.
 
 ---
 
@@ -33,7 +33,7 @@ The founder didn't learn this from a course. He built it:
 
 No CS degree. No dev team. No co-founder. Just Claude Code.
 
-Members of this community have built SaaS products, automated their entire client delivery, launched new service lines, and replaced expensive software subscriptions with custom tools they own. All with Claude Code.
+This is what the community is built around: shipping SaaS products, automating client delivery, launching new service lines, and replacing expensive software with custom tools you own. All with Claude Code.
 
 Every module, template, and case study inside Claudify comes directly from these production systems. Nothing is theoretical. You are studying real infrastructure that runs real businesses.
 
@@ -75,9 +75,9 @@ The gap between "I'd need a team for that" and "I did it myself" is closed. The 
 
 ---
 
-**The 21-day guarantee.**
+**The 21-day milestone.**
 
-Build your first working Claude Code system - a custom agent, a CLAUDE.md-powered workflow, or a slash command that saves you real time - within 21 days, or get your money back. Not an income promise. A build-it-or-refund-it guarantee.
+Build your first working Claude Code system - a custom agent, a CLAUDE.md-powered workflow, or a slash command that saves you real time - within 21 days. The 21-Day Quick Start gives you a clear, guided path: six modules, weekly coaching calls, and founder check-ins at Day 7 and Day 14. Follow the path, do the work, and you will have a working system by Day 21.
 
 ---
 
@@ -120,7 +120,7 @@ Claudify
 What used to take a team or an expert now takes a subscription.
 
 **One-liner (below subheadline):**
-From needing a team and an expert to being both. First working system in 21 days or your money back.
+From needing a team and an expert to being both. First working system in 21 days.
 
 **Body:**
 
@@ -139,7 +139,7 @@ $97/mo - Join Claudify
 Annual plan available - 2 months free, plus 1-on-1 project reviews and priority coaching access.
 
 **Risk reversal (below CTA):**
-Build your first working system in 21 days or get a full refund. No questions.
+Build your first working system in 21 days. Six modules. Weekly coaching. Founder check-ins. Follow the path.
 
 ---
 
@@ -165,9 +165,15 @@ KubeCraft patterns applied:
 - Transformation outcomes before features
 - Quantified content library (20+ modules, 5 case studies)
 - Annual upsell with tangible bonuses
-- Low-risk refund language near CTA
+- Low-risk milestone language near CTA (updated v4: no refund, structured path instead)
 - "Have questions?" section
 - Specificity throughout
+
+**v4 changes (community plan alignment):**
+1. Removed "or your money back" from About section line and landing page one-liner. The 21-day milestone is a structured path, not a refund promise.
+2. Rewrote guarantee section: "The 21-day milestone" replaces "The 21-day guarantee." No refund language. Describes the Quick Start path, coaching calls, and founder check-ins.
+3. Updated risk reversal line below CTA: "Six modules. Weekly coaching. Founder check-ins. Follow the path." replaces refund language.
+4. See `claudify-community-plan.md` for full content structure, launch content, monthly roadmap, onboarding flow, and retention mechanics.
 
 **Still needed:**
 - Founder name (to be added to the one-line founder story)
