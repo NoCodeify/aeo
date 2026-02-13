@@ -41,7 +41,20 @@ export type LayoutType =
   | "stat_cards"
   | "pie_chart"
   | "flow_diagram"
-  | "treasure_map";
+  | "treasure_map"
+  | "chapter_card"
+  | "cta_overlay"
+  | "search_bar"
+  | "star_rating"
+  | "chat_bubbles"
+  | "terminal"
+  | "code_editor"
+  | "browser_mockup"
+  | "toggle_switch"
+  | "notification_stack"
+  | "pricing_card"
+  | "countdown_flip"
+  | "text_highlight";
 
 export interface BaseEdit {
   type: LayoutType;
@@ -205,6 +218,7 @@ export interface ComparisonTableEdit extends BaseEdit {
   rows: ComparisonRow[];
   accentColor?: string;
   layout?: DataVizLayout;
+  winnerSide?: "left" | "right";
 }
 
 // Quote card - stylized quote with attribution
@@ -435,6 +449,150 @@ export interface TreasureMapEdit extends BaseEdit {
   layout?: DataVizLayout;
 }
 
+// Chapter card - full-screen section header between topics
+export type CtaStyleType = "offer" | "subscribe" | "next_video";
+
+export interface ChapterCardEdit extends BaseEdit {
+  type: "chapter_card";
+  title: string;
+  number?: number;
+  subtitle?: string;
+  accentColor?: string;
+  layout?: DataVizLayout;
+}
+
+// CTA overlay - animated call-to-action on speaker video
+export interface CtaOverlayEdit extends BaseEdit {
+  type: "cta_overlay";
+  text: string;
+  subtitle?: string;
+  style?: CtaStyleType;
+  accentColor?: string;
+}
+
+// Search bar with query typing + results appearing
+export type SearchEngine = "google" | "chatgpt" | "gemini";
+
+export interface SearchBarEdit extends BaseEdit {
+  type: "search_bar";
+  query: string;
+  engine?: SearchEngine;
+  results?: string[];
+  accentColor?: string;
+  layout?: DataVizLayout;
+}
+
+// Star rating with animated fill
+export interface StarRatingEdit extends BaseEdit {
+  type: "star_rating";
+  rating: number; // supports 4.5
+  label?: string;
+  reviewCount?: string;
+  color?: string;
+  layout?: DataVizLayout;
+}
+
+// Chat bubbles like iMessage/ChatGPT
+export interface ChatMessage {
+  role: "user" | "ai";
+  text: string;
+}
+
+export interface ChatBubblesEdit extends BaseEdit {
+  type: "chat_bubbles";
+  messages: ChatMessage[];
+  aiName?: string;
+  accentColor?: string;
+  layout?: DataVizLayout;
+}
+
+// Terminal with commands typing in + output
+export interface TerminalCommand {
+  input: string;
+  output?: string;
+}
+
+export interface TerminalEdit extends BaseEdit {
+  type: "terminal";
+  commands: TerminalCommand[];
+  prompt?: string;
+  accentColor?: string;
+  layout?: DataVizLayout;
+}
+
+// VS Code-style code editor with typing
+export interface CodeEditorEdit extends BaseEdit {
+  type: "code_editor";
+  code: string;
+  language?: string;
+  highlightLines?: number[];
+  accentColor?: string;
+  layout?: DataVizLayout;
+}
+
+// Chrome browser frame with URL typing + page content
+export interface BrowserMockupEdit extends BaseEdit {
+  type: "browser_mockup";
+  url: string;
+  pageTitle?: string;
+  content: string[];
+  accentColor?: string;
+  layout?: DataVizLayout;
+}
+
+// iOS toggle switch with spring flip
+export interface ToggleSwitchEdit extends BaseEdit {
+  type: "toggle_switch";
+  labelOff: string;
+  labelOn: string;
+  startsOn?: boolean;
+  accentColor?: string;
+}
+
+// iOS-style notification stack from top
+export interface NotificationItem {
+  title: string;
+  body: string;
+  icon?: string;
+}
+
+export interface NotificationStackEdit extends BaseEdit {
+  type: "notification_stack";
+  notifications: NotificationItem[];
+  accentColor?: string;
+}
+
+// Pricing card with features + mouse click selection
+export interface PricingCardEdit extends BaseEdit {
+  type: "pricing_card";
+  name: string;
+  price: string;
+  period?: string;
+  features: string[];
+  badge?: string;
+  accentColor?: string;
+  layout?: DataVizLayout;
+}
+
+// Airport departure board flip-clock countdown
+export interface CountdownFlipEdit extends BaseEdit {
+  type: "countdown_flip";
+  from: number;
+  to: number;
+  label?: string;
+  suffix?: string;
+  color?: string;
+}
+
+// Text with mouse drag highlight + zoom
+export interface TextHighlightEdit extends BaseEdit {
+  type: "text_highlight";
+  paragraph: string;
+  highlight: string;
+  accentColor?: string;
+  layout?: DataVizLayout;
+}
+
 export type Edit =
   | SpeakerFullEdit
   | SlideFullEdit
@@ -476,7 +634,20 @@ export type Edit =
   | StatCardsEdit
   | PieChartEdit
   | FlowDiagramEdit
-  | TreasureMapEdit;
+  | TreasureMapEdit
+  | ChapterCardEdit
+  | CtaOverlayEdit
+  | SearchBarEdit
+  | StarRatingEdit
+  | ChatBubblesEdit
+  | TerminalEdit
+  | CodeEditorEdit
+  | BrowserMockupEdit
+  | ToggleSwitchEdit
+  | NotificationStackEdit
+  | PricingCardEdit
+  | CountdownFlipEdit
+  | TextHighlightEdit;
 
 export interface BgMusicConfig {
   src: string; // path relative to public/, e.g. "sfx/lofi-beat-bg.mp3"

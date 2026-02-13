@@ -26,6 +26,19 @@ import { StatCards } from "./components/StatCards";
 import { PieChart } from "./components/PieChart";
 import { FlowDiagram } from "./components/FlowDiagram";
 import { TreasureMap } from "./components/TreasureMap";
+import { ChapterCard } from "./components/ChapterCard";
+import { CtaOverlay } from "./components/CtaOverlay";
+import { SearchBar } from "./components/SearchBar";
+import { StarRating } from "./components/StarRating";
+import { ChatBubbles } from "./components/ChatBubbles";
+import { Terminal } from "./components/Terminal";
+import { CodeEditor } from "./components/CodeEditor";
+import { BrowserMockup } from "./components/BrowserMockup";
+import { ToggleSwitch } from "./components/ToggleSwitch";
+import { NotificationStack } from "./components/NotificationStack";
+import { PricingCard } from "./components/PricingCard";
+import { CountdownFlip } from "./components/CountdownFlip";
+import { TextHighlight } from "./components/TextHighlight";
 import { VideoConfig, Edit, BgMusicConfig } from "./types/timeline";
 
 // Default config for studio preview
@@ -393,6 +406,191 @@ export const RemotionRoot: React.FC = () => {
             { label: "Treasure!", description: "AI visibility" },
           ],
           accentColor: "#c0392b",
+        }}
+      />
+      {/* === Chapter Card + CTA Overlay === */}
+      <Composition
+        id="ChapterCardPreview"
+        component={ChapterCard as any}
+        durationInFrames={90}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          title: "The Problem",
+          number: 1,
+          subtitle: "Why traditional SEO is dying",
+          accentColor: "#e63946",
+        }}
+      />
+      <Composition
+        id="CtaOverlayPreview"
+        component={CtaOverlay as any}
+        durationInFrames={180}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          text: "Free AEO Quiz",
+          subtitle: "Link in Description",
+          style: "offer",
+          accentColor: "#e63946",
+        }}
+      />
+      {/* === Interactive Animation Components === */}
+      <Composition
+        id="SearchBarPreview"
+        component={SearchBar as any}
+        durationInFrames={240}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          query: "best AI assistant 2026",
+          engine: "chatgpt",
+          results: ["ChatGPT says Claude and GPT lead the pack", "Based on benchmarks, Claude excels at coding"],
+        }}
+      />
+      <Composition
+        id="StarRatingPreview"
+        component={StarRating as any}
+        durationInFrames={150}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          rating: 4.8,
+          label: "Google Reviews",
+          reviewCount: "1,247 reviews",
+          color: "#fbbf24",
+        }}
+      />
+      <Composition
+        id="ChatBubblesPreview"
+        component={ChatBubbles as any}
+        durationInFrames={240}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          messages: [
+            { role: "user", text: "Best hair transplant clinic?" },
+            { role: "ai", text: "Based on reviews, Clinica Fuegenix is highly rated." },
+            { role: "user", text: "What about pricing?" },
+          ],
+          aiName: "ChatGPT",
+        }}
+      />
+      <Composition
+        id="TerminalPreview"
+        component={Terminal as any}
+        durationInFrames={240}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          commands: [
+            { input: "claude --help", output: "Claude Code v1.0\nUsage: claude [options]" },
+            { input: "claude 'fix the bug'" },
+          ],
+        }}
+      />
+      <Composition
+        id="CodeEditorPreview"
+        component={CodeEditor as any}
+        durationInFrames={240}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          code: "const audit = await runAudit({\n  brand: 'Acme',\n  category: 'SaaS'\n});",
+          language: "TypeScript",
+          highlightLines: [1, 2],
+        }}
+      />
+      <Composition
+        id="BrowserMockupPreview"
+        component={BrowserMockup as any}
+        durationInFrames={210}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          url: "chatgpt.com",
+          pageTitle: "ChatGPT",
+          content: ["What is AEO?", "Answer Engine Optimization is the practice of optimizing content for AI-powered search engines."],
+        }}
+      />
+      <Composition
+        id="ToggleSwitchPreview"
+        component={ToggleSwitch as any}
+        durationInFrames={90}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          labelOff: "Traditional SEO",
+          labelOn: "AEO Protocol",
+          accentColor: "#22c55e",
+        }}
+      />
+      <Composition
+        id="NotificationStackPreview"
+        component={NotificationStack as any}
+        durationInFrames={180}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          notifications: [
+            { title: "New Member", body: "Sarah joined Claudify" },
+            { title: "Payment", body: "$97.00 received" },
+            { title: "New Member", body: "Marcus joined Claudify" },
+          ],
+          accentColor: "#e63946",
+        }}
+      />
+      <Composition
+        id="PricingCardPreview"
+        component={PricingCard as any}
+        durationInFrames={210}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          name: "Claudify Pro",
+          price: "$97",
+          period: "/mo",
+          features: ["Weekly live calls", "14 custom agents", "Community access", "Done-for-you templates"],
+          badge: "Most Popular",
+          accentColor: "#e63946",
+        }}
+      />
+      <Composition
+        id="CountdownFlipPreview"
+        component={CountdownFlip as any}
+        durationInFrames={120}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          from: 10,
+          to: 3,
+          label: "Spots Left",
+          color: "#e63946",
+        }}
+      />
+      <Composition
+        id="TextHighlightPreview"
+        component={TextHighlight as any}
+        durationInFrames={210}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          paragraph: "By 2027, over 50% of all searches will be zero-click, answered directly by AI without users visiting any website.",
+          highlight: "50% of all searches will be zero-click",
+          accentColor: "#e63946",
         }}
       />
     </>

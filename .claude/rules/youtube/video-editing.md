@@ -87,6 +87,16 @@ npx ts-node render.ts ../../youtube/weekly-production/2026-w08-rank-in-chatgpt
 | `text_reveal_wipe` | Clip-path text reveal (left/right/top/bottom wipe) | 1-2s |
 | `confetti_burst` | Colorful particle explosion overlay | 2-3s |
 | `screen_shake` | Camera shake transform (impact/earthquake/subtle) | 0.5-1s |
+| `cta_overlay` | Animated CTA card (offer/subscribe/next_video) | 5-10s |
+| `toggle_switch` | iOS toggle with spring flip + label change | 2-4s |
+| `countdown_flip` | Airport flip-clock countdown | 3-5s |
+| `notification_stack` | iOS notification cards sliding in from top | 4-8s |
+
+### Full-Screen Section Headers
+
+| Type | Description | Duration |
+|------|-------------|----------|
+| `chapter_card` | Animated chapter title card (dark bg, glass card, number + title + subtitle) | 2-4s |
 
 ### Speaker Effects (brief transforms)
 
@@ -117,6 +127,21 @@ All data viz types support an optional `layout` property:
 | `pie_chart` | Animated pie/donut segments with legend | 4-6s |
 | `flow_diagram` | Linear node flow (A → B → C → D) horizontal or vertical | 4-6s |
 | `treasure_map` | Winding dashed path with numbered waypoints, X marks the spot | 4-6s |
+
+### Interactive Animation Components (full-screen, simulated UI)
+
+Mouse cursor, typing, clicking interactions for realistic UI demos.
+
+| Type | Description | Duration |
+|------|-------------|----------|
+| `search_bar` | Search bar with cursor click, query typing, results appearing | 6-10s |
+| `star_rating` | Stars fill one by one with glow + sparkle (supports 4.5) | 4-5s |
+| `chat_bubbles` | iMessage/ChatGPT-style bubbles typing in one by one | 6-12s |
+| `terminal` | Command line with typing commands + output appearing | 5-10s |
+| `code_editor` | VS Code editor with code typing + syntax highlighting | 5-10s |
+| `browser_mockup` | Chrome browser with URL typing + page loading | 5-8s |
+| `pricing_card` | Pricing tier with features checking in + mouse click selection | 5-8s |
+| `text_highlight` | Paragraph with mouse drag highlight + zoomed phrase | 5-8s |
 
 ---
 
@@ -285,6 +310,27 @@ split_right → zoom_transition_out → slide_full
 # Full slide → Speaker (zoom in)
 slide_full → zoom_transition_in → speaker_full
 ```
+
+### CTA Rules
+
+Every video MUST have two CTA moments:
+
+**Mid-Roll CTA (~50% mark):**
+- Place at natural topic break closest to 50% of total video duration
+- 30-60s of speaker-focused content (`speaker_full`, `gradual_zoom`)
+- Use `cta_overlay` with `style: "offer"` during speaker segments
+- One `text_overlay` also allowed for the offer name
+- NOT allowed during CTA: data viz, slides, splits, GIFs, B-roll
+
+**End CTA (last 15-20s):**
+- `speaker_full` or `gradual_zoom` only
+- Optional `cta_overlay` with `style: "next_video"`
+- No other graphics - YouTube end screen elements overlay this section
+
+**Chapter Cards:**
+- Use `chapter_card` between major topic sections (2-4s each)
+- Speaker audio continues underneath
+- Number prop for sequential chapter numbers (01, 02, 03...)
 
 ### Background Music
 
@@ -478,7 +524,7 @@ npx ts-node autocut.ts <video_dir>
 video-editor-remotion/
 ├── src/
 │   ├── components/
-│   │   ├── MainVideo.tsx        # Timeline renderer (43 layout types)
+│   │   ├── MainVideo.tsx        # Timeline renderer (57 layout types)
 │   │   ├── backgrounds.tsx      # DarkGradientBg, MeshGradientBg, BlurredSpeakerBg
 │   │   ├── premium-utils.ts     # Shared animation utilities (springs, glow, particles)
 │   │   ├── # Core layouts
@@ -522,7 +568,21 @@ video-editor-remotion/
 │   │   ├── StatCards.tsx        # Metric cards grid
 │   │   ├── PieChart.tsx         # Animated pie/donut
 │   │   ├── FlowDiagram.tsx      # Linear node flow
-│   │   └── TreasureMap.tsx      # Winding path + X marks spot
+│   │   ├── TreasureMap.tsx      # Winding path + X marks spot
+│   │   ├── ChapterCard.tsx     # Animated chapter title card
+│   │   ├── CtaOverlay.tsx      # CTA overlay (offer/subscribe/next_video)
+│   │   ├── # Interactive animation components
+│   │   ├── SearchBar.tsx       # Search engine query + results demo
+│   │   ├── StarRating.tsx      # Animated star rating with sparkle
+│   │   ├── ChatBubbles.tsx     # iMessage/ChatGPT conversation
+│   │   ├── Terminal.tsx        # Command line typing + output
+│   │   ├── CodeEditor.tsx      # VS Code editor with syntax highlighting
+│   │   ├── BrowserMockup.tsx   # Chrome browser with page loading
+│   │   ├── ToggleSwitch.tsx    # iOS toggle with spring flip
+│   │   ├── NotificationStack.tsx # iOS notification cards
+│   │   ├── PricingCard.tsx     # Pricing card with mouse click
+│   │   ├── CountdownFlip.tsx   # Airport flip-clock countdown
+│   │   └── TextHighlight.tsx   # Mouse drag highlight + zoom
 │   ├── types/
 │   │   └── timeline.ts          # TypeScript types
 │   ├── Root.tsx

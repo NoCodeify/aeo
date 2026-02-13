@@ -1,7 +1,9 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Audio,
   OffthreadVideo,
+  Sequence,
   staticFile,
   useCurrentFrame,
   useVideoConfig,
@@ -150,6 +152,10 @@ export const CalloutAnnotation: React.FC<CalloutAnnotationProps> = ({
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       )}
+
+      <Sequence from={0} durationInFrames={15}>
+        <Audio src={staticFile("sfx/bubble-pop.mp3")} volume={0.4} />
+      </Sequence>
 
       {/* Callout annotation */}
       <div

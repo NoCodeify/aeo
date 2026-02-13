@@ -1,7 +1,9 @@
 import React, { useMemo } from "react";
 import {
   AbsoluteFill,
+  Audio,
   OffthreadVideo,
+  Sequence,
   staticFile,
   interpolate,
   useCurrentFrame,
@@ -70,6 +72,10 @@ export const ConfettiBurst: React.FC<ConfettiBurstProps> = ({
           }}
         />
       )}
+
+      <Sequence from={3} durationInFrames={15}>
+        <Audio src={staticFile("sfx/achievement-ding.mp3")} volume={0.5} />
+      </Sequence>
 
       {/* Confetti particles */}
       <AbsoluteFill style={{ pointerEvents: "none", opacity: particleOpacity }}>

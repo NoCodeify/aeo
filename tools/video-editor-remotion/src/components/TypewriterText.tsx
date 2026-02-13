@@ -1,7 +1,9 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Audio,
   OffthreadVideo,
+  Sequence,
   staticFile,
   useCurrentFrame,
   useVideoConfig,
@@ -41,6 +43,9 @@ export const TypewriterText: React.FC<TypewriterTextProps> = ({
 
   const cursorVisible = Math.floor(frame / 10) % 2 === 0;
 
+  // Frame when typing finishes (for SFX duration)
+  const typingDoneFrame = Math.ceil((text.length / speed) * fps);
+
   // Fade out over last 6 frames
   const exitOp = interpolate(
     frame,
@@ -51,6 +56,11 @@ export const TypewriterText: React.FC<TypewriterTextProps> = ({
 
   return (
     <>
+      {/* SFX: keyboard typing loop during character reveal */}
+      <Sequence from={0} durationInFrames={typingDoneFrame}>
+        <Audio src={staticFile("sfx/keyboard-typing.mp3")} volume={0.25} loop />
+      </Sequence>
+
       <DarkGradientBg accentColor={cursorColor} />
 
       <AbsoluteFill

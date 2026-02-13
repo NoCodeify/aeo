@@ -78,6 +78,11 @@ These checks require reading the transcript's `words` array.
 
 21. **Hook pacing** - First 30s: no segment > 5s. 30-60s: no segment > 7s. Flag violations.
 
+22. **CTA presence** - Every video must have two CTA moments:
+    - **Mid-roll CTA (40-60% of duration):** There must be a 20s+ stretch of speaker-only content (`speaker_full`, `gradual_zoom`, `cta_overlay`, or `text_overlay`) between 40% and 60% of total video duration. A `cta_overlay` or `text_overlay` should be present in this zone. No data viz, slides, splits, GIFs, or B-roll allowed during CTA.
+    - **End CTA (last 15s):** The last 15 seconds must be speaker-only (`speaker_full` or `gradual_zoom`). A `cta_overlay` with `style: "next_video"` is allowed but no other graphic overlays. This leaves space for YouTube end screen elements.
+    - Flag if either CTA zone is missing or contains disallowed layout types.
+
 ## Output Format
 
 ### If all checks pass:
@@ -85,7 +90,7 @@ These checks require reading the transcript's `words` array.
 ```
 VERDICT: PASS
 
-All 21 checks passed.
+All 22 checks passed.
 Visual density: [X] GIFs, [X] B-roll, [X] text overlays, [X] SFX, [X] zoom transitions
 Timeline entries: [N] total
 Video duration: [X]s
@@ -125,6 +130,6 @@ The builder agent should be able to apply every fix without guessing.
 2. Read transcript-clean.json (fallback: transcript.json)
 3. List files in slides/, gifs/, broll/ directories (for file reference validation)
 4. Get video duration from the last timeline entry's `end` value (or transcript `duration`)
-5. Run all 21 checks sequentially
+5. Run all 22 checks sequentially
 6. Compute density counts and compare against scaled minimums
 7. Output structured verdict

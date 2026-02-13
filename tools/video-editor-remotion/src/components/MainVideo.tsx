@@ -40,6 +40,19 @@ import { StatCards } from "./StatCards";
 import { PieChart } from "./PieChart";
 import { FlowDiagram } from "./FlowDiagram";
 import { TreasureMap } from "./TreasureMap";
+import { ChapterCard } from "./ChapterCard";
+import { CtaOverlay } from "./CtaOverlay";
+import { SearchBar } from "./SearchBar";
+import { ChatBubbles } from "./ChatBubbles";
+import { Terminal } from "./Terminal";
+import { CodeEditor } from "./CodeEditor";
+import { ToggleSwitch } from "./ToggleSwitch";
+import { CountdownFlip } from "./CountdownFlip";
+import { NotificationStack } from "./NotificationStack";
+import { StarRating } from "./StarRating";
+import { BrowserMockup } from "./BrowserMockup";
+import { PricingCard } from "./PricingCard";
+import { TextHighlight } from "./TextHighlight";
 
 interface MainVideoProps {
   config: VideoConfig;
@@ -354,6 +367,7 @@ function renderEdit(
           rightLabel={edit.rightLabel}
           rows={edit.rows}
           accentColor={edit.accentColor}
+          winnerSide={edit.winnerSide}
         />
       ));
 
@@ -583,6 +597,160 @@ function renderEdit(
           nodes={edit.nodes}
           accentColor={edit.accentColor}
           title={edit.title}
+        />
+      ));
+
+    case "chapter_card":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <ChapterCard
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          title={edit.title}
+          number={edit.number}
+          subtitle={edit.subtitle}
+          accentColor={edit.accentColor}
+        />
+      ));
+
+    case "cta_overlay":
+      return (
+        <CtaOverlay
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          text={edit.text}
+          subtitle={edit.subtitle}
+          style={edit.style}
+          accentColor={edit.accentColor}
+        />
+      );
+
+    case "toggle_switch":
+      return (
+        <ToggleSwitch
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          labelOff={edit.labelOff}
+          labelOn={edit.labelOn}
+          startsOn={edit.startsOn}
+          accentColor={edit.accentColor}
+        />
+      );
+
+    case "countdown_flip":
+      return (
+        <CountdownFlip
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          from={edit.from}
+          to={edit.to}
+          label={edit.label}
+          suffix={edit.suffix}
+          color={edit.color}
+        />
+      );
+
+    case "notification_stack":
+      return (
+        <NotificationStack
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          notifications={edit.notifications}
+          accentColor={edit.accentColor}
+        />
+      );
+
+    case "star_rating":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <StarRating
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          rating={edit.rating}
+          label={edit.label}
+          reviewCount={edit.reviewCount}
+          color={edit.color}
+        />
+      ));
+
+    case "search_bar":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <SearchBar
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          query={edit.query}
+          engine={edit.engine}
+          results={edit.results}
+          accentColor={edit.accentColor}
+        />
+      ));
+
+    case "chat_bubbles":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <ChatBubbles
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          messages={edit.messages}
+          aiName={edit.aiName}
+          accentColor={edit.accentColor}
+        />
+      ));
+
+    case "terminal":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <Terminal
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          commands={edit.commands}
+          prompt={edit.prompt}
+          accentColor={edit.accentColor}
+        />
+      ));
+
+    case "code_editor":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <CodeEditor
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          code={edit.code}
+          language={edit.language}
+          highlightLines={edit.highlightLines}
+          accentColor={edit.accentColor}
+        />
+      ));
+
+    case "browser_mockup":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <BrowserMockup
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          url={edit.url}
+          pageTitle={edit.pageTitle}
+          content={edit.content}
+          accentColor={edit.accentColor}
+        />
+      ));
+
+    case "pricing_card":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <PricingCard
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          name={edit.name}
+          price={edit.price}
+          period={edit.period}
+          features={edit.features}
+          badge={edit.badge}
+          accentColor={edit.accentColor}
+        />
+      ));
+
+    case "text_highlight":
+      return withSplitLayout(edit.layout, speakerVideo, speakerStartFrom, (src) => (
+        <TextHighlight
+          speakerSrc={src}
+          startFrom={speakerStartFrom}
+          paragraph={edit.paragraph}
+          highlight={edit.highlight}
+          accentColor={edit.accentColor}
         />
       ));
 

@@ -94,6 +94,16 @@ A `timeline.json` file with edit decisions:
 | `text_reveal_wipe` | Clip-path text reveal (left/right/top/bottom wipe) | Dramatic text reveals, framework names | 1-2s |
 | `confetti_burst` | Colorful particle explosion overlay | Celebration moments, milestones, wins | 2-3s |
 | `screen_shake` | Camera shake transform (impact/earthquake/subtle) | Emphasis on shocking statements, impact moments | 0.5-1s |
+| `cta_overlay` | Animated CTA card (offer/subscribe/next_video) | Mid-roll CTA, end CTA, subscribe prompt | 5-10s |
+| `toggle_switch` | iOS toggle with spring flip + label change | Before/after, on/off, enable/disable | 2-4s |
+| `countdown_flip` | Airport flip-clock countdown | Urgency, deadlines, "only X spots left" | 3-5s |
+| `notification_stack` | iOS notification cards sliding in from top | Social proof, activity feed, "people are joining" | 4-8s |
+
+### Full-Screen Section Headers
+
+| Layout | Description | When to Use | Duration |
+|--------|-------------|-------------|----------|
+| `chapter_card` | Animated chapter title card (dark bg, glass card) | Between major topic sections | 2-4s |
 
 ### Speaker Effects (brief transforms)
 
@@ -129,6 +139,51 @@ Use split layout for simpler visualizations (bullet lists, stat cards, quotes) w
 | `flow_diagram` | Linear node flow (A → B → C → D) | Process steps, workflows, methodologies | 4-6s |
 | `treasure_map` | Winding dashed path with X marks the spot | Roadmaps, journey visualization, step sequences | 4-6s |
 
+### Interactive Animation Components (full-screen, simulated UI)
+
+Real-world UI interactions with mouse cursor, typing, clicking. Great for demos, product showcases, and AEO explanations.
+
+All support optional `layout` property (full/split_left/split_right) except toggle_switch, countdown_flip, notification_stack (speaker overlays).
+
+| Layout | Description | When to Use | Duration |
+|--------|-------------|-------------|----------|
+| `search_bar` | Search bar + cursor click + query typing + results | "When someone searches for X...", AEO demos | 6-10s |
+| `star_rating` | Stars fill one by one with glow + sparkle | Google reviews, trust signals, rating comparisons | 4-5s |
+| `chat_bubbles` | iMessage/ChatGPT-style conversation bubbles | "Here's what ChatGPT says...", AI conversation demos | 6-12s |
+| `terminal` | Command line with typing commands + output | Claude Code demos, CLI walkthroughs, install commands | 5-10s |
+| `code_editor` | VS Code editor with code typing + syntax highlighting | Code snippets, Claude Code output, config examples | 5-10s |
+| `browser_mockup` | Chrome browser with URL typing + page loading | Showing websites, SERP results, "go to this page" | 5-8s |
+| `pricing_card` | Pricing tier with features + mouse click selection | Pricing reveals, offer moments, "here's what you get" | 5-8s |
+| `text_highlight` | Paragraph with mouse drag highlight + zoom | Pulling key quotes, emphasizing specific phrases | 5-8s |
+
+### Interactive Component JSON Examples
+
+```json
+{"type": "search_bar", "start": 12.5, "end": 20.5, "query": "best AI assistant 2026", "engine": "chatgpt", "results": ["ChatGPT says...", "Claude offers..."]}
+
+{"type": "star_rating", "start": 67.8, "end": 71.8, "rating": 4.8, "label": "Google Reviews", "reviewCount": "1,247 reviews"}
+
+{"type": "chat_bubbles", "start": 45.2, "end": 51.2, "messages": [{"role": "user", "text": "Best hair transplant clinic?"}, {"role": "ai", "text": "Based on reviews, Clinica Fuegenix is highly rated."}], "aiName": "ChatGPT"}
+
+{"type": "terminal", "start": 30.0, "end": 38.0, "commands": [{"input": "claude --help", "output": "Claude Code v1.0\nUsage: claude [options]"}, {"input": "claude 'fix the bug'"}]}
+
+{"type": "code_editor", "start": 55.0, "end": 63.0, "code": "const audit = await runAudit({\n  brand: 'Acme',\n  category: 'SaaS'\n});", "language": "TypeScript", "highlightLines": [1, 2]}
+
+{"type": "browser_mockup", "start": 72.0, "end": 79.0, "url": "chatgpt.com", "pageTitle": "ChatGPT", "content": ["What is AEO?", "Answer Engine Optimization is..."]}
+
+{"type": "toggle_switch", "start": 82.0, "end": 85.0, "labelOff": "Traditional SEO", "labelOn": "AEO Protocol", "accentColor": "#22c55e"}
+
+{"type": "notification_stack", "start": 95.0, "end": 101.0, "notifications": [{"title": "New Member", "body": "Sarah joined Claudify"}, {"title": "Payment", "body": "$97.00 received"}]}
+
+{"type": "pricing_card", "start": 200.0, "end": 207.0, "name": "Claudify Pro", "price": "$97", "period": "/mo", "features": ["Weekly live calls", "14 custom agents", "Community access"], "badge": "Most Popular"}
+
+{"type": "countdown_flip", "start": 180.0, "end": 184.0, "from": 10, "to": 3, "label": "Spots Left", "color": "#e63946"}
+
+{"type": "text_highlight", "start": 110.0, "end": 117.0, "paragraph": "By 2027, over 50% of all searches will be zero-click, answered directly by AI.", "highlight": "50% of all searches will be zero-click"}
+
+{"type": "comparison_table", "start": 59.0, "end": 65.0, "leftLabel": "Old Way", "rightLabel": "New Way", "rows": [{"left": "Slow", "right": "Fast", "rightWins": true}], "winnerSide": "right"}
+```
+
 ### Data Viz JSON Examples
 
 ```json
@@ -157,6 +212,12 @@ Use split layout for simpler visualizations (bullet lists, stat cards, quotes) w
 {"type": "confetti_burst", "start": 33.0, "end": 36.0, "density": 1.0, "colors": ["#e63946", "#457b9d", "#2a9d8f"]}
 
 {"type": "check_x_mark", "start": 38.0, "end": 39.5, "markType": "check", "position": "center"}
+
+{"type": "chapter_card", "start": 62.0, "end": 65.0, "title": "The Data", "number": 2, "subtitle": "What the numbers say", "accentColor": "#e63946"}
+
+{"type": "cta_overlay", "start": 150.0, "end": 157.0, "text": "Free AEO Quiz", "subtitle": "Link in Description", "style": "offer", "accentColor": "#e63946"}
+
+{"type": "cta_overlay", "start": 290.0, "end": 300.0, "text": "Watch Next", "style": "next_video"}
 ```
 
 ## Layout Distribution
@@ -201,14 +262,43 @@ Pick the right visualization for the content:
 
 SFX edits are **audio-only overlays** - they don't replace the visual. Place them at the same timestamp as visual edits.
 
-| Sound | When to Use |
-|-------|-------------|
-| `boop` | text_overlay reveals, soft emphasis moments |
-| `click` | Layout changes to slides/splits, slide transitions |
+#### Full SFX Inventory (14 files in `public/sfx/`)
+
+**Auto-triggered by components** (these play automatically when the component renders - do NOT manually place them in timeline):
+
+| Sound | Auto-triggered by | Purpose |
+|-------|-------------------|---------|
+| `keyboard-typing` | CodeEditor, BrowserMockup, Terminal, SearchBar, TypewriterText | Typing animation loop |
+| `enter` | BrowserMockup, Terminal | Enter key press |
+| `flipcard-count` | CountdownFlip | Each digit flip |
+| `boop` | PricingCard features, StarRating stars, ChatBubbles messages, SearchBar results | Soft pop-in moments |
+| `click` | PricingCard click, CtaOverlay click, SearchBar clicks, ToggleSwitch flip | Mouse click interactions |
+| `bubble-pop` | NotificationStack cards | Pop-in entrances |
+| `achievement-ding` | ComparisonTable winner, ConfettiBurst | Win/completion moments |
+| `shimmer` | StarRating shimmer sweep | Shine/sparkle effect |
+
+**Manually placeable in timeline** (use these for standalone SFX edits):
+
+| Sound | When to Use | Suggested Volume |
+|-------|-------------|-----------------|
+| `boop` | text_overlay reveals, soft emphasis moments | 0.3-0.5 |
+| `click` | Layout changes to slides/splits, slide transitions | 0.3-0.5 |
+| `whoosh` | Fast entrances, slide-in transitions | 0.25-0.4 |
+| `thud` | Impact moments, heavy number reveals | 0.3-0.5 |
+| `achievement-ding` | Achievement/milestone moments | 0.4-0.5 |
+| `shimmer` | Sparkle/shine reveals | 0.3-0.4 |
+
+**Background music** (use for full video background):
+
+| Sound | Purpose |
+|-------|---------|
+| `lofi-beat-bg` | Chill background loop |
+| `upbeat-bg` | Energetic background loop |
 
 **Rules:**
-- Max **4-6 per 10-min video** - sparse and deliberate
-- Volume `0.3-0.5` (never above `0.7`)
+- Max **4-6 manually placed SFX per 10-min video** - sparse and deliberate
+- Component auto-SFX don't count toward this limit
+- Volume `0.3-0.5` for manual SFX (never above `0.7`)
 - SFX `start`/`end` = sound duration (0.5-1s)
 - OK to overlap with any visual edit at the same timestamp
 
@@ -518,6 +608,54 @@ Look for gaps > 0.3s between consecutive words - these are natural break points 
 ### Matching Prompter to Timestamps
 
 Cross-reference the prompter's `[SLIDE XX]` markers with the transcript words to find exactly when each slide topic begins. Search the `words` array for the first few words after each slide marker to get precise timing.
+
+## CTA Placement Rules
+
+Every video MUST have two CTA moments. Place these using `cta_overlay` or `text_overlay`.
+
+### Mid-Roll CTA (~50% mark)
+
+Place at the natural topic break closest to 50% of total video duration.
+
+- **Duration:** 30-60s of speaker-focused content around the CTA
+- Use `cta_overlay` with `style: "offer"` during `speaker_full` or `gradual_zoom`
+- One `text_overlay` also allowed for the offer name (e.g., "FREE QUIZ")
+- **NOT allowed during CTA:** data viz, slides, splits, GIFs, B-roll
+- Keep it conversational - the speaker is pitching directly to camera
+
+```json
+{"type": "gradual_zoom", "start": 148.0, "end": 155.0, "zoomStart": 1.0, "zoomEnd": 1.08},
+{"type": "cta_overlay", "start": 150.0, "end": 157.0, "text": "Free AEO Quiz", "subtitle": "Link in Description", "style": "offer"},
+{"type": "speaker_full", "start": 155.0, "end": 160.0}
+```
+
+### End CTA (last 15-20s)
+
+The final section of the video. YouTube end screen elements overlay this, so keep it clean.
+
+- `speaker_full` or `gradual_zoom` only
+- Optional `cta_overlay` with `style: "next_video"` (slides up from bottom)
+- **No other graphics** - YouTube end screen elements need this space
+- Speaker should be saying goodbye / pitching the next video
+
+```json
+{"type": "speaker_full", "start": 285.0, "end": 290.0},
+{"type": "cta_overlay", "start": 290.0, "end": 300.0, "text": "Watch Next", "style": "next_video"},
+{"type": "speaker_full", "start": 290.0, "end": 300.0}
+```
+
+### Chapter Cards
+
+Use `chapter_card` between major topic sections to visually mark transitions:
+
+- **Duration:** 2-4s (speaker audio continues underneath)
+- **When to use:** Speaker finishes one topic, chapter card plays, then next topic begins
+- **Number prop:** Sequential chapter numbers (01, 02, 03...)
+- Supports optional `layout` property for 50/50 split with speaker
+
+```json
+{"type": "chapter_card", "start": 62.0, "end": 65.0, "title": "The Data", "number": 2, "subtitle": "What the numbers say"}
+```
 
 ## Technical Notes
 
