@@ -1,7 +1,6 @@
 ---
 name: video-timeline
-description: Generate and validate timeline.json using a builder + validator team.
-disable-model-invocation: true
+description: Generate and validate timeline.json using a builder + validator team. Use when user says "build timeline", "generate timeline", "timeline.json", or "video timeline".
 ---
 
 # Video Timeline Pipeline

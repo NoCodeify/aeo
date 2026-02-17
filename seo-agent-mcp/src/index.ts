@@ -394,6 +394,180 @@ async function getLocations(): Promise<unknown> {
   };
 }
 
+// Google Trends Explore (supports YouTube, web, news, images, shopping)
+async function googleTrendsExplore(
+  keywords: string[],
+  type: string,
+  locationCode: number | null,
+  dateFrom: string | null,
+  dateTo: string | null,
+  timeRange: string | null,
+  categoryCode: number | null,
+  itemTypes: string[]
+): Promise<unknown> {
+  const body: Record<string, unknown> = {
+    keywords,
+    type,
+    item_types: itemTypes,
+  };
+  if (locationCode) body.location_code = locationCode;
+  if (dateFrom) body.date_from = dateFrom;
+  if (dateTo) body.date_to = dateTo;
+  if (timeRange && !dateFrom) body.time_range = timeRange;
+  if (categoryCode) body.category_code = categoryCode;
+
+  const response = await axios.post<DataForSEOResponse<unknown>>(
+    `${DATAFORSEO_BASE_URL}/keywords_data/google_trends/explore/live`,
+    [body],
+    { headers, timeout: 60000 }
+  );
+
+  if (response.data.status_code !== 20000) {
+    throw new Error(`DataForSEO error: ${response.data.status_message}`);
+  }
+
+  const result = response.data.tasks?.[0]?.result?.[0];
+  if (!result) {
+    return { items: [], message: "No data found" };
+  }
+
+  const r = result as {
+    keywords?: string[];
+    location_code?: number;
+    language_code?: string;
+    check_url?: string;
+    items_count?: number;
+    items?: Array<{
+      type?: string;
+      title?: string;
+      keywords?: string[];
+      data?: unknown;
+      averages?: number[];
+    }>;
+  };
+
+  // Transform items for cleaner output
+  const items = (r.items || []).map((item) => {
+    if (item.type === "google_trends_graph") {
+      const graphData = item.data as Array<{
+        date_from: string;
+        date_to: string;
+        timestamp: number;
+        missing_data: boolean;
+        values: number[];
+      }>;
+      return {
+        type: item.type,
+        title: item.title,
+        keywords: item.keywords,
+        averages: item.averages,
+        data_points: graphData?.length || 0,
+        data: graphData,
+      };
+    }
+    if (item.type === "google_trends_topics_list") {
+      const topicsData = item.data as {
+        top?: Array<{ topic_id: string; topic_title: string; topic_type: string; value: string }>;
+        rising?: Array<{ topic_id: string; topic_title: string; topic_type: string; value: string }>;
+      };
+      return {
+        type: item.type,
+        title: item.title,
+        top_topics: topicsData?.top || [],
+        rising_topics: topicsData?.rising || [],
+      };
+    }
+    if (item.type === "google_trends_queries_list") {
+      const queriesData = item.data as {
+        top?: Array<{ query: string; value: string }>;
+        rising?: Array<{ query: string; value: string }>;
+      };
+      return {
+        type: item.type,
+        title: item.title,
+        top_queries: queriesData?.top || [],
+        rising_queries: queriesData?.rising || [],
+      };
+    }
+    return item;
+  });
+
+  return {
+    keywords: r.keywords,
+    location_code: r.location_code,
+    check_url: r.check_url,
+    items_count: r.items_count,
+    items,
+  };
+}
+
+// DataForSEO Trends Explore (proprietary data, web/news/ecommerce only)
+async function dataforseoTrendsExplore(
+  keywords: string[],
+  type: string,
+  locationCode: number | null,
+  dateFrom: string | null,
+  dateTo: string | null,
+  timeRange: string | null
+): Promise<unknown> {
+  const body: Record<string, unknown> = {
+    keywords,
+    type,
+  };
+  if (locationCode) body.location_code = locationCode;
+  if (dateFrom) body.date_from = dateFrom;
+  if (dateTo) body.date_to = dateTo;
+  if (timeRange && !dateFrom) body.time_range = timeRange;
+
+  const response = await axios.post<DataForSEOResponse<unknown>>(
+    `${DATAFORSEO_BASE_URL}/keywords_data/dataforseo_trends/explore/live`,
+    [body],
+    { headers, timeout: 60000 }
+  );
+
+  if (response.data.status_code !== 20000) {
+    throw new Error(`DataForSEO error: ${response.data.status_message}`);
+  }
+
+  const result = response.data.tasks?.[0]?.result?.[0];
+  if (!result) {
+    return { items: [], message: "No data found" };
+  }
+
+  const r = result as {
+    keywords?: string[];
+    location_code?: number;
+    language_code?: string;
+    items_count?: number;
+    items?: Array<{
+      type?: string;
+      keywords?: string[];
+      data?: Array<{
+        date_from: string;
+        date_to: string;
+        timestamp: number;
+        values: number[];
+      }>;
+      averages?: number[];
+    }>;
+  };
+
+  const items = (r.items || []).map((item) => ({
+    type: item.type,
+    keywords: item.keywords,
+    averages: item.averages,
+    data_points: item.data?.length || 0,
+    data: item.data,
+  }));
+
+  return {
+    keywords: r.keywords,
+    location_code: r.location_code,
+    items_count: r.items_count,
+    items,
+  };
+}
+
 // Create MCP server
 const server = new McpServer({
   name: "seo-agent-mcp",
@@ -590,6 +764,81 @@ server.tool(
             text: `Error: ${error instanceof Error ? error.message : String(error)}`,
           },
         ],
+        isError: true,
+      };
+    }
+  }
+);
+
+// Tool 6: Google Trends Explore
+server.tool(
+  "google_trends_explore",
+  "Explore keyword trends via Google Trends. Supports YouTube, web, news, images, and shopping. Returns trend graphs, related topics, and rising queries. Set type to 'youtube' for YouTube-specific trends.",
+  {
+    keywords: z.array(z.string()).max(5).describe("Keywords to explore (max 5). Use 1 keyword to get related topics/queries."),
+    type: z.enum(["web", "news", "youtube", "images", "froogle"]).optional().describe("Search type (default: web). Use 'youtube' for YouTube trends, 'froogle' for Shopping."),
+    location_code: z.number().optional().describe("Location code (e.g., 2840 for US). Default: global."),
+    date_from: z.string().optional().describe("Start date yyyy-mm-dd (default: 12 months ago)"),
+    date_to: z.string().optional().describe("End date yyyy-mm-dd (default: today)"),
+    time_range: z.string().optional().describe("Preset range: past_hour, past_4_hours, past_day, past_7_days, past_30_days, past_90_days, past_12_months, past_5_years. Ignored if date_from is set."),
+    category_code: z.number().optional().describe("Category filter (default: 0 = all categories)"),
+    item_types: z.array(z.enum(["google_trends_graph", "google_trends_map", "google_trends_topics_list", "google_trends_queries_list"])).optional().describe("Data to return (default: graph + topics + queries)"),
+  },
+  async ({ keywords, type, location_code, date_from, date_to, time_range, category_code, item_types }) => {
+    try {
+      const defaultItems = keywords.length === 1
+        ? ["google_trends_graph", "google_trends_topics_list", "google_trends_queries_list"]
+        : ["google_trends_graph"];
+      const result = await googleTrendsExplore(
+        keywords,
+        type || "web",
+        location_code || null,
+        date_from || null,
+        date_to || null,
+        time_range || null,
+        category_code || null,
+        item_types || defaultItems
+      );
+      return {
+        content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }],
+      };
+    } catch (error) {
+      return {
+        content: [{ type: "text" as const, text: `Error: ${error instanceof Error ? error.message : String(error)}` }],
+        isError: true,
+      };
+    }
+  }
+);
+
+// Tool 7: DataForSEO Trends Explore
+server.tool(
+  "dataforseo_trends_explore",
+  "Explore keyword trends using DataForSEO's proprietary trend data. More reliable than Google Trends but only supports web, news, and ecommerce (no YouTube). Compare up to 5 keywords.",
+  {
+    keywords: z.array(z.string()).max(5).describe("Keywords to compare (max 5)"),
+    type: z.enum(["web", "news", "ecommerce"]).optional().describe("Search type (default: web)"),
+    location_code: z.number().optional().describe("Location code (e.g., 2840 for US). Default: global."),
+    date_from: z.string().optional().describe("Start date yyyy-mm-dd (default: 12 months ago)"),
+    date_to: z.string().optional().describe("End date yyyy-mm-dd (default: today)"),
+    time_range: z.string().optional().describe("Preset range: past_4_hours, past_day, past_7_days, past_30_days, past_90_days, past_12_months, past_5_years. Ignored if date_from is set."),
+  },
+  async ({ keywords, type, location_code, date_from, date_to, time_range }) => {
+    try {
+      const result = await dataforseoTrendsExplore(
+        keywords,
+        type || "web",
+        location_code || null,
+        date_from || null,
+        date_to || null,
+        time_range || null
+      );
+      return {
+        content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }],
+      };
+    } catch (error) {
+      return {
+        content: [{ type: "text" as const, text: `Error: ${error instanceof Error ? error.message : String(error)}` }],
         isError: true,
       };
     }

@@ -1,8 +1,9 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
   Audio,
-  OffthreadVideo,
+
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -67,7 +68,7 @@ export const NotificationStack: React.FC<NotificationStackProps> = ({
     <AbsoluteFill>
       {/* Speaker video underneath */}
       {speakerSrc && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

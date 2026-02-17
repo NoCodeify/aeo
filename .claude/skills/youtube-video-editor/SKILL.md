@@ -1,6 +1,7 @@
 ---
 name: youtube-video-editor
-description: Edit YouTube videos using Ed Lawrence's retention-focused editing system with tournament-style thumbnail selection. Use when the user needs editing guidance, thumbnail creation, visual metaphor implementation, or production quality advice. Optimizes for viewer satisfaction through strategic cuts, pacing, and visual elements.
+description: Edit YouTube videos using retention-focused editing system. Use when user says "editing guide", "retention edit", "visual metaphors", "pacing advice", or "production quality". Do NOT use for script writing (use youtube-script-writer), video ideation (use youtube-video-ideation), or thumbnail generation (use thumbnail).
+allowed-tools: Read, Glob, Grep, Write, Edit, Bash
 ---
 
 # YouTube Video Editor (Ed Lawrence Method + Thumbnail Tournament)

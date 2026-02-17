@@ -1,11 +1,11 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
   staticFile,
   useVideoConfig,
 } from "remotion";
-import { proxyVideo } from "../use-proxy";
+import { proxyVideo, ForceVideoContext } from "../use-proxy";
 
 interface DataVizSplitProps {
   speakerSrc: string;
@@ -42,7 +42,7 @@ export const DataVizSplit: React.FC<DataVizSplitProps> = ({
         {children}
       </div>
 
-      {/* Speaker half */}
+      {/* Speaker half - ForceVideoContext ensures this isn't skipped in continuous mode */}
       <div
         style={{
           position: "absolute",
@@ -53,16 +53,18 @@ export const DataVizSplit: React.FC<DataVizSplitProps> = ({
           overflow: "hidden",
         }}
       >
-        <OffthreadVideo
-          src={staticFile(proxyVideo(speakerSrc))}
-          startFrom={startFrom}
-          pauseWhenBuffering
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        />
+        <ForceVideoContext.Provider value={true}>
+          <SmartVideo
+            src={staticFile(proxyVideo(speakerSrc))}
+            startFrom={startFrom}
+            pauseWhenBuffering
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        </ForceVideoContext.Provider>
       </div>
     </AbsoluteFill>
   );

@@ -7,17 +7,23 @@
  *   Merge: U3P base + filler positions from U2
  *
  * Usage:
- *   npx ts-node transcribe.ts <video_dir>
+ *   npx ts-node transcribe.ts <video_dir> [--clean]
  *
- * Example:
- *   npx ts-node transcribe.ts ../../youtube/weekly-production/2026-w08-rank-in-chatgpt
+ * Examples:
+ *   npx ts-node transcribe.ts ../../youtube/weekly-production/2026-w09-claude-code-use-cases
+ *   npx ts-node transcribe.ts ../../youtube/weekly-production/2026-w09-claude-code-use-cases --clean
+ *
+ * Flags:
+ *   --clean   Transcribe speaker-clean.mp4 → transcript-clean.json
+ *             (use after manual rough cut in video editor)
  *
  * Prerequisites:
  *   - ffmpeg installed (for audio extraction)
  *   - ASSEMBLYAI_API_KEY env var set
  *
  * Output:
- *   <video_dir>/video/transcript.json
+ *   <video_dir>/video/transcript.json        (default)
+ *   <video_dir>/video/transcript-clean.json   (--clean mode)
  */
 
 import path from "path";
@@ -162,11 +168,15 @@ function mergeFillers(
 async function transcribe() {
   const args = process.argv.slice(2);
 
-  if (args.length < 1) {
-    console.log("Usage: npx ts-node transcribe.ts <video_dir>");
+  const cleanMode = args.includes("--clean");
+  const filteredArgs = args.filter((a) => a !== "--clean");
+
+  if (filteredArgs.length < 1) {
+    console.log("Usage: npx ts-node transcribe.ts <video_dir> [--clean]");
     console.log(
-      "Example: npx ts-node transcribe.ts ../../youtube/weekly-production/2026-w08-rank-in-chatgpt"
+      "Example: npx ts-node transcribe.ts ../../youtube/weekly-production/2026-w09-claude-code-use-cases"
     );
+    console.log("  --clean   Transcribe speaker-clean.mp4 instead of speaker.mp4");
     process.exit(1);
   }
 
@@ -185,9 +195,9 @@ async function transcribe() {
     process.exit(1);
   }
 
-  const videoDir = path.resolve(args[0]);
+  const videoDir = path.resolve(filteredArgs[0]);
   const videoSubdir = path.join(videoDir, "video");
-  const outputPath = path.join(videoSubdir, "transcript.json");
+  const outputPath = path.join(videoSubdir, cleanMode ? "transcript-clean.json" : "transcript.json");
 
   // Find speaker video
   if (!fs.existsSync(videoSubdir)) {
@@ -195,19 +205,32 @@ async function transcribe() {
     process.exit(1);
   }
 
-  const videoFiles = fs
-    .readdirSync(videoSubdir)
-    .filter(
-      (f) =>
-        f.endsWith(".mp4") && !f.includes("test") && !f.includes("output")
-    );
+  let speakerVideoPath: string;
 
-  if (videoFiles.length === 0) {
-    console.error("No speaker video found in", videoSubdir);
-    process.exit(1);
+  if (cleanMode) {
+    // --clean mode: target speaker-clean.mp4 directly
+    speakerVideoPath = path.join(videoSubdir, "speaker-clean.mp4");
+    if (!fs.existsSync(speakerVideoPath)) {
+      console.error("speaker-clean.mp4 not found in", videoSubdir);
+      console.error("Do a manual rough cut first and export as speaker-clean.mp4");
+      process.exit(1);
+    }
+  } else {
+    // Default: find raw speaker video (exclude clean/test/output)
+    const videoFiles = fs
+      .readdirSync(videoSubdir)
+      .filter(
+        (f) =>
+          f.endsWith(".mp4") && !f.includes("test") && !f.includes("output") && !f.includes("clean")
+      );
+
+    if (videoFiles.length === 0) {
+      console.error("No speaker video found in", videoSubdir);
+      process.exit(1);
+    }
+
+    speakerVideoPath = path.join(videoSubdir, videoFiles[0]);
   }
-
-  const speakerVideoPath = path.join(videoSubdir, videoFiles[0]);
 
   console.log("=== AssemblyAI Dual-Pass Transcription ===");
   console.log("Speaker video:", speakerVideoPath);

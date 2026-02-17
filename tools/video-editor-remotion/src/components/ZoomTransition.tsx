@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   Img,
   useCurrentFrame,
   useVideoConfig,
@@ -80,7 +81,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
 
   // Render speaker_full
   const renderSpeakerFull = () => (
-    <OffthreadVideo
+    <SmartVideo
       src={staticFile(speakerSrc)}
       startFrom={startFrom}
       pauseWhenBuffering
@@ -115,7 +116,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
       <>
         {/* Grid background */}
         <AbsoluteFill>
-          <OffthreadVideo
+          <SmartVideo
             src={staticFile(gridSrc)}
             pauseWhenBuffering
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -177,7 +178,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
               "cornerShape": "superellipse(2)",
             } as React.CSSProperties}
           >
-            <OffthreadVideo
+            <SmartVideo
               src={staticFile(speakerSrc)}
               startFrom={startFrom}
               pauseWhenBuffering
@@ -244,7 +245,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
               overflow: "hidden",
             }}
           >
-            <OffthreadVideo
+            <SmartVideo
               src={staticFile(speakerSrc)}
               startFrom={startFrom}
               pauseWhenBuffering
@@ -262,7 +263,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
 
   // Render broll_full
   const renderBrollFull = () => (
-    <OffthreadVideo
+    <SmartVideo
       src={staticFile(slideSrc)}
       muted
       pauseWhenBuffering

@@ -1,7 +1,7 @@
 {
   "name": "seo-agent-mcp",
   "version": "1.0.0",
-  "description": "MCP server for DataForSEO API - keyword research, competitor analysis, content gaps",
+  "description": "MCP server for DataForSEO API - keyword research, competitor analysis, content gaps, Google Trends, YouTube trends",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {

@@ -18,12 +18,18 @@ paths:
 - Thumbnails: `/thumbnail` skill (forks to thumbnail-prompter agent)
 - Full pipeline: `/video-produce` skill (agent team)
 
-## Pipeline
+## Pipeline (Post-Film)
 
-1. Record raw footage
-2. `/auto-cutter` - intelligent silence/filler removal
-3. `/video-timeline` - generate timeline.json from script + transcript
-4. Remotion render at 4K
+1. **Transcribe** raw footage (`transcribe.ts`)
+2. **Auto-cut** silences/fillers (`/auto-cutter` -> `autocut.ts`)
+3. **Build timeline** (`/video-timeline`) - MUST happen before slide generation
+   - Timeline decides layouts per segment (speaker_full, slide_full, split_5050, etc.)
+   - This determines slide aspect ratios: 16:9 for `slide_full`, 1:1 for `split_5050`
+4. **Generate slides** at correct aspect ratios per timeline
+   - `/excalidraw-slides` for hand-drawn whiteboard style
+   - `/broll-prompting` only for premium dark-bg graphics (rare)
+5. **Download GIFs** (can run parallel with step 4)
+6. **Remotion render** at 4K
 
 ## Quick Start
 
@@ -61,7 +67,7 @@ npx ts-node render.ts ../../youtube/weekly-production/2026-w08-rank-in-chatgpt
 | `split_5050_left` | Full-bleed 50/50: speaker left, slide right (no padding/borders) |
 | `split_5050_right` | Full-bleed 50/50: slide left, speaker right (no padding/borders) |
 | `broll_full` | Stock video B-roll fills frame (speaker audio continues, no loop) |
-| `gif_overlay` | GIF on top of speaker video (reaction memes, humor beats) |
+| `gif_overlay` | GIF on top of speaker video (reaction memes, humor beats). **Speaker-only layouts!** |
 | `gif_full` | GIF fills frame (speaker audio continues, big meme moments) |
 | `text_overlay` | Text on speaker video (Syne font, off-white, pop animation) |
 | `jump_zoom_in` | Animated zoom punch (configurable duration) |
@@ -216,7 +222,14 @@ Use jump zooms to punch key words/sentences. Rules:
 | `center` | Center | 240px | Big impact (framework names, key stats) |
 | `heading` | Top | 160px | Section headers |
 
-**CRITICAL: text_overlay ONLY on speaker_full segments.** Never on slides, splits, or GIFs.
+**CRITICAL: Overlays ONLY on speaker_full/gradual_zoom/jump segments.** Never on slides, splits, or B-roll.
+- `text_overlay` - text on speaker only
+- `gif_overlay` - GIF meme on speaker only (never on split/slide layouts)
+- Other overlays (lower_third, callout, confetti, etc.) - speaker only
+
+**Technical note:** Overlay components are pure overlays (no speaker video). The underlying layout handles the speaker. This means overlays preserve the zoom level of whatever layout is underneath.
+
+**Z-order note:** Timeline array order = render z-order. When multiple overlays share a timestamp (e.g., two gif_overlays + text_overlay), put text_overlay LAST so it renders on top of GIFs.
 
 **Rules:**
 - 1-3 words max (power words work best)
@@ -356,18 +369,34 @@ To disable bg music for a specific render, omit the `bgMusic` field from the con
 
 ### Sound Effects (SFX) Rules
 
-**Library:** `public/sfx/boop.mp3` and `public/sfx/click.mp3` - ship with editor, not per-video.
+**Library:** `public/sfx/` - ship with editor, not per-video.
 
 | Sound | Use Case |
 |-------|----------|
 | `boop` | Text overlay reveals, soft emphasis, gentle moments |
 | `click` | Layout transitions to slides, UI-like moments |
+| ~~`thud`~~ | **REMOVED** - too abrupt, use `boop` or `achievement-ding` instead |
+| `achievement-ding` | Success moments, milestone reveals, surprise beats |
+| `whoosh` | Fast transitions, speed emphasis |
+| `shimmer` | Sparkle moments, premium/quality reveals |
+| `bubble-pop` | Playful moments, list items appearing |
+| `draw` | Excalidraw/whiteboard slide reveals |
+| `enter` | Element entrances |
+| `flipcard-count` | Counter/flipcard animations |
+| `keyboard-typing` | Terminal/code editor typing |
+| `ticking-fast` | Countdown/urgency moments |
 
 **Rules:**
-- Max **4-6 sfx per 10-min video** - sparse and deliberate
+- Max **10-15 sfx per 10-min video** - sparse and deliberate
+- **No click SFX on routine layout transitions** - only use for significant UI moments
+- **Whoosh only at chapter transitions** - not every layout change
+- **Minimum 10s between SFX** - never cluster multiple SFX within seconds of each other
 - Default volume `0.5` (subtle) - never louder than `0.7`
 - SFX edits **overlap** with visual edits (same timestamp is fine)
 - Duration matches the sound file length (0.5-1s typical)
+- **No thud** - removed from library (too abrupt). Use `boop` or `achievement-ding` instead
+- **Component-embedded SFX must be quiet** - ComparisonTable, ConfettiBurst, etc. have auto-playing SFX. Keep these at `0.1-0.15` max. These stack with timeline SFX and bg music
+- **screen_shake needs clear speech context** - only use when the speaker says something genuinely impactful. Random screen_shake is distracting
 
 ```json
 {"type": "sfx", "start": 10.0, "end": 10.5, "content": "boop", "volume": 0.5},
@@ -603,12 +632,57 @@ video-editor-remotion/
 └── package.json
 ```
 
+## Studio Preview Setup
+
+To preview a video in Remotion Studio, copy all assets to `public/`:
+
+```bash
+# Copy from production dir to public/
+cp <video_dir>/video/speaker-clean.mp4 public/speaker.mp4
+cp -r <video_dir>/slides/ public/slides/
+cp -r <video_dir>/gifs/ public/gifs/
+cp -r <video_dir>/video/broll/ public/broll/
+cp <video_dir>/video/timeline.json public/timeline.json
+
+# Generate proxy for smooth preview
+ffmpeg -y -i public/speaker.mp4 -vf "scale=960:540" -c:v libx264 -preset fast -crf 28 -c:a aac -b:a 64k public/speaker-proxy.mp4
+```
+
+**Timeline editing:** `public/timeline.json` is the single working copy during Studio preview. Edit ONLY this file - never the source `video/timeline.json` separately. `render.ts` auto-syncs public → source before rendering.
+
+**Timeline paths:** Content paths must be relative to `public/` (e.g., `broll/file.mp4` not `video/broll/file.mp4`). The `render.ts` script remaps paths automatically at render time, but Studio reads them as-is.
+
+**Auto-reload timeline:** The timeline is imported directly from `public/timeline.json` via Vite. Changes to the file trigger HMR auto-reload in Studio - no manual refresh needed. Props are also editable in the Studio sidebar via Zod schema.
+
+**Config:** `remotion.config.ts` sets `setMaxTimelineTracks(200)` for videos with 100+ timeline entries.
+
+**Speaker crop fix:** If the speaker is off-center, crop with ffmpeg (not in Remotion):
+```bash
+# Shift 120px right: crop right edge, proportional Y to keep 16:9, scale back
+ffmpeg -y -i speaker-clean.mp4 -vf "crop=3720:2092:0:34,scale=3840:2160" -c:a copy speaker-shifted.mp4
+```
+
 ## Render Settings
 
 | Setting | Value |
 |---------|-------|
 | Resolution | 3840x2160 (4K) |
 | FPS | 30 |
-| Codec | H.264 |
+| Codec | H.264 (VideoToolbox hardware encoder on Mac) |
 | Format | MP4 |
-| Bitrate | 35-45 Mbps (use `--video-bitrate=40M`) |
+| Bitrate | 35 Mbps |
+| Concurrency | 12 (M3 Max P-cores) |
+| GL renderer | ANGLE (Metal GPU on Apple Silicon) |
+| Video cache | 512MB offthread cache |
+
+### Render Commands
+
+```bash
+# Full 4K production render
+npx ts-node render.ts ../../youtube/weekly-production/2026-w09-claude-code-use-cases
+
+# Quick test render (first 30s, 1080p, 10Mbps) - ~4x faster
+npx ts-node render.ts ../../youtube/weekly-production/2026-w09-claude-code-use-cases --test
+```
+
+**Test mode (`--test`):** Renders first 30s at 1080p (half scale) with 10Mbps bitrate and 8 threads. Use for spot-checking sections without waiting for full 4K.

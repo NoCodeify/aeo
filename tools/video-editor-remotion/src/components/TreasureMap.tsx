@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
   useCurrentFrame,
   useVideoConfig,
@@ -251,7 +252,7 @@ export const TreasureMap: React.FC<TreasureMapProps> = ({
 
       {/* Speaker audio (hidden) */}
       {speakerSrc && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(proxyVideo(speakerSrc))}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

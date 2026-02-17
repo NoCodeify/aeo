@@ -1,8 +1,6 @@
 import React from "react";
 import {
   AbsoluteFill,
-  OffthreadVideo,
-  staticFile,
   useCurrentFrame,
   useVideoConfig,
   interpolate,
@@ -18,8 +16,8 @@ import { TextStyle } from "../types/timeline";
 loadSyne("normal", { weights: ["700", "800"], subsets: ["latin"] });
 
 interface TextOverlayProps {
-  speakerSrc: string;
-  startFrom: number;
+  speakerSrc?: string;  // unused, kept for API compat
+  startFrom?: number;   // unused, kept for API compat
   text: string;
   style?: TextStyle;
   color?: string;
@@ -152,16 +150,8 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
   const textStyles = getTextStyles(style, color, glow);
 
   return (
-    <AbsoluteFill>
-      {/* Speaker video underneath */}
-      <OffthreadVideo
-        src={staticFile(speakerSrc)}
-        startFrom={startFrom}
-        pauseWhenBuffering
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-      />
-
-      {/* Text overlay */}
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {/* Pure overlay - no speaker video. The underlying layout handles speaker. */}
       <div
         style={{
           position: "absolute",
@@ -173,6 +163,7 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
           style={{
             transform: `scale(${scale})`,
             opacity,
+            textAlign: "center",
             ...textStyles,
           }}
         >

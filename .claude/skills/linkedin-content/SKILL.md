@@ -1,7 +1,7 @@
 ---
 name: linkedin-content
-description: Design LinkedIn posts, banners, and profile content. Creates text posts with hooks, visual banners as React components, and profile optimization.
-disable-model-invocation: true
+description: Design LinkedIn posts, banners, and profile content. Use when user says "LinkedIn post", "LinkedIn banner", "LinkedIn content", "write a post", or "profile optimization". Do NOT use for website copy (use website-copywriting) or YouTube scripts (use youtube-script-writer).
+allowed-tools: Read, Write, Edit, Glob, Grep, WebFetch
 ---
 
 # LinkedIn Content Creation

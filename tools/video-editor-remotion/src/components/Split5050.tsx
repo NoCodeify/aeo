@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   Img,
   useVideoConfig,
   staticFile,
@@ -61,7 +62,7 @@ export const Split5050: React.FC<Split5050Props> = ({
           overflow: "hidden",
         }}
       >
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom}
           pauseWhenBuffering

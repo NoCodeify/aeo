@@ -2,7 +2,7 @@
 
 ## Context
 
-The founder has spent the past year building an entire business infrastructure with Claude Code - 14 agents, 23 skills, 5 MCP servers, a video production pipeline, audit tools, and a full client delivery system - without being a traditional developer. He also built DMChamp, a SaaS generating $100K/yr ARR (~$8.3K/mo), largely maintained by an agentic CI/CD pipeline with minimal founder time (human QA only). He has one existing consulting client (Fuegenix) paying EUR 1,500/mo + 21% VAT (EUR 1,815/mo total, ~$1,900/mo USD) for marketing consulting that now includes AEO. The founder is not starting from $0 - existing revenue is ~$10.2K/mo (DMChamp + Fuegenix) before any new community or high-ticket revenue.
+The founder has spent the past year building an entire business infrastructure with Claude Code - 14 agents, 23 skills, 5 MCP servers, a video production pipeline, audit tools, and a full client delivery system. He also built DMChamp, a SaaS generating $100K/yr ARR (~$8.3K/mo), largely maintained by an agentic CI/CD pipeline with minimal founder time (human QA only). He has one existing consulting client (Fuegenix) paying EUR 1,500/mo + 21% VAT (EUR 1,815/mo total, ~$1,900/mo USD) for marketing consulting that now includes AEO. The founder is not starting from $0 - existing revenue is ~$10.2K/mo (DMChamp + Fuegenix) before any new community or high-ticket revenue.
 
 The original plan was to sell AEO (Answer Engine Optimization) as a white-label SaaS (MentionedIn.ai). After deep market research, the Claude Code community + services path offers better founder-market fit, faster time to revenue, a larger market, and lower risk. AEO becomes one service offering in a broader Claude Code implementation business, not a separate company.
 
@@ -96,6 +96,7 @@ Nobody else in the Claude Code education space has this breadth:
 **Competitive positioning:**
 | Competitor | YouTube | Their angle | Your angle |
 |-----------|--------|------------|------------|
+| Nick Saraev (Maker School, $184/mo) | ~150K subs | Automation for agencies (Make/n8n/CC). $4M/yr from teaching. Now adding CC to curriculum. | Practitioner vs educator. His $4M is from courses, yours is from production systems. He demos throwaway builds, you run DMChamp in production. |
 | Samin (Claude Co-workers, $49/mo) | ~17K subs | Claude for SaaS founders | Claude for ALL professionals (with real $100K SaaS as proof) |
 | Alex Finn (Vibe Coding Academy, $97/mo) | ~110K subs | Build a $300K app (MMO) | Be better at your current work (not just apps) |
 | Chris Ashby (AI Founders, $59-67/mo) | ~34K subs | Idea to app in 28 days (MMO) | Amplify what you already do |
@@ -104,6 +105,19 @@ Nobody else in the Claude Code education space has this breadth:
 | Liam Ottley (AAA Accelerator) | 731K subs | AI agency business model | Not competing directly - different tool (n8n vs Claude Code) |
 | KubeCraft (Mischa, $400/mo) | 78K subs | DevOps career training | Broader: any professional, not just DevOps |
 | Free courses (Anthropic, Coursera, etc.) | N/A | Self-paced tutorials | Community + coaching + done-with-you + REAL production systems to study |
+
+**The n8n-to-Claude-Code migration (Feb 2026):**
+
+Nick Saraev published a comprehensive 2.5-hour "Claude Code Full Beginner Course" covering setup, CLAUDE.md, agents, skills, MCP, hooks, context management, plan mode, and deployment. This signals a broader trend: established automation educators (Nick, Nate Herk, Liam Ottley) are adding Claude Code to their teaching stack alongside Make.com and n8n.
+
+What this means:
+- **The "beginner tutorial" keyword is now contested.** Nick's course is thorough - setup through deployment, non-developer friendly. Competing on beginner tutorials alone is a losing strategy.
+- **Their revenue comes from teaching, not building.** Nick's $4M/yr is from Maker School and courses, not from production systems. His Claude Code demos are built live and thrown away. He does not run a SaaS, an agentic CI/CD pipeline, or a consulting delivery system with Claude Code.
+- **They go wide, not deep.** Nick covers 15 topics in one video. He cannot go 2 hours deep on multi-agent orchestration or MCP server architecture because he hasn't built and maintained those systems in production.
+- **Their audience is "sell automation to clients" (MMO).** The founder's audience is "automate YOUR existing business" (skill). Different buyer, different retention profile.
+- **More educators = bigger market.** Every Nick Saraev viewer who learns Claude Code exists will want to go deeper. Some of them will find Claudify. The funnel gets wider, not narrower.
+
+The competitive moat is not "I teach Claude Code." Everyone will teach Claude Code. The moat is: "I built a $100K SaaS, an agentic CI/CD pipeline, a consulting delivery system, and an NFC smart lock with Claude Code - and you can study the actual production infrastructure."
 
 **Thought leaders building toward communities (potential future competitors or collaborators):**
 - **Carl Vellotti** - Free "CC for Everyone" + "CC for PMs" courses, 7,394 total Maven students across courses (2,000+ PMs completed the PM-specific course). Innovative approach (learn CC inside CC). Building toward community but hasn't launched a paid Skool yet.
@@ -171,7 +185,7 @@ The critical insight: high-ticket comes FIRST. You do not need an audience to se
     - Module 4: Your First Real System (the key module - members build ONE real thing)
     - Module 5: When Things Go Wrong
     - Module 6: Pick Your Track
-  - **FoundationKit (added 1-2/month based on demand):**
+  - **Foundations (added 1-2/month based on demand):**
     - Module 7: Custom Slash Commands & Skills
     - Module 8: Building Agents
     - Module 9: MCP Servers
@@ -181,13 +195,13 @@ The critical insight: high-ticket comes FIRST. You do not need an audience to se
     - Module 13: Claude Code for Content & Marketing
     - Module 14: Building Internal Tools & Dashboards
     - Module 15: Advanced Patterns (git worktrees, parallel sessions)
-  - **CaseStudyOS (released 1 per month):**
+  - **Case Studies (released 1 per month):**
     - CS1: DMChamp - $100K SaaS lifecycle
     - CS2: Agentic CI/CD Pipeline
     - CS3: AEO Consulting Business
     - CS4: NFC Smart Lock
     - CS5: Video Production & Outreach Stack
-  - **ServiceKit (for Track C members):**
+  - **Service Track (for Track C members):**
     - SK1: The Claude Code Service Menu
     - SK2: Scoping & Discovery
     - SK3: Pricing & Packaging
@@ -320,21 +334,32 @@ Only 5-8 creators consistently make Claude Code content. View potential: 20K-90K
   - "I Built 14 AI Agents That Run My Consulting Business"
   - "How Claude Code Replaced a $5K/Month Developer"
 
-### Verified Content Gaps (all 6 still open as of Feb 2026)
+### Content Gaps (updated Feb 2026 - post Nick Saraev course)
 
-1. **Multi-agent orchestration tutorials** - MAJOR GAP. Nobody teaching this.
-2. **MCP server setup guides** - HIGH. Setup complexity is where people quit.
-3. **Non-developer Claude Code workflows** - GROWING. Fortune/Lenny validated demand.
-4. **Context management at scale** - CRITICAL. Common Reddit complaint.
-5. **Hooks & advanced automation** - MEDIUM-HIGH.
-6. **"15-minute build" format** - PROVEN. Peter Yang's most engaging format.
+Nick Saraev's 2.5-hour course covered context management, hooks, MCP, agents, and skills at a surface level. This narrows the beginner tutorial gaps but opens deeper ones.
+
+**Still wide open (nobody going deep):**
+1. **Multi-agent orchestration in production** - Nick mentioned agent teams briefly. Nobody has shown a real multi-agent system running a business. This is the founder's strongest content angle.
+2. **Production case studies with real revenue** - Everybody demos throwaway builds. Nobody shows "here's a SaaS making $100K/yr, here's how it's maintained with Claude Code." The founder owns this.
+3. **Agentic CI/CD pipelines** - Bug detection -> auto-fix -> customer notification. Nick has nothing like this. Nobody does.
+4. **Non-software Claude Code projects** - NFC smart lock, hardware/firmware. Pattern interrupt content that nobody else can make.
+
+**Narrowing (now covered at surface level by others):**
+5. **MCP server setup guides** - Nick covered basics. Opportunity is in advanced MCP (building custom servers, multi-server orchestration).
+6. **Context management** - Nick covered slash commands and compaction. Opportunity is in advanced patterns (git worktrees, parallel sessions, project-scale context).
+7. **Hooks & automation** - Nick covered the concept. Opportunity is in production hook systems (the founder's completion chime is an example Nick actually copied).
+
+**Saturating (avoid competing here):**
+8. **"Claude Code beginner tutorial"** - Nick's 2.5-hour course, plus Anthropic's free course, plus multiple Udemy courses. Do NOT compete on beginner tutorials. Lead with case studies and proof instead.
+
+**Content strategy implication:** The first 3 videos should be case studies (proof of work), not tutorials. Tutorials are commodity. Production proof is not.
 
 ### First 10 Videos (Weeks 1-10)
 
 | Week | Title | Pillar | Expected | Why |
 |------|-------|--------|----------|-----|
 | 1 | "I Built a $100K SaaS With Claude Code (No Coding Background)" | Case study | 10K-50K | Origin story + proof. DMChamp is the hook. |
-| 2 | "Claude Code Tutorial: The Only Guide Non-Developers Need (2026)" | Search | 5K-20K | Evergreen search traffic, establishes authority |
+| 2 | "Claude Code Tutorial: The Only Guide Non-Developers Need (2026)" | Search | 5K-20K | Evergreen search traffic, establishes authority. High-volume keyword - multiple creators can rank. |
 | 3 | [React to trending Claude/AI news with your angle] | Trending | 10K-100K | Algorithm boost, ride the wave |
 | 4 | "My AI Fixes Its Own Bugs and Emails Customers (Full Demo)" | Case study | 5K-30K | Jaw-dropping content. Agentic pipeline demo. |
 | 5 | "Claude Code vs Cursor vs Copilot: Honest Comparison" | Search/trending | 10K-50K | High search volume comparison keyword |
@@ -619,7 +644,7 @@ The 90-day plan above assumes the machine is running. This section addresses the
 |------|-----------|
 | Platform risk (tied to Anthropic) | We are betting on Claude Code's continued growth. CLAUDE.md, MCP, hooks, and agents are Anthropic-specific and do not transfer directly to Cursor or Copilot. If the market shifts, we pivot the curriculum - the community and personal brand survive because the audience trusts the founder, not because the content is platform-agnostic. Karpathy's "agentic engineering" framing provides a broader conceptual umbrella if needed. |
 | Claude Code becomes too easy | Go deeper: agents, MCP, multi-agent systems, enterprise workflows. Basics commoditize, advanced does not. |
-| Nate Herk or others enter the space | They cannot match the founder's depth (year of production use, 14 agents, 23 skills, 5 MCP servers). They are tourists, the founder is a resident. |
+| n8n/automation educators pivot to Claude Code | Already happening (Nick Saraev published a 2.5-hour CC course, Feb 2026). Their moat is audience size, not depth. They teach throwaway demos, not production systems. The founder's moat is proof of work: $100K SaaS, agentic CI/CD, consulting delivery. Compete on depth and production proof, not beginner tutorials. More educators = bigger market. |
 | Content treadmill burnout | Batch record, use Claude Code to produce faster, build content systems (the video pipeline already exists) |
 | High-ticket pipeline stalls | Community becomes the flywheel - paid members refer their network. Also: YouTube -> Skool -> high-ticket is a proven funnel. |
 | Free courses undercut paid | Free courses are self-paced and impersonal. Community + coaching + accountability is the premium. Anthropic's free course is GOOD - it creates demand. |

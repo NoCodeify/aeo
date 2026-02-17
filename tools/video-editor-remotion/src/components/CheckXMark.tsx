@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
   useCurrentFrame,
 } from "remotion";
@@ -86,7 +87,7 @@ export const CheckXMark: React.FC<CheckXMarkProps> = ({
     <AbsoluteFill>
       {/* Speaker video underneath */}
       {speakerSrc && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(proxyVideo(speakerSrc))}
           startFrom={startFrom}
           pauseWhenBuffering

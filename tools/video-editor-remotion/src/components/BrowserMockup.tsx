@@ -1,8 +1,9 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
   Audio,
-  OffthreadVideo,
+
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -355,7 +356,7 @@ export const BrowserMockup: React.FC<BrowserMockupProps> = ({
 
       {/* Speaker audio (hidden) */}
       {speakerSrc && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

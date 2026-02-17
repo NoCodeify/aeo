@@ -1,7 +1,6 @@
 ---
 name: video-produce
-description: Full YouTube video production pipeline using agent teams. Coordinates visual design, GIF search, and timeline building with persistent context.
-disable-model-invocation: true
+description: Full YouTube video production pipeline using agent teams. Coordinates slides, B-roll, GIFs, and timeline building. Use when user says "produce video", "full video pipeline", "video production", or "generate all video assets".
 ---
 
 # YouTube Video Production Pipeline

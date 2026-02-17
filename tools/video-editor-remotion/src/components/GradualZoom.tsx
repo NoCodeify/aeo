@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   useCurrentFrame,
   useVideoConfig,
   interpolate,
@@ -45,7 +46,7 @@ export const GradualZoom: React.FC<GradualZoomProps> = ({
           overflow: "hidden",
         }}
       >
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom}
           pauseWhenBuffering

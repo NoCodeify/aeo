@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   Img,
   useVideoConfig,
   staticFile,
@@ -61,7 +62,7 @@ export const SplitLayout: React.FC<SplitLayoutProps> = ({
     <AbsoluteFill>
       {/* Grid background video */}
       <AbsoluteFill>
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(gridSrc)}
           pauseWhenBuffering
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -113,7 +114,7 @@ export const SplitLayout: React.FC<SplitLayoutProps> = ({
           "cornerShape": "superellipse(2)",
         } as React.CSSProperties}
       >
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom}
           pauseWhenBuffering

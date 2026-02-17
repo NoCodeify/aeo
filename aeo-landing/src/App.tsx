@@ -3,6 +3,7 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import { LandingPage } from "./pages/LandingPage";
 import { FuegenixReport } from "./pages/FuegenixReport";
 import { LinkedInBanner } from "./pages/LinkedInBanner";
+import { YouTubeBanner } from "./pages/YouTubeBanner";
 import { ChecklistPage } from "./pages/ChecklistPage";
 import { WhatIsAEO } from "./pages/WhatIsAEO";
 import { AEOvsSEO } from "./pages/AEOvsSEO";
@@ -39,6 +40,7 @@ function App() {
       <Route path="/aeo-consulting" element={<AEOConsulting />} />
       <Route path="/report/fuegenix" element={<FuegenixReport />} />
       <Route path="/banner" element={<LinkedInBanner />} />
+      <Route path="/yt-banner" element={<YouTubeBanner />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     </>

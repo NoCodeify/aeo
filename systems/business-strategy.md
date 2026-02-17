@@ -1,7 +1,7 @@
 # AEO Business Strategy - Full Research Synthesis
 
 **Date:** February 5, 2026
-**Status:** Research complete, ready for decision
+**Status:** SUPERSEDED by `new-plan-wip-draft.md` (Claude Code community pivot). This doc is pre-pivot (AEO SaaS focus). Kept for historical reference. Free Skool tier, SaaS build phases, and 90-day plan are all outdated.
 
 ---
 

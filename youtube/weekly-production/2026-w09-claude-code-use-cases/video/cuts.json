@@ -1,0 +1,498 @@
+{
+  "originalDuration": 569,
+  "cleanDuration": 468.04,
+  "savedSeconds": 100.96,
+  "keepSegments": [
+    {
+      "start": 36.44,
+      "end": 94.19
+    },
+    {
+      "start": 95.19,
+      "end": 98.76
+    },
+    {
+      "start": 110.16,
+      "end": 114.93
+    },
+    {
+      "start": 118.4,
+      "end": 138.84
+    },
+    {
+      "start": 141.75,
+      "end": 145.87
+    },
+    {
+      "start": 146.87,
+      "end": 150.4
+    },
+    {
+      "start": 152.91,
+      "end": 159.14
+    },
+    {
+      "start": 159.52,
+      "end": 161.68
+    },
+    {
+      "start": 163.36,
+      "end": 180.73
+    },
+    {
+      "start": 182.16,
+      "end": 194.2
+    },
+    {
+      "start": 194.8,
+      "end": 210.53
+    },
+    {
+      "start": 215.45,
+      "end": 234.44
+    },
+    {
+      "start": 234.97,
+      "end": 242.83
+    },
+    {
+      "start": 245.6,
+      "end": 260.37
+    },
+    {
+      "start": 263.69,
+      "end": 315.17
+    },
+    {
+      "start": 316.69,
+      "end": 331.31
+    },
+    {
+      "start": 332.3,
+      "end": 351.02
+    },
+    {
+      "start": 351.71,
+      "end": 361.8
+    },
+    {
+      "start": 368.51,
+      "end": 392.99
+    },
+    {
+      "start": 393.43,
+      "end": 405.69
+    },
+    {
+      "start": 406.65,
+      "end": 420.74
+    },
+    {
+      "start": 423.06,
+      "end": 424.87
+    },
+    {
+      "start": 429.66,
+      "end": 479.24
+    },
+    {
+      "start": 481.39,
+      "end": 488.87
+    },
+    {
+      "start": 489.79,
+      "end": 504.26
+    },
+    {
+      "start": 507.85,
+      "end": 545.46
+    },
+    {
+      "start": 546.21,
+      "end": 546.54
+    },
+    {
+      "start": 546.75,
+      "end": 550.65
+    },
+    {
+      "start": 551.21,
+      "end": 569
+    }
+  ],
+  "cuts": [
+    {
+      "start": 0,
+      "end": 36.44,
+      "type": "false_start",
+      "reason": "Pre-roll: outtake + two false starts + silences before final take",
+      "words": [
+        "Best",
+        "one",
+        "too",
+        "I",
+        "built",
+        "a",
+        "SaaS",
+        "that",
+        "makes",
+        "$100",
+        "grand",
+        "a",
+        "year",
+        "Oh",
+        "too",
+        "fast",
+        "too",
+        "fast",
+        "I",
+        "would",
+        "assess",
+        "that",
+        "makes",
+        "$100",
+        "grand"
+      ]
+    },
+    {
+      "start": 94.19,
+      "end": 95.19,
+      "type": "false_start",
+      "reason": "False start \"That--\" after ceiling; 0.05s early trim to avoid consonant bleed"
+    },
+    {
+      "start": 98.76,
+      "end": 110.16,
+      "type": "silence",
+      "reason": "11.45s retake gap between Cursor and Claude Code sections"
+    },
+    {
+      "start": 114.93,
+      "end": 118.4,
+      "type": "repeated_phrase",
+      "reason": "First attempt \"Features that...were coming--\" restarted as complete sentence",
+      "words": [
+        "Features",
+        "that",
+        "would",
+        "have",
+        "taken",
+        "me",
+        "weeks",
+        "or",
+        "months",
+        "were",
+        "coming—"
+      ]
+    },
+    {
+      "start": 138.84,
+      "end": 141.75,
+      "type": "repeated_phrase",
+      "reason": "\"It doesn't get confused about pricing\" (first attempt, vague) -- second version better with \"when a customer asks\"",
+      "words": [
+        "It",
+        "doesn't",
+        "get",
+        "confused",
+        "about",
+        "pricing"
+      ]
+    },
+    {
+      "start": 145.87,
+      "end": 146.87,
+      "type": "silence",
+      "reason": "1.2s pause before \"picture\" -- trim to 0.15s"
+    },
+    {
+      "start": 150.4,
+      "end": 152.91,
+      "type": "silence",
+      "reason": "2.4s retake gap + redundant \"now\"; keeps \"Now [DM Champ] makes about $100,000\"",
+      "words": [
+        "[gap]",
+        "now"
+      ]
+    },
+    {
+      "start": 159.14,
+      "end": 159.52,
+      "type": "silence",
+      "reason": "0.73s gap between list and new sentence -- trim to 0.30s"
+    },
+    {
+      "start": 161.68,
+      "end": 163.36,
+      "type": "silence",
+      "reason": "1.88s mid-sentence pause before \"conversations\" -- trim to 0.15s"
+    },
+    {
+      "start": 180.73,
+      "end": 182.16,
+      "type": "repeated_phrase",
+      "reason": "\"I was a developer\" (first attempt) -- second version: \"I was THE developer the support agent...\"",
+      "words": [
+        "I",
+        "was",
+        "a",
+        "developer"
+      ]
+    },
+    {
+      "start": 194.2,
+      "end": 194.8,
+      "type": "silence",
+      "reason": "0.8s mid-sentence pause in pipeline description -- trim to 0.15s"
+    },
+    {
+      "start": 210.53,
+      "end": 215.45,
+      "type": "silence",
+      "reason": "5.37s gap before pipeline steps -- keep 0.4s for topic transition"
+    },
+    {
+      "start": 234.44,
+      "end": 234.97,
+      "type": "silence",
+      "reason": "0.88s step transition gap -- trim to 0.30s"
+    },
+    {
+      "start": 242.83,
+      "end": 245.6,
+      "type": "silence",
+      "reason": "3.12s gap before final agent step -- keep 0.3s"
+    },
+    {
+      "start": 260.37,
+      "end": 263.69,
+      "type": "repeated_phrase",
+      "reason": "First attempt \"and the customer already got...resolved\" -- second version has continuation",
+      "words": [
+        "and",
+        "the",
+        "customer",
+        "already",
+        "got",
+        "a",
+        "message",
+        "on",
+        "WhatsApp",
+        "saying",
+        "it's",
+        "resolved"
+      ]
+    },
+    {
+      "start": 315.17,
+      "end": 316.69,
+      "type": "silence",
+      "reason": "1.72s pause between \"personalized\" and \"line\" -- trim to 0.15s"
+    },
+    {
+      "start": 331.31,
+      "end": 332.3,
+      "type": "false_start",
+      "reason": "False start \"They're actually\" restarted as \"they're actual letters\"",
+      "words": [
+        "They're",
+        "actually"
+      ]
+    },
+    {
+      "start": 351.02,
+      "end": 351.71,
+      "type": "silence",
+      "reason": "1.04s pause before \"matters\" -- keep 0.3s for emphasis"
+    },
+    {
+      "start": 361.8,
+      "end": 368.51,
+      "type": "false_start",
+      "reason": "Two false starts before final \"all right now this next one is on a completely different level\"",
+      "words": [
+        "All",
+        "right",
+        "now",
+        "this",
+        "next",
+        "one",
+        "is--",
+        "no",
+        "all",
+        "right",
+        "now",
+        "this",
+        "next",
+        "one",
+        "is",
+        "completely--"
+      ]
+    },
+    {
+      "start": 392.99,
+      "end": 393.43,
+      "type": "silence",
+      "reason": "0.64s gap in enumeration between \"mobile\" and \"app\" -- trim to 0.15s"
+    },
+    {
+      "start": 405.69,
+      "end": 406.65,
+      "type": "silence",
+      "reason": "1.16s mid-sentence pause after \"I handed\" -- trim to 0.15s"
+    },
+    {
+      "start": 420.74,
+      "end": 423.06,
+      "type": "false_start",
+      "reason": "False start \"but you're really [gap] leaving\" restarted as \"But you're leaving so much on the table\"; first \"but\" included in cut to avoid \"but But\"",
+      "words": [
+        "but",
+        "you're",
+        "really",
+        "leaving"
+      ]
+    },
+    {
+      "start": 424.87,
+      "end": 429.66,
+      "type": "repeated_phrase",
+      "reason": "First attempt \"Whatever you think Claude Code can do multiply that by\" with long hesitation -- second attempt is clean",
+      "words": [
+        "Whatever",
+        "you",
+        "think",
+        "Claude",
+        "Code",
+        "can",
+        "do",
+        "multiply",
+        "that",
+        "by"
+      ]
+    },
+    {
+      "start": 479.24,
+      "end": 481.39,
+      "type": "repeated_phrase",
+      "reason": "First attempt \"The system runs the audit\" -- second attempt cleaner: \"the system runs audit identifies exactly what's wrong\"",
+      "words": [
+        "The",
+        "system",
+        "runs",
+        "the",
+        "audit"
+      ]
+    },
+    {
+      "start": 488.87,
+      "end": 489.79,
+      "type": "silence",
+      "reason": "1.12s gap between \"multiple\" and \"agents\" -- trim to 0.15s"
+    },
+    {
+      "start": 504.26,
+      "end": 507.85,
+      "type": "false_start",
+      "reason": "False start \"So what do these live things--\" restarted as \"so what do these 5 things have in common\"",
+      "words": [
+        "So",
+        "what",
+        "do",
+        "these",
+        "live",
+        "things--"
+      ]
+    },
+    {
+      "start": 545.46,
+      "end": 546.21,
+      "type": "silence",
+      "reason": "1.2s pause before \"products\" -- keep 0.4s for dramatic pause"
+    },
+    {
+      "start": 546.54,
+      "end": 546.75,
+      "type": "repeated_phrase",
+      "reason": "Stuttered \"Pick one\" before clean \"pick one good one\"",
+      "words": [
+        "Pick",
+        "one"
+      ]
+    },
+    {
+      "start": 550.65,
+      "end": 551.21,
+      "type": "silence",
+      "reason": "0.76s gap between \"Oh\" and \"and one more thing\" -- trim to 0.15s"
+    }
+  ],
+  "kept": [
+    {
+      "start": 210.13,
+      "end": 210.53,
+      "type": "topic_transition",
+      "reason": "0.4s transition before pipeline step-by-step"
+    },
+    {
+      "start": 234.14,
+      "end": 234.44,
+      "type": "emphasis_pause",
+      "reason": "0.3s transition before developer agent step"
+    },
+    {
+      "start": 242.53,
+      "end": 242.83,
+      "type": "topic_transition",
+      "reason": "0.3s transition before final agent step"
+    },
+    {
+      "start": 350.72,
+      "end": 351.02,
+      "type": "emphasis_pause",
+      "reason": "0.3s emphasis before \"matters\""
+    },
+    {
+      "start": 545.06,
+      "end": 545.46,
+      "type": "dramatic_pause",
+      "reason": "0.4s emphasis before \"products\""
+    },
+    {
+      "start": 153.88,
+      "end": 154.4,
+      "type": "emphasis_pause",
+      "reason": "0.52s natural pause after $100,000 revenue figure"
+    },
+    {
+      "start": 374.28,
+      "end": 375.08,
+      "type": "emphasis_pause",
+      "reason": "Extended \"a\" before $50,000 -- natural emphasis"
+    },
+    {
+      "start": 396.64,
+      "end": 397.14,
+      "type": "emphasis_pause",
+      "reason": "0.5s deliberate enumeration pause in list"
+    },
+    {
+      "start": 411.18,
+      "end": 412.18,
+      "type": "dramatic_pause",
+      "reason": "1.0s pause before $50,000 project reveal"
+    },
+    {
+      "start": 476.49,
+      "end": 477.28,
+      "type": "emphasis_pause",
+      "reason": "0.79s pause before $2,000/month price reveal"
+    },
+    {
+      "start": 510.54,
+      "end": 511.1,
+      "type": "emphasis_pause",
+      "reason": "0.56s emphasis before \"production\""
+    }
+  ]
+}

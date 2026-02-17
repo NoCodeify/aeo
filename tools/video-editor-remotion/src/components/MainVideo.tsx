@@ -1,8 +1,22 @@
 import React from "react";
-import { Audio, Sequence, staticFile, useVideoConfig } from "remotion";
+import {
+  Audio,
+  Sequence,
+  Video,
+  staticFile,
+  useVideoConfig,
+  useCurrentFrame,
+  interpolate,
+  Easing,
+  getRemotionEnvironment,
+} from "remotion";
 import { Edit, VideoConfig, BgMusicConfig, DataVizLayout } from "../types/timeline";
 import { DataVizSplit } from "./DataVizSplit";
-import { proxyVideo } from "../use-proxy";
+import {
+  proxyVideo,
+  ContinuousSpeakerContext,
+  EditTypeContext,
+} from "../use-proxy";
 import { SpeakerFull } from "./SpeakerFull";
 import { SlideFull } from "./SlideFull";
 import { SplitLayout } from "./SplitLayout";
@@ -58,11 +72,97 @@ interface MainVideoProps {
   config: VideoConfig;
 }
 
+// Types that are pure overlays - they don't control the speaker layout/zoom.
+// When finding the "current edit" for speaker styling, skip these.
+const OVERLAY_TYPES = new Set([
+  "text_overlay", "sfx", "gif_overlay", "lower_third", "callout",
+  "light_leak", "confetti_burst", "check_x_mark", "cta_overlay",
+]);
+
+// ---------------------------------------------------------------------------
+// Continuous speaker: compute CSS for the ONE base video based on current edit
+// ---------------------------------------------------------------------------
+function computeSpeakerStyle(
+  edit: Edit | null,
+  frame: number,
+  fps: number,
+): React.CSSProperties {
+  if (!edit) return {};
+
+  const editStart = Math.round(edit.start * fps);
+  const editEnd = Math.round(edit.end * fps);
+  const dur = editEnd - editStart;
+  const f = frame - editStart; // frame within this edit
+
+  switch (edit.type) {
+    case "jump_zoom_in": {
+      const z = edit.zoom ?? 1.2;
+      const s = interpolate(f, [0, dur], [1.0, z], {
+        extrapolateRight: "clamp",
+        easing: Easing.inOut(Easing.quad),
+      });
+      return { transform: `scale(${s})` };
+    }
+    case "jump_zoom_out": {
+      const z = edit.zoom ?? 1.2;
+      const s = interpolate(f, [0, dur], [z, 1.0], {
+        extrapolateRight: "clamp",
+        easing: Easing.inOut(Easing.quad),
+      });
+      return { transform: `scale(${s})` };
+    }
+    case "jump_cut_in":
+      return { transform: `scale(${edit.zoom ?? 1.2})` };
+    case "jump_cut_out":
+      return {};
+    case "gradual_zoom": {
+      const s = interpolate(
+        f,
+        [0, dur],
+        [edit.zoomStart ?? 1.0, edit.zoomEnd ?? 1.1],
+        { extrapolateRight: "clamp" },
+      );
+      return { transform: `scale(${s})` };
+    }
+    // Full-screen content: keep speaker visible so the Sequence overlay
+    // (which fades in) crossfades from speaker → content.
+    // Hiding the speaker here would flash the grid background during the fade.
+    case "slide_full":
+    case "gif_full":
+    case "broll_full":
+      return {};
+    default:
+      return {};
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Component
+// ---------------------------------------------------------------------------
 export const MainVideo: React.FC<MainVideoProps> = ({ config }) => {
   const { fps } = useVideoConfig();
+  const frame = useCurrentFrame();
+  const env = getRemotionEnvironment();
   const { speakerVideo, gridBackground, timeline } = config;
   const resolvedSpeaker = proxyVideo(speakerVideo);
   const resolvedGrid = proxyVideo(gridBackground);
+
+  // Studio-only: continuous base layer so we never remount video elements
+  const useContinuous = !env.isRendering;
+
+  // Find current layout edit for base video CSS (skip overlays)
+  const currentTime = frame / fps;
+  const layoutEdits = useContinuous
+    ? timeline.filter((e) => !OVERLAY_TYPES.has(e.type))
+    : [];
+  const currentEdit = useContinuous
+    ? (layoutEdits.find((e, i) => {
+        const next = layoutEdits[i + 1];
+        return currentTime >= e.start && (!next || currentTime < next.start);
+      }) ?? null)
+    : null;
+
+  const speakerStyle = computeSpeakerStyle(currentEdit, frame, fps);
 
   return (
     <>
@@ -81,28 +181,71 @@ export const MainVideo: React.FC<MainVideoProps> = ({ config }) => {
         />
       )}
 
-      {/* Visual timeline */}
-      {timeline.map((edit, index) => {
-        const startFrame = Math.round(edit.start * fps);
-        const endFrame = Math.round(edit.end * fps);
-        const durationInFrames = endFrame - startFrame;
+      {/* ============================================================
+          STUDIO: Continuous base layers (never remount, no seeking)
+          These provide audio + visual. Per-segment SmartVideo elements
+          are auto-skipped via ContinuousSpeakerContext.
+          ============================================================ */}
+      {useContinuous && (
+        <>
+          {/* Grid background (z0) - always present, hidden behind speaker for non-split */}
+          <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+            <Video
+              src={staticFile(resolvedGrid)}
+              loop
+              muted
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
 
-        // Speaker video startFrom (in frames)
-        const speakerStartFrom = startFrame;
-
-        return (
-          <Sequence
-            key={index}
-            from={startFrame}
-            durationInFrames={durationInFrames}
-            name={`${edit.type}-${index}`}
-            premountFor={30}
+          {/* Speaker video (z1) - CSS-driven zoom/hide per edit type */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              zIndex: 1,
+              overflow: "hidden",
+              ...speakerStyle,
+            }}
           >
-            {renderEdit(edit, resolvedSpeaker, resolvedGrid, speakerStartFrom)}
-          </Sequence>
-        );
-      })}
+            <Video
+              src={staticFile(resolvedSpeaker)}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+        </>
+      )}
 
+      {/* ============================================================
+          Timeline sequences (overlays, splits, effects)
+          In Studio: SmartVideo auto-skips per-segment speaker videos
+          for most edit types. Split/special types keep their own video
+          (muted) for correct positioning.
+          In Rendering: everything renders normally via OffthreadVideo.
+          ============================================================ */}
+      <ContinuousSpeakerContext.Provider value={useContinuous}>
+        {timeline.map((edit, index) => {
+          const startFrame = Math.round(edit.start * fps);
+          const endFrame = Math.round(edit.end * fps);
+          const durationInFrames = endFrame - startFrame;
+          const speakerStartFrom = startFrame;
+
+          return (
+            <Sequence
+              key={index}
+              from={startFrame}
+              durationInFrames={durationInFrames}
+              name={`${edit.type}-${index}`}
+              premountFor={10}
+              style={useContinuous ? { zIndex: 2 } : undefined}
+            >
+              <EditTypeContext.Provider value={edit.type}>
+                {renderEdit(edit, resolvedSpeaker, resolvedGrid, speakerStartFrom)}
+              </EditTypeContext.Provider>
+            </Sequence>
+          );
+        })}
+      </ContinuousSpeakerContext.Provider>
     </>
   );
 };

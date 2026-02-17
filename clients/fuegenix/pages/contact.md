@@ -31,7 +31,7 @@
 
 ### Initial Contact
 
-**Paragraph:** `When you submit an enquiry, our patient coordination team responds within 24 to 48 business hours. We gather preliminary information about your situation and schedule a consultation at a mutually convenient time.`
+**Paragraph:** `When you reach out via WhatsApp, our patient coordination team responds personally. We gather preliminary information about your situation and schedule a consultation at a mutually convenient time.`
 
 **Initial Information Requested:**
 - Current hair loss pattern and progression
@@ -118,15 +118,12 @@
 **Heading:** `How to Reach Us`
 
 **Primary Method:**
-`Consultation Request Form (below)`
+`WhatsApp`
 
 **Email:**
 `info@fuegenix.nl`
 
-**WhatsApp:**
-`Available for existing clients and confirmed consultations`
-
-**Note:** `We do not publish phone numbers for unsolicited calls. All initial contact should be made through the consultation request form or email. This ensures proper handling of your enquiry with appropriate privacy protocols.`
+**Note:** `Due to high demand, our consultation request form is currently closed. To begin the process, please reach out directly via WhatsApp or email. This allows our team to respond personally and prioritize your enquiry.`
 
 ---
 
@@ -186,8 +183,12 @@
 
 **Heading:** `Request Your Consultation`
 
-**Paragraph:** `Complete the form below to begin the consultation process. You will hear from our team within 24 to 48 business hours.`
-
-*[Consultation request form would be here]*
+**Paragraph:** `Due to high demand, our consultation form is currently closed. Send us a WhatsApp message to begin the process.`
 
 **Investment:** `Starting at €50,000`
+
+**CTA Button 1:** `Open WhatsApp` *(primary, links to WhatsApp)*
+
+**CTA Button 2:** `Book Video Consultation` *(secondary, links to Calendly/booking)*
+
+**Subtext:** `Prefer to skip the wait? Book a 30-minute video consultation directly with Dr. Ahmad.`

@@ -52,95 +52,101 @@ export function LinkedInBanner() {
 
         {/* Background Gradient Orbs */}
         <div
-          className="absolute rounded-full bg-primary/20 blur-[100px] pointer-events-none"
-          style={{ width: "300px", height: "300px", top: "-100px", right: "50px" }}
+          className="absolute rounded-full blur-[100px] pointer-events-none"
+          style={{ width: "300px", height: "300px", top: "-100px", right: "50px", backgroundColor: "rgba(0, 212, 255, 0.2)" }}
         />
         <div
-          className="absolute rounded-full bg-accent/15 blur-[80px] pointer-events-none"
-          style={{ width: "250px", height: "250px", bottom: "-80px", left: "200px" }}
+          className="absolute rounded-full blur-[80px] pointer-events-none"
+          style={{ width: "250px", height: "250px", bottom: "-80px", left: "200px", backgroundColor: "rgba(139, 92, 246, 0.15)" }}
         />
         <div
-          className="absolute rounded-full bg-secondary/10 blur-[90px] pointer-events-none"
-          style={{ width: "200px", height: "200px", top: "50px", left: "400px" }}
+          className="absolute rounded-full blur-[90px] pointer-events-none"
+          style={{ width: "200px", height: "200px", top: "50px", left: "400px", backgroundColor: "rgba(59, 130, 246, 0.1)" }}
         />
 
-        {/* Left Side - AI Chat Bubble */}
+        {/* Left Side - Terminal Mockup */}
         <div
           className="absolute left-10 top-6"
-          style={{
-            opacity: 0.9,
-          }}
+          style={{ opacity: 0.9 }}
         >
-          {/* Chat interface mockup */}
           <div
-            className="rounded-2xl border border-primary/20 bg-primary/5 p-6"
-            style={{ width: "480px" }}
+            className="rounded-2xl border border-primary/20 bg-[#0d1117] p-5"
+            style={{ width: "520px" }}
           >
-            {/* Chat header dots */}
-            <div className="flex gap-2 mb-5">
-              <div className="w-2.5 h-2.5 rounded-full bg-primary/40" />
-              <div className="w-2.5 h-2.5 rounded-full bg-primary/25" />
-              <div className="w-2.5 h-2.5 rounded-full bg-primary/15" />
-            </div>
-
-            {/* Query with icon */}
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="#00d4ff">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                </svg>
-              </div>
+            {/* Terminal header dots */}
+            <div className="flex gap-2 mb-4">
+              <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#ff5f57" }} />
+              <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#febc2e" }} />
+              <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#28c840" }} />
               <span
-                className="font-sans font-medium text-foreground/80"
-                style={{ fontSize: "24px" }}
+                className="ml-3 font-mono text-white/30"
+                style={{ fontSize: "16px" }}
               >
-                What's the best in my <span className="text-primary">category</span>?
+                claude-code
               </span>
             </div>
 
+            {/* Terminal lines */}
+            <div className="font-mono space-y-3" style={{ fontSize: "20px", lineHeight: "1.6" }}>
+              <div className="flex items-center gap-2">
+                <span style={{ color: "#00d4ff" }}>$</span>
+                <span className="text-white/70">claude &quot;build the CI/CD pipeline&quot;</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span style={{ color: "#28c840" }}>&#10003;</span>
+                <span className="text-white/50">3 agents deployed</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span style={{ color: "#28c840" }}>&#10003;</span>
+                <span className="text-white/50">Auto-fix pipeline active</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span style={{ color: "#28c840" }}>&#10003;</span>
+                <span className="text-white/50">Customer notifications wired</span>
+              </div>
+              <div className="flex items-center gap-2 mt-1">
+                <span style={{ color: "#00d4ff" }}>$</span>
+                <span className="text-white/70">revenue --check</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span style={{ color: "#febc2e" }}>&#9654;</span>
+                <span style={{ color: "#00d4ff" }}>$100K ARR</span>
+                <span className="text-white/30">and counting</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Text Content - Center */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ marginLeft: "300px" }}>
+        {/* Text Content - Center-Right */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ marginLeft: "280px" }}>
           <div className="text-center">
             {/* Headline */}
             <h1
               className="font-heading font-bold text-foreground leading-tight"
-              style={{ fontSize: "54px" }}
+              style={{ fontSize: "52px" }}
             >
-              Become The Brand
+              I Build Business Systems
             </h1>
             <h1
               className="font-heading font-bold leading-tight text-gradient"
-              style={{ fontSize: "54px" }}
+              style={{ fontSize: "52px" }}
             >
-              ChatGPT Recommends
+              With Claude Code
             </h1>
 
-            {/* Arrow */}
-            <div className="mt-3 flex justify-center">
-              <svg
-                width="20"
-                height="12"
-                viewBox="0 0 20 12"
-                fill="none"
-              >
-                <path
-                  d="M2 2 L10 10 L18 2"
-                  stroke="#00d4ff"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
+            {/* Subtitle */}
+            <p
+              className="mt-3 text-foreground/50 font-sans"
+              style={{ fontSize: "20px" }}
+            >
+              SaaS. Agentic Pipelines. Full Infrastructure. DM Me To Build Yours.
+            </p>
 
             {/* URL Pill */}
-            <div className="mt-3 inline-flex items-center gap-2 px-5 py-2 rounded-xl border border-primary/40 bg-primary/5">
+            <div className="mt-4 inline-flex items-center gap-2 px-5 py-2 rounded-xl border border-primary/40 bg-primary/5">
               <svg
-                width="22"
-                height="22"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="#00d4ff"
@@ -149,15 +155,14 @@ export function LinkedInBanner() {
                 strokeLinejoin="round"
                 className="opacity-80"
               >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M2 12h20" />
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
               </svg>
               <span
                 className="font-sans font-medium text-foreground"
-                style={{ fontSize: "24px" }}
+                style={{ fontSize: "22px" }}
               >
-                AEOprotocol.ai
+                sohaibahmad.me
               </span>
             </div>
           </div>
@@ -212,13 +217,6 @@ export function LinkedInBanner() {
                   <feMergeNode in="SourceGraphic" />
                 </feMerge>
               </filter>
-              <filter id="glowWide">
-                <feGaussianBlur stdDeviation="12" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
               <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="#00d4ff" stopOpacity="0.45" />
                 <stop offset="30%" stopColor="#00d4ff" stopOpacity="0.2" />
@@ -231,10 +229,6 @@ export function LinkedInBanner() {
                 <stop offset="70%" stopColor="#00d4ff" stopOpacity="0.9" />
                 <stop offset="100%" stopColor="#5ce1ff" stopOpacity="1" />
               </linearGradient>
-              <linearGradient id="areaFill2" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.15" />
-                <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
-              </linearGradient>
             </defs>
 
             {/* Main filled area */}
@@ -243,7 +237,7 @@ export function LinkedInBanner() {
               fill="url(#areaFill)"
             />
 
-            {/* The main line - 16 points, random volatile, trending up */}
+            {/* The main line */}
             <path
               d="M 0 350 L 30 340 L 55 348 L 90 325 L 120 335 L 155 305 L 185 318 L 220 275 L 255 290 L 290 230 L 320 210 L 345 155 L 365 120 L 385 60 L 405 35 L 420 15"
               stroke="url(#lineGradient)"

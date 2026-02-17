@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
   useCurrentFrame,
   useVideoConfig,
@@ -140,7 +141,7 @@ export const KineticType: React.FC<KineticTypeProps> = ({
 
       {/* Speaker audio (hidden) */}
       {hasSpeaker && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

@@ -1,6 +1,7 @@
 ---
 name: youtube-video-ideation
-description: Generate search-optimized YouTube video concepts (titles, thumbnails, angles) using keyword data and Ed Lawrence's proven patterns. Use when the user needs help creating video concepts, evaluating video ideas, or planning their next YouTube video. Combines keyword targeting with tournament selection for maximum search ranking AND retention.
+description: Generate search-optimized YouTube video concepts (titles, thumbnails, angles) using keyword data. Use when user says "video idea", "video title", "thumbnail concept", "next video", "content calendar", or "what video should I make". Do NOT use for script writing (use youtube-script-writer) or editing guidance (use youtube-video-editor).
+allowed-tools: Read, Glob, Grep, WebSearch, mcp__seo-agent__google_trends_explore, mcp__seo-agent__keyword_overview
 ---
 
 # YouTube Video Ideation (Search-First + Ed Lawrence Method)
@@ -77,20 +78,41 @@ Document the target keyword before proceeding.
 | Explains WHAT | Shows WHY it matters |
 | Targets search | Stops scrolling |
 
+### Thumbnail Type Selection (CRITICAL)
+
+**Every thumbnail must combine 2-3 types.** Pick from:
+
+| Type | What It Does |
+|------|-------------|
+| **Big Numbers** | Dollar amounts, percentages that shock |
+| **Shock/Curiosity** | Something unexpected |
+| **Simple/Minimal** | Just one object, nothing else |
+| **Social Hacking** | Recognizable face/brand |
+| **Creator + Bigger** | You next to something impressive |
+| **Header Text** | Bold context the title doesn't give |
+| **Comparison** | Before/after, vs., side by side |
+| **Blur/Mystery** | Key element blurred |
+| **Weird Object** | Something that doesn't belong |
+| **Branded** | Consistent channel identity |
+
+**Always specify the 2-3 types in your concept.** Single-type thumbnails don't stand out.
+
 ### Thumbnail Text Rules
 
+- **ALL CAPS ALWAYS**
 - **3-5 words maximum**
 - **Does NOT repeat title words**
 - **Emotional/stakes-based**
 - **Readable at 160x90px (mobile)**
+- **Porsche font, smooth white-to-silver gradient**
 
 ### Examples
 
-| Title | Thumbnail Text (BAD) | Thumbnail Text (GOOD) |
-|-------|---------------------|----------------------|
-| "Answer Engine Optimization Guide" | "AEO GUIDE" | "NEW SEO" |
-| "How to Rank in ChatGPT" | "RANK IN CHATGPT" | "GET FOUND" |
-| "SEO vs GEO" | "SEO VS GEO" | "WHICH ONE?" |
+| Title | Thumbnail Text (BAD) | Thumbnail Text (GOOD) | Types Used |
+|-------|---------------------|----------------------|------------|
+| "Answer Engine Optimization Guide" | "AEO GUIDE" | "NEW SEO" | Header + Shock |
+| "How to Rank in ChatGPT" | "RANK IN CHATGPT" | "GET FOUND" | Header + Simple |
+| "Claude Code Use Cases: 5 Things" | "I BUILT THESE" | "$100K" | Big Numbers + Shock |
 
 ---
 
@@ -146,36 +168,37 @@ Select winner.
 
 ---
 
-## Step 6: Thumbnail Specification
+## Step 6: Thumbnail Specification (Minimal Apple Aesthetic)
 
 ### Required Elements
 
 | Element | Specification |
 |---------|---------------|
-| **Your face** | Right 40% of frame |
-| **Expression** | Matches video mood |
-| **Text** | 3-5 words, upper-left |
-| **Hero color** | Yellow/Red/Gold/Teal (see style guide) |
-| **Visual metaphor** | ONE subtle element |
-| **Clear zone** | Bottom-right for timestamp |
+| **Thumbnail types** | 2-3 types combined (from Step 3 table) |
+| **Background** | Pure black (#000000) |
+| **Icons** | Glossy 3D iOS-style app icons, each with own color glow |
+| **Text** | ALL CAPS, 3-5 words, Porsche font |
+| **Text gradient** | Smooth white-to-silver (gradual, not abrupt) |
+| **No faces** | Revisit at 2-5K subs |
 
-### Color Selection
+### Icon Color Palette
 
-| Video Mood | Hero Color | Hex |
-|------------|------------|-----|
-| Success/Achievement | Gold | #C9A86C |
-| Warning/Problem | Red | #FF4444 |
-| New/Tech/Modern | Teal | #00D4FF |
-| Default/Positive | Yellow | #FFE135 |
+| Project | Color | Symbol |
+|---------|-------|--------|
+| AI Chat | Teal | Chat bubble |
+| Code/CI-CD | Purple | Terminal cursor |
+| Email | Blue | Envelope |
+| NFC/Access | Gold | NFC waves |
+| Search/AEO | Orange | Magnifying glass |
+| Claude/AI | Coral-orange | Stylized "A" |
 
-### Expression Guide
+### Layouts
 
-| Video Type | Expression |
-|------------|------------|
-| Tutorial/Guide | Serious, authoritative |
-| Transformation | Impressed, satisfied |
-| Problem/Warning | Concerned, furrowed brow |
-| Success/Proof | Slight smirk, confident |
+- **Icon Row:** 5 icons in a line, text above (for lists)
+- **Hub + Satellites:** Center icon large, smaller icons orbiting (for "built with X")
+- **Two Icons + Plus:** Icon + Icon with "+" between (for combinations)
+
+### Full specs: `youtube/templates/thumbnail-style-guide.md`
 
 ---
 

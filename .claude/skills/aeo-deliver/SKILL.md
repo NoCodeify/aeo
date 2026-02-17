@@ -1,7 +1,6 @@
 ---
 name: aeo-deliver
-description: Full AEO client delivery pipeline using agent teams. Coordinates audit, playbook, content optimization, and reporting with persistent context.
-disable-model-invocation: true
+description: Full AEO client delivery pipeline using agent teams. Coordinates audit, playbook, content optimization, and reporting. Use when user says "full delivery", "client delivery", "AEO delivery pipeline", or "end-to-end audit and playbook".
 ---
 
 # AEO Client Delivery Pipeline

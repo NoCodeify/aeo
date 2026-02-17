@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
   useCurrentFrame,
 } from "remotion";
@@ -128,7 +129,7 @@ export const BlurredSpeakerBg: React.FC<BlurredSpeakerBgProps> = ({
   return (
     <AbsoluteFill>
       {/* Blurred speaker */}
-      <OffthreadVideo
+      <SmartVideo
         src={staticFile(speakerSrc)}
         startFrom={startFrom}
         pauseWhenBuffering

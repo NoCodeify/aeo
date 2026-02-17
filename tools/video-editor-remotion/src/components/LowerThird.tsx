@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
   useCurrentFrame,
   useVideoConfig,
@@ -68,7 +69,7 @@ export const LowerThird: React.FC<LowerThirdProps> = ({
     <AbsoluteFill>
       {/* Speaker video underneath */}
       {speakerSrc && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

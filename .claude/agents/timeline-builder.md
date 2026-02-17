@@ -22,7 +22,7 @@ Read a video script or prompter with slide markers and generate a complete `time
 5. **Slides directory** with slide images (slide-01.jpg, slide-02.jpg, etc.)
 6. **Speaker video** - `speaker-clean.mp4` if auto-cut was run, otherwise original
 7. **GIFs directory** (optional) with downloaded GIFs from gif-researcher agent
-8. **B-roll directory** (optional) with stock video clips from pexels-mcp
+8. **B-roll directory** (REQUIRED) with stock video clips from pexels-mcp - every video MUST have B-roll
 
 **Priority:** transcript-clean.json > transcript.json > SRT file
 
@@ -227,8 +227,8 @@ All support optional `layout` property (full/split_left/split_right) except togg
 | `speaker_full` | ~15% | Intro, personal stories, trust-building, transitions |
 | `slide_full` | ~15% | Teaching, complex diagrams, CTA slides |
 | `split_right` / `split_left` | ~12% | Teaching with speaker visible (glass border style) |
-| `split_5050_left` / `split_5050_right` | ~5% | Equal emphasis on speaker + slide (full-bleed, 1:1 slides) |
-| `broll_full` | ~5% | Stock video B-roll (visual metaphors, establishing shots) |
+| `split_5050_left` / `split_5050_right` | ~5% | **REQUIRED** - Equal emphasis on speaker + slide (full-bleed, 1:1 slides). Use 2-4 per video for big reveals, result moments, storytelling. |
+| `broll_full` | ~5% | **REQUIRED** - Stock video B-roll (visual metaphors, establishing shots, 5-7s each) |
 | `jump_zoom` + `gradual_zoom` | ~15% | Emphasis, energy, movement |
 | Speaker overlays | ~15% | newspaper_flash, counter_ticker, callout, check_x_mark, etc. |
 | Full-screen data viz | ~12% | bar_chart, pie_chart, bullet_list, stat_cards, flow_diagram, etc. |
@@ -236,6 +236,8 @@ All support optional `layout` property (full/split_left/split_right) except togg
 | `sfx` | 4-6 total | Sound effects: "boop" (reveals) or "click" (transitions). Overlaps visuals. |
 
 **No single layout dominates** - keeps visual variety throughout the video.
+
+**No micro-gaps (<1s):** If a segment would be shorter than 1s (e.g., a 0.5s `speaker_full` before a `counter_ticker`), it creates a distracting flash. Either extend the next segment to start earlier, or extend the previous segment to end later. Every segment must be at least 1s.
 
 ### Data Viz Selection Guide
 
@@ -282,11 +284,19 @@ SFX edits are **audio-only overlays** - they don't replace the visual. Place the
 | Sound | When to Use | Suggested Volume |
 |-------|-------------|-----------------|
 | `boop` | text_overlay reveals, soft emphasis moments | 0.3-0.5 |
-| `click` | Layout changes to slides/splits, slide transitions | 0.3-0.5 |
-| `whoosh` | Fast entrances, slide-in transitions | 0.25-0.4 |
-| `thud` | Impact moments, heavy number reveals | 0.3-0.5 |
+| `whoosh` | Chapter transitions ONLY (not every layout change) | 0.25-0.4 |
 | `achievement-ding` | Achievement/milestone moments | 0.4-0.5 |
 | `shimmer` | Sparkle/shine reveals | 0.3-0.4 |
+
+**REMOVED from library:**
+- ~~`thud`~~ - too abrupt, use `boop` or `achievement-ding` instead
+- ~~`click`~~ - don't use for routine layout transitions (too many = annoying)
+
+**SFX Density Rules:**
+- **Max 10-15 SFX per 10-min video** - sparse and deliberate
+- **Minimum 10s between manual SFX** - never cluster multiple SFX within seconds
+- **No SFX on routine layout transitions** - layout changes are visual, not auditory
+- **Whoosh ONLY at chapter_card transitions** - not every slide change
 
 **Background music** (use for full video background):
 
@@ -301,6 +311,7 @@ SFX edits are **audio-only overlays** - they don't replace the visual. Place the
 - Volume `0.3-0.5` for manual SFX (never above `0.7`)
 - SFX `start`/`end` = sound duration (0.5-1s)
 - OK to overlap with any visual edit at the same timestamp
+- **Z-order = array order** - when overlays share a timestamp, put text_overlay AFTER gif_overlays so text renders on top
 
 ```json
 {"type": "text_overlay", "start": 10.0, "end": 12.0, "text": "KEY STAT", "style": "center"},
@@ -498,6 +509,10 @@ To find valid cut points, scan the transcript for gaps: if `words[n].end` + 0.3 
 ### gif_overlay
 GIF appears as a floating element on top of the speaker video. Used for reaction GIFs and humor beats.
 
+**CRITICAL: gif_overlay ONLY on speaker layouts** (`speaker_full`, `gradual_zoom`, `jump_cut_in`). NEVER place on `split_right`, `split_left`, `slide_full`, or `broll_full`.
+
+**Minimum display time: 1s.** If the next segment (counter_ticker, slide_full, etc.) starts within 1s, don't add the overlay - it will be an invisible flash.
+
 ```json
 {"type": "gif_overlay", "start": 45.0, "end": 47.5, "content": "gifs/gif-01-mind-blown.gif", "position": "bottom-right", "size": 0.3}
 ```
@@ -617,6 +632,7 @@ Every video MUST have two CTA moments. Place these using `cta_overlay` or `text_
 
 Place at the natural topic break closest to 50% of total video duration.
 
+- **CRITICAL: Sync to transcript** - grep transcript for the actual speech timestamp where the speaker mentions the CTA. Never estimate - always use the real timestamp.
 - **Duration:** 30-60s of speaker-focused content around the CTA
 - Use `cta_overlay` with `style: "offer"` during `speaker_full` or `gradual_zoom`
 - One `text_overlay` also allowed for the offer name (e.g., "FREE QUIZ")
@@ -656,6 +672,20 @@ Use `chapter_card` between major topic sections to visually mark transitions:
 ```json
 {"type": "chapter_card", "start": 62.0, "end": 65.0, "title": "The Data", "number": 2, "subtitle": "What the numbers say"}
 ```
+
+## B-Roll Rules (REQUIRED)
+
+Every video MUST include `broll_full` entries. B-roll breaks up long speaker-only stretches and adds visual variety.
+
+- **Minimum 3 B-roll clips per video** - search Pexels for relevant stock footage
+- **Any `speaker_full` segment longer than 8s** should be broken up with B-roll
+- **Pattern:** speaker_full (2-3s) -> broll_full (5-7s) -> speaker_full (1-2s)
+- **B-roll files** go in `broll/` directory, named `broll-XX-description.mp4`
+- **Speaker audio continues** under B-roll (the speaker is still talking, just not visible)
+- **Best for:** metaphors, establishing shots, illustrating concepts (typing, coding, business environments, technology)
+- **NOT for:** CTA sections, personal stories, surprise reveals - those need the speaker visible
+
+If no B-roll clips exist in the `broll/` directory, flag this as missing and note which speaker segments need coverage.
 
 ## Technical Notes
 

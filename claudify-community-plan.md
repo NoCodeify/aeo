@@ -28,7 +28,7 @@ Every new member starts here. Linear, no choices to make. The structured onboard
 
 **Module 4 is the key module.** This is where the 21-day milestone lives or dies. Members pick ONE real thing from their work (not a tutorial project) and build it with Claude Code. Coaching calls during weeks 2-3 focus heavily on helping people through this module.
 
-### Category: FoundationKit
+### Category: Foundations
 
 Unlocked after Quick Start (or browse freely). Added over time, 1-2 per month based on demand.
 
@@ -44,7 +44,7 @@ Unlocked after Quick Start (or browse freely). Added over time, 1-2 per month ba
 | 14 | Building Internal Tools & Dashboards | Quick Start |
 | 15 | Advanced Patterns (git worktrees, parallel sessions) | Module 10 |
 
-### Category: CaseStudyOS
+### Category: Case Studies
 
 Released 1 per month. Each based on the founder's actual production systems.
 
@@ -66,7 +66,7 @@ Not video modules. Downloadable resources organized by type:
 - Project structure starters
 - Prompt libraries for common tasks
 
-### Category: ServiceKit
+### Category: Service Track
 
 For members on the service track (Track C).
 
@@ -87,9 +87,9 @@ The minimum viable community. Enough to deliver on the 21-day milestone, show de
 **Must-have at launch:**
 
 - 21-Day Quick Start: All 6 modules (video lessons)
-- CaseStudyOS: CS1 (DMChamp) - the flagship case study
+- Case Studies: CS1 (DMChamp) - the flagship case study
 - The Vault: 3-5 CLAUDE.md templates, 2-3 agent configs
-- ServiceKit: SK1 (Service Menu overview)
+- Service Track: SK1 (Service Menu overview)
 - Welcome video from the founder
 - Community spaces set up (see section 4)
 - First coaching call scheduled
@@ -198,7 +198,7 @@ The founder DM at Day 7 and Day 14 is critical for retention. Personal touch in 
 
 ## 8. Track-Specific Paths
 
-The three tracks share the same Quick Start and FoundationKit. They diverge at Module 6 ("Pick Your Track") with recommended paths.
+The three tracks share the same Quick Start and Foundations. They diverge at Module 6 ("Pick Your Track") with recommended paths.
 
 ### Track A: Build for Yourself
 
@@ -214,7 +214,7 @@ Goal: ship a SaaS or tool that generates revenue.
 
 ### Track C: Build a Service
 
-Quick Start -> ServiceKit (all modules) -> Module 8 (Agents) -> CS3 (AEO as service template)
+Quick Start -> Service Track (all modules) -> Module 8 (Agents) -> CS3 (AEO as service template)
 
 Goal: package and sell Claude Code implementation services.
 
@@ -227,7 +227,7 @@ Tracks are recommendations, not gatekeeping. Any member can access any module.
 ### new-plan-wip-draft.md
 
 - Remove free Skool tier (Layer 3). YouTube is the free content. No free community.
-- Update module numbering to match this plan (Quick Start 1-6, FoundationKit 7-15, CaseStudyOS CS1-CS5, ServiceKit SK1-SK5).
+- Update module numbering to match this plan (Quick Start 1-6, Foundations 7-15, Case Studies CS1-CS5, Service Track SK1-SK5).
 - Remove "refund guarantee" / "money back" language from the guarantee section. Reframe as a 21-day structured milestone.
 - Update 90-day action plan to reflect no free tier launch.
 

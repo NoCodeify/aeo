@@ -1,0 +1,1243 @@
+[
+  {
+    "type": "gradual_zoom",
+    "start": 0,
+    "end": 2.08,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "_note": "Hook: I built a SaaS that makes $100 grand a year"
+  },
+  {
+    "type": "text_overlay",
+    "start": 1.12,
+    "end": 2.08,
+    "text": "$100K/YR",
+    "style": "center"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 2.08,
+    "end": 2.38,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 2.38,
+    "end": 4.08,
+    "zoom": 1.2,
+    "_note": "...a government access control system"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 4.08,
+    "end": 4.38,
+    "zoom": 1.2
+  },
+  {
+    "type": "speaker_full",
+    "start": 4.38,
+    "end": 5.44,
+    "_note": "a cold email agent"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 5.44,
+    "end": 9.6,
+    "zoomStart": 1,
+    "zoomEnd": 1.12,
+    "_note": "...all with Claude Code"
+  },
+  {
+    "type": "text_overlay",
+    "start": 8.24,
+    "end": 9.6,
+    "text": "CLAUDE CODE",
+    "style": "center"
+  },
+  {
+    "type": "sfx",
+    "start": 8.24,
+    "end": 8.74,
+    "content": "whoosh",
+    "volume": 0.4
+  },
+  {
+    "type": "split_right",
+    "start": 9.6,
+    "end": 13.16,
+    "content": "slides/02-mac-minis_1.jpg",
+    "_note": "people buying 20 Mac Minis - split for hook pacing"
+  },
+  {
+    "type": "slide_full",
+    "start": 13.16,
+    "end": 15.6,
+    "content": "slides/02-mac-minis_1.jpg",
+    "_note": "20 Mac Minis full frame"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 15.6,
+    "end": 17.8,
+    "content": "gifs/gif-01-what-are-you-doing.mp4",
+    "position": "bottom-right",
+    "size": 0.3,
+    "_note": "what are you doing with your life"
+  },
+  {
+    "type": "sfx",
+    "start": 15.6,
+    "end": 16.1,
+    "content": "boop",
+    "volume": 0.4
+  },
+  {
+    "type": "speaker_full",
+    "start": 17.8,
+    "end": 20.24,
+    "_note": "20 AI agents running in your closet"
+  },
+  {
+    "type": "text_overlay",
+    "start": 18.5,
+    "end": 20.24,
+    "text": "20 AGENTS",
+    "style": "center"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 20.24,
+    "end": 24.16,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "_note": "building SaaS apps nobody uses"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 24.16,
+    "end": 26.29,
+    "content": "gifs/gif-02-not-impressed.mp4",
+    "position": "bottom-left",
+    "size": 0.3,
+    "_note": "not impressed - that's entertainment"
+  },
+  {
+    "type": "speaker_full",
+    "start": 26.29,
+    "end": 28.29,
+    "_note": "passing time"
+  },
+  {
+    "type": "text_overlay",
+    "start": 27.17,
+    "end": 28.29,
+    "text": "PASSING TIME",
+    "style": "caption"
+  },
+  {
+    "type": "slide_full",
+    "start": 28.29,
+    "end": 32.65,
+    "content": "slides/03-five-projects-list_1.jpg",
+    "_note": "5 things I actually built"
+  },
+  {
+    "type": "speaker_full",
+    "start": 32.65,
+    "end": 34.29,
+    "_note": "running in production right now"
+  },
+  {
+    "type": "text_overlay",
+    "start": 32.85,
+    "end": 34.29,
+    "text": "IN PRODUCTION",
+    "style": "center"
+  },
+  {
+    "type": "speaker_full",
+    "start": 34.29,
+    "end": 36.53,
+    "_note": "real revenue, not toy projects"
+  },
+  {
+    "type": "text_overlay",
+    "start": 34.65,
+    "end": 36.53,
+    "text": "REAL REVENUE",
+    "style": "center"
+  },
+  {
+    "type": "chapter_card",
+    "start": 36.53,
+    "end": 39.53,
+    "title": "DM Champ",
+    "number": 1,
+    "subtitle": "AI Sales Agent",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "sfx",
+    "start": 36.53,
+    "end": 37.03,
+    "content": "whoosh",
+    "volume": 0.35
+  },
+  {
+    "type": "split_right",
+    "start": 39.53,
+    "end": 45.73,
+    "content": "slides/04-dm-champ-hub_1.jpg",
+    "_note": "DM Champ - AI sales agent, WhatsApp/Instagram/Facebook"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 45.73,
+    "end": 47.53,
+    "content": "gifs/gif-04-money-rain.mp4",
+    "position": "bottom-right",
+    "size": 0.3,
+    "_note": "money rain - conversations with customers"
+  },
+  {
+    "type": "speaker_full",
+    "start": 47.53,
+    "end": 49.33,
+    "_note": "real conversations"
+  },
+  {
+    "type": "speaker_full",
+    "start": 49.33,
+    "end": 51.25,
+    "_note": "handles objections"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 51.25,
+    "end": 51.55,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 51.55,
+    "end": 55.49,
+    "zoom": 1.15,
+    "_note": "answers product questions, remembers, closes deals"
+  },
+  {
+    "type": "text_overlay",
+    "start": 54.65,
+    "end": 55.49,
+    "text": "CLOSES DEALS",
+    "style": "center"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 55.49,
+    "end": 55.79,
+    "zoom": 1.15
+  },
+  {
+    "type": "speaker_full",
+    "start": 55.79,
+    "end": 56.55,
+    "_note": "bridge to evolution"
+  },
+  {
+    "type": "split_left",
+    "start": 56.55,
+    "end": 63.11,
+    "content": "slides/05-evolution-timeline_1.jpg",
+    "_note": "GoHighLevel -> Zapier -> FlutterFlow"
+  },
+  {
+    "type": "split_right",
+    "start": 63.11,
+    "end": 69.43,
+    "content": "slides/05-evolution-timeline_1.jpg",
+    "_note": "hit the ceiling -> Cursor -> still not there"
+  },
+  {
+    "type": "split_left",
+    "start": 69.43,
+    "end": 76.51,
+    "content": "slides/06-weeks-vs-days_1.jpg",
+    "_note": "Switched to Claude Code - weeks vs days"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 76.51,
+    "end": 76.81,
+    "zoom": 1.2,
+    "_note": "everything changed"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 76.81,
+    "end": 78.31,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 78.31,
+    "end": 78.61,
+    "zoom": 1.2
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 78.61,
+    "end": 82.61,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "_note": "skyrocketed, weeks or months coming out in days"
+  },
+  {
+    "type": "text_overlay",
+    "start": 79.39,
+    "end": 80.79,
+    "text": "SKYROCKETED",
+    "style": "center"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 82.61,
+    "end": 84.5,
+    "content": "gifs/gif-03-rocket-speed.mp4",
+    "position": "bottom-right",
+    "size": 0.3,
+    "_note": "rocket speed - insane speed"
+  },
+  {
+    "type": "speaker_full",
+    "start": 84.5,
+    "end": 89.13,
+    "_note": "Claude Code just understood what I needed and built it"
+  },
+  {
+    "type": "text_overlay",
+    "start": 87.5,
+    "end": 89.13,
+    "text": "JUST BUILT IT",
+    "style": "center"
+  },
+  {
+    "type": "split_5050_right",
+    "start": 89.13,
+    "end": 98.97,
+    "content": "slides/07-claude-dual-role-5050_1.jpg",
+    "_note": "Claude isn't just the tool - Claude IS DM Champ's brain"
+  },
+  {
+    "type": "speaker_full",
+    "start": 98.97,
+    "end": 104.01,
+    "_note": "Tested OpenAI, tested everything else, Claude most reliable"
+  },
+  {
+    "type": "text_overlay",
+    "start": 102.13,
+    "end": 104.01,
+    "text": "MOST RELIABLE",
+    "style": "center"
+  },
+  {
+    "type": "broll_full",
+    "start": 104.01,
+    "end": 111.49,
+    "content": "broll/broll-01-relaxed-coding.mp4",
+    "_note": "doesn't make things up, doesn't get confused, handles pricing/voice/photo"
+  },
+  {
+    "type": "speaker_full",
+    "start": 111.49,
+    "end": 113.29,
+    "_note": "like a real person"
+  },
+  {
+    "type": "counter_ticker",
+    "start": 113.29,
+    "end": 117.13,
+    "from": 0,
+    "to": 100000,
+    "prefix": "$",
+    "suffix": "/yr",
+    "label": "DM Champ Revenue",
+    "_note": "DM Champ now makes about $100K a year"
+  },
+  {
+    "type": "split_right",
+    "start": 117.13,
+    "end": 125.59,
+    "content": "slides/08-revenue-100k_1.jpg",
+    "_note": "businesses worldwide, clinics, restaurants, 24/7"
+  },
+  {
+    "type": "speaker_full",
+    "start": 125.59,
+    "end": 130.69,
+    "_note": "Claude Code is why it got here. Not big team"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 125.6,
+    "end": 127.6,
+    "content": "gifs/gif-15-typing-fast.mp4",
+    "position": "bottom-right",
+    "size": 0.25,
+    "_note": "typing fast - 24/7 automated responses"
+  },
+  {
+    "type": "text_overlay",
+    "start": 128,
+    "end": 130,
+    "text": "NOT A BIG TEAM",
+    "style": "caption"
+  },
+  {
+    "type": "broll_full",
+    "start": 130.69,
+    "end": 135.13,
+    "content": "broll/broll-04-night-coding.mp4",
+    "_note": "not because I raised money, tool was that good"
+  },
+  {
+    "type": "chapter_card",
+    "start": 135.13,
+    "end": 138.33,
+    "title": "Dev Pipeline",
+    "number": 2,
+    "subtitle": "Automated Bug Fixing",
+    "accentColor": "#457b9d"
+  },
+  {
+    "type": "speaker_full",
+    "start": 138.33,
+    "end": 139.93,
+    "_note": "I had a new problem"
+  },
+  {
+    "type": "split_right",
+    "start": 139.93,
+    "end": 149.35,
+    "content": "slides/09-bottleneck-problem_1.jpg",
+    "_note": "every bug report, feature request, support ticket coming to me"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 149.35,
+    "end": 151.5,
+    "content": "gifs/gif-05-drowning-in-work.mp4",
+    "position": "bottom-right",
+    "size": 0.3,
+    "_note": "drowning - all at the same time"
+  },
+  {
+    "type": "speaker_full",
+    "start": 151.5,
+    "end": 153.11,
+    "_note": "what if I just automated the entire thing"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 153.11,
+    "end": 153.41,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 153.41,
+    "end": 155.95,
+    "zoom": 1.15,
+    "_note": "whole pipeline, bug to fix to customer message"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 155.95,
+    "end": 156.25,
+    "zoom": 1.15
+  },
+  {
+    "type": "slide_full",
+    "start": 156.25,
+    "end": 164.63,
+    "content": "slides/10-pipeline-flow_1.jpg",
+    "_note": "pipeline flow: bug comes in -> customer gets message it's fixed"
+  },
+  {
+    "type": "flow_diagram",
+    "start": 164.63,
+    "end": 170.54,
+    "nodes": [
+      {
+        "label": "Bug Report"
+      },
+      {
+        "label": "AI Triage"
+      },
+      {
+        "label": "Investigate"
+      },
+      {
+        "label": "Fix Code"
+      },
+      {
+        "label": "Notify Customer"
+      }
+    ],
+    "accentColor": "#457b9d",
+    "direction": "horizontal",
+    "_note": "pipeline steps detail"
+  },
+  {
+    "type": "split_left",
+    "start": 170.54,
+    "end": 183.46,
+    "content": "slides/11-pipeline-steps_1.jpg",
+    "_note": "AI agent reads ticket, decides, sends to right place, investigates"
+  },
+  {
+    "type": "broll_full",
+    "start": 183.46,
+    "end": 189.22,
+    "content": "broll/broll-03-server-room.mp4",
+    "_note": "code analysis, live system investigation"
+  },
+  {
+    "type": "split_right",
+    "start": 189.22,
+    "end": 199.78,
+    "content": "slides/11-pipeline-steps_1.jpg",
+    "_note": "developer agent writes fix, tests, submits for review"
+  },
+  {
+    "type": "speaker_full",
+    "start": 199.78,
+    "end": 209.37,
+    "_note": "last agent sends WhatsApp + email - friendly professional"
+  },
+  {
+    "type": "text_overlay",
+    "start": 201.5,
+    "end": 203.5,
+    "text": "LAST AGENT",
+    "style": "caption"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 209.37,
+    "end": 219.21,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "_note": "friendly professional done - that's it"
+  },
+  {
+    "type": "text_overlay",
+    "start": 209.53,
+    "end": 211.13,
+    "text": "WHATSAPP",
+    "style": "caption"
+  },
+  {
+    "type": "check_x_mark",
+    "start": 218.01,
+    "end": 219.21,
+    "markType": "check",
+    "position": "center",
+    "_note": "And that's it. It's done."
+  },
+  {
+    "type": "sfx",
+    "start": 218.01,
+    "end": 218.51,
+    "content": "achievement-ding",
+    "volume": 0.2
+  },
+  {
+    "type": "split_right",
+    "start": 219.21,
+    "end": 226.89,
+    "content": "slides/12-3am-timeline_1.jpg",
+    "_note": "Bug at 3am, by morning: investigated, fixed, customer notified"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 226.89,
+    "end": 228.85,
+    "content": "gifs/gif-13-sleeping-desk.mp4",
+    "position": "bottom-right",
+    "size": 0.3,
+    "_note": "sleeping peacefully while bug gets fixed at 3am"
+  },
+  {
+    "type": "speaker_full",
+    "start": 228.85,
+    "end": 232.03,
+    "_note": "I didn't touch anything"
+  },
+  {
+    "type": "text_overlay",
+    "start": 230.91,
+    "end": 232.03,
+    "text": "ZERO TOUCH",
+    "style": "center"
+  },
+  {
+    "type": "split_5050_left",
+    "start": 232.03,
+    "end": 243.43,
+    "content": "slides/13-agent-team-5050_1.jpg",
+    "_note": "team of agents, each specialized in one job"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 243.43,
+    "end": 245.9,
+    "content": "gifs/gif-08-impressed-nod.mp4",
+    "position": "bottom-right",
+    "size": 0.3,
+    "_note": "impressed - even one that reviews all others"
+  },
+  {
+    "type": "speaker_full",
+    "start": 245.9,
+    "end": 248.91,
+    "_note": "make sure nothing went wrong"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 248.91,
+    "end": 254.31,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "_note": "I just do quality checks now"
+  },
+  {
+    "type": "text_overlay",
+    "start": 252.51,
+    "end": 254.31,
+    "text": "QA ONLY",
+    "style": "center"
+  },
+  {
+    "type": "speaker_full",
+    "start": 254.31,
+    "end": 260.51,
+    "_note": "look at the fix, approve it. Everything else is handled"
+  },
+  {
+    "type": "text_overlay",
+    "start": 258.99,
+    "end": 260.51,
+    "text": "HANDLED",
+    "style": "caption"
+  },
+  {
+    "type": "chapter_card",
+    "start": 260.51,
+    "end": 263.15,
+    "title": "Cold Email Agent",
+    "number": 3,
+    "subtitle": "Research-First Outreach",
+    "accentColor": "#2a9d8f"
+  },
+  {
+    "type": "sfx",
+    "start": 260.51,
+    "end": 261.01,
+    "content": "whoosh",
+    "volume": 0.35
+  },
+  {
+    "type": "speaker_full",
+    "start": 263.15,
+    "end": 268.39,
+    "_note": "I hate cold email, most is terrible, template within 2 seconds"
+  },
+  {
+    "type": "text_overlay",
+    "start": 264.63,
+    "end": 266.27,
+    "text": "TERRIBLE",
+    "style": "center"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 268.39,
+    "end": 270.8,
+    "content": "gifs/gif-07-side-eye-skeptical.mp4",
+    "position": "bottom-left",
+    "size": 0.3,
+    "_note": "skeptical side eye - nobody reads that"
+  },
+  {
+    "type": "speaker_full",
+    "start": 270.8,
+    "end": 274.03,
+    "_note": "goes straight to spam"
+  },
+  {
+    "type": "text_overlay",
+    "start": 272.71,
+    "end": 274.03,
+    "text": "SPAM",
+    "style": "center",
+    "color": "#e63946"
+  },
+  {
+    "type": "broll_full",
+    "start": 274.03,
+    "end": 281.87,
+    "content": "broll/broll-02-typing-email.mp4",
+    "_note": "AI agent researches company, Googles, reads website"
+  },
+  {
+    "type": "split_right",
+    "start": 281.87,
+    "end": 293.25,
+    "content": "slides/14-email-comparison_1.jpg",
+    "_note": "completely personalized email, every paragraph about that company"
+  },
+  {
+    "type": "speaker_full",
+    "start": 293.25,
+    "end": 302.01,
+    "_note": "every paragraph about that specific company"
+  },
+  {
+    "type": "text_overlay",
+    "start": 295,
+    "end": 297,
+    "text": "PERSONALIZED",
+    "style": "center"
+  },
+  {
+    "type": "cta_overlay",
+    "start": 333.67,
+    "end": 339.71,
+    "text": "Join Claudify",
+    "subtitle": "Link in Description",
+    "style": "offer",
+    "accentColor": "#e63946",
+    "_note": "Mid-roll CTA at ~53%"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 302.01,
+    "end": 309.01,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "_note": "two emails side by side, wouldn't know same system"
+  },
+  {
+    "type": "text_overlay",
+    "start": 307.25,
+    "end": 309.01,
+    "text": "NOT TEMPLATES",
+    "style": "center"
+  },
+  {
+    "type": "speaker_full",
+    "start": 309.01,
+    "end": 315.8,
+    "_note": "building this with Claude Code took me a day or two"
+  },
+  {
+    "type": "text_overlay",
+    "start": 314.13,
+    "end": 315.8,
+    "text": "A DAY OR TWO",
+    "style": "center"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 315.8,
+    "end": 316.1,
+    "zoom": 1.18
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 316.1,
+    "end": 319.07,
+    "zoom": 1.18,
+    "_note": "that's the part people don't get, not massive engineering"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 319.07,
+    "end": 319.37,
+    "zoom": 1.18
+  },
+  {
+    "type": "comparison_table",
+    "start": 319.37,
+    "end": 327.39,
+    "leftLabel": "Human",
+    "rightLabel": "AI Agent",
+    "rows": [
+      {
+        "left": "15-20 min/email",
+        "right": "Seconds",
+        "rightWins": true
+      },
+      {
+        "left": "1 email at a time",
+        "right": "100 emails",
+        "rightWins": true
+      },
+      {
+        "left": "Template-feeling",
+        "right": "Fully personalized",
+        "rightWins": true
+      }
+    ],
+    "winnerSide": "right",
+    "_note": "15-20 min per email x100 emails"
+  },
+  {
+    "type": "speaker_full",
+    "start": 327.39,
+    "end": 331.71,
+    "_note": "multiply by 100 emails, see why this matters"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 329.39,
+    "end": 331.71,
+    "content": "gifs/gif-11-money-counting.mp4",
+    "position": "bottom-right",
+    "size": 0.3,
+    "_note": "money counting - multiply by 100"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 331.71,
+    "end": 343.58,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "_note": "transition to NFC chapter"
+  },
+  {
+    "type": "chapter_card",
+    "start": 343.58,
+    "end": 346.34,
+    "title": "NFC Access Control",
+    "number": 4,
+    "subtitle": "$50K Government Project",
+    "accentColor": "#e9c46a"
+  },
+  {
+    "type": "sfx",
+    "start": 343.58,
+    "end": 344.08,
+    "content": "whoosh",
+    "volume": 0.35
+  },
+  {
+    "type": "split_right",
+    "start": 346.34,
+    "end": 355.94,
+    "content": "slides/15-nfc-access_1.jpg",
+    "_note": "full access control system, NFC, government, $50K project"
+  },
+  {
+    "type": "speaker_full",
+    "start": 355.94,
+    "end": 362.5,
+    "_note": "not a to-do app, serious system that controls who gets in"
+  },
+  {
+    "type": "text_overlay",
+    "start": 357,
+    "end": 359,
+    "text": "NOT A TODO APP",
+    "style": "center"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 362.5,
+    "end": 362.8,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 362.8,
+    "end": 365.36,
+    "zoom": 1.15,
+    "_note": "can't share details, government project"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 365.36,
+    "end": 365.66,
+    "zoom": 1.15
+  },
+  {
+    "type": "broll_full",
+    "start": 365.66,
+    "end": 371.89,
+    "content": "broll/broll-09-nfc-tap.mp4",
+    "_note": "NFC card tap, door access"
+  },
+  {
+    "type": "split_left",
+    "start": 371.89,
+    "end": 379.17,
+    "content": "slides/16-ninety-percent_1.jpg",
+    "_note": "90% built by Claude Code - web app, mobile app, access logic"
+  },
+  {
+    "type": "split_right",
+    "start": 379.17,
+    "end": 392.85,
+    "content": "slides/17-nfc-timeline_1.jpg",
+    "_note": "2 months to 90%, last 10% another month, offshore + QA"
+  },
+  {
+    "type": "speaker_full",
+    "start": 396.79,
+    "end": 400.03,
+    "_note": "$50K project, think about that"
+  },
+  {
+    "type": "counter_ticker",
+    "start": 392.85,
+    "end": 396.79,
+    "from": 0,
+    "to": 50000,
+    "prefix": "$",
+    "label": "Project Value"
+  },
+  {
+    "type": "slide_full",
+    "start": 400.03,
+    "end": 408.91,
+    "content": "slides/18-multiply-by-ten_1.jpg",
+    "_note": "people building to-do apps, multiply by 10"
+  },
+  {
+    "type": "speaker_full",
+    "start": 408.91,
+    "end": 413.55,
+    "_note": "if it can build government access control, it can build whatever you need"
+  },
+  {
+    "type": "text_overlay",
+    "start": 410.5,
+    "end": 412.5,
+    "text": "WHATEVER YOU NEED",
+    "style": "center"
+  },
+  {
+    "type": "chapter_card",
+    "start": 413.55,
+    "end": 416.07,
+    "title": "AEO System",
+    "number": 5,
+    "subtitle": "Answer Engine Optimization",
+    "accentColor": "#f4845f"
+  },
+  {
+    "type": "sfx",
+    "start": 413.55,
+    "end": 414.05,
+    "content": "whoosh",
+    "volume": 0.35
+  },
+  {
+    "type": "split_right",
+    "start": 416.07,
+    "end": 428.16,
+    "content": "slides/19-aeo-system_1.jpg",
+    "_note": "AEO system - checks if ChatGPT/Gemini know your business"
+  },
+  {
+    "type": "search_bar",
+    "start": 428.16,
+    "end": 438.16,
+    "query": "best clinic in Amsterdam",
+    "engine": "chatgpt",
+    "results": [
+      "Clinica Fuegenix - Highly rated",
+      "Another Clinic - Good reviews"
+    ],
+    "_note": "System runs queries, are you in the answer?"
+  },
+  {
+    "type": "speaker_full",
+    "start": 438.16,
+    "end": 443.8,
+    "_note": "are you mentioned? recommended? or completely invisible?"
+  },
+  {
+    "type": "text_overlay",
+    "start": 442.28,
+    "end": 443.8,
+    "text": "INVISIBLE",
+    "style": "center",
+    "color": "#e63946"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 443.8,
+    "end": 445.8,
+    "content": "gifs/gif-10-invisible-ghost.mp4",
+    "position": "bottom-right",
+    "size": 0.3,
+    "_note": "invisible ghost - completely invisible"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 445.8,
+    "end": 450.04,
+    "zoomStart": 1,
+    "zoomEnd": 1.12,
+    "_note": "people asking ChatGPT for recommendations every day"
+  },
+  {
+    "type": "chat_bubbles",
+    "start": 450.04,
+    "end": 458.89,
+    "messages": [
+      {
+        "role": "user",
+        "text": "Best restaurant near me?"
+      },
+      {
+        "role": "ai",
+        "text": "Based on ratings, I'd recommend..."
+      },
+      {
+        "role": "user",
+        "text": "Best CRM for small business?"
+      },
+      {
+        "role": "ai",
+        "text": "Here are the top options..."
+      }
+    ],
+    "aiName": "ChatGPT",
+    "_note": "best restaurant, best CRM, best clinic - are you in those answers?"
+  },
+  {
+    "type": "speaker_full",
+    "start": 458.89,
+    "end": 464.65,
+    "_note": "client pays $2K/mo for this service"
+  },
+  {
+    "type": "counter_ticker",
+    "start": 460,
+    "end": 463,
+    "from": 0,
+    "to": 2000,
+    "prefix": "$",
+    "suffix": "/mo",
+    "label": "Monthly Revenue"
+  },
+  {
+    "type": "broll_full",
+    "start": 464.65,
+    "end": 470.61,
+    "content": "broll/broll-10-analytics-screen.mp4",
+    "_note": "data dashboard - system runs audit, identifies what's wrong"
+  },
+  {
+    "type": "split_left",
+    "start": 470.61,
+    "end": 476.09,
+    "content": "slides/19-aeo-system_1.jpg",
+    "_note": "playbook, multiple agents, each part of audit"
+  },
+  {
+    "type": "split_5050_left",
+    "start": 476.09,
+    "end": 490.99,
+    "content": "slides/20-before-after-5050_1.jpg",
+    "_note": "invisible in ChatGPT -> recommended as top option in 8 weeks"
+  },
+  {
+    "type": "confetti_burst",
+    "start": 480.35,
+    "end": 482.91,
+    "density": 0.8,
+    "colors": [
+      "#e63946",
+      "#457b9d",
+      "#2a9d8f"
+    ],
+    "_note": "recommended as top option celebration"
+  },
+  {
+    "type": "chapter_card",
+    "start": 490.99,
+    "end": 494.51,
+    "title": "The Lesson",
+    "number": 6,
+    "subtitle": "What these 5 builds have in common",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "sfx",
+    "start": 490.99,
+    "end": 491.49,
+    "content": "whoosh",
+    "volume": 0.35
+  },
+  {
+    "type": "bullet_list",
+    "start": 494.51,
+    "end": 503.47,
+    "title": "5 Builds, 1 Common Thread",
+    "items": [
+      "All in production",
+      "All solve real problems",
+      "All generate revenue",
+      "Built because I needed them"
+    ],
+    "icon": "check",
+    "color": "#22c55e",
+    "_note": "what do these 5 things have in common"
+  },
+  {
+    "type": "speaker_full",
+    "start": 503.47,
+    "end": 509.15,
+    "_note": "Claude Code is the only tool you need"
+  },
+  {
+    "type": "text_overlay",
+    "start": 507.43,
+    "end": 509.15,
+    "text": "ONE TOOL",
+    "style": "center"
+  },
+  {
+    "type": "sfx",
+    "start": 507.43,
+    "end": 507.93,
+    "content": "boop",
+    "volume": 0.4
+  },
+  {
+    "type": "split_right",
+    "start": 509.15,
+    "end": 519.87,
+    "content": "slides/21-scattered-vs-focused_1.jpg",
+    "_note": "OpenAI million things vs Anthropic one product, really good"
+  },
+  {
+    "type": "speaker_full",
+    "start": 519.87,
+    "end": 525.71,
+    "_note": "Anthropic just building one product, making it really good"
+  },
+  {
+    "type": "text_overlay",
+    "start": 522,
+    "end": 524,
+    "text": "ONE PRODUCT",
+    "style": "center"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 525.71,
+    "end": 526.01,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 526.01,
+    "end": 529.27,
+    "zoom": 1.2,
+    "_note": "No distractions, no 15 features, just a tool that works"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 529.27,
+    "end": 529.57,
+    "zoom": 1.2
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 529.57,
+    "end": 535.15,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "_note": "that's the lesson, stop looking for the next tool"
+  },
+  {
+    "type": "kinetic_type",
+    "start": 535.15,
+    "end": 541.35,
+    "words": "PICK ONE GOOD TOOL AND BUILD",
+    "_note": "Pick one good one, point at real problem, build"
+  },
+  {
+    "type": "speaker_full",
+    "start": 541.35,
+    "end": 544.27,
+    "_note": "oh and one more thing"
+  },
+  {
+    "type": "slide_full",
+    "start": 544.27,
+    "end": 546.63,
+    "content": "slides/22-surprise-sixth_1.jpg",
+    "_note": "this video's editing pipeline = also Claude Code"
+  },
+  {
+    "type": "sfx",
+    "start": 544.27,
+    "end": 544.77,
+    "content": "boop",
+    "volume": 0.5
+  },
+  {
+    "type": "gif_overlay",
+    "start": 546.6,
+    "end": 548.6,
+    "content": "gifs/gif-09-jaw-drop.mp4",
+    "position": "bottom-right",
+    "size": 0.3,
+    "_note": "jaw drop - surprise sixth"
+  },
+  {
+    "type": "speaker_full",
+    "start": 546.63,
+    "end": 553.19,
+    "_note": "That's 6 now + build stuff like this yourself"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 546.63,
+    "end": 548.07,
+    "content": "gifs/gif-12-mic-drop.mp4",
+    "position": "bottom-left",
+    "size": 0.3,
+    "_note": "mic drop - that's 6 now"
+  },
+  {
+    "type": "text_overlay",
+    "start": 546.63,
+    "end": 548.07,
+    "text": "THAT'S 6",
+    "style": "center"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 553.19,
+    "end": 561.35,
+    "zoomStart": 1,
+    "zoomEnd": 1.05,
+    "_note": "end CTA zoom - Claudify pitch"
+  },
+  {
+    "type": "cta_overlay",
+    "start": 553.35,
+    "end": 561.35,
+    "text": "Join Claudify",
+    "subtitle": "Link in Description",
+    "style": "next_video",
+    "accentColor": "#e63946"
+  }
+]

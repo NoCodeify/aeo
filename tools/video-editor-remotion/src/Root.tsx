@@ -1,5 +1,7 @@
 import React from "react";
-import { Composition, staticFile } from "remotion";
+import { Composition } from "remotion";
+import { z } from "zod";
+import timelineData from "../public/timeline.json";
 import { MainVideo } from "./components/MainVideo";
 import { NewspaperFlash } from "./components/NewspaperFlash";
 import { LowerThird } from "./components/LowerThird";
@@ -41,20 +43,47 @@ import { CountdownFlip } from "./components/CountdownFlip";
 import { TextHighlight } from "./components/TextHighlight";
 import { VideoConfig, Edit, BgMusicConfig } from "./types/timeline";
 
-// Default config for studio preview
-// Loads timeline.json from public/ folder
-const defaultTimeline: Edit[] = (() => {
-  try {
-    return require("../public/timeline.json");
-  } catch {
-    return [];
-  }
-})();
+// Zod schema for Studio props editing
+const EditSchema = z.object({
+  type: z.string(),
+  start: z.number(),
+  end: z.number(),
+  content: z.string().optional(),
+  text: z.string().optional(),
+  style: z.string().optional(),
+  zoom: z.number().optional(),
+  position: z.string().optional(),
+  size: z.number().optional(),
+  volume: z.number().optional(),
+  color: z.string().optional(),
+  _note: z.string().optional(),
+}).passthrough();
 
+const BgMusicSchema = z.object({
+  src: z.string(),
+  startVolume: z.number().optional(),
+  mainVolume: z.number().optional(),
+  fadeDuration: z.number().optional(),
+});
+
+const ConfigSchema = z.object({
+  config: z.object({
+    speakerVideo: z.string(),
+    gridBackground: z.string(),
+    timeline: z.array(EditSchema),
+    fps: z.number(),
+    width: z.number(),
+    height: z.number(),
+    bgMusic: BgMusicSchema.optional(),
+  }),
+});
+
+// Default config for studio preview
+// Timeline imported directly from public/timeline.json - Vite HMR auto-reloads on change.
 const defaultConfig: VideoConfig = {
   speakerVideo: "speaker.mp4",
   gridBackground: "grid-loop.mp4",
-  timeline: defaultTimeline,
+  timeline: timelineData as unknown as Edit[],
   fps: 30,
   width: 3840,
   height: 2160,
@@ -79,6 +108,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="MainVideo"
         component={MainVideo as any}
+        schema={ConfigSchema}
         durationInFrames={calculateDuration(defaultConfig.timeline, defaultConfig.fps)}
         fps={defaultConfig.fps}
         width={defaultConfig.width}
@@ -91,6 +121,7 @@ export const RemotionRoot: React.FC = () => {
             fps: config.fps,
             width: config.width,
             height: config.height,
+            props: { config },
           };
         }}
       />

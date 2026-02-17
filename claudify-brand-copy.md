@@ -17,7 +17,7 @@ Run a consulting agency. Ship a $100K SaaS. Deliver services that used to need a
 
 Ready to do things in 2026 that used to require a dev team, a specialist, or a six-figure budget?
 
-Built a $100K/yr SaaS, a self-healing CI/CD pipeline, and a full consulting delivery system with Claude Code. Zero dev background. Now teaching others to do the same. First working system in 21 days.
+Built a $100K/yr SaaS, a self-healing CI/CD pipeline, and a full consulting delivery system with Claude Code. Now teaching others to do the same. First working system in 21 days.
 
 ---
 
@@ -31,7 +31,7 @@ The founder didn't learn this from a course. He built it:
 - An NFC smart lock system - hardware and firmware, not just software
 - A video production pipeline, cold outreach system, and marketing automation stack
 
-No CS degree. No dev team. No co-founder. Just Claude Code.
+No agency. No dev team. No co-founder. Just Claude Code.
 
 This is what the community is built around: shipping SaaS products, automating client delivery, launching new service lines, and replacing expensive software with custom tools you own. All with Claude Code.
 
@@ -57,13 +57,13 @@ The gap between "I'd need a team for that" and "I did it myself" is closed. The 
 
 **What do you get? ($97/mo)**
 
-**FoundationKit** - The full curriculum from first session to multi-agent teams, MCP servers, hooks, and advanced patterns. 20+ modules covering everything from setup to orchestrating AI agent teams.
+**Foundations** - The full curriculum from first session to multi-agent teams, MCP servers, hooks, and advanced patterns. 20+ modules covering everything from setup to orchestrating AI agent teams.
 
-**CaseStudyOS** - 5 real-world breakdowns from production systems the founder built and runs. Not walkthroughs of demo apps. Full dissections of a $100K SaaS, an agentic CI/CD pipeline, a consulting delivery system, a hardware project, and an outreach stack.
+**Case Studies** - 5 real-world breakdowns from production systems the founder built and runs. Not walkthroughs of demo apps. Full dissections of a $100K SaaS, an agentic CI/CD pipeline, a consulting delivery system, a hardware project, and an outreach stack.
 
 **The Vault** - Production-grade templates pulled from real businesses. CLAUDE.md files, agent configs, skill setups, project structures. Copy them, adapt them, ship with them.
 
-**ServiceKit** - A complete playbook for packaging and selling Claude Code implementation services at $2-5K per project. Scoping, pricing, delivery, client management.
+**Service Track** - A complete playbook for packaging and selling Claude Code implementation services at $2-5K per project. Scoping, pricing, delivery, client management.
 
 **Weekly live coaching** - Bring your project, share your screen, build together, get unstuck in real time.
 
@@ -124,7 +124,7 @@ From needing a team and an expert to being both. First working system in 21 days
 
 **Body:**
 
-The founder built a $100K/yr SaaS, a self-healing CI/CD pipeline, a full consulting delivery system, and an NFC smart lock - all with Claude Code. Zero dev background.
+The founder built a $100K/yr SaaS, a self-healing CI/CD pipeline, a full consulting delivery system, and an NFC smart lock - all with Claude Code.
 
 Claudify is where professionals and business owners learn to do the same. Not tutorials. Not theory. Real systems, real templates, production-grade infrastructure you can study and adapt.
 
@@ -154,9 +154,9 @@ Fixes applied:
 4. Replaced "not an MMO play" with "No income screenshots, no revenue promises" - plain language the audience understands.
 
 KubeCraft patterns applied:
-1. **One-line founder story in header** - "Built a $100K/yr SaaS, a self-healing CI/CD pipeline, and a full consulting delivery system with Claude Code. Zero dev background." Sits right below the opening hook.
+1. **One-line founder story in header** - "Built a $100K/yr SaaS, a self-healing CI/CD pipeline, and a full consulting delivery system with Claude Code." Sits right below the opening hook.
 2. **Proof before features** - "The proof" section now comes before "What do you get?" Founder's portfolio leads, then member outcomes, then deliverables.
-3. **Branded deliverable names** - FoundationKit (curriculum), CaseStudyOS (case studies), The Vault (templates), ServiceKit (service playbook). Each feels like a product, not a course module.
+3. **Deliverable names** - All use plain names now: Foundations, Case Studies, The Vault, Service Track.
 4. **Transformation in minimal words** - "From needing a team to being the team." Used in the transformation phrase section and on the landing page.
 5. **Timeframe elevated** - "First working system in 21 days" now appears in the header area and the landing page one-liner, not just buried in the guarantee section.
 
@@ -178,5 +178,5 @@ KubeCraft patterns applied:
 **Still needed:**
 - Founder name (to be added to the one-line founder story)
 - Testimonials/social proof section once early members produce results
-- Final review of branded deliverable names (FoundationKit, CaseStudyOS, The Vault, ServiceKit) - do they feel right or forced?
+- Final review of "The Vault" as a name - the rest are plain labels now
 - Trustpilot or equivalent review platform setup

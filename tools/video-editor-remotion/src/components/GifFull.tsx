@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill, OffthreadVideo, Loop, staticFile, useCurrentFrame, useVideoConfig, interpolate } from "remotion";
+import { AbsoluteFill, Loop, staticFile, useCurrentFrame, useVideoConfig, interpolate } from "remotion";
+import { SmartVideo } from "../use-proxy";
 
 interface GifFullProps {
   gifSrc: string;
@@ -38,7 +39,7 @@ export const GifFull: React.FC<GifFullProps> = ({
         }}
       >
         <Loop durationInFrames={durationInFrames}>
-          <OffthreadVideo
+          <SmartVideo
             src={staticFile(gifSrc)}
             pauseWhenBuffering
             style={{ width: "100%", height: "100%", objectFit: "contain" }}
@@ -48,7 +49,7 @@ export const GifFull: React.FC<GifFullProps> = ({
       </AbsoluteFill>
 
       {/* Audio from speaker video (hidden) */}
-      <OffthreadVideo
+      <SmartVideo
         src={staticFile(speakerSrc)}
         startFrom={startFrom}
         pauseWhenBuffering

@@ -1,8 +1,9 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
   Audio,
-  OffthreadVideo,
+
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -182,7 +183,7 @@ export const StarRating: React.FC<StarRatingProps> = ({
     <AbsoluteFill>
       {/* Background: speaker video or dark gradient */}
       {isOverlay ? (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc!)}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

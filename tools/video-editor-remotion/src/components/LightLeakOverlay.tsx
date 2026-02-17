@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
 } from "remotion";
 import { LightLeak } from "@remotion/light-leaks";
@@ -23,7 +24,7 @@ export const LightLeakOverlay: React.FC<LightLeakOverlayProps> = ({
     <AbsoluteFill>
       {/* Speaker video underneath */}
       {speakerSrc && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

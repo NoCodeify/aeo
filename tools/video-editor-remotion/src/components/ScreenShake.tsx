@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
   useCurrentFrame,
 } from "remotion";
@@ -50,7 +51,7 @@ export const ScreenShake: React.FC<ScreenShakeProps> = ({
         }}
       >
         {speakerSrc && (
-          <OffthreadVideo
+          <SmartVideo
             src={staticFile(proxyVideo(speakerSrc))}
             startFrom={startFrom}
             pauseWhenBuffering

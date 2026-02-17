@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
   useCurrentFrame,
   useVideoConfig,
@@ -69,7 +70,7 @@ export const FreezeFrame: React.FC<FreezeFrameProps> = ({
             transform: isRecordScratch ? "scale(1.05)" : undefined,
           }}
         >
-          <OffthreadVideo
+          <SmartVideo
             src={staticFile(speakerSrc)}
             startFrom={startFrom ?? 0}
             pauseWhenBuffering
@@ -131,7 +132,7 @@ export const FreezeFrame: React.FC<FreezeFrameProps> = ({
 
       {/* Speaker audio (hidden) */}
       {hasSpeaker && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

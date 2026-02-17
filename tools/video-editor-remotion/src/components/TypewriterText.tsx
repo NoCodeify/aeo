@@ -1,8 +1,9 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
   Audio,
-  OffthreadVideo,
+
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -98,7 +99,7 @@ export const TypewriterText: React.FC<TypewriterTextProps> = ({
 
       {/* Speaker audio only */}
       {speakerSrc && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(proxyVideo(speakerSrc))}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

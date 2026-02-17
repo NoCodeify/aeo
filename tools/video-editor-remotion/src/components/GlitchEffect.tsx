@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
   interpolate,
   useCurrentFrame,
@@ -55,7 +56,7 @@ export const GlitchEffect: React.FC<GlitchEffectProps> = ({
       {/* Base speaker layer (green channel - no shift) */}
       {hasSpeaker && (
         <AbsoluteFill>
-          <OffthreadVideo
+          <SmartVideo
             src={staticFile(speakerSrc)}
             startFrom={startFrom ?? 0}
             pauseWhenBuffering
@@ -76,7 +77,7 @@ export const GlitchEffect: React.FC<GlitchEffectProps> = ({
             opacity: 0.8,
           }}
         >
-          <OffthreadVideo
+          <SmartVideo
             src={staticFile(speakerSrc)}
             startFrom={startFrom ?? 0}
             pauseWhenBuffering
@@ -99,7 +100,7 @@ export const GlitchEffect: React.FC<GlitchEffectProps> = ({
             opacity: 0.8,
           }}
         >
-          <OffthreadVideo
+          <SmartVideo
             src={staticFile(speakerSrc)}
             startFrom={startFrom ?? 0}
             pauseWhenBuffering
@@ -150,7 +151,7 @@ export const GlitchEffect: React.FC<GlitchEffectProps> = ({
 
       {/* Speaker audio (hidden) */}
       {hasSpeaker && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

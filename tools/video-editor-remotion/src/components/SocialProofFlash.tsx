@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
   useCurrentFrame,
   useVideoConfig,
@@ -268,7 +269,7 @@ export const SocialProofFlash: React.FC<SocialProofFlashProps> = ({
 
       {/* Speaker audio (hidden) */}
       {speakerSrc && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering

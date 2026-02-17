@@ -1,6 +1,6 @@
 ---
 name: website-copywriting
-description: Website copy creation for CMS implementation. Use when writing website copy, page content, creating new pages, or rewriting existing pages. Triggers on "write copy", "website copy", "page content", "rewrite page", "create page".
+description: Website copy creation for CMS implementation. Use when user says "write copy", "website copy", "page content", "rewrite page", or "create page". Writes the actual copy. Do NOT use for content strategy/planning (use content-strategist) or optimizing existing content for LLMs (use optimize-content).
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, WebFetch
 ---
 

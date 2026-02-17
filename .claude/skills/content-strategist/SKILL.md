@@ -1,6 +1,6 @@
 ---
 name: content-strategist
-description: Strategic content planning for AEO dominance. Use when planning what content to create, identifying data study opportunities, finding terms to own, discovering zero-volume keywords, or auditing content lifecycle. Triggers on "content strategy", "what content", "content plan", "data study", "keyword research", "terms to own", "content audit".
+description: Strategic content planning for AEO dominance. Use when user says "content strategy", "what content should I create", "content plan", "data study", "keyword research", "terms to own", or "content audit". Plans WHAT to create. Do NOT use for writing copy (use website-copywriting) or optimizing existing content (use optimize-content).
 allowed-tools: Read, Glob, Grep, WebFetch, WebSearch, mcp__aeo-audit__query_chatgpt, mcp__aeo-audit__query_gemini, mcp__aeo-audit__query_google
 ---
 

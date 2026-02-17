@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill, OffthreadVideo, Loop, staticFile, useCurrentFrame, useVideoConfig, interpolate, Easing } from "remotion";
+import { AbsoluteFill, staticFile, useCurrentFrame, useVideoConfig, interpolate, Easing } from "remotion";
+import { SmartVideo } from "../use-proxy";
 import { GifPosition } from "../types/timeline";
 
 interface GifOverlayProps {
@@ -79,16 +80,8 @@ export const GifOverlay: React.FC<GifOverlayProps> = ({
   const posStyle = getPositionStyle(position, gifWidth, gifHeight);
 
   return (
-    <AbsoluteFill>
-      {/* Speaker video underneath */}
-      <OffthreadVideo
-        src={staticFile(speakerSrc)}
-        startFrom={startFrom}
-        pauseWhenBuffering
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-      />
-
-      {/* GIF as MP4 overlay */}
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {/* Pure overlay - underlying layout handles speaker */}
       <div
         style={{
           position: "absolute",
@@ -102,14 +95,13 @@ export const GifOverlay: React.FC<GifOverlayProps> = ({
           ...posStyle,
         }}
       >
-        <Loop durationInFrames={durationInFrames}>
-          <OffthreadVideo
-            src={staticFile(gifSrc)}
-            pauseWhenBuffering
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            muted
-          />
-        </Loop>
+        <SmartVideo
+          src={staticFile(gifSrc)}
+          pauseWhenBuffering
+          loop
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          muted
+        />
       </div>
     </AbsoluteFill>
   );

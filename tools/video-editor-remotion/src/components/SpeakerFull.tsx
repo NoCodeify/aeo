@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill, OffthreadVideo, staticFile } from "remotion";
+import { AbsoluteFill, staticFile } from "remotion";
+import { SmartVideo } from "../use-proxy";
 
 interface SpeakerFullProps {
   speakerSrc: string;
@@ -12,7 +13,7 @@ export const SpeakerFull: React.FC<SpeakerFullProps> = ({
 }) => {
   return (
     <AbsoluteFill>
-      <OffthreadVideo
+      <SmartVideo
         src={staticFile(speakerSrc)}
         startFrom={startFrom}
         pauseWhenBuffering

@@ -44,12 +44,21 @@ async function render() {
     speakerVideoPath = path.join(videoSubdir, videoFiles[0]);
   }
 
-  // Read timeline
-  if (!fs.existsSync(timelinePath)) {
-    console.error("Timeline not found:", timelinePath);
+  // Read timeline - prefer public/timeline.json (Studio working copy) over source
+  const publicTimelinePath = path.join(publicDir, "timeline.json");
+  const timelineSource = fs.existsSync(publicTimelinePath) ? publicTimelinePath : timelinePath;
+
+  if (!fs.existsSync(timelineSource)) {
+    console.error("Timeline not found:", timelineSource);
     process.exit(1);
   }
-  const timeline = JSON.parse(fs.readFileSync(timelinePath, "utf-8"));
+  const timeline = JSON.parse(fs.readFileSync(timelineSource, "utf-8"));
+
+  // Sync: copy Studio working copy back to source dir
+  if (timelineSource === publicTimelinePath && timelinePath !== publicTimelinePath) {
+    fs.copyFileSync(publicTimelinePath, timelinePath);
+    console.log("Synced public/timeline.json → source");
+  }
 
   console.log("=== Remotion Video Render ===");
   console.log("Speaker video:", speakerVideoPath);
@@ -94,7 +103,7 @@ async function render() {
   }
 
   // Copy B-roll folder (if it exists)
-  const brollDir = path.join(videoDir, "broll");
+  const brollDir = path.join(videoDir, "video", "broll");
   const brollDest = path.join(publicDir, "broll");
   if (fs.existsSync(brollDir)) {
     if (fs.existsSync(brollDest)) fs.rmSync(brollDest, { recursive: true, force: true });
@@ -160,13 +169,29 @@ async function render() {
   const outputPath = path.join(videoSubdir, "output-remotion.mp4");
   console.log("Rendering to:", outputPath);
 
+  // Quick test render: pass --test to render 30s at 1080p
+  const isTest = args.includes("--test");
+
   await renderMedia({
     composition,
     serveUrl: bundleLocation,
     codec: "h264",
     outputLocation: outputPath,
     inputProps,
-    videoBitrate: "35M",
+    videoBitrate: isTest ? "10M" : "35M",
+    // M3 Max: 12 performance cores. Use all 12 for full renders, 8 for test.
+    concurrency: isTest ? 8 : 12,
+    // Use Metal GPU via ANGLE for faster frame rendering on Apple Silicon
+    chromiumOptions: { gl: "angle" },
+    // 512MB offthread video cache - reduces re-decoding of speaker/broll videos
+    offthreadVideoCacheSizeInBytes: 512 * 1024 * 1024,
+    // 4K speaker video frames can take >28s to decode - increase timeout
+    timeoutInMilliseconds: 120000,
+    // Test mode: render first 30s only at 1080p
+    ...(isTest ? {
+      frameRange: [0, 30 * composition.fps],
+      scale: 0.5, // 1920x1080 instead of 3840x2160
+    } : {}),
     ffmpegOverride: ({ args }) => {
       // Use Apple VideoToolbox hardware encoder on macOS (M-series chips)
       return args.map((a) => (a === "libx264" ? "h264_videotoolbox" : a));

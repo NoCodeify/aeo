@@ -1,8 +1,9 @@
 import React, { useMemo } from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
   Audio,
-  OffthreadVideo,
+
   Sequence,
   staticFile,
   interpolate,
@@ -61,7 +62,7 @@ export const ConfettiBurst: React.FC<ConfettiBurstProps> = ({
     <AbsoluteFill>
       {/* Speaker video underneath */}
       {speakerSrc && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(proxyVideo(speakerSrc))}
           startFrom={startFrom}
           pauseWhenBuffering
@@ -74,7 +75,7 @@ export const ConfettiBurst: React.FC<ConfettiBurstProps> = ({
       )}
 
       <Sequence from={3} durationInFrames={15}>
-        <Audio src={staticFile("sfx/achievement-ding.mp3")} volume={0.5} />
+        <Audio src={staticFile("sfx/achievement-ding.mp3")} volume={0.1} />
       </Sequence>
 
       {/* Confetti particles */}

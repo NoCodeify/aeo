@@ -9,9 +9,11 @@ tools: Read, Grep, Glob, Write, Bash
 
 Analyze a speaker video's transcript to intelligently cut silences, filler words, and mistakes while preserving dramatic pauses and natural speech rhythm.
 
+> **NOTE:** This agent is **optional**. The default pipeline uses manual rough cuts in a video editor (step 7 in production.md). Manual cutting is faster and more reliable - you catch everything by ear. Use this agent only as a reference guide to identify where issues are before manual editing.
+
 ## Purpose
 
-Read `transcript.json` (word-level timestamps from Whisper) and decide what to cut vs keep using contextual understanding — not just threshold rules. Output `cuts.json` that the `autocut.ts` script applies mechanically with ffmpeg.
+Read `transcript.json` (word-level timestamps from Whisper) and decide what to cut vs keep using contextual understanding — not just threshold rules. Output `cuts.json` that the `autocut.ts` script applies mechanically with ffmpeg, or that the user reviews as a guide for manual editing.
 
 ## Input Required
 
@@ -77,6 +79,29 @@ Walk through the `words` array and identify every potential cut. For each gap be
 | **Topic transition pauses** | Gap before a new section/topic begins | Gives viewer time to process |
 | **Emotional moments** | Pauses during personal stories, vulnerability, humor | Don't rush emotional beats |
 
+### Phase 2.5: Within-Segment Repeat Scan
+
+After identifying individual cuts, scan each **kept segment longer than 3 seconds** for repeated phrases that the word-by-word pass misses (because both instances are within the same kept region).
+
+**Detection:**
+
+For each kept segment, extract all words in order. Look for any sequence of 3+ consecutive words that appears twice within the segment, where the gap between the end of the first occurrence and the start of the second is less than 0.7s.
+
+**Action:**
+
+- If the second version is more specific or complete, cut the first attempt (false start → polished version)
+  - Example: "confused about pricing" followed by "confused when a customer asks about pricing" → cut "confused about pricing"
+- If the first version is more complete, cut the second (accidental repeat)
+- If both are identical, cut the second occurrence
+- Don't cut if the repetition is clearly intentional emphasis (e.g., "never, never do this")
+
+**Examples from W09:**
+
+| Heard | Issue | Action |
+|-------|-------|--------|
+| "It doesn't get confused about pricing" (x2) | Full phrase repeated within segment | Cut first instance |
+| "I was a developer" (x2) | Same phrase repeated | Cut second instance |
+
 ### Phase 3: Context Check
 
 For every potential cut, ask yourself:
@@ -95,6 +120,29 @@ For every potential cut, ask yourself:
 3. Invert cuts to get keep segments: everything NOT in a cut region
 4. For each keep segment, ensure minimum 0.15s gap at boundaries (don't cut right up to the start of a word)
 5. Add 0.05s padding before each keep segment start (catches the attack of the first consonant)
+
+### Phase 4.5: Join-Check
+
+After computing keep segments, check every pair of **adjacent segments** for word repetition at the join boundary. The auto-cutter removes gaps between segments, which can cause the last word of segment N to collide with the first word of segment N+1.
+
+**Detection:**
+
+For each pair of adjacent keep segments (N, N+1):
+1. Get the last 1-2 words of segment N
+2. Get the first 1-2 words of segment N+1
+3. Compare case-insensitively
+
+**Action:**
+
+- If the last word of segment N matches the first word of segment N+1, trim the trailing word from segment N (move segment N's end earlier to before that word)
+  - Example: "stores services | Service businesses" → trim "services" from segment N → "stores | Service businesses"
+- If the last 2 words of segment N match the first 2 words of segment N+1, trim both trailing words from segment N
+
+**Constraints:**
+
+- Don't trim if segment N would become shorter than 0.3s after trimming
+- Don't trim if the repeated word is clearly intentional (e.g., "again and again | Again, this time...")
+- Use word timestamps to find the exact trim point (set segment N's end to the start of the repeated word minus 0.05s)
 
 ### Phase 5: Write Output
 

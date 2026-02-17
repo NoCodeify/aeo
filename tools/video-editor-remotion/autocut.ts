@@ -63,6 +63,130 @@ interface Transcript {
   text: string;
 }
 
+interface SilencePeriod {
+  start: number;
+  end: number;
+}
+
+/**
+ * Run ffmpeg silencedetect to find all silence gaps in the audio.
+ * Returns sorted array of silence periods with start/end timestamps.
+ */
+function detectSilence(videoPath: string): SilencePeriod[] {
+  try {
+    const result = execSync(
+      `ffmpeg -i "${videoPath}" -af silencedetect=noise=-35dB:d=0.3 -f null - 2>&1`,
+      { encoding: "utf-8", timeout: 120000, maxBuffer: 50 * 1024 * 1024 }
+    );
+
+    const silences: SilencePeriod[] = [];
+    const lines = result.split("\n");
+    let currentStart: number | null = null;
+
+    for (const line of lines) {
+      const startMatch = line.match(/silence_start:\s*([\d.]+)/);
+      const endMatch = line.match(/silence_end:\s*([\d.]+)/);
+
+      if (startMatch) {
+        currentStart = parseFloat(startMatch[1]);
+      }
+      if (endMatch && currentStart !== null) {
+        silences.push({
+          start: currentStart,
+          end: parseFloat(endMatch[1]),
+        });
+        currentStart = null;
+      }
+    }
+
+    return silences;
+  } catch (err: any) {
+    console.warn("  Warning: silence detection failed, skipping boundary snapping");
+    console.warn("  ", err.message?.split("\n")[0] || err);
+    return [];
+  }
+}
+
+/**
+ * Check if a timestamp falls within any silence period.
+ */
+function isInSilence(t: number, silences: SilencePeriod[]): boolean {
+  return silences.some((s) => t >= s.start && t <= s.end);
+}
+
+/**
+ * Snap segment boundaries to nearest silence edges to prevent audio bleed.
+ * Only TIGHTENS segments (moves start forward, end backward). Never expands.
+ * Returns the number of segments that were adjusted.
+ */
+function snapSegmentBoundaries(
+  segments: KeepSegment[],
+  silences: SilencePeriod[]
+): number {
+  if (silences.length === 0) return 0;
+
+  let snappedCount = 0;
+  const SNAP_TOLERANCE = 0.2;
+  const MIN_SEGMENT_DURATION = 0.3;
+
+  for (const seg of segments) {
+    const origStart = seg.start;
+    const origEnd = seg.end;
+
+    // Snap START: if not in silence, find nearest silence edge AHEAD and move forward
+    if (!isInSilence(seg.start, silences)) {
+      let bestSnap: number | null = null;
+      let bestDist = Infinity;
+
+      for (const s of silences) {
+        for (const edge of [s.start, s.end]) {
+          const dist = edge - seg.start; // positive = forward (tightens)
+          if (dist > 0 && dist <= SNAP_TOLERANCE && dist < bestDist) {
+            bestSnap = edge;
+            bestDist = dist;
+          }
+        }
+      }
+
+      if (bestSnap !== null) {
+        seg.start = bestSnap;
+      }
+    }
+
+    // Snap END: if not in silence, find nearest silence edge BEHIND and move backward
+    if (!isInSilence(seg.end, silences)) {
+      let bestSnap: number | null = null;
+      let bestDist = Infinity;
+
+      for (const s of silences) {
+        for (const edge of [s.start, s.end]) {
+          const dist = seg.end - edge; // positive = backward (tightens)
+          if (dist > 0 && dist <= SNAP_TOLERANCE && dist < bestDist) {
+            bestSnap = edge;
+            bestDist = dist;
+          }
+        }
+      }
+
+      if (bestSnap !== null) {
+        seg.end = bestSnap;
+      }
+    }
+
+    // Revert if segment became too short after snapping
+    if (seg.start !== origStart || seg.end !== origEnd) {
+      if (seg.end - seg.start < MIN_SEGMENT_DURATION) {
+        seg.start = origStart;
+        seg.end = origEnd;
+      } else {
+        snappedCount++;
+      }
+    }
+  }
+
+  return snappedCount;
+}
+
 async function autocut() {
   const args = process.argv.slice(2);
 
@@ -139,6 +263,22 @@ async function autocut() {
     console.error("No keep segments found in cuts.json");
     process.exit(1);
   }
+
+  // Step 0.5: Detect silence periods and snap segment boundaries
+  console.log("Detecting silence periods...");
+  const silences = detectSilence(speakerVideoPath);
+  console.log(`  Found ${silences.length} silence periods`);
+
+  const snappedCount = snapSegmentBoundaries(cuts.keepSegments, silences);
+  if (snappedCount > 0) {
+    console.log(`  Snapped ${snappedCount} segment boundaries to silence edges`);
+    const newCleanDuration = cuts.keepSegments.reduce(
+      (sum, seg) => sum + (seg.end - seg.start),
+      0
+    );
+    console.log(`  Clean duration after snapping: ${newCleanDuration.toFixed(1)}s`);
+  }
+  console.log();
 
   // Step 1: Extract keep segments with ffmpeg
   // Only add onset padding after SILENCE cuts (not filler cuts).
@@ -268,7 +408,9 @@ async function autocut() {
     const paddedEnd = (cutAfterRemap && FILLER_CUT_TYPES.has(cutAfterRemap))
       ? seg.end - FILLER_ONSET_GUARD
       : seg.end;
-    if (i > 0) {
+    if (i === 0) {
+      cumulativeCutDuration = paddedStart; // Everything before first segment is cut
+    } else {
       const prevCutAfter = cutTypeAfterSegment.get(i - 1);
       const prevPaddedEnd = (prevCutAfter && FILLER_CUT_TYPES.has(prevCutAfter))
         ? cuts.keepSegments[i - 1].end - FILLER_ONSET_GUARD

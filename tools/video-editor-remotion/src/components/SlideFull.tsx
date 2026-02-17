@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill, Img, OffthreadVideo, staticFile } from "remotion";
+import { AbsoluteFill, Img, staticFile } from "remotion";
+import { SmartVideo } from "../use-proxy";
 
 interface SlideFullProps {
   slideSrc: string;
@@ -24,7 +25,7 @@ export const SlideFull: React.FC<SlideFullProps> = ({
         }}
       />
       {/* Audio from speaker video */}
-      <OffthreadVideo
+      <SmartVideo
         src={staticFile(speakerSrc)}
         startFrom={startFrom}
         pauseWhenBuffering

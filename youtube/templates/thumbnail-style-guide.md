@@ -1,277 +1,258 @@
-# Thumbnail Style Guide: AEO Channel
+# Thumbnail Style Guide
 
-Professional thumbnail specifications for all YouTube content.
+Minimal Apple aesthetic. Pure black, glossy 3D icons, clean typography.
+
+---
+
+## Visual Style: Minimal Apple Aesthetic
+
+**The look:** Pure black background, glossy 3D app icons, clean Porsche font text with smooth gradient. Think Apple keynote product shots, not Netflix movie posters.
+
+**Reference:** AntiGravity YouTube channel thumbnails (glossy icons + black + chrome text)
+
+**What we DO NOT do:**
+- No cinematic color grading (no navy, no crushed blacks, no vignette)
+- No heavy text effects (no 6px strokes, no heavy drop shadows, no outer glow)
+- No faces (new channel, zero recognition value - revisit when channel grows)
+- No freeze frames from video
+- No busy backgrounds or gradients
+- No "Netflix thumbnail" aesthetic
 
 ---
 
 ## Workflow
 
-1. **Record video** as normal
-2. **Extract freeze frame** with correct expression
-3. **Run through Imagen** with prompt to add text/effects
-4. **Review at mobile size** (160x90px)
+1. **Choose thumbnail types** (combine 2-3 from the type library below)
+2. **Write the text** (ALL CAPS, 3-5 words max)
+3. **Generate with Imagen** using the prompt template below
+4. **Review at mobile size** (160x90px) on thumbsup.tv
 5. **Export** as JPEG under 2MB
-
-**Imagen does:**
-- Keeps your face/expression exactly as-is
-- Applies cinematic color grading
-- Adds professional text with effects
-- Adds visual metaphors/accents
-- Repositions you slightly if needed
 
 ---
 
 ## Brand Philosophy
 
-**Universal Hook Strategy:** Niche B2B content struggles with CTR. Solution: lead with universal desires (money, customers, survival), make the niche (AEO) the *reveal*, not the hook.
-
 **The 1+1=3 Rule:** Title and thumbnail COMPLEMENT, not repeat.
-- Title = what (story setup)
-- Thumbnail = why it matters (stakes/emotion)
+- Title = what (story setup, search keyword)
+- Thumbnail = why it matters (stakes/emotion/result)
+- If your thumbnail text appears in your title, start over.
 
 ---
 
-## Professional Text Effects (MANDATORY)
+## Thumbnail Types (CRITICAL - Pick 2-3)
 
-Every text element needs this effects stack:
+Every viral thumbnail combines multiple types. Never use just one.
 
-### Effect Specifications
+### The 10 Types
 
-| Effect | Hero Text | Secondary Text |
-|--------|-----------|----------------|
-| **Stroke** | 6px black (#000000) | 4px black |
-| **Drop Shadow** | 12px offset, 25px blur, 90% black | 8px offset, 15px blur, 80% black |
-| **Outer Glow** | 40px feather, 25-30% opacity | 20px feather, 15-20% opacity |
-| **Inner Bevel** | Subtle 3D depth | Optional |
+| # | Type | What It Does | Example |
+|---|------|-------------|---------|
+| 1 | **Big Numbers** | Dollar amounts, percentages, counts that shock | "$100K", "90%", "50K PROJECT" |
+| 2 | **Shock/Curiosity** | Something unexpected that demands a click | Weird object, surprising visual |
+| 3 | **Simple/Minimal** | Just one object or screenshot, nothing else | A single icon, a red button |
+| 4 | **Social Hacking** | Recognizable face/brand from your niche | Well-known logo, familiar product |
+| 5 | **Creator + Something Bigger** | You next to an oversized or impressive object | (deferred until face is added) |
+| 6 | **Header Text** | Bold text giving context the title doesn't | Statement, claim, context line |
+| 7 | **Comparison** | Before/after, vs., old/new side by side | Split screen, icons with "+" between |
+| 8 | **Blur/Mystery** | Key element blurred so people click to find out | Blurred result, blurred number |
+| 9 | **Weird Object** | Something that doesn't belong, makes you look twice | NFC card on a coding video |
+| 10 | **Branded/Recognizable** | Consistent visual identity across videos | Same color system, same icon style |
 
-### Why This Matters
+### Combination Strategy (THE SECRET)
 
-| Without Effects | With Effects |
-|-----------------|--------------|
-| Flat, amateur | Depth, dimension |
-| Disappears on mobile | Pops off any background |
-| Looks like MS Paint | Looks like Netflix |
+**Always combine 2-3 types.** This is what separates amateur thumbnails from viral ones.
+
+| Video Topic | Type Combo | Thumbnail Concept |
+|------------|-----------|-------------------|
+| "5 Things I Built" | Header + Simple + Branded | "5 REAL BUILDS" text, Claude icon center, 5 project icons orbiting |
+| "Claude Code Teams" | Comparison + Header + Branded | Two icons with "+" between, "TEAM MODE" text |
+| "Best Practices" | Simple + Header + Branded | Checklist icon, "DO THIS" text |
+| "Claude Code vs Cursor" | Comparison + Social Hacking | Side-by-side logos with "+" or "VS" |
 
 ---
 
-## Text Sizing
+## Typography
+
+### Font
+- **Style:** Porsche font
+- **Weight:** Bold or heavy
+- **Case:** ALL CAPS ALWAYS
+- **No exceptions.** Every text element is uppercase.
+
+### Text Gradient (CRITICAL)
+- Smooth gradient from **bright white** at top to **light silver-gray** at bottom
+- The gradient must be **very gradual and smooth** - never abrupt or harsh
+- Soft diffused white glow behind the text
+- NO heavy strokes, NO heavy drop shadows, NO colored outer glows
+- The text should look like polished chrome/silver, not like a gaming thumbnail
+
+### Text Sizing
 
 | Element | Frame Height % | Example |
 |---------|----------------|---------|
-| **Hero word** | 25-40% | "LOSING", "#1", "FIRST" |
-| **Secondary** | 12-18% | "HALF ARE", "NOW", "DO THIS" |
-| **Tertiary** | 8-12% | Rarely used |
+| **Hero text** | 20-35% | "$100K", "5 REAL BUILDS" |
+| **Secondary** | 10-15% | "BUILT WITH AI", "ALL REAL" |
 
-**Mobile Test:** If you can't read it clearly at 160x90px, it's too small.
-
----
-
-## Color Palette
-
-### Primary Colors
-
-| Element | Color | Hex | When to Use |
-|---------|-------|-----|-------------|
-| **Default Hero** | Electric Yellow | `#FFE135` | Success, money, priority |
-| **Warning Hero** | Warning Red | `#FF4444` | Losing, failing, danger |
-| **Achievement Hero** | Warm Gold | `#C9A86C` | Proof, results, premium |
-| **Tech Hero** | Teal | `#00D4FF` | AI, new, modern |
-| **Secondary Text** | White | `#FFFFFF` | Always for supporting text |
-| **All Strokes** | Black | `#000000` | Every text element |
-
-### Color Grade Targets
-
-| Element | Before | After |
-|---------|--------|-------|
-| **Blacks** | Raw black | Navy `#0A1628` |
-| **Shadows** | Neutral | +5% teal tint |
-| **Highlights** | Raw | Slight warmth |
-| **Saturation** | Raw | -10-15% midtones |
-| **Contrast** | Raw | +15-20% |
+### Text Rules
+- 3-5 words maximum
+- ALL CAPS always
+- Does NOT repeat title words
+- Readable at 160x90px (mobile)
 
 ---
 
-## Cinematic Color Grading
+## Visual Elements: Glossy 3D App Icons
 
-Apply to EVERY freeze frame before/during Imagen processing:
+### Style
+- **iOS-style rounded corner app icons** with glossy 3D finish
+- Each icon represents a project, tool, or concept
+- Each icon has its **own color** with a matching soft glow behind it
+- Icons float on pure black background
 
-```
-1. Crush blacks to deep navy (#0A1628)
-2. Increase contrast 15-20%
-3. Desaturate midtones 10-15% (protect skin tones)
-4. Add subtle teal to shadows (#00D4FF at 5%)
-5. Add subtle warmth to highlights
-6. Apply dark vignette around all edges
-7. Result: Netflix thumbnail, not webcam screenshot
-```
+### Icon Color Palette
+
+| Project | Icon Color | Symbol |
+|---------|-----------|--------|
+| **AI Chat / DM Champ** | Teal | Chat bubble |
+| **CI/CD / Code** | Purple | Terminal / cursor prompt |
+| **Email Agent** | Blue | Envelope with sparkle |
+| **NFC / Access Control** | Gold | NFC contactless waves |
+| **AEO / Search** | Orange | Magnifying glass |
+| **Claude / AI** | Coral-orange on dark | Stylized "A" letter |
+
+### Icon Rules
+- Each icon glows its own color softly against the black
+- Icons should look premium and glossy, like real app icons
+- Center icon (if using hub layout) should be larger (~35% frame height)
+- Satellite icons should be smaller (~15-20% frame height)
+- Keep spacing clean - icons should breathe
 
 ---
 
-## Layout Specification
+## Layouts
 
+### Layout A: Icon Row (for lists, multiple items)
 ```
 +---------------------------------------+
 |                                       |
-|  [HERO TEXT - yellow/red/gold]  [YOU] |
-|  [Secondary - white]            RIGHT |
-|                                  40%  |
-|  [Visual Metaphor]               OF   |
-|  (subtle accent)                FRAME |
+|         [HERO TEXT - ALL CAPS]        |
 |                                       |
-|                          [TIMESTAMP]  |
+|  [icon] [icon] [icon] [icon] [icon]  |
+|                                       |
 +---------------------------------------+
 ```
+Best for: "$100K", "ALL REAL", list-style videos
 
-### Fixed Elements
+### Layout B: Hub + Satellites (for "built with X" concepts)
+```
++---------------------------------------+
+|                                       |
+|         [HERO TEXT - ALL CAPS]        |
+|                                       |
+|    [sm]    [CENTER ICON]    [sm]     |
+|       [sm]            [sm]           |
+|                                       |
++---------------------------------------+
+```
+Best for: "5 REAL BUILDS" with Claude icon center, project icons orbiting
 
-| Element | Position | Size |
-|---------|----------|------|
-| **You (face)** | Right side | 40% of frame width |
-| **Hero text** | Upper-left | 8% from left, 15% from top |
-| **Secondary text** | Below hero | Left-aligned with hero |
-| **Visual metaphor** | Lower-left or center | 70-150px |
-| **Clear zone** | Bottom-right | For YouTube timestamp |
-
----
-
-## Visual Metaphor Library
-
-### By Video Type
-
-| Concept | Visual | Color | Opacity |
-|---------|--------|-------|---------|
-| **Money/Stakes** | Dollar amount, car silhouette | Gold `#C9A86C` | 40-50% |
-| **Invisible** | Fading logo, ghost effect | Gray `#6B7280` | 30-60% fade |
-| **Success/Proof** | Trophy, medal, #1 badge | Gold `#C9A86C` | 40-50% |
-| **Transition** | Old icon → new icon | Gray → Teal | 35% → 80% |
-| **Priority** | Arrow pointing right, "1" badge | Yellow `#FFE135` | 70% |
-| **Decline/Loss** | Downward graph, arrow | Red `#FF4444` | 50-60% |
-
-### Rules
-
-- **ONE** visual metaphor per thumbnail (maximum)
-- Should be **subtle accent**, not hero element
-- Must **integrate** with color grade (not look pasted on)
-- **Never** competes with text or face for attention
+### Layout C: Two Icons + Plus (for combinations, integrations)
+```
++---------------------------------------+
+|                                       |
+|         [HERO TEXT - ALL CAPS]        |
+|                                       |
+|      [ICON]    +    [ICON]           |
+|                                       |
+|         [SECONDARY TEXT]              |
++---------------------------------------+
+```
+Best for: "ABSURD COMBINATION", tool integrations, vs. comparisons
 
 ---
 
-## Per-Video Specifications
+## Background
 
-### W2: Origin Story
-| Element | Specification |
-|---------|---------------|
-| Text | "$50K DECISION" |
-| Hero Color | Yellow `#FFE135` |
-| Visual | Porsche silhouette (gold, subtle) |
-| Expression | Smirking, slightly sheepish |
-| Mood | Confident confession |
-
-### W3: The System
-| Element | Specification |
-|---------|---------------|
-| Text | "ARE YOU INVISIBLE?" |
-| Hero Color | Yellow `#FFE135` |
-| Visual | Fading ghost logo |
-| Expression | Concerned, questioning |
-| Mood | Diagnostic concern |
-
-### W4: Case Study
-| Element | Specification |
-|---------|---------------|
-| Text | "NOW #1" |
-| Hero Color | Gold `#C9A86C` |
-| Visual | Trophy/medal (gold, subtle) |
-| Expression | Impressed, satisfied |
-| Mood | Quiet victory |
-
-### W5: Contrarian
-| Element | Specification |
-|---------|---------------|
-| Text | "I TRACK THIS NOW" |
-| Hero Color | Teal `#00D4FF` |
-| Visual | Faded Google G → glowing metric |
-| Expression | Relaxed smirk |
-| Mood | Insider knowledge |
-
-### W6: Deep Dive
-| Element | Specification |
-|---------|---------------|
-| Text | "DO THIS FIRST" |
-| Hero Color | Yellow `#FFE135` |
-| Visual | Arrow or "1" badge |
-| Expression | Serious, pointing |
-| Mood | Authority, mentor |
-
-### W7: 100 Brands
-| Element | Specification |
-|---------|---------------|
-| Text | "HALF ARE LOSING" |
-| Hero Color | Red `#FF4444` |
-| Visual | Downward graph |
-| Expression | Serious, concerned |
-| Mood | Data-backed concern |
+- **Pure black (#000000).** Not navy. Not dark gray. Not gradient. Black.
+- The only "color" comes from icon glows bleeding softly into the black
+- No patterns, no textures, no vignettes
 
 ---
 
-## Freeze Frame Selection
+## Imagen Prompt Template
 
-### What to Look For
+Use this structure for every thumbnail generation:
 
-| Video Type | Expression | Body |
-|------------|------------|------|
-| **Confidence** | Slight smirk, direct eye contact | Relaxed |
-| **Concern/Warning** | Furrowed brow, serious | Leaning slightly |
-| **Success/Proof** | Impressed, eyebrows raised | Open |
-| **Authority** | Serious, determined | Pointing (if possible) |
-| **Knowing/Secret** | One eyebrow up, smirk | Confident |
+```
+YouTube thumbnail on pure black background. [LAYOUT DESCRIPTION - icons,
+positions, sizes]. [ICON DESCRIPTIONS - each icon's color, symbol, glow].
+Above [or position], clean text reading "[TEXT IN ALL CAPS]" in the Porsche font. ALL CAPS.
+ALL CAPS. The text has a very smooth subtle gradient from bright white at
+the top to light silver-gray at the bottom, with a very soft diffused white
+glow behind it. The gradient must be very gradual and smooth, not abrupt.
+Pure black background. Minimal, glossy, premium Apple aesthetic. No noise,
+no borders, no people, no faces. Professional YouTube thumbnail 1920x1080.
+```
 
-### Technical Requirements
+**Always specify:**
+- "Porsche font"
+- "ALL CAPS"
+- "very smooth subtle gradient from bright white to light silver-gray"
+- "very gradual and smooth, not abrupt"
+- "pure black background"
+- "glossy 3D rounded-corner app icons"
+- "No people, no faces"
 
-- Eyes fully open
-- Not mid-word (mouth looks weird)
-- Sharp focus (no motion blur)
-- Good lighting on face
-- Direct eye contact with camera
+---
 
-### Never Use
+## Getting Inspiration
 
-- Shocked/screaming (clickbait, repels business audience)
-- Eyes closed or half-closed
-- Looking off-camera
-- Blurry/motion-affected
-- Mid-blink
+**Do NOT copy thumbnails from channels in your niche.** If 5 Claude Code channels all have the same thumbnail style, hopping on that train makes you a copycat.
+
+**Instead:**
+1. Browse channels in completely different niches (cooking, fitness, finance, gaming)
+2. Find thumbnail concepts that catch YOUR eye
+3. Adapt the concept to your topic
+
+**Key reference:** AntiGravity channel - glossy icons on black, clean chrome text
+
+---
+
+## Pre-Publish Testing
+
+1. **thumbsup.tv** - Upload title + thumbnail, see how it looks on a simulated YouTube homepage
+2. **Mobile check** - View at 160x90px. Can you read the text?
+3. **Competitor check** - Search your target keyword. Does yours look different?
+4. **5-second test** - Show someone for 5 seconds. Can they tell what the video is about?
 
 ---
 
 ## Quality Checklist
 
-Before publishing ANY thumbnail:
+### Concept
+- [ ] Uses 2-3 thumbnail types (not just one)
+- [ ] 1+1=3 rule passes (text doesn't repeat title)
+- [ ] Creates a "journey" - viewer wants to know what happens next
 
 ### Text
-- [ ] Hero text has 6px black stroke
-- [ ] Hero text has heavy drop shadow (12px, 90% black)
-- [ ] Hero text has color-matched outer glow
-- [ ] Hero text is 25-40% of frame height
-- [ ] Secondary text has 4px stroke + shadow
-- [ ] All text readable at 160x90px
+- [ ] ALL CAPS
+- [ ] Porsche font
+- [ ] Smooth white-to-silver gradient (not abrupt)
+- [ ] Soft diffused glow behind text
+- [ ] 3-5 words max
+- [ ] Readable at 160x90px
 
-### Color
-- [ ] Cinematic color grade applied
-- [ ] Blacks crushed to navy (not pure black)
-- [ ] Contrast increased
-- [ ] Dark vignette around edges
+### Visuals
+- [ ] Glossy 3D iOS-style app icons
+- [ ] Each icon has its own color glow
+- [ ] Pure black background (#000000)
+- [ ] No faces, no people
+- [ ] Clean spacing, icons breathe
 
-### Composition
-- [ ] You on right 40% of frame
-- [ ] Text on upper-left
-- [ ] ONE visual metaphor only
-- [ ] Bottom-right clear for timestamp
-- [ ] 1+1=3 rule followed (complements title)
-
-### Overall
-- [ ] Looks like Netflix, not webcam
-- [ ] Professional, not clickbait
+### Testing
+- [ ] Checked on thumbsup.tv
+- [ ] Readable at mobile size
+- [ ] Looks different from competitor thumbnails
 - [ ] Would stop YOUR scroll
 
 ---
@@ -280,39 +261,34 @@ Before publishing ANY thumbnail:
 
 | Category | Never | Why |
 |----------|-------|-----|
-| **Text** | Flat text without effects | Looks amateur |
-| **Text** | Thin strokes (under 4px) | Disappears on mobile |
+| **Style** | Cinematic color grading / Netflix look | Not our aesthetic |
+| **Style** | Heavy strokes, drop shadows, outer glows | Looks like gaming thumbnails |
+| **Style** | Navy/dark backgrounds (use pure black) | Doesn't match Apple aesthetic |
+| **Text** | Lowercase or mixed case | Always ALL CAPS |
+| **Text** | Abrupt chrome gradient | Must be smooth and gradual |
 | **Text** | Repeating the title | Wastes persuasion real estate |
-| **Text** | More than 5 words | Unreadable |
-| **Face** | Shocked/screaming | Clickbait, repels buyers |
-| **Face** | Changing your expression | Looks fake |
+| **Text** | More than 5 words | Unreadable at mobile |
+| **Face** | Adding face to thumbnail (for now) | Zero recognition at 0 subs |
 | **Visual** | Red arrows and circles | 2015 YouTube |
-| **Visual** | Multiple competing elements | Confusing |
-| **Color** | Ungraded raw footage | Looks amateur |
-| **Color** | Pure black (#000000) | Too harsh |
-| **Color** | Neon/saturated colors | Not premium |
+| **Visual** | Busy backgrounds or patterns | Competes with icons |
+| **Concept** | Using only one thumbnail type | Won't stand out |
+| **Concept** | Copying competitors in your niche | Becomes a copycat |
 
 ---
 
-## Reference Channels
+## Face Policy
 
-Study these for professional thumbnail style:
+**Current:** No face. Channel has zero subs, face adds no recognition value.
 
-| Channel | What They Do Well |
-|---------|-------------------|
-| **Alex Hormozi** | Heavy text effects, clean composition |
-| **Codie Sanchez** | Professional color grade, bold text |
-| **Colin and Samir** | Cinematic quality, Netflix-level |
-| **The Futur** | Premium aesthetic, minimal |
-| **Ed Lawrence** | Clean, professional, "boring but effective" |
+**When to add face:** Revisit when channel reaches ~2-5K subscribers. At that point, viewers start recognizing you and the face becomes a scroll-stopper instead of dead space.
+
+**When face is added:** Face goes on right third, icons and text adjust to left 60%. Same black background, same icon style, same text style.
 
 ---
 
 ## A/B Testing Protocol
 
-When testing thumbnails:
-
-1. **Test ONE variable** at a time (text OR color OR expression)
+1. **Test ONE variable** at a time (text OR layout OR icon style)
 2. **Minimum 48 hours** with sufficient impressions
 3. **Check mobile CTR specifically** (70%+ views are mobile)
 4. **Document winners** and update this style guide

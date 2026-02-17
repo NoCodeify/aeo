@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   useCurrentFrame,
   useVideoConfig,
   interpolate,
@@ -63,7 +64,7 @@ export const JumpZoom: React.FC<JumpZoomProps> = ({
           overflow: "hidden",
         }}
       >
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom}
           pauseWhenBuffering

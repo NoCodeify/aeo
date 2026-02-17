@@ -1,7 +1,8 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  OffthreadVideo,
+
   staticFile,
 } from "remotion";
 
@@ -26,7 +27,7 @@ export const JumpCut: React.FC<JumpCutProps> = ({
           overflow: "hidden",
         }}
       >
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom}
           pauseWhenBuffering

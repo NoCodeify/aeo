@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill, OffthreadVideo, staticFile, useCurrentFrame, interpolate } from "remotion";
+import { AbsoluteFill, staticFile, useCurrentFrame, interpolate } from "remotion";
+import { SmartVideo } from "../use-proxy";
 
 interface BrollFullProps {
   brollSrc: string;
@@ -29,7 +30,7 @@ export const BrollFull: React.FC<BrollFullProps> = ({
     <AbsoluteFill>
       {/* B-roll video - full screen, no loop */}
       <AbsoluteFill style={{ opacity }}>
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(brollSrc)}
           pauseWhenBuffering
           muted
@@ -38,7 +39,7 @@ export const BrollFull: React.FC<BrollFullProps> = ({
       </AbsoluteFill>
 
       {/* Audio from speaker video (hidden) */}
-      <OffthreadVideo
+      <SmartVideo
         src={staticFile(speakerSrc)}
         startFrom={startFrom}
         pauseWhenBuffering

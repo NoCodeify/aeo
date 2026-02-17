@@ -1,6 +1,7 @@
 ---
 name: youtube-script-writer
-description: Write YouTube video scripts using search-first, stakes-based methodology. Use when the user needs to write a video script, create hooks/intros, or structure video content. Optimizes for both search ranking (keyword-targeted titles) and retention (escalating stakes, mid-video climax, show-don't-explain).
+description: Write YouTube video scripts using search-first, stakes-based methodology. Use when the user says "write script", "video script", "create hook", "script intro", or "write video". Optimizes for search ranking and retention. Do NOT use for editing guidance (use youtube-video-editor) or video concept ideation (use youtube-video-ideation).
+allowed-tools: Read, Glob, Grep
 ---
 
 # YouTube Script Writer (Search-First + Stakes-Based)

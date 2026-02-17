@@ -1,8 +1,9 @@
 import React from "react";
+import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
   Audio,
-  OffthreadVideo,
+
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -308,13 +309,13 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({
       {/* Winner reveal SFX */}
       {hasWinner && (
         <Sequence from={winnerRevealFrame} durationInFrames={15}>
-          <Audio src={staticFile("sfx/achievement-ding.mp3")} volume={0.4} />
+          <Audio src={staticFile("sfx/achievement-ding.mp3")} volume={0.15} />
         </Sequence>
       )}
 
       {/* Speaker audio (hidden) */}
       {speakerSrc && (
-        <OffthreadVideo
+        <SmartVideo
           src={staticFile(speakerSrc)}
           startFrom={startFrom ?? 0}
           pauseWhenBuffering
