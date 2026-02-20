@@ -98,6 +98,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
   const renderSlideFull = () => (
     <Img
       src={staticFile(slideSrc)}
+      delayRenderRetries={3}
       style={{
         width: "100%",
         height: "100%",
@@ -151,6 +152,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
           >
             <Img
               src={staticFile(slideSrc)}
+              delayRenderRetries={3}
               style={{
                 width: "100%",
                 height: "100%",
@@ -226,6 +228,7 @@ export const ZoomTransition: React.FC<ZoomTransitionProps> = ({
           >
             <Img
               src={staticFile(slideSrc)}
+              delayRenderRetries={3}
               style={{
                 width: "100%",
                 height: "100%",

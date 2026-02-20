@@ -30,8 +30,8 @@
 ## Title & Thumbnail (1+1=3 Rule)
 
 ### Title
-**Title:** "Claude Code Use Cases: 5 Things I Actually Built"
-(52 characters)
+**Title:** "Claude Code Use Cases That Actually Make Money"
+(47 characters)
 
 **Title Checklist:**
 - [x] Keyword in first 5 words ("Claude Code Use Cases")

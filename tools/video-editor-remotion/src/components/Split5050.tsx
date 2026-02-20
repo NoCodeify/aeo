@@ -43,6 +43,7 @@ export const Split5050: React.FC<Split5050Props> = ({
       >
         <Img
           src={staticFile(slideSrc)}
+          delayRenderRetries={3}
           style={{
             width: "100%",
             height: "100%",

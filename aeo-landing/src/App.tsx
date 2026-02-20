@@ -18,6 +18,8 @@ import { AEOAudit } from "./pages/AEOAudit";
 import { AEOConsulting } from "./pages/AEOConsulting";
 import { Learn } from "./pages/Learn";
 import { NotFound } from "./pages/NotFound";
+import { SkoolBanner } from "./pages/SkoolBanner";
+import { SkoolIcon } from "./pages/SkoolIcon";
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
       <Route path="/report/fuegenix" element={<FuegenixReport />} />
       <Route path="/banner" element={<LinkedInBanner />} />
       <Route path="/yt-banner" element={<YouTubeBanner />} />
+      <Route path="/skool-banner" element={<SkoolBanner />} />
+      <Route path="/skool-icon" element={<SkoolIcon />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     </>

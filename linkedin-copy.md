@@ -12,40 +12,45 @@ Hi, I'm Sohaib.
 
 I started building with Claude Code in 2025.
 
-By 2026 I'd built an entire business infrastructure with it - a $100K/yr SaaS, agentic CI/CD pipelines, a consulting delivery system, and an NFC smart lock.
+By 2026 I'd built an entire business infrastructure with it - a $100K/yr SaaS, automated client delivery pipelines, and even hardware firmware for a smart lock.
 
-Now I set up Claude Code systems for agency owners, consultants, and business owners so they can do the same.
+Now I set up Claude Code for agency owners, consultants, and business owners so they can automate the work that eats their time.
 
-All you need is a business with repeatable workflows and a Claude Code subscription.
+All you need is a business with repeatable workflows.
 
-I do done-with-you Claude Code implementation. In 2 weeks you'll have custom agents, automated workflows, and a CLAUDE.md that makes Claude Code understand your business.
+I do done-with-you setups. In 2 weeks you'll have AI handling the stuff you used to do manually - client onboarding, reporting, content, internal operations, whatever your bottleneck is.
 
-What I've built (the portfolio that IS the pitch):
+What I've built:
 
-1) DMChamp - a SaaS generating $100K/yr in real revenue. Real customers, real MRR. Maintained by an agentic CI/CD pipeline where bugs get detected, fixed, and the customer gets notified automatically. Human QA only.
+1) DMChamp - a SaaS doing $100K/yr. Real customers, real recurring revenue. Bugs get detected and fixed automatically. Customers get notified. I barely touch it.
 
-2) A full consulting delivery system - custom AI agents, automated workflows, and API integrations powering a complete client pipeline. One system runs an entire consulting engagement.
+2) A full consulting delivery system - client intake, project tracking, deliverables, and reporting. One system runs an entire engagement start to finish.
 
-3) An NFC smart lock - battery-less hardware where the phone charges the lock via NFC, authenticates, and unlocks. Not just software. Claude Code built the firmware.
+3) An NFC smart lock - the phone charges the lock, authenticates, and unlocks. Not just software. Claude Code built the firmware too.
 
-4) A video production pipeline, cold outreach system, and marketing automation stack. All connected, all automated.
+4) A video production pipeline, cold outreach system, and marketing automation stack. All connected.
 
-5) FueGenix - took a premium brand from invisible to globally recommended by ChatGPT and Gemini. Built the entire audit and optimization infrastructure with Claude Code.
+5) FueGenix - took a premium brand from invisible to globally recommended by ChatGPT and Gemini. Built the entire system behind it with Claude Code.
 
 What a done-with-you setup looks like:
 
-1. Audit your workflows (what you do daily/weekly)
-2. Build your custom CLAUDE.md (Claude Code learns your business)
-3. Create 3-5 custom agents for your specific workflows
-4. Set up your project structure, skills, and slash commands
-5. 2x 90-minute live sessions (screen-share, build together)
-6. 30 days of async support
+1. I audit your workflows - what you do daily and weekly
+2. I build a system where Claude Code understands your business
+3. I create custom AI workflows for your specific bottlenecks
+4. We do 2x 90-minute live sessions where we build it together
+5. You get 30 days of support after
 
-Want Claude Code set up for YOUR business?
+Want your business running on Claude Code?
 
 DM me or book a call:
 
 https://sohaibahmad.me/
+
+---
+
+## Link Text (for bio link)
+
+`Work With Me` -> https://sohaibahmad.me/
 
 ---
 

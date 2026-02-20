@@ -1,0 +1,1216 @@
+[
+  {
+    "type": "speaker_full",
+    "start": 0,
+    "end": 2.64,
+    "_note": "HOOK: 'So after...' - direct to camera, sets up authority"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 2.64,
+    "end": 2.94,
+    "zoom": 1.20,
+    "_note": "Punch on '1,158 hours' - the big number"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 2.94,
+    "end": 3.84,
+    "zoom": 1.20,
+    "_note": "HOLD zoom on '1,158 hours in Claude Code'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 2.94,
+    "end": 5.4,
+    "text": "1,158 HOURS",
+    "style": "center",
+    "_note": "Big number overlay - THE hook stat (starts on zoom hold)"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 3.84,
+    "end": 4.14,
+    "zoom": 1.20,
+    "_note": "Release zoom"
+  },
+  {
+    "type": "broll_full",
+    "start": 4.14,
+    "end": 8.88,
+    "content": "screen-recordings/screen-01-hours-tracked.mp4",
+    "_note": "SCREEN 01: Hours tracked screen showing 1,158 hours - proof"
+  },
+  {
+    "type": "speaker_full",
+    "start": 8.88,
+    "end": 11.76,
+    "_note": "'is outdated. The system changes every few months'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 11.76,
+    "end": 14.48,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'The workflow shift. What work in October'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 9.24,
+    "end": 11.76,
+    "text": "ALREADY OUTDATED",
+    "style": "center",
+    "_note": "Punch text on 'outdated' - hooks viewer with contrarian claim"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 14.48,
+    "end": 22.06,
+    "zoomStart": 1.06,
+    "zoomEnd": 1.10,
+    "_note": "'does not work in February...fundamentally different ways of working'"
+  },
+  {
+    "type": "slide_full",
+    "start": 22.06,
+    "end": 26.88,
+    "content": "slides/slide-01.jpg",
+    "_note": "SLIDE 01: Three icons - SaaS, govt, business hub. '3 production systems. A SaaS that does 100 grand'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 26.88,
+    "end": 29.13,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'A government access control system and a full business'"
+  },
+  {
+    "type": "sfx",
+    "start": 22.06,
+    "end": 23.06,
+    "content": "shimmer",
+    "volume": 0.3,
+    "_note": "Shimmer on slide reveal - three production systems"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 29.13,
+    "end": 33.85,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'a full business running through AI agents and custom servers'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 33.85,
+    "end": 37.01,
+    "_note": "'This is everything that actually matters. And there's one thing...'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 37.01,
+    "end": 40.61,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.08,
+    "_note": "'everyone recommends that made everything worse for me. I'll get to that' - tension build to chapter break"
+  },
+
+  {
+    "type": "sfx",
+    "start": 40.61,
+    "end": 41.61,
+    "content": "whoosh",
+    "volume": 0.35,
+    "_note": "Whoosh: Chapter transition - DM Champ"
+  },
+  {
+    "type": "speaker_full",
+    "start": 40.61,
+    "end": 42.49,
+    "_note": "Base layer under chapter card 1"
+  },
+  {
+    "type": "chapter_card",
+    "start": 40.61,
+    "end": 42.49,
+    "title": "THE BEGINNING",
+    "number": 1,
+    "subtitle": "Where it all started",
+    "_note": "Chapter 1 card - DM Champ section"
+  },
+  {
+    "type": "speaker_full",
+    "start": 42.49,
+    "end": 46.09,
+    "_note": "'My first project was DM Champ. It's an AI sales agent.'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 43.97,
+    "end": 46.09,
+    "text": "DM CHAMP",
+    "style": "caption",
+    "_note": "Product name callout on mention"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 46.09,
+    "end": 55.36,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'You connect it to WhatsApp, Instagram...Closes deals, makes about 100 grand a year'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 52.37,
+    "end": 55.36,
+    "text": "$100K/YR",
+    "style": "center",
+    "_note": "Revenue stat overlay - big impact number"
+  },
+  {
+    "type": "speaker_full",
+    "start": 55.36,
+    "end": 59.26,
+    "_note": "'Now DM Champ already existed when I started using Claude Code'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 59.26,
+    "end": 62.06,
+    "text": "EXISTING CODEBASE",
+    "style": "caption",
+    "_note": "Key concept callout - working on existing code"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 59.26,
+    "end": 63.14,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.04,
+    "_note": "'existing code base. Code was kind of a mess because it was originally'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 63.14,
+    "end": 66.94,
+    "_note": "'built with a no-code tool called FlutterFlow. And then we exported it'"
+  },
+  {
+    "type": "broll_full",
+    "start": 66.94,
+    "end": 72.0,
+    "content": "broll/code-on-screen.mp4",
+    "_note": "PEXELS: Close-up code on screen - existing codebase context"
+  },
+  {
+    "type": "broll_full",
+    "start": 71.7,
+    "end": 81.2,
+    "content": "screen-recordings/screen-02a-terminal-scan.mp4",
+    "_note": "SCREEN 02: Terminal running claude, scanning repo - 'open the repo and run Claude Code'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 81.2,
+    "end": 86.3,
+    "_note": "'just init and go. Did it break stuff? Yeah but so do normal developers'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 86.3,
+    "end": 91.7,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'That's not a Claude Code problem. And with the latest models, it barely makes mistakes'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 91.7,
+    "end": 96.9,
+    "_note": "'But here's where it gets interesting. On top of DM Champ I built a separate system'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 94.0,
+    "end": 96.9,
+    "text": "6 AI AGENTS",
+    "style": "center",
+    "_note": "Number callout on '6 AI agents that handle the entire support pipeline'"
+  },
+  {
+    "type": "split_5050_right",
+    "start": 96.9,
+    "end": 107.4,
+    "content": "slides/slide-02.jpg",
+    "_note": "SLIDE 02: Flow diagram - bug > triage > fix > notify. 'one agent figures out what's wrong, another writes the fix'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 107.4,
+    "end": 112.7,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'I wake up, check the fix, approve it. Done. 6 agents, 4 custom MCPs'"
+  },
+  {
+    "type": "sfx",
+    "start": 111.67,
+    "end": 112.17,
+    "content": "boop",
+    "volume": 0.4,
+    "_note": "Boop on 'done' - punctuate the agent pipeline completion"
+  },
+  {
+    "type": "broll_full",
+    "start": 112.7,
+    "end": 117.8,
+    "content": "screen-recordings/screen-03-dmchamp-agents.mp4",
+    "_note": "SCREEN 03: dm-champ-agents repo, src/publish/ with 6 handlers - '6 agents, 4 custom MCPs'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 117.8,
+    "end": 123.0,
+    "_note": "'setup file for this project is just a basic CLAUDE.md explaining the repo'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 123.0,
+    "end": 129.91,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.08,
+    "_note": "'Nothing fancy. When you're starting out, you don't need a complex setup. You just need to start'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 126.4,
+    "end": 129.91,
+    "text": "JUST START",
+    "style": "center",
+    "_note": "Key message callout - motivational beat"
+  },
+
+  {
+    "type": "sfx",
+    "start": 129.91,
+    "end": 130.91,
+    "content": "whoosh",
+    "volume": 0.35,
+    "_note": "Whoosh: Chapter transition - The Mistake"
+  },
+  {
+    "type": "speaker_full",
+    "start": 129.91,
+    "end": 131.7,
+    "_note": "Base layer under chapter card 2"
+  },
+  {
+    "type": "chapter_card",
+    "start": 129.91,
+    "end": 131.7,
+    "title": "THE MISTAKE",
+    "number": 2,
+    "subtitle": "What cost me weeks",
+    "accentColor": "#e63946",
+    "_note": "Chapter 2 card - the autonomy mistake"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 131.7,
+    "end": 136.8,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.08,
+    "_note": "'Now here's where most people go wrong. And I made this exact mistake'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 136.8,
+    "end": 143.05,
+    "_note": "'government access control system. Tap to enter badges, admin dashboard, mobile app, the whole thing'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 139.0,
+    "end": 143.05,
+    "text": "8,000+ FILES",
+    "style": "center",
+    "_note": "Big number - emphasis on project scale"
+  },
+  {
+    "type": "broll_full",
+    "start": 143.05,
+    "end": 149.21,
+    "content": "broll/access-card-door.mp4",
+    "_note": "PEXELS: Person tapping access card on door reader - government project visual"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 149.21,
+    "end": 155.5,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.08,
+    "_note": "'Let it build everything. Fully autonomous. End to end. No human checking anything'"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 155.5,
+    "end": 155.8,
+    "zoom": 1.20,
+    "_note": "Punch on 'it does not work' - the big reveal"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 155.8,
+    "end": 158.0,
+    "zoom": 1.20,
+    "_note": "HOLD on 'it does not work'"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 155.8,
+    "end": 158.0,
+    "content": "gifs/disappointed.mp4",
+    "position": "bottom-right",
+    "size": 0.25,
+    "_note": "GIF: disappointed reaction on 'it does not work'"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 158.0,
+    "end": 158.3,
+    "zoom": 1.20,
+    "_note": "Release zoom"
+  },
+  {
+    "type": "speaker_full",
+    "start": 158.3,
+    "end": 166.2,
+    "_note": "'I know that's not what you want to hear...everyone telling you to let AI do everything...for anything going into production'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 166.2,
+    "end": 171.3,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.04,
+    "_note": "'bottleneck is checking whether the code actually works. Can write tests but basic'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 167.0,
+    "end": 170.0,
+    "text": "THE BOTTLENECK",
+    "style": "center",
+    "_note": "Concept callout - what actually slows you down"
+  },
+  {
+    "type": "speaker_full",
+    "start": 171.3,
+    "end": 176.5,
+    "_note": "'testing the actual interface. What takes you a minute takes the AI 50 minutes. Take screenshots, analyze them'"
+  },
+  {
+    "type": "split_5050_left",
+    "start": 176.5,
+    "end": 186.6,
+    "content": "slides/slide-03.jpg",
+    "_note": "SLIDE 03: AI builds (speed icon) / Human verifies (eye icon) - 'AI builds fast, human verifies'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 186.6,
+    "end": 191.6,
+    "_note": "'Don't skip the verify step. I tried. It cost me weeks'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 191.6,
+    "end": 196.7,
+    "_note": "'Cost me weeks. But that wasn't even the real lesson. The real lesson was something I stumbled into by accident'"
+  },
+
+  {
+    "type": "sfx",
+    "start": 196.7,
+    "end": 197.7,
+    "content": "whoosh",
+    "volume": 0.35,
+    "_note": "Whoosh: Chapter transition - Structure"
+  },
+  {
+    "type": "speaker_full",
+    "start": 196.7,
+    "end": 199.3,
+    "_note": "Base layer under chapter card 3"
+  },
+  {
+    "type": "chapter_card",
+    "start": 196.7,
+    "end": 199.3,
+    "title": "THE STRUCTURE",
+    "number": 3,
+    "subtitle": "What changes everything",
+    "_note": "Chapter 3 card - the structure unlock"
+  },
+  {
+    "type": "speaker_full",
+    "start": 199.3,
+    "end": 207.1,
+    "_note": "'Working on this government project. 27 features across the app. Claude keeps losing context'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 202.0,
+    "end": 205.0,
+    "text": "27 FEATURES",
+    "style": "center",
+    "_note": "Number callout - scale of the project"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 207.1,
+    "end": 212.1,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'doesn't know what a feature is supposed to do. Mixing things up. Code that runs but doesn't fit'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 212.1,
+    "end": 219.86,
+    "_note": "'model isn't stupid. Really smart now. So the problem has to be on my end. So I reorganized everything'"
+  },
+  {
+    "type": "slide_full",
+    "start": 219.86,
+    "end": 233.6,
+    "content": "slides/slide-04.jpg",
+    "_note": "SLIDE 04: Folder tree diagram - each folder labeled (auth, NFC, permissions, cards, locations)"
+  },
+  {
+    "type": "broll_full",
+    "start": 233.3,
+    "end": 241.8,
+    "content": "screen-recordings/screen-04-features-folder.mp4",
+    "_note": "SCREEN 04: VS Code features/ folder expanded, 15 folders - '15 features on the backend'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 241.8,
+    "end": 248.9,
+    "_note": "'one self-contained. But here's the part that made a real difference. Every single feature folder gets its own instruction file'"
+  },
+  {
+    "type": "broll_full",
+    "start": 248.6,
+    "end": 259.2,
+    "content": "screen-recordings/screen-05-feature-claudemd.mp4",
+    "_note": "SCREEN 05: Per-feature CLAUDE.md open, scrolling through - 'what the feature is for, how it works'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 256.0,
+    "end": 259.2,
+    "text": "27 CONTEXT FILES",
+    "style": "caption",
+    "_note": "Number callout - context files across the project"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 259.2,
+    "end": 264.5,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'when Claude works on the access badge feature, it automatically knows all of that context'"
+  },
+  {
+    "type": "split_5050_right",
+    "start": 264.5,
+    "end": 275.0,
+    "content": "slides/slide-05.jpg",
+    "_note": "SLIDE 05: Claude + context = clean code (check) / Claude - context = compiles but wrong (X)"
+  },
+  {
+    "type": "sfx",
+    "start": 269.9,
+    "end": 270.9,
+    "content": "shimmer",
+    "volume": 0.3,
+    "_note": "Shimmer: 'That was the unlock' - insight reveal"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 275.0,
+    "end": 275.3,
+    "zoom": 1.15,
+    "_note": "Punch on 'No context? Code that runs but makes no sense'"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 275.3,
+    "end": 278.0,
+    "zoom": 1.15,
+    "_note": "HOLD zoom on key insight"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 278.0,
+    "end": 278.3,
+    "zoom": 1.15,
+    "_note": "Release zoom"
+  },
+  {
+    "type": "speaker_full",
+    "start": 278.3,
+    "end": 283.9,
+    "_note": "'The other thing I did is project management inside the repo. Not Jira. Not Linear. Just text files'"
+  },
+  {
+    "type": "broll_full",
+    "start": 283.9,
+    "end": 291.0,
+    "content": "screen-recordings/screen-06-tasks-directory.mp4",
+    "_note": "SCREEN 06: TASKS/ directory, numbered files with status emojis - '107 task files'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 285.7,
+    "end": 291.0,
+    "text": "107 TASKS",
+    "style": "caption",
+    "_note": "Number callout - task files in markdown"
+  },
+  {
+    "type": "speaker_full",
+    "start": 291.0,
+    "end": 296.2,
+    "_note": "'Why not a real project management tool? Because Claude Code can read local files instantly'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 296.2,
+    "end": 301.4,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.05,
+    "_note": "'The moment you make it talk to an external tool through API, it's slower and less reliable'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 301.4,
+    "end": 306.7,
+    "_note": "'Built custom integration with ClickUp, it's still slower than just reading a text file'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 301.4,
+    "end": 306.7,
+    "text": "LOCAL > EXTERNAL",
+    "style": "center",
+    "_note": "Key principle callout - local is king"
+  },
+  {
+    "type": "speaker_full",
+    "start": 306.7,
+    "end": 311.8,
+    "_note": "'than just reading a text file. For an AI, local is king'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 311.8,
+    "end": 320.0,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.10,
+    "_note": "'got a SaaS running, government system with proper structure, I figured this out. But then things got a lot bigger'"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 317.2,
+    "end": 320.0,
+    "content": "gifs/buckle-up.mp4",
+    "position": "bottom-right",
+    "size": 0.25,
+    "_note": "GIF: 'buckle up here we go' on 'things got a lot bigger'"
+  },
+
+  {
+    "type": "speaker_full",
+    "start": 320.0,
+    "end": 325.0,
+    "_note": "MID CTA: 'Quick thing. If you're watching this and you want to set up Claude Code for a real project'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 325.0,
+    "end": 332.9,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'I'm building a community called Claudify. Real builds, not toy projects. Link in description'"
+  },
+  {
+    "type": "cta_overlay",
+    "start": 325.0,
+    "end": 332.9,
+    "text": "CLAUDIFY",
+    "subtitle": "Link in description",
+    "style": "offer",
+    "_note": "Mid-video CTA overlay - synced to 'community called Claudify'"
+  },
+
+  {
+    "type": "sfx",
+    "start": 332.9,
+    "end": 333.9,
+    "content": "whoosh",
+    "volume": 0.4,
+    "_note": "Whoosh: Major chapter transition - Business OS"
+  },
+  {
+    "type": "speaker_full",
+    "start": 332.9,
+    "end": 335.0,
+    "_note": "Base layer under chapter card 4"
+  },
+  {
+    "type": "chapter_card",
+    "start": 332.9,
+    "end": 335.0,
+    "title": "THE SYSTEM",
+    "number": 4,
+    "subtitle": "Building a business OS",
+    "_note": "Chapter 4 card - the business operating system"
+  },
+  {
+    "type": "speaker_full",
+    "start": 335.0,
+    "end": 339.0,
+    "_note": "'the third project isn't even a project. It's my entire business running through Claude Code'"
+  },
+  {
+    "type": "slide_full",
+    "start": 339.0,
+    "end": 343.5,
+    "content": "slides/slide-06.jpg",
+    "_note": "SLIDE 06: Hub diagram - center 'One Repo' with 4 spokes: Consulting, YouTube, SaaS, Client Delivery"
+  },
+  {
+    "type": "sfx",
+    "start": 343.0,
+    "end": 344.0,
+    "content": "shimmer",
+    "volume": 0.3,
+    "_note": "Shimmer on hub diagram - synced with file count reveal"
+  },
+  {
+    "type": "text_overlay",
+    "start": 339.0,
+    "end": 343.5,
+    "text": "1,066 FILES / 1 REPO",
+    "style": "caption",
+    "_note": "Number callout - 1066 files in one repo"
+  },
+  {
+    "type": "broll_full",
+    "start": 343.5,
+    "end": 353.9,
+    "content": "screen-recordings/screen-07-mcp-servers.mp4",
+    "_note": "SCREEN 07: .mcp.json showing 7 server configs - '7 custom MCP servers'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 346.0,
+    "end": 350.0,
+    "text": "7 CUSTOM SERVERS",
+    "style": "caption",
+    "_note": "Number callout on MCP server section"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 353.9,
+    "end": 359.2,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'I built these myself. One checks how brands appear in ChatGPT/Gemini. One does keyword research...'"
+  },
+  {
+    "type": "broll_full",
+    "start": 359.2,
+    "end": 366.1,
+    "content": "broll/server-room.mp4",
+    "_note": "PEXELS: Server room / data center abstract - visual metaphor for custom servers"
+  },
+  {
+    "type": "speaker_full",
+    "start": 366.1,
+    "end": 374.8,
+    "_note": "'Why build my own? Because the ones other people have made don't do what you need for real work. Every time I hit that wall'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 370.0,
+    "end": 374.8,
+    "text": "BUILD YOUR OWN",
+    "style": "center",
+    "_note": "Key principle callout - the pattern of building custom tools"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 374.8,
+    "end": 382.0,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'I ended up building my own. That's the pattern. You can use existing MCPs as a base...open source anyway'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 382.0,
+    "end": 390.5,
+    "_note": "'Now here's the big one. This goes against what basically everyone is saying right now. Everyone talks about giving agents roles'"
+  },
+  {
+    "type": "split_5050_left",
+    "start": 390.5,
+    "end": 400.8,
+    "content": "slides/slide-07.jpg",
+    "_note": "SLIDE 07: Role agents (meh ~) vs Task agents (check, specific jobs) - the contrarian insight"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 400.8,
+    "end": 406.5,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'doesn't make things noticeably better. They work, they run, but the output isn't really different'"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 400.8,
+    "end": 406.5,
+    "content": "gifs/underwhelmed.mp4",
+    "position": "bottom-right",
+    "size": 0.25,
+    "_note": "GIF: underwhelmed reaction on 'not really different from just using Claude Code directly'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 406.5,
+    "end": 414.39,
+    "_note": "'What actually makes a difference is giving agent-specific tasks. Not be a developer. It's take this transcript and generate a video timeline'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 409.0,
+    "end": 414.39,
+    "text": "TASK AGENTS",
+    "style": "center",
+    "_note": "Key concept callout - task agents over role agents"
+  },
+  {
+    "type": "broll_full",
+    "start": 414.39,
+    "end": 421.9,
+    "content": "screen-recordings/screen-08-agents-folder.mp4",
+    "_note": "SCREEN 08: .claude/agents/ folder, 14 agent files"
+  },
+  {
+    "type": "speaker_full",
+    "start": 421.9,
+    "end": 427.1,
+    "_note": "'Each agent gets specific tools and specific context. They do one thing well.'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 427.1,
+    "end": 432.3,
+    "text": "14 AGENTS / 24 SKILLS",
+    "style": "center",
+    "_note": "Big number callout - system scale"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 427.1,
+    "end": 432.3,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.04,
+    "_note": "'14 of these, plus 24 skills. A skill is a set of instructions for a specific job'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 432.3,
+    "end": 437.6,
+    "_note": "'instead of explaining how to write a video script every time'"
+  },
+  {
+    "type": "sfx",
+    "start": 443.0,
+    "end": 443.5,
+    "content": "boop",
+    "volume": 0.4,
+    "_note": "Boop on 'one skill per job' - punctuate the point"
+  },
+  {
+    "type": "speaker_full",
+    "start": 437.6,
+    "end": 443.8,
+    "_note": "'Claude just loads the skill and knows exactly what to do. Same for audits, reports, timelines. One skill per job'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 443.8,
+    "end": 448.9,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'latest evolution is task agents working together in teams. Not one agent calling another'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 448.9,
+    "end": 454.0,
+    "_note": "'Actual teams with a shared task list'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 448.9,
+    "end": 454.0,
+    "text": "AGENT TEAMS",
+    "style": "center",
+    "_note": "Concept callout - the latest evolution"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 454.0,
+    "end": 459.0,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.05,
+    "_note": "'produce this video, kicks off a team. One builds timeline, another finds GIFs'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 459.0,
+    "end": 464.1,
+    "_note": "'another one sources stock footage. They're all working in parallel'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 460.0,
+    "end": 464.1,
+    "text": "PARALLEL EXECUTION",
+    "style": "caption",
+    "_note": "Concept callout - agents working in parallel"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 464.1,
+    "end": 469.3,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'off the same task list, coordinating with each other. That feels genuinely new'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 469.3,
+    "end": 474.4,
+    "_note": "'Not managing each agent. They pick up tasks, do their work, report back'"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 474.4,
+    "end": 474.7,
+    "zoom": 1.15,
+    "_note": "Punch on 'closest thing to having an actual team'"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 474.7,
+    "end": 480.1,
+    "zoom": 1.15,
+    "_note": "HOLD on 'closest thing to an actual team. When do you use a sub-agent versus a full team?'"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 480.1,
+    "end": 480.4,
+    "zoom": 1.15,
+    "_note": "Release zoom"
+  },
+  {
+    "type": "comparison_table",
+    "start": 480.4,
+    "end": 492.9,
+    "leftLabel": "Sub-Agent",
+    "rightLabel": "Team",
+    "rows": [
+      {"left": "One-off tasks", "right": "Back-and-forth", "rightWins": true},
+      {"left": "Context is gone", "right": "Shared context", "rightWins": true},
+      {"left": "Fire and forget", "right": "Coordinating", "rightWins": true}
+    ],
+    "_note": "Comparison table: sub-agent vs team - 'A sub-agent is for one-off tasks, context gone. A team is back-and-forth'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 492.9,
+    "end": 498.3,
+    "_note": "'building on what the others did. That's the difference'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 498.3,
+    "end": 503.6,
+    "_note": "'And here's something nobody talks about. Just like your code accumulates technical debt, your Claude Code setup does too'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 498.3,
+    "end": 503.6,
+    "text": "AI SETUP DEBT",
+    "style": "center",
+    "_note": "Key concept callout - the hidden maintenance cost"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 503.6,
+    "end": 509.2,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.05,
+    "_note": "'Skills get outdated. Agents reference old patterns. Instructions contradicting each other'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 509.2,
+    "end": 514.3,
+    "_note": "'Something 3 months ago now wrong, AI following old instructions instead of new ones'"
+  },
+  {
+    "type": "broll_full",
+    "start": 514.3,
+    "end": 526.2,
+    "content": "screen-recordings/screen-09-maintaining-md.mp4",
+    "_note": "SCREEN 09: MAINTAINING.md scrolling through - '346-line document just for how to maintain the AI setup'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 517.0,
+    "end": 521.1,
+    "text": "346 LINES",
+    "style": "caption",
+    "_note": "Number callout - maintenance doc size"
+  },
+  {
+    "type": "speaker_full",
+    "start": 526.2,
+    "end": 531.5,
+    "_note": "'And sometimes Claude creates new shortcuts on its own. Noticed a workflow I kept repeating, made a command without me asking'"
+  },
+  {
+    "type": "slide_full",
+    "start": 531.5,
+    "end": 541.8,
+    "content": "slides/slide-08.jpg",
+    "_note": "SLIDE 08: Timeline arrow - 'approve every edit, bypass, plan mode, just say it in plain English'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 541.8,
+    "end": 546.8,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.06,
+    "_note": "'Now I just say think about this first in plain English and it does'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 546.8,
+    "end": 552.1,
+    "_note": "'it even goes into plan mode itself. That's 4 different workflows in less than a year'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 552.1,
+    "end": 558.43,
+    "_note": "'4 different workflows in less than a year. Tutorial from 6 months ago = probably teaching you the old way'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 552.1,
+    "end": 556.0,
+    "text": "4 WORKFLOWS / 1 YEAR",
+    "style": "center",
+    "_note": "Number callout - pace of change"
+  },
+
+  {
+    "type": "sfx",
+    "start": 558.43,
+    "end": 559.43,
+    "content": "whoosh",
+    "volume": 0.35,
+    "_note": "Whoosh: Chapter transition - The Trap payoff"
+  },
+  {
+    "type": "speaker_full",
+    "start": 558.43,
+    "end": 560.5,
+    "_note": "Base layer under chapter card 5"
+  },
+  {
+    "type": "chapter_card",
+    "start": 558.43,
+    "end": 560.5,
+    "title": "THE TRAP",
+    "number": 5,
+    "subtitle": "The thing that made everything worse",
+    "accentColor": "#e63946",
+    "_note": "Chapter 5 card - the trap payoff"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 560.5,
+    "end": 567.4,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.08,
+    "_note": "'remember that one thing I said at the beginning? The one thing everyone recommends that made everything worse?'"
+  },
+  {
+    "type": "slide_full",
+    "start": 567.4,
+    "end": 573.8,
+    "content": "slides/slide-09.jpg",
+    "_note": "SLIDE 09: Overloaded toolbox - too many MCP servers, confused AI in the middle"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 573.8,
+    "end": 574.1,
+    "zoom": 1.20,
+    "_note": "Punch on 'it's actually the opposite'"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 574.1,
+    "end": 579.1,
+    "zoom": 1.20,
+    "_note": "HOLD on 'You give Claude 40 tools and it doesn't know which ones to use. Quality goes down'"
+  },
+  {
+    "type": "gif_overlay",
+    "start": 575.5,
+    "end": 579.1,
+    "content": "gifs/mind-blown.mp4",
+    "position": "bottom-right",
+    "size": 0.25,
+    "_note": "GIF: mind blown on 'Quality goes down' - ironic reaction"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 579.1,
+    "end": 579.4,
+    "zoom": 1.20,
+    "_note": "Release zoom"
+  },
+  {
+    "type": "speaker_full",
+    "start": 579.4,
+    "end": 589.3,
+    "_note": "'Government project has 15 agents but didn't start with 15. Started with zero. Hit a wall, added one. Hit another wall, added another. Every single one earned its place'"
+  },
+  {
+    "type": "text_overlay",
+    "start": 579.4,
+    "end": 584.2,
+    "text": "LESS IS MORE",
+    "style": "center",
+    "_note": "Key principle callout - the trap payoff message"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 589.3,
+    "end": 594.6,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.05,
+    "_note": "'Start with nothing. Add things only when you feel the pain of not having them'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 594.6,
+    "end": 599.8,
+    "_note": "'Less is more until it isn't. So that's 1,158 hours compressed'"
+  },
+  {
+    "type": "slide_full",
+    "start": 599.8,
+    "end": 610.1,
+    "content": "slides/slide-10.jpg",
+    "_note": "SLIDE 10: Three steps - 1. Init and go > 2. Structure everything > 3. Build a system"
+  },
+  {
+    "type": "speaker_full",
+    "start": 610.1,
+    "end": 615.5,
+    "_note": "'Then you structure everything. One folder per feature. Context files everywhere. Tasks inside the repo'"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 615.5,
+    "end": 620.7,
+    "zoomStart": 1.0,
+    "zoomEnd": 1.05,
+    "_note": "'always a human checking anything that goes to production. And eventually you build a system around it'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 620.7,
+    "end": 625.9,
+    "_note": "'Custom MCP servers when the generic ones don't cut it. Task agents instead of role agents'"
+  },
+  {
+    "type": "speaker_full",
+    "start": 625.9,
+    "end": 631.0,
+    "_note": "'maintain that system the same way you maintain your code. The difference between 10 hours and 1,000 hours'"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 631.0,
+    "end": 631.3,
+    "zoom": 1.15,
+    "_note": "Punch on closing line"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 631.3,
+    "end": 636.1,
+    "zoom": 1.15,
+    "_note": "HOLD on 'isn't knowing more features, it's knowing which ones to ignore'"
+  },
+  {
+    "type": "sfx",
+    "start": 631.0,
+    "end": 632.0,
+    "content": "shimmer",
+    "volume": 0.3,
+    "_note": "Shimmer: Closing line emphasis - the big takeaway"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 636.1,
+    "end": 636.4,
+    "zoom": 1.15,
+    "_note": "Release zoom"
+  },
+  {
+    "type": "speaker_full",
+    "start": 636.4,
+    "end": 644.9,
+    "_note": "End CTA: 'If you want to see the actual repo structures, agent configs...I share all of that inside Claudify. Link in description. See you in the next one. Bye'"
+  },
+  {
+    "type": "cta_overlay",
+    "start": 639.0,
+    "end": 644.9,
+    "text": "CLAUDIFY",
+    "subtitle": "Link in description",
+    "style": "next_video",
+    "_note": "End CTA overlay - synced to 'inside Claudify'"
+  }
+]

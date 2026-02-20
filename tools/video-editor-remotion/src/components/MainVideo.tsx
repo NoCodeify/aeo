@@ -1,8 +1,8 @@
 import React from "react";
 import {
-  Audio,
   Sequence,
   Video,
+  OffthreadVideo,
   staticFile,
   useVideoConfig,
   useCurrentFrame,
@@ -10,6 +10,7 @@ import {
   Easing,
   getRemotionEnvironment,
 } from "remotion";
+import { SafeAudio as Audio } from "./SafeAudio";
 import { Edit, VideoConfig, BgMusicConfig, DataVizLayout } from "../types/timeline";
 import { DataVizSplit } from "./DataVizSplit";
 import {
@@ -147,8 +148,9 @@ export const MainVideo: React.FC<MainVideoProps> = ({ config }) => {
   const resolvedSpeaker = proxyVideo(speakerVideo);
   const resolvedGrid = proxyVideo(gridBackground);
 
-  // Studio-only: continuous base layer so we never remount video elements
-  const useContinuous = !env.isRendering;
+  // Continuous base layer: one speaker video with CSS-driven zoom/transforms.
+  // Ensures zoom sequences look identical in Studio and render.
+  const useContinuous = true;
 
   // Find current layout edit for base video CSS (skip overlays)
   const currentTime = frame / fps;
@@ -182,15 +184,16 @@ export const MainVideo: React.FC<MainVideoProps> = ({ config }) => {
       )}
 
       {/* ============================================================
-          STUDIO: Continuous base layers (never remount, no seeking)
-          These provide audio + visual. Per-segment SmartVideo elements
-          are auto-skipped via ContinuousSpeakerContext.
+          Continuous base layers: one speaker + grid video with CSS zoom.
+          Studio uses <Video> (streaming), render uses <OffthreadVideo>
+          (frame-perfect). Per-segment SmartVideo elements are auto-skipped
+          via ContinuousSpeakerContext.
           ============================================================ */}
       {useContinuous && (
         <>
           {/* Grid background (z0) - always present, hidden behind speaker for non-split */}
           <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-            <Video
+            <OffthreadVideo
               src={staticFile(resolvedGrid)}
               loop
               muted
@@ -208,7 +211,7 @@ export const MainVideo: React.FC<MainVideoProps> = ({ config }) => {
               ...speakerStyle,
             }}
           >
-            <Video
+            <OffthreadVideo
               src={staticFile(resolvedSpeaker)}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />

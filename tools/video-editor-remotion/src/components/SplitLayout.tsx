@@ -87,6 +87,7 @@ export const SplitLayout: React.FC<SplitLayoutProps> = ({
       >
         <Img
           src={staticFile(slideSrc)}
+          delayRenderRetries={3}
           style={{
             width: "100%",
             height: "100%",

@@ -60,12 +60,15 @@ export const SmartVideo: React.FC<React.ComponentProps<typeof OffthreadVideo>> =
   const editType = useContext(EditTypeContext);
   const forceKeep = useContext(ForceVideoContext);
 
-  // Studio continuous mode: skip per-segment speaker videos
+  // Continuous mode: skip per-segment speaker videos (base layer handles them)
   if (continuousMode && props.startFrom !== undefined && !forceKeep) {
     if (!editType || !KEEP_OWN_VIDEO.has(editType)) {
       return null; // Base continuous video handles audio + visual
     }
     // Split/special types: render for visual positioning, muted (base handles audio)
+    if (env.isRendering) {
+      return <OffthreadVideo {...props} muted />;
+    }
     const { pauseWhenBuffering, ...rest } = props as any;
     return <Video {...rest} pauseWhenBuffering={pauseWhenBuffering} muted />;
   }

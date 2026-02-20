@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  Audio,
 
   Sequence,
   staticFile,
@@ -10,6 +9,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
+import { SafeAudio as Audio } from "./SafeAudio";
 import { proxyVideo } from "../use-proxy";
 import { generateParticles, updateParticle } from "./premium-utils";
 

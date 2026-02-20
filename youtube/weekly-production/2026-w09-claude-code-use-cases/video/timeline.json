@@ -15,14 +15,8 @@
     "style": "center"
   },
   {
-    "type": "jump_zoom_in",
-    "start": 2.08,
-    "end": 2.38,
-    "zoom": 1.2
-  },
-  {
     "type": "jump_cut_in",
-    "start": 2.38,
+    "start": 2.08,
     "end": 4.08,
     "zoom": 1.2,
     "_note": "...a government access control system"

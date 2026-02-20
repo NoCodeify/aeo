@@ -2,7 +2,6 @@ import React from "react";
 import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  Audio,
 
   Sequence,
   staticFile,
@@ -10,6 +9,7 @@ import {
   useVideoConfig,
   interpolate,
 } from "remotion";
+import { SafeAudio as Audio } from "./SafeAudio";
 import { proxyVideo } from "../use-proxy";
 import {
   loadFont,

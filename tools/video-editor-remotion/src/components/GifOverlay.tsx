@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, staticFile, useCurrentFrame, useVideoConfig, interpolate, Easing } from "remotion";
+import { AbsoluteFill, staticFile, useCurrentFrame, useVideoConfig, interpolate, Easing, getRemotionEnvironment } from "remotion";
 import { SmartVideo } from "../use-proxy";
 import { GifPosition } from "../types/timeline";
 
@@ -48,6 +48,7 @@ export const GifOverlay: React.FC<GifOverlayProps> = ({
 }) => {
   const frame = useCurrentFrame();
   const { width, durationInFrames } = useVideoConfig();
+  const env = getRemotionEnvironment();
 
   const gifWidth = Math.floor(width * size);
   const gifHeight = gifWidth;
@@ -81,7 +82,16 @@ export const GifOverlay: React.FC<GifOverlayProps> = ({
 
   return (
     <AbsoluteFill style={{ pointerEvents: "none" }}>
-      {/* Pure overlay - underlying layout handles speaker */}
+      {/* Render mode: include speaker video + audio (no base layer in render) */}
+      {env.isRendering && speakerSrc && (
+        <SmartVideo
+          src={staticFile(speakerSrc)}
+          startFrom={startFrom}
+          pauseWhenBuffering
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      )}
+      {/* GIF overlay */}
       <div
         style={{
           position: "absolute",

@@ -12,10 +12,15 @@ The `youtube/` folder contains the video production framework (Ed Lawrence metho
 ```
 youtube/
   templates/           # Production templates (brief, script, prompter, shot-list, editing-guide, work-log, brain-dump, thumbnail-style-guide)
-  system/              # SOPs and topic bank
-    production-sop.md
-    aeo-video-topics.md
-    aeo-keyword-data.md  # KEYWORD SOURCE OF TRUTH
+  system/              # SOPs, keyword data, and reference docs
+    claude-code-keyword-data.csv  # PRIMARY KEYWORD SOURCE (Feb 2026)
+    title-frameworks.md           # 765 proven title frameworks
+    title-validation-rules.md     # Acute moments, 16 patterns, red/green flags
+    hook-templates.md             # 6 hook templates (F/A/B/C/D/E)
+    script-planning-guide.md      # 4-exchange architecture process
+    script-writing-rules.md       # Retention mechanics, Forward Pulls, WHY moments
+    thumbnail-validation.md       # Reinforce-not-repeat, pre-flight checklist
+    aeo-keyword-data.md           # Legacy AEO keywords (reference only)
   stories/inventory/   # 146+ story files
   weekly-production/   # Active video production
   published-videos/    # Completed archives
@@ -50,11 +55,20 @@ Channel pivoted to Claude Code content (Feb 2026). All new content decisions use
 
 ## Production Pipeline (CORRECT ORDER)
 
-### Pre-Production
-1. **Select keyword** from `youtube/system/claude-code-keyword-data.csv`
-2. **Create brief** using `youtube/templates/video-brief-template.md`
-3. **Write script** via `/youtube-script-writer` skill
-4. **Generate thumbnail** via `/thumbnail` skill
+### Pre-Production (New 5-Step Pipeline)
+1. **Ideation + Packaging** via `/youtube-video-ideation` - keyword selection, title generation (5-7 options, user picks), thumbnail concept (3+ options, user picks), hook generation (3 options: Safe/Experimental/Hybrid, user picks). Output: locked packaging document.
+2. **Script Architecture** via `/youtube-script-plan` - 4-exchange process producing beat-level architecture with STP ratios, tension loops, Forward Pull map, creative elements. Output: locked architecture.
+3. **Script Writing** via `/youtube-script-writer` - executes locked architecture with retention mechanics. **Script = full production blueprint** including:
+   - Dialogue in `| Visual | What You Say |` tables with inline production markers
+   - Layout directions (gradual_zoom, speaker_full, etc.)
+   - Slide markers (SLIDE XX), screen recording markers (SCREEN XX)
+   - B-roll moments (BROLL: Pexels search query)
+   - GIF placements (GIF: search query, emotional beats only, speaker layouts only)
+   - SFX cues (whoosh at chapters, shimmer at reveals, boop for punctuation)
+   - Text overlay cues (key numbers/stats only)
+   - Asset lists: screen recordings, slides, Pexels queries, GIF queries, SFX map, text overlays
+   - Layout flow: second-by-second guidance for timeline builder
+4. **Generate thumbnail** via `/thumbnail` skill (reads `youtube/system/thumbnail-validation.md` for validation)
 5. **Extract prompter text** (plain text from script, no tables/slide refs)
 
 ### Post-Film
@@ -85,7 +99,25 @@ Channel pivoted to Claude Code content (Feb 2026). All new content decisions use
     - Check: overlays only on speaker layouts, SFX not too dense, zooms smooth
 14. **Render** at 4K via `render.ts` (reads from `public/timeline.json`, auto-syncs back to source)
 
+### Hook Pacing (First 60 Seconds) - CRITICAL
+
+The first 60 seconds decide if viewers stay. Edit aggressively.
+
+**First 30s:** Max 5 seconds per segment. Something must change every 3-5 seconds (layout, zoom, text overlay, GIF, B-roll). At least 1 text overlay + 1 jump zoom in the first 30s. No long speaker-only stretches.
+
+**30-60s:** Max 7 seconds per segment. Maintain visual variety but can breathe slightly more than the opening.
+
+**Requirements:**
+- No segment > 5s in first 30 seconds
+- No segment > 7s from 30-60 seconds
+- At least 1 text overlay in first 30s
+- At least 1 non-speaker layout (slide, B-roll, screen recording) in first 30s
+- Visual change every 3-5 seconds minimum
+- If viewer survives first 60 seconds, they'll likely watch the rest
+
 ### Common Mistakes
+- **ALWAYS use `transcribe.ts` for transcription** - NEVER call AssemblyAI manually via curl/API. The script does dual-pass (Universal-3-Pro + Universal-2 filler detection), proper audio extraction, and outputs the correct JSON format. Run from `tools/video-editor-remotion/`: `npx ts-node transcribe.ts <video_dir> [--clean]`
+- **ALWAYS use dedicated skills/agents for pipeline steps** - don't manually do what a skill is built for. `/video-timeline` for timelines, `/excalidraw-slides` for slides, `/gif-search` for GIFs, `transcribe.ts` for transcription
 - **DON'T skip the manual rough cut** - automated cutting misses repeated phrases, partial word bleeds, and splice artifacts. Manual editing with ears is faster and catches everything
 - **DON'T forget to re-transcribe** after manual cut - `transcript-clean.json` must match `speaker-clean.mp4` timestamps. Run `transcribe.ts --clean`
 - **DON'T generate slides before timeline** - you won't know which are 16:9 vs 1:1

@@ -5,7 +5,10 @@ import {
   useVideoConfig,
   interpolate,
   Easing,
+  getRemotionEnvironment,
+  staticFile,
 } from "remotion";
+import { SmartVideo } from "../use-proxy";
 import {
   loadFont as loadSyne,
   fontFamily as syneFontFamily,
@@ -122,6 +125,7 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
+  const env = getRemotionEnvironment();
 
   // Isaac's pop animation: 70% → 110% (7 frames) → 100% (5 frames) = 12 frames total
   const scale = interpolate(
@@ -151,7 +155,16 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
 
   return (
     <AbsoluteFill style={{ pointerEvents: "none" }}>
-      {/* Pure overlay - no speaker video. The underlying layout handles speaker. */}
+      {/* Render mode: include speaker video + audio (no base layer in render) */}
+      {env.isRendering && speakerSrc && (
+        <SmartVideo
+          src={staticFile(speakerSrc)}
+          startFrom={startFrom}
+          pauseWhenBuffering
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      )}
+      {/* Text overlay */}
       <div
         style={{
           position: "absolute",

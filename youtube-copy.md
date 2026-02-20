@@ -20,6 +20,13 @@ https://sohaibahmad.me/
 
 ---
 
+## Links (for bio/links section)
+
+**Link 1:** `Work With Me` -> https://sohaibahmad.me/
+**Link 2 (when Skool launches):** `Join Claudify` -> (Skool URL)
+
+---
+
 ## Banner Text Options (pick one)
 
 **A:** Build Real Systems With Claude Code

@@ -416,6 +416,16 @@ speaker_full (intro)
 
 ---
 
+## Hook Pacing (First 60 Seconds) - CRITICAL
+
+The first 60 seconds decide if viewers stay. Edit aggressively.
+
+- **First 30s:** Max 5s per segment. Visual change every 3-5s. At least 1 text overlay + 1 jump zoom. No speaker-only stretches.
+- **30-60s:** Max 7s per segment. Maintain variety.
+- **Entire video:** No speaker-only stretch > 10s ANYWHERE. Break up with text overlays, gradual_zoom changes, or layout switches.
+
+W11 lesson: First timeline had a 12s gradual_zoom in the hook and 15s+ speaker stretches throughout. Had to completely rebuild from 80 to 162 entries. Design this in from the start - don't rely on the validator to catch it after the fact.
+
 ## Timeline Format
 
 ```json

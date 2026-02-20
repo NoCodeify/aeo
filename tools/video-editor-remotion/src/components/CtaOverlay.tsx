@@ -2,7 +2,6 @@ import React from "react";
 import { SmartVideo } from "../use-proxy";
 import {
   AbsoluteFill,
-  Audio,
 
   Sequence,
   staticFile,
@@ -12,6 +11,7 @@ import {
   spring,
   Easing,
 } from "remotion";
+import { SafeAudio as Audio } from "./SafeAudio";
 import {
   loadFont as loadSyne,
   fontFamily as syneFontFamily,

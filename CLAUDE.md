@@ -66,13 +66,16 @@ Domain-specific rules load automatically based on what files you're working with
 | `/sitemap-audit` | "sitemap", "site structure" |
 | `/website-copywriting` | "write copy", "page content" |
 | `/content-strategist` | "content strategy", "keyword research" |
-| `/youtube-script-writer` | "write script", "video script" |
-| `/youtube-video-ideation` | "video idea", "title", "thumbnail" |
+| `/youtube-video-ideation` | "video idea", "next video", "what video should I make" |
+| `/youtube-title` | "video title", "title ideas", "generate titles" |
 | `/youtube-video-editor` | "editing guide", "retention edit" |
 
 ### Manual-only (invoke explicitly with `/name`)
 | Skill | Purpose | Delegates to agent |
 |-------|---------|-------------------|
+| `/youtube-hook` | Hook generation (3 options: Safe/Experimental/Hybrid) | hook-generator |
+| `/youtube-script-plan` | Script architecture (4-exchange, beat-level STP) | script-architect |
+| `/youtube-script-writer` | Script execution from locked architecture | script-writer |
 | `/broll-prompting` | B-roll image prompts | broll-prompter |
 | `/gif-search` | GIF search + download | gif-researcher |
 | `/excalidraw-slides` | Whiteboard slides | slide-prompter |
@@ -80,7 +83,7 @@ Domain-specific rules load automatically based on what files you're working with
 | `/client-report` | Client visibility report | report-generator |
 | `/forum-research` | Reddit/forum competitor research | competitor-researcher |
 | `/auto-cutter` | Intelligent silence removal | auto-cutter |
-| `/thumbnail` | YouTube thumbnails | thumbnail-prompter |
+| `/thumbnail` | YouTube thumbnails + validation | thumbnail-prompter |
 | `/playbook` | Audit to playbook conversion | playbook-creator |
 | `/optimize-content` | Content optimization for LLMs | content-optimizer |
 | `/aeo-site-page` | AEO Protocol site pages | aeo-site-writer |
@@ -95,4 +98,18 @@ Domain-specific rules load automatically based on what files you're working with
 
 ## Agents (`.claude/agents/`)
 
-14 specialized agents with isolated context, tool restrictions, and MCP access. Skills delegate to agents via `context: fork`. See individual agent files for full system prompts.
+18 specialized agents with isolated context, tool restrictions, and MCP access. Skills delegate to agents via `context: fork`. See individual agent files for full system prompts.
+
+### YouTube Pre-Production Agents (NEW)
+| Agent | Purpose | MCP |
+|-------|---------|-----|
+| `title-validator` | Title generation + acute moment validation + 765 frameworks | seo-agent |
+| `hook-generator` | 6-template hook system, 3 options output | - |
+| `script-architect` | Beat-level script architecture, 4-exchange process | - |
+| `script-writer` | Voice execution from locked architecture + production blueprint | - |
+
+### YouTube Pre-Production Flow
+```
+/youtube-video-ideation -> /youtube-title -> /youtube-hook -> /youtube-script-plan -> /youtube-script-writer
+```
+Each step presents OPTIONS. User picks winners. No auto-selection.
