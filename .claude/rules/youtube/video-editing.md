@@ -223,7 +223,7 @@ Use jump zooms to punch key words/sentences. Rules:
 | `heading` | Top | 160px | Section headers |
 
 **CRITICAL: Overlays ONLY on speaker_full/gradual_zoom/jump segments.** Never on slides, splits, or B-roll.
-- `text_overlay` - text on speaker only
+- `text_overlay` - text on speaker only. Plays boop SFX on entrance by default. Set `"sfx": false` in JSON to disable for a specific overlay. No separate SFX timeline entries needed.
 - `gif_overlay` - GIF meme on speaker only (never on split/slide layouts)
 - Other overlays (lower_third, callout, confetti, etc.) - speaker only
 
@@ -633,11 +633,13 @@ video-editor-remotion/
 │   ├── speaker-proxy.mp4    # 720p proxy (generated via npm run proxy)
 │   ├── slides/
 │   ├── gifs/                    # Downloaded GIFs (from gif-researcher)
-│   ├── broll/                   # Stock video B-roll (from pexels-mcp)
+│   ├── memes/                   # Captioned memes (from imgflip-mcp, replaces broll)
+│   ├── broll/                   # Stock video B-roll (legacy, replaced by memes)
 │   └── sfx/                     # Audio (boop.mp3, click.mp3, lofi-beat-bg.mp3, upbeat-bg.mp3) - permanent
 ├── render.ts
 ├── transcribe.ts              # Dual-pass AssemblyAI transcription (U3P + U2 fillers)
 ├── autocut.ts                 # Apply cuts.json (ffmpeg + timestamp remap)
+├── lint-timeline.js           # Timeline linter (short speakers, gaps, text-on-gif, overlaps)
 ├── remotion.config.ts
 └── package.json
 ```
@@ -659,6 +661,17 @@ ffmpeg -y -i public/speaker.mp4 -vf "scale=960:540" -c:v libx264 -preset fast -c
 ```
 
 **Timeline editing:** `public/timeline.json` is the single working copy during Studio preview. Edit ONLY this file - never the source `video/timeline.json` separately. `render.ts` auto-syncs public → source before rendering.
+
+**Timeline linting:** After any timeline edit, run `node lint-timeline.js` from `tools/video-editor-remotion/`. Catches:
+1. Short speaker segments (<2s) between visual layouts (talking head flash)
+2. Micro-gaps (<0.5s) between consecutive base layouts
+3. Text overlays on non-speaker layouts (slides, GIFs, B-roll, splits, chapter cards)
+4. Overlapping base layouts
+5. Text overlays >2s from transcript speech (needs `transcript-clean.json`)
+6. First segment must be speaker + animation (gradual_zoom recommended, not slide/broll/gif)
+7. Text overlays spanning a jarring layout transition (text still showing when layout changes underneath)
+
+Use `--fix` to auto-fix: removes short speaker segments (extends adjacent visuals), removes text overlays on non-speaker layouts, closes micro-gaps. Check 7 is warn-only (manual fix: trim overlay end to transition boundary).
 
 **Timeline paths:** Content paths must be relative to `public/` (e.g., `broll/file.mp4` not `video/broll/file.mp4`). The `render.ts` script remaps paths automatically at render time, but Studio reads them as-is.
 

@@ -117,8 +117,8 @@ export const CtaOverlay: React.FC<CtaOverlayProps> = ({
   // === Mouse cursor: absolute position in frame ===
   const startX = width * 0.82;
   const startY = height * 0.95;
-  const endX = width * 0.58;
-  const endY = height - 200;
+  const endX = width * 0.52;
+  const endY = height - 260;
 
   const cursorProgress = interpolate(
     frame,

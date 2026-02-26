@@ -8,6 +8,7 @@ import {
   getRemotionEnvironment,
   staticFile,
 } from "remotion";
+import { SafeAudio as Audio } from "./SafeAudio";
 import { SmartVideo } from "../use-proxy";
 import {
   loadFont as loadSyne,
@@ -25,6 +26,8 @@ interface TextOverlayProps {
   style?: TextStyle;
   color?: string;
   glow?: boolean;
+  sfx?: string | false;  // sound effect on entrance — default: "boop". Set false to disable.
+  sfxVolume?: number;    // default: 0.4
 }
 
 function getTextPosition(style: TextStyle): React.CSSProperties {
@@ -122,6 +125,8 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
   style = "caption",
   color = "#e8e4e0",
   glow = true,
+  sfx = "boop",
+  sfxVolume = 0.4,
 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
@@ -155,6 +160,8 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
 
   return (
     <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {/* Optional SFX on entrance */}
+      {sfx && <Audio src={staticFile(`sfx/${sfx}.mp3`)} volume={sfxVolume} />}
       {/* Render mode: include speaker video + audio (no base layer in render) */}
       {env.isRendering && speakerSrc && (
         <SmartVideo

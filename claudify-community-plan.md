@@ -17,6 +17,10 @@ The Claudify Skool community content structure. Designed to launch lean (8 modul
 
 Every new member starts here. Linear, no choices to make. The structured onboarding path that gives new members direction and momentum.
 
+**Core framing: chatbot vs operating system.** The Quick Start teaches the shift from "chatting with AI" (Module 2) to "building with AI" (Module 4). By the end, members understand why ChatGPT frustrates them and what a real AI system looks like.
+
+**Demo project: Language Tutor.** The founder builds a Dutch language tutor on camera as the running example across Modules 2-5. Members follow along with whatever they want to build - a language tutor, a client tool, a personal system. The language tutor is the demo because it's relatable (everyone's tried to learn a language), unexpected (nobody thinks "language app" when they hear Claude Code), and it showcases memory, skills, and file-based tracking better than a static document generator.
+
 **Rule: Do not skip ahead.** Trust the process. Each day builds on the previous one. Members who rush through modules miss the community actions and coaching that make the difference. (Inspired by CoderCo's "clean completion" philosophy.)
 
 | # | Module | What they build | Day |
@@ -29,6 +33,141 @@ Every new member starts here. Linear, no choices to make. The structured onboard
 | 6 | Pick Your Track | Choose: build for yourself / product / service | Day 19-21 |
 
 **Module 4 is the key module.** This is where the 21-day milestone lives or dies. Members pick ONE real thing from their work (not a tutorial project) and build it with Claude Code. Coaching calls during weeks 2-3 focus heavily on helping people through this module.
+
+#### Quick Start Module Outlines (Recording Guide)
+
+**Total recording time: ~2.5 hours.** Each module is a screen share recording in the terminal. The founder builds the Dutch language tutor on camera while explaining concepts. Members pause and build their own version.
+
+---
+
+**Module 1: Welcome + Setup (~15 min) | Day 1**
+
+| Lesson | What's on screen | What you say |
+|--------|-----------------|-------------|
+| 1.1 Show the end result | Run the finished language tutor: `/lesson`, watch it review old words, teach new ones, quiz, save progress | "By Module 4, you'll have built this yourself. Let me show you what we're building." |
+| 1.2 Install Claude Code | Terminal: install Node.js (if needed), `npm install -g @anthropic-ai/claude-code`, run `claude`, authenticate | "If you've never opened a terminal before, that's fine. This is the only setup you'll ever do." |
+| 1.3 Your workspace | `mkdir dutch-tutor && cd dutch-tutor`. Explain what a directory is and why Claude Code works inside one | "Claude Code always works inside a folder. That folder is your project." |
+
+Deliverable: Claude Code installed, running, inside a project folder. Post screenshot in Wins.
+
+---
+
+**Module 2: Your First Session (~20 min) | Day 2-3**
+
+This is the "chatbot" experience. Members use Claude Code the way they'd use ChatGPT - one-shot prompts, no structure. It works, but they'll see the limits in Module 3.
+
+| Lesson | What's on screen | What you say |
+|--------|-----------------|-------------|
+| 2.1 The magic moment | Paste raw text: "My wife is British, lives in the Netherlands, needs to learn Dutch for daily life." Ask: "Give me 5 common Dutch phrases for ordering at a cafe, with pronunciation tips for an English speaker." | "That's already more useful than Google Translate. But watch what happens next." |
+| 2.2 Make it interactive | "Now quiz me on those phrases." Get some wrong, see corrections with explanations. Then: "Give me 5 phrases for the grocery store." | "You're having a language lesson in your terminal. No app, no subscription, no ads." |
+| 2.3 Working with files | "Save those phrases and my quiz results to lesson-01-cafe.md." Open the file. Then: "Read lesson-01-cafe.md and give me a harder quiz based on what I got wrong." | "Claude Code reads files, writes files, and edits files. That's 90% of what you need." |
+
+Deliverable: Two lesson files with quiz results. Members try it with any language. Post first quiz score in Wins.
+
+---
+
+**Module 3: CLAUDE.md - Your Project's Brain (~25 min) | Day 4-6**
+
+This is the turning point. The shift from "chatbot" to "system." Before vs after CLAUDE.md is the entire sales pitch for Claude Code over ChatGPT.
+
+| Lesson | What's on screen | What you say |
+|--------|-----------------|-------------|
+| 3.1 The problem with one-shots | Open a NEW Claude Code session. Ask for a Dutch lesson. It doesn't know the learner is British, beginner, needs daily-life Dutch. It gives generic output | "Every session starts fresh. It doesn't know your rules, your level, your weak areas. Sound familiar? This is exactly how ChatGPT works. And this is the problem CLAUDE.md solves." |
+| 3.2 Writing your first CLAUDE.md | Create CLAUDE.md in the project root. Walk through each section live | The file on screen should include: learner profile (British English, Netherlands Dutch, beginner A1, daily life focus, weak on de/het articles), teaching rules (plain English explanations, no IPA symbols, quiz after every 5 words, track progress in files, correct mistakes encouragingly), and session format (review 3 words from last lesson, teach new topic, end with 5-question quiz, save to lessons/ folder) |
+| 3.3 Before vs after | Run the EXACT same prompt as Module 2 but now with CLAUDE.md in place. Output follows all the rules automatically | "You didn't tell it any of this. It already knows. That's the difference between using a tool and owning a system." |
+| 3.4 Making it yours | Add a custom rule: "Focus on spoken Dutch, not written. Skip spelling exercises." Show the output adapting | "This is YOUR system now. No two CLAUDE.md files are the same. And this is why ChatGPT users are frustrated - they're starting from scratch every single time." |
+
+Deliverable: A CLAUDE.md file in their project. Members share theirs in Show Your Work (for any project, not just language tutors).
+
+---
+
+**Module 4: Your First Real System (~40 min, split 4a/4b/4c) | Day 7-14**
+
+The big module. On camera, the founder builds the Dutch tutor into a complete system with project structure, slash commands, and progress tracking. Members build THEIR system - could be a language tutor, a client tool, an internal workflow, anything.
+
+**4a: Structure your project (~15 min)**
+
+Build the project structure on screen:
+
+```
+dutch-tutor/
+  CLAUDE.md
+  .claude/
+    commands/
+      lesson.md
+      quiz.md
+      review.md
+  lessons/
+    01-cafe.md
+    02-grocery.md
+  progress/
+    vocabulary.md       (master word list with scores)
+    weak-areas.md       (auto-updated after each quiz)
+  topics/
+    daily-life.md       (topic outlines: cafe, grocery, doctor, neighbors)
+```
+
+Key point: "A system has structure. A one-shot prompt doesn't. These files ARE the memory that ChatGPT doesn't have."
+
+**4b: Build slash commands (~15 min)**
+
+Create `.claude/commands/lesson.md`:
+
+```
+Read progress/vocabulary.md and progress/weak-areas.md.
+Read the next untaught topic from topics/daily-life.md.
+Start with a 3-word review from vocabulary.md (pick words with low scores).
+Teach today's topic following the session format in CLAUDE.md.
+Run the end-of-lesson quiz.
+Update vocabulary.md with new words and scores.
+Update weak-areas.md if any quiz answers were wrong.
+Save the full lesson to lessons/ with today's date.
+```
+
+Demo it live: run `/lesson`. Watch it review old words, teach new ones, quiz, update scores, save everything. Run it again the next day - it remembers, it adapts, it progresses.
+
+"That's not a chatbot. That's a tutor with memory."
+
+Add `/quiz` (quick quiz from vocabulary, weighted toward weak areas) and `/review` (targeted practice from weak-areas.md).
+
+**4c: Add polish and power (~10 min)**
+
+- Add a conversation mode: "Simulate a conversation at the grocery store in Dutch. I'll respond in Dutch, you correct my mistakes." Show the back-and-forth dialogue
+- Add a new topic file (`topics/emergencies.md`) and show the system picks it up automatically
+- Show bulk: "My wife's friend also wants to learn. Copy the project, change the CLAUDE.md profile, done - a second tutor in 30 seconds"
+
+"You now have something that Duolingo charges $13/mo for. Yours is free, personalized, and runs on your laptop."
+
+Deliverable: Working system with slash commands, progress tracking, and conversation mode. Members build THEIR version. Build Lab hot seats during Week 2 focus entirely on helping members through their builds.
+
+---
+
+**Module 5: When Things Go Wrong (~20 min) | Day 15-18**
+
+| Lesson | What's on screen | What you say |
+|--------|-----------------|-------------|
+| 5.1 Context limits | Feed it a massive vocabulary review (200+ words). Show context filling up. Fix: summarize progress into a status file, reference that instead of loading all lessons | "If your system gets big, you summarize. Same as you'd brief a colleague - you don't hand them every email, you give them the summary." |
+| 5.2 Hallucinations | Ask it to teach a Dutch word - it gives a slightly wrong translation or invents a phrase. Why it happens (it fills gaps). Fix: add CLAUDE.md rule: "Never invent Dutch words. If unsure, say so and suggest checking a dictionary." | "LLMs are not dictionaries. They approximate. Your CLAUDE.md rules are the guardrails." |
+| 5.3 Inconsistent difficulty | One session teaches A1, next jumps to B2. Fix: CLAUDE.md learner level + progress files keep it calibrated. Show how the system (files + commands) reduces variance vs raw prompting | "This is why 'just prompting ChatGPT' frustrates people. Without structure, every session is a coin flip." |
+| 5.4 File conflicts and recovery | Show vocabulary.md getting overwritten. Explain the permission system (accept/deny edits). Teach git basics: `git init`, `git add`, `git commit` | "If you only learn one thing from this module: commit before you experiment. It's your undo button." |
+
+Deliverable: Error-prevention rules added to CLAUDE.md. Members share their "biggest mistake so far" in Help & Debug (normalizes failure, builds community trust).
+
+---
+
+**Module 6: Pick Your Track (~15 min) | Day 19-21**
+
+Talking head + screen share examples. No building in this module.
+
+| Section | What you cover |
+|---------|---------------|
+| 6.1 What you built | Recap: "You went from zero to a working system in 18 days. You have memory, slash commands, progress tracking, and conversation practice. Most people using AI are still prompting ChatGPT one question at a time." |
+| 6.2 Track A: Build for yourself | Turn this pattern into other personal tools: client intake forms, report generators, a personal knowledge base, a fitness tracker. "You're replacing SaaS subscriptions with tools you own." Next: Modules 7, 8, 14 |
+| 6.3 Track B: Build a product | Turn the language tutor into a product: web frontend, Stripe payments, multi-user support. "Duolingo charges $13/mo for generic lessons. Yours are personalized. That's a product." Tease CS1 (DMChamp): same journey from personal tool to $100K SaaS. Next: Modules 8, 9, 10 |
+| 6.4 Track C: Build a service | Sell custom AI systems to businesses. "My friend is a scientist who checks ingredient safety in ChatGPT - it forgets the rules every session. That's a $3-5K project for you." Next: Service Track SK1-SK5 |
+| 6.5 What's next | Walk through Foundations modules and case studies. Point to The Vault (annual). "Pick a track, start the next module, bring your questions to Thursday's Build Lab." |
+
+Deliverable: Members post which track they chose and what they want to build next. This data tells the founder what modules to prioritize.
 
 #### Day-by-Day Pacing (21 Days)
 

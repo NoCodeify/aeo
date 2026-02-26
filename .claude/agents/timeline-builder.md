@@ -22,7 +22,7 @@ Read a video script or prompter with slide markers and generate a complete `time
 5. **Slides directory** with slide images (slide-01.jpg, slide-02.jpg, etc.)
 6. **Speaker video** - `speaker-clean.mp4` if auto-cut was run, otherwise original
 7. **GIFs directory** (optional) with downloaded GIFs from gif-researcher agent
-8. **B-roll directory** (REQUIRED) with stock video clips from pexels-mcp - every video MUST have B-roll
+8. **Memes directory** (REQUIRED) with captioned memes from imgflip-mcp - every video MUST have memes. **NEVER use Pexels B-roll** - generic stock footage is never relevant. Use Imgflip memes rendered as `slide_full` entries instead.
 
 **Priority:** transcript-clean.json > transcript.json > SRT file
 
@@ -71,11 +71,11 @@ A `timeline.json` file with edit decisions:
 | `jump_cut_in` | Instant zoom (no animation) | HOLD after jump_zoom_in |
 | `jump_zoom_out` | Animated zoom back | After hold period |
 | `jump_cut_out` | Instant back to normal | Hard cut reset |
-| `zoom_transition_in` | Slide -> Speaker with zoom | Smooth transition to speaker |
-| `zoom_transition_out` | Speaker -> Slide with zoom | Smooth transition to slide |
+| ~~`zoom_transition_in`~~ | **DEPRECATED** - Do not use. Hard cuts between layouts are cleaner. |  |
+| ~~`zoom_transition_out`~~ | **DEPRECATED** - Do not use. Hard cuts between layouts are cleaner. |  |
 | `gradual_zoom` | Slow drift zoom (10-15%) | Speaker segments, 4-10s |
-| `gif_overlay` | GIF on top of speaker video | Reaction GIFs, humor beats (1-3s) |
-| `gif_full` | GIF fills frame (speaker audio continues) | Big meme moments (2-4s) |
+| `gif_full` | GIF fills frame, hard cut (speaker audio continues) | **DEFAULT** - reaction GIFs, humor beats (2-3s) |
+| `gif_overlay` | Small GIF overlay on speaker | AVOID - rare exception only |
 | `text_overlay` | Text on top of speaker video | Key words, statistics, framework names (1-3 words) |
 | `broll_full` | Stock video B-roll fills frame (no loop, speaker audio continues) | Visual metaphors, establishing shots, supporting claims (3-15s) |
 | `sfx` | Sound effect overlay (audio-only, no visual) | Subtle boop/click on reveals, transitions (max 4-6 per video) |
@@ -173,9 +173,9 @@ All support optional `layout` property (full/split_left/split_right) except togg
 
 {"type": "toggle_switch", "start": 82.0, "end": 85.0, "labelOff": "Traditional SEO", "labelOn": "AEO Protocol", "accentColor": "#22c55e"}
 
-{"type": "notification_stack", "start": 95.0, "end": 101.0, "notifications": [{"title": "New Member", "body": "Sarah joined Claudify"}, {"title": "Payment", "body": "$97.00 received"}]}
+{"type": "notification_stack", "start": 95.0, "end": 101.0, "notifications": [{"title": "New Member", "body": "joined SaaS Accelerator"}, {"title": "Payment", "body": "$47.00 received"}]}
 
-{"type": "pricing_card", "start": 200.0, "end": 207.0, "name": "Claudify Pro", "price": "$97", "period": "/mo", "features": ["Weekly live calls", "14 custom agents", "Community access"], "badge": "Most Popular"}
+{"type": "pricing_card", "start": 200.0, "end": 207.0, "name": "SaaS Accelerator", "price": "$47", "period": "/mo", "features": ["Weekly coaching calls", "1-on-1 access", "Community of builders"], "badge": "Most Popular"}
 
 {"type": "countdown_flip", "start": 180.0, "end": 184.0, "from": 10, "to": 3, "label": "Spots Left", "color": "#e63946"}
 
@@ -215,20 +215,20 @@ All support optional `layout` property (full/split_left/split_right) except togg
 
 {"type": "chapter_card", "start": 62.0, "end": 65.0, "title": "The Data", "number": 2, "subtitle": "What the numbers say", "accentColor": "#e63946"}
 
-{"type": "cta_overlay", "start": 150.0, "end": 157.0, "text": "Free AEO Quiz", "subtitle": "Link in Description", "style": "offer", "accentColor": "#e63946"}
+{"type": "cta_overlay", "start": 150.0, "end": 157.0, "text": "Join SaaS Accelerator", "subtitle": "Link in Description", "style": "offer", "accentColor": "#e63946"}
 
-{"type": "cta_overlay", "start": 290.0, "end": 300.0, "text": "Watch Next", "style": "next_video"}
+{"type": "cta_overlay", "start": 290.0, "end": 300.0, "text": "SaaS Accelerator", "style": "next_video"}
 ```
 
 ## Layout Distribution
 
 | Layout | % of Video | Purpose |
 |--------|------------|---------|
-| `speaker_full` | ~15% | Intro, personal stories, trust-building, transitions |
-| `slide_full` | ~15% | Teaching, complex diagrams, CTA slides |
+| `speaker_full` | ~10% | Personal stories, transitions. Minimize talking head - break up with slides/gifs/broll. |
+| `slide_full` | ~20% | **REQUIRED** - Every key concept gets a slide. First slide within 5s. **Calculate minimum from duration: 1 slide per 18s of video** (e.g., 10-min = 33+ slides). Do NOT rely on script SLIDE markers - they are always too few. |
 | `split_right` / `split_left` | ~12% | Teaching with speaker visible (glass border style) |
 | `split_5050_left` / `split_5050_right` | ~5% | **REQUIRED** - Equal emphasis on speaker + slide (full-bleed, 1:1 slides). Use 2-4 per video for big reveals, result moments, storytelling. |
-| `broll_full` | ~5% | **REQUIRED** - Stock video B-roll (visual metaphors, establishing shots, 5-7s each) |
+| `broll_full` | ~~5%~~ | **DEPRECATED** - Use Imgflip memes as `slide_full` instead. Never use Pexels stock footage. |
 | `jump_zoom` + `gradual_zoom` | ~15% | Emphasis, energy, movement |
 | Speaker overlays | ~15% | newspaper_flash, counter_ticker, callout, check_x_mark, etc. |
 | Full-screen data viz | ~12% | bar_chart, pie_chart, bullet_list, stat_cards, flow_diagram, etc. |
@@ -283,7 +283,7 @@ SFX edits are **audio-only overlays** - they don't replace the visual. Place the
 
 | Sound | When to Use | Suggested Volume |
 |-------|-------------|-----------------|
-| `boop` | text_overlay reveals, soft emphasis moments | 0.3-0.5 |
+| `boop` | text_overlay reveals, soft emphasis moments | 0.15-0.25 |
 | `whoosh` | Chapter transitions ONLY (not every layout change) | 0.25-0.4 |
 | `achievement-ding` | Achievement/milestone moments | 0.4-0.5 |
 | `shimmer` | Sparkle/shine reveals | 0.3-0.4 |
@@ -308,27 +308,34 @@ SFX edits are **audio-only overlays** - they don't replace the visual. Place the
 **Rules:**
 - Max **4-6 manually placed SFX per 10-min video** - sparse and deliberate
 - Component auto-SFX don't count toward this limit
-- Volume `0.3-0.5` for manual SFX (never above `0.7`)
+- Volume `0.15-0.35` for manual SFX (never above `0.5`). Boop specifically: `0.15-0.25`
 - SFX `start`/`end` = sound duration (0.5-1s)
 - OK to overlap with any visual edit at the same timestamp
 - **Z-order = array order** - when overlays share a timestamp, put text_overlay AFTER gif_overlays so text renders on top
 
 ```json
 {"type": "text_overlay", "start": 10.0, "end": 12.0, "text": "KEY STAT", "style": "center"},
-{"type": "sfx", "start": 10.0, "end": 10.5, "content": "boop", "volume": 0.5}
+{"type": "sfx", "start": 10.0, "end": 10.5, "content": "boop", "volume": 0.2}
 ```
 
 ## Hook Editing Rules (CRITICAL)
 
 The first 60 seconds decide if people stay. Edit aggressively.
 
-### First 30 seconds - Max 5s per segment
-- **Something must happen every 3-5 seconds** - layout change, zoom punch, text overlay, GIF, anything
+### First 10 seconds - MAXIMUM density (Max 3s per segment)
+- **Something must happen every 1.5-3 seconds** - zoom punch, slide, layout change, anything
+- **No segment longer than 3 seconds**
+- **At least 1 slide or meme** in the first 5 seconds (NOT text overlay - slides are stronger pattern interrupts)
+- **At least 1 jump zoom** in the first 10 seconds
+- **Visual variety is the priority** - never repeat the same layout back-to-back
+- This is the hardest, fastest section of the entire video. Viewers decide in seconds.
+
+### 10-30 seconds - Still hard and dense (Max 5s per segment)
+- **Something must happen every 3-5 seconds** - layout change, zoom punch, slide, GIF, meme
 - **No segment longer than 5 seconds**
-- **All layout types are fair game** - face, splits, slides, zooms, text, GIFs
-- **At least 1 text overlay** with the key stat/hook word
-- **At least 1 jump zoom** to punch a key statement
-- **Visual variety is the priority** - don't repeat the same layout back-to-back
+- **All layout types are fair game** - face, splits, slides, zooms, GIFs, memes
+- **NO text overlays in the first 30s** - use slides/GIFs/memes for pattern interrupts instead. Text overlays are weak compared to full-screen visuals. Save them for mid-video emphasis.
+- Slightly less aggressive than 0-10s but still very fast pacing
 
 ### 30-60 seconds - Max 7s per segment
 - Still faster than the rest of the video
@@ -379,6 +386,16 @@ The first 60 seconds decide if people stay. Edit aggressively.
 jump_zoom_in (0.3-0.5s) -> jump_cut_in (HOLD 2-5s) -> jump_zoom_out (0.3-0.5s)
 ```
 Never go directly from jump_zoom_in to jump_zoom_out.
+
+**NEVER place `jump_zoom_in` after `gradual_zoom`.** The `jump_zoom_in` component always starts from scale 1.0, but `gradual_zoom` ends at an elevated zoom (e.g., 1.08-1.15). This creates a visible "bounce" — the speaker snaps back to 1.0 then zooms in again. Instead, go directly from `gradual_zoom` to `jump_cut_in` (instant hold at the target zoom). The cut from a drifting zoom to an instant higher zoom reads as a clean punch with no bounce.
+
+```
+WRONG:  gradual_zoom (1.0->1.1) -> jump_zoom_in (1.0->1.2) -> jump_cut_in (1.2)
+                                    ^^^ BOUNCES back to 1.0
+
+RIGHT:  gradual_zoom (1.0->1.1) -> jump_cut_in (1.2) -> jump_zoom_out (1.2->1.0)
+                                    ^^^ clean instant punch
+```
 
 ### 2. Zoom Transition Rules
 
@@ -506,39 +523,39 @@ To find valid cut points, scan the transcript for gaps: if `words[n].end` + 0.3 
 
 ## GIF Layout Rules
 
-### gif_overlay
-GIF appears as a floating element on top of the speaker video. Used for reaction GIFs and humor beats.
-
-**CRITICAL: gif_overlay ONLY on speaker layouts** (`speaker_full`, `gradual_zoom`, `jump_cut_in`). NEVER place on `split_right`, `split_left`, `slide_full`, or `broll_full`.
-
-**Minimum display time: 1s.** If the next segment (counter_ticker, slide_full, etc.) starts within 1s, don't add the overlay - it will be an invisible flash.
+### gif_full (DEFAULT - always use this)
+GIF fills the entire frame with a hard cut (no fade). Speaker audio continues underneath. This is the default GIF layout because it breaks up talking head and adds maximum visual variety.
 
 ```json
-{"type": "gif_overlay", "start": 45.0, "end": 47.5, "content": "gifs/gif-01-mind-blown.gif", "position": "bottom-right", "size": 0.3}
+{"type": "gif_full", "start": 120.0, "end": 122.5, "content": "gifs/gif-02-frustrated.mp4"}
 ```
 
-| Property | Default | Options |
-|----------|---------|---------|
-| `position` | `bottom-right` | `bottom-right`, `bottom-left`, `top-right`, `top-left`, `center` |
-| `size` | `0.3` | Fraction of frame width (0.2-0.5) |
-
-**Animations:** Scale bounce on entrance, fade on exit (automatic).
-
-### gif_full
-GIF fills the entire frame. Speaker audio continues underneath. Used for big meme moments.
-
+**To insert a gif_full**, split the underlying speaker/gradual_zoom segment:
 ```json
-{"type": "gif_full", "start": 120.0, "end": 122.0, "content": "gifs/gif-02-frustrated.gif"}
+// BEFORE: one long speaker segment
+{"type": "speaker_full", "start": 80.0, "end": 90.0}
+
+// AFTER: split around the gif
+{"type": "speaker_full", "start": 80.0, "end": 82.0},
+{"type": "gif_full", "start": 82.0, "end": 84.5, "content": "gifs/gif-01.mp4"},
+{"type": "speaker_full", "start": 84.5, "end": 90.0}
 ```
+
+### gif_overlay (AVOID - only for rare exceptions)
+GIF as a small floating overlay on top of the speaker. **Do NOT use gif_overlay by default.** Only use in rare cases where the speaker's face/gesture is critical to the moment AND you want a small reaction in the corner.
+
+If gif_overlay is used: ONLY on speaker layouts (`speaker_full`, `gradual_zoom`, `jump_cut_in`). NEVER on splits, slides, or B-roll. Minimum 1s display time.
 
 ### GIF Placement Rules
+- **ALWAYS use gif_full (hard cut), NEVER gif_overlay** - full-screen GIFs break up talking head far more effectively than tiny overlays
+- **No fade transitions on GIFs** - hard cut in, hard cut out
+- **Males only** - all GIFs featuring people must show males. Reject and re-search if the GIF features females.
 - **Always download fresh assets** - never reuse GIFs or B-roll from previous runs. Delete existing files in gifs/ and broll/ directories and search for new ones each time.
 - **Verify every download** - after downloading a GIF or B-roll clip, extract sample frames and READ them to check the content is valid and relevant. Use `fps=1` for short clips (GIFs under 5s) and `fps=1/5` for longer clips (B-roll). Command: `ffmpeg -i file.mp4 -vf "fps=1" /tmp/verify-%02d.jpg` or `ffmpeg -i file.mp4 -vf "fps=1/5" /tmp/verify-%02d.jpg`. Reject and re-search if it's a "content not available" placeholder, unrelated to the search query, or low quality.
-- **Maximum 1 GIF per 45-60 seconds** (pattern interrupt, not constant)
-- **Duration:** 1-3 seconds for overlays, 2-4 seconds for full
+- **Duration:** 2-3 seconds (hard cut)
 - **Placement:** Always AFTER the statement (punctuate, don't interrupt)
 - **Never place during:** Important explanations, data/diagrams on screen
-- **Typical count:** 6-10 GIFs per 10-minute video
+- **Typical count:** 15-20 GIFs per 10-minute video
 - GIF files are in `gifs/` folder (parallel to `slides/`)
 
 ### Example Timeline with GIFs
@@ -582,6 +599,8 @@ Text appears on top of the speaker video with pop animation (scale bounce entran
 - **Frequency:** Max 1 per 30-60 seconds (like jump zooms - emphasis, not spam)
 - **Use `center` style** for big impact moments (framework names, key stats)
 - **Use `caption` style** for supporting emphasis (smaller, bottom of frame)
+- **Built-in SFX:** Every text_overlay plays boop on entrance by default (volume 0.2). No `sfx` property needed in JSON. Set `"sfx": false` to silence a specific overlay. No separate SFX timeline entries needed.
+- **NEVER stack with newspaper_flash/callout** - if a text_overlay and a newspaper_flash/callout overlap at the same timestamp, the text flickers for a split second then gets covered. Remove the text_overlay - the overlay component is more visually interesting.
 
 ## Using Word-Level Timestamps (transcript.json)
 
@@ -641,7 +660,7 @@ Place at the natural topic break closest to 50% of total video duration.
 
 ```json
 {"type": "gradual_zoom", "start": 148.0, "end": 155.0, "zoomStart": 1.0, "zoomEnd": 1.08},
-{"type": "cta_overlay", "start": 150.0, "end": 157.0, "text": "Free AEO Quiz", "subtitle": "Link in Description", "style": "offer"},
+{"type": "cta_overlay", "start": 150.0, "end": 157.0, "text": "Join SaaS Accelerator", "subtitle": "Link in Description", "style": "offer"},
 {"type": "speaker_full", "start": 155.0, "end": 160.0}
 ```
 
@@ -656,7 +675,7 @@ The final section of the video. YouTube end screen elements overlay this, so kee
 
 ```json
 {"type": "speaker_full", "start": 285.0, "end": 290.0},
-{"type": "cta_overlay", "start": 290.0, "end": 300.0, "text": "Watch Next", "style": "next_video"},
+{"type": "cta_overlay", "start": 290.0, "end": 300.0, "text": "SaaS Accelerator", "style": "next_video"},
 {"type": "speaker_full", "start": 290.0, "end": 300.0}
 ```
 
@@ -673,19 +692,24 @@ Use `chapter_card` between major topic sections to visually mark transitions:
 {"type": "chapter_card", "start": 62.0, "end": 65.0, "title": "The Data", "number": 2, "subtitle": "What the numbers say"}
 ```
 
-## B-Roll Rules (REQUIRED)
+## Meme Rules (REQUIRED - replaces B-roll)
 
-Every video MUST include `broll_full` entries. B-roll breaks up long speaker-only stretches and adds visual variety.
+**NEVER use Pexels B-roll.** Generic stock footage is never relevant. Use Imgflip memes instead - they're always contextually relevant because captions match the speech.
 
-- **Minimum 3 B-roll clips per video** - search Pexels for relevant stock footage
-- **Any `speaker_full` segment longer than 8s** should be broken up with B-roll
-- **Pattern:** speaker_full (2-3s) -> broll_full (5-7s) -> speaker_full (1-2s)
-- **B-roll files** go in `broll/` directory, named `broll-XX-description.mp4`
-- **Speaker audio continues** under B-roll (the speaker is still talking, just not visible)
-- **Best for:** metaphors, establishing shots, illustrating concepts (typing, coding, business environments, technology)
-- **NOT for:** CTA sections, personal stories, surprise reveals - those need the speaker visible
+Every video MUST include memes rendered as `slide_full` entries. Memes break up long speaker-only stretches and add humor.
 
-If no B-roll clips exist in the `broll/` directory, flag this as missing and note which speaker segments need coverage.
+- **Source:** Imgflip MCP (`imgflip` server) - search templates by emotion, caption with context-relevant text
+- **Render as:** `slide_full` with content path `memes/meme-XX-description.jpg`
+- **Minimum 8-12 memes per 10-min video** (1 per 50-75s)
+- **Any `speaker_full` segment longer than 8s** should be broken up with a meme or slide
+- **Duration:** 3-5s per meme (hard cut)
+- **Placement:** AFTER the statement they punctuate (humor beat, not interruption)
+- **Meme files** go in `memes/` directory, named `meme-XX-description.jpg`
+- **Speaker audio continues** under memes (speaker is still talking, just not visible)
+- **Best for:** humor, reactions, comparisons (Drake format), frustration moments, "wait what" moments
+- **NOT for:** CTA sections, personal stories - those need the speaker visible
+
+If no memes exist in the `memes/` directory, flag this as missing and note which speaker segments need coverage.
 
 ## Technical Notes
 
@@ -706,7 +730,7 @@ If no B-roll clips exist in the `broll/` directory, flag this as missing and not
 
 **Render command:**
 ```bash
-npx remotion render MainVideo out/video.mp4 --video-bitrate=40M --props='{"config":{...}}'
+npx remotion render MainVideo out/video.mp4 --video-bitrate=35M --chunks=10 --concurrency=8 --gl=angle
 
 # Or via render script
 npx ts-node render.ts <video_dir>
@@ -735,4 +759,8 @@ The agent will:
 
 ## After Generation
 
-After writing timeline.json, report completion to the team lead. A separate validator agent will check the timeline for structural correctness, visual density, and speech alignment. If validation fails, you will receive specific fix instructions with exact timestamps and values to change.
+After writing timeline.json:
+
+1. **Run lint-timeline.js** - `node tools/video-editor-remotion/lint-timeline.js --fix` to auto-fix short segments and micro-gaps. This MUST run before validation.
+2. **Verify end CTA is last entry** - The `calculateDuration` function in Root.tsx uses `Math.max()` across all entries, but ensure the CTA overlay (end: video_duration) is not buried under SFX entries.
+3. Report completion to the team lead. A separate validator agent will check the timeline for structural correctness, visual density, and speech alignment. If validation fails, you will receive specific fix instructions with exact timestamps and values to change.

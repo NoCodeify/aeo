@@ -168,6 +168,8 @@ export interface TextOverlayEdit extends BaseEdit {
   style?: TextStyle; // default: "caption"
   color?: string; // default: "#ffffff"
   glow?: boolean; // default: true
+  sfx?: string; // optional sound effect (e.g. "boop") — plays on entrance
+  sfxVolume?: number; // default: 0.4
 }
 
 // Sound effect (audio-only overlay, no visual - plays on top of current layout)

@@ -75,16 +75,12 @@ export const CounterTicker: React.FC<CounterTickerProps> = ({
     extrapolateRight: "clamp",
   });
 
-  // Exit: fade out over last 8 frames
-  const exitOp = interpolate(
-    frame,
-    [durationInFrames - 8, durationInFrames],
-    [1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-  );
+  // No exit fade — hard cut to next layout. Fading reveals the speaker
+  // underneath at a different zoom level, creating a visible flash.
+  const exitOp = 1;
 
   return (
-    <>
+    <AbsoluteFill style={{ opacity: exitOp }}>
       <DarkGradientBg accentColor={color} />
 
       <AbsoluteFill
@@ -94,7 +90,6 @@ export const CounterTicker: React.FC<CounterTickerProps> = ({
           alignItems: "center",
           justifyContent: "center",
           transform: `scale(${containerScale})`,
-          opacity: exitOp,
         }}
       >
         {label && (
@@ -143,6 +138,6 @@ export const CounterTicker: React.FC<CounterTickerProps> = ({
           style={{ display: "none" }}
         />
       )}
-    </>
+    </AbsoluteFill>
   );
 };

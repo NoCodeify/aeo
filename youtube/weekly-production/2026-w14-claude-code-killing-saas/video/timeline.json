@@ -1,0 +1,1442 @@
+[
+  {
+    "type": "gradual_zoom",
+    "start": 0,
+    "end": 2.5,
+    "zoomStart": 1,
+    "zoomEnd": 1.05
+  },
+  {
+    "type": "slide_full",
+    "start": 2.5,
+    "end": 5,
+    "content": "slides/slide-41-kanban-board.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 5,
+    "end": 7
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 7,
+    "end": 9.44,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 9.44,
+    "end": 10,
+    "zoom": 1.15
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 10,
+    "end": 12,
+    "zoomStart": 1,
+    "zoomEnd": 1.05
+  },
+  {
+    "type": "slide_full",
+    "start": 12,
+    "end": 15,
+    "content": "memes/meme-01-drake-flutterflow-vs-claude.jpg"
+  },
+  {
+    "type": "slide_full",
+    "start": 15,
+    "end": 17.2,
+    "content": "slides/slide-42-months-to-minutes.jpg"
+  },
+  {
+    "type": "gif_full",
+    "start": 17.2,
+    "end": 19.36,
+    "content": "gifs/gif-01-done-mic-drop.mp4"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 19.36,
+    "end": 22,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "speaker_full",
+    "start": 22,
+    "end": 24
+  },
+  {
+    "type": "slide_full",
+    "start": 24,
+    "end": 31.3,
+    "content": "slides/slide-21.jpg"
+  },
+  {
+    "type": "chapter_card",
+    "start": 31.3,
+    "end": 34,
+    "title": "The No-Code Trap",
+    "number": 1,
+    "subtitle": "FlutterFlow and the ceiling",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "sfx",
+    "start": 31.3,
+    "end": 31.8,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "slide_full",
+    "start": 34,
+    "end": 38.5,
+    "content": "slides/slide-22.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 38.5,
+    "end": 42.1,
+    "zoomStart": 1,
+    "zoomEnd": 1.0565
+  },
+  {
+    "type": "slide_full",
+    "start": 42.1,
+    "end": 50,
+    "content": "memes/meme-02-roll-safe-ceiling.jpg"
+  },
+  {
+    "type": "slide_full",
+    "start": 50,
+    "end": 54,
+    "content": "slides/slide-23.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 54,
+    "end": 56.5,
+    "zoomStart": 1,
+    "zoomEnd": 1.05
+  },
+  {
+    "type": "slide_full",
+    "start": 56.5,
+    "end": 63.19,
+    "content": "slides/slide-08.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 63.19,
+    "end": 66.39,
+    "zoomStart": 1.0281,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "speaker_full",
+    "start": 66.39,
+    "end": 69.15
+  },
+  {
+    "type": "text_overlay",
+    "start": 68,
+    "end": 69.15,
+    "text": "ALWAYS HAD TO",
+    "style": "center"
+  },
+  {
+    "type": "sfx",
+    "start": 68,
+    "end": 68.5,
+    "content": "boop",
+    "volume": 0.2
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 69.15,
+    "end": 71.9,
+    "zoomStart": 1,
+    "zoomEnd": 1.044
+  },
+  {
+    "type": "slide_full",
+    "start": 71.9,
+    "end": 75.4,
+    "content": "slides/slide-09.jpg"
+  },
+  {
+    "type": "gif_full",
+    "start": 75.4,
+    "end": 79.3,
+    "content": "gifs/gif-02-frustrated-computer.mp4"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 79.3,
+    "end": 81.3,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 81.3,
+    "end": 81.7,
+    "zoom": 1.15
+  },
+  {
+    "type": "speaker_full",
+    "start": 81.7,
+    "end": 84
+  },
+  {
+    "type": "glitch",
+    "start": 84,
+    "end": 84.3,
+    "intensity": 0.5
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 84.3,
+    "end": 88,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "newspaper_flash",
+    "start": 84.5,
+    "end": 87.5,
+    "headlines": [
+      "FlutterFlow Triples Pricing",
+      "Users Scramble to Export Code",
+      "No-Code Platforms Face Backlash"
+    ],
+    "keyword": "Triples"
+  },
+  {
+    "type": "speaker_full",
+    "start": 88,
+    "end": 90.8
+  },
+  {
+    "type": "split_5050_left",
+    "start": 90.8,
+    "end": 94.3,
+    "content": "slides/slide-10.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 94.3,
+    "end": 96.3,
+    "zoomStart": 1,
+    "zoomEnd": 1.1
+  },
+  {
+    "type": "slide_full",
+    "start": 96.3,
+    "end": 99.3,
+    "content": "memes/meme-03-harold-visual-builder.jpg"
+  },
+  {
+    "type": "check_x_mark",
+    "start": 97,
+    "end": 98.5,
+    "markType": "x",
+    "position": "center"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 99.3,
+    "end": 101.7,
+    "zoomStart": 1,
+    "zoomEnd": 1.15
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 101.7,
+    "end": 103.75,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 103.75,
+    "end": 104.2,
+    "zoom": 1.15
+  },
+  {
+    "type": "split_5050_right",
+    "start": 104.2,
+    "end": 113.6,
+    "content": "slides/slide-01.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 113.6,
+    "end": 116
+  },
+  {
+    "type": "split_5050_right",
+    "start": 116,
+    "end": 120.8,
+    "content": "slides/slide-24.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 120.8,
+    "end": 125.04
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 125.04,
+    "end": 125.4,
+    "zoom": 1.18
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 125.4,
+    "end": 129.68,
+    "zoom": 1.18
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 129.68,
+    "end": 130.08,
+    "zoom": 1.18
+  },
+  {
+    "type": "slide_full",
+    "start": 130.08,
+    "end": 135.8,
+    "content": "memes/meme-05-headache-dart-files.jpg"
+  },
+  {
+    "type": "slide_full",
+    "start": 135.8,
+    "end": 139.3,
+    "content": "slides/slide-25.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 139.3,
+    "end": 144,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "gif_full",
+    "start": 144,
+    "end": 146,
+    "content": "gifs/gif-03-mind-blown.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 146,
+    "end": 150
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 150,
+    "end": 153.3,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "text_overlay",
+    "start": 150,
+    "end": 153.3,
+    "text": "30 MINUTES",
+    "style": "center",
+    "color": "#22c55e"
+  },
+  {
+    "type": "sfx",
+    "start": 150,
+    "end": 150.5,
+    "content": "boop",
+    "volume": 0.2
+  },
+  {
+    "type": "slide_full",
+    "start": 153.3,
+    "end": 158.7,
+    "content": "slides/slide-26.jpg"
+  },
+  {
+    "type": "gif_full",
+    "start": 158.7,
+    "end": 161,
+    "content": "gifs/gif-04-checklist-productivity.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 161,
+    "end": 163.7
+  },
+  {
+    "type": "bullet_list",
+    "start": 163.7,
+    "end": 168.3,
+    "layout": "split_right",
+    "title": "The Backlog",
+    "items": [
+      "Interactive dashboards",
+      "Custom notifications",
+      "Proper search system",
+      "Kanban board"
+    ],
+    "icon": "check",
+    "color": "#22c55e"
+  },
+  {
+    "type": "slide_full",
+    "start": 168.3,
+    "end": 174.9,
+    "content": "slides/slide-11.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 174.9,
+    "end": 177,
+    "zoomStart": 1,
+    "zoomEnd": 1.0323076923076921
+  },
+  {
+    "type": "slide_full",
+    "start": 177,
+    "end": 183,
+    "content": "slides/slide-12.jpg"
+  },
+  {
+    "type": "split_5050_left",
+    "start": 183,
+    "end": 187,
+    "content": "slides/slide-27.jpg"
+  },
+  {
+    "type": "gif_full",
+    "start": 187,
+    "end": 189,
+    "content": "gifs/gif-05-lightbulb-realization.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 189,
+    "end": 192
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 192,
+    "end": 192.3,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 192.3,
+    "end": 194,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 194,
+    "end": 194.4,
+    "zoom": 1.15
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 194.4,
+    "end": 198.7,
+    "zoomStart": 1,
+    "zoomEnd": 1.0741
+  },
+  {
+    "type": "split_5050_left",
+    "start": 198.7,
+    "end": 207,
+    "content": "slides/slide-02.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 207,
+    "end": 212
+  },
+  {
+    "type": "check_x_mark",
+    "start": 211,
+    "end": 212.5,
+    "markType": "check",
+    "position": "center"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 212,
+    "end": 215.6,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "text_overlay",
+    "start": 212,
+    "end": 215.6,
+    "text": "SPEED + CONTROL",
+    "style": "center",
+    "color": "#22c55e"
+  },
+  {
+    "type": "sfx",
+    "start": 215,
+    "end": 215.5,
+    "content": "shimmer",
+    "volume": 0.35
+  },
+  {
+    "type": "speaker_full",
+    "start": 215.6,
+    "end": 222.4
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 222.4,
+    "end": 228.4,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "speaker_full",
+    "start": 228.4,
+    "end": 231
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 231,
+    "end": 234.5,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 234.5,
+    "end": 234.9,
+    "zoom": 1.15
+  },
+  {
+    "type": "chapter_card",
+    "start": 234.9,
+    "end": 237.5,
+    "title": "The SaaS Tax",
+    "number": 2,
+    "subtitle": "What you're really paying for",
+    "accentColor": "#457b9d"
+  },
+  {
+    "type": "sfx",
+    "start": 234.9,
+    "end": 235.4,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "speaker_full",
+    "start": 237.5,
+    "end": 240.9
+  },
+  {
+    "type": "slide_full",
+    "start": 240.9,
+    "end": 247.1,
+    "content": "memes/meme-08-skeleton-hubspot.jpg"
+  },
+  {
+    "type": "slide_full",
+    "start": 247.1,
+    "end": 250.6,
+    "content": "slides/slide-28.jpg"
+  },
+  {
+    "type": "counter_ticker",
+    "start": 250.6,
+    "end": 253.8,
+    "from": 0,
+    "to": 1000,
+    "prefix": "$",
+    "suffix": "/mo",
+    "label": "Monthly SaaS Spend"
+  },
+  {
+    "type": "speaker_full",
+    "start": 253.8,
+    "end": 258.7
+  },
+  {
+    "type": "text_overlay",
+    "start": 255,
+    "end": 258.7,
+    "text": "$497/mo",
+    "style": "center",
+    "color": "#e63946"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 258.7,
+    "end": 261,
+    "zoomStart": 1,
+    "zoomEnd": 1.0302
+  },
+  {
+    "type": "slide_full",
+    "start": 261,
+    "end": 264.8,
+    "content": "slides/slide-13.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 264.8,
+    "end": 268.4
+  },
+  {
+    "type": "text_overlay",
+    "start": 266.3,
+    "end": 268.4,
+    "text": "$800/mo + $3K",
+    "style": "center",
+    "color": "#e63946"
+  },
+  {
+    "type": "speaker_full",
+    "start": 268.4,
+    "end": 272
+  },
+  {
+    "type": "gif_full",
+    "start": 272,
+    "end": 274.2,
+    "content": "gifs/gif-06-shocked-jaw-drop.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 274.2,
+    "end": 276.5
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 276.5,
+    "end": 282.3,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "split_5050_right",
+    "start": 282.3,
+    "end": 288.1,
+    "content": "slides/slide-30.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 288.1,
+    "end": 290.1,
+    "zoomStart": 1,
+    "zoomEnd": 1.1
+  },
+  {
+    "type": "slide_full",
+    "start": 290.1,
+    "end": 293.1,
+    "content": "memes/meme-06-buff-doge-backlog.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 293.1,
+    "end": 295.2,
+    "zoomStart": 1,
+    "zoomEnd": 1.1
+  },
+  {
+    "type": "slide_full",
+    "start": 295.2,
+    "end": 301,
+    "content": "slides/slide-31.jpg"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 301,
+    "end": 301.3,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 301.3,
+    "end": 304.5,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 304.5,
+    "end": 304.9,
+    "zoom": 1.15
+  },
+  {
+    "type": "speaker_full",
+    "start": 304.9,
+    "end": 307
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 307,
+    "end": 309,
+    "zoomStart": 1,
+    "zoomEnd": 1.0186
+  },
+  {
+    "type": "slide_full",
+    "start": 309,
+    "end": 312,
+    "content": "slides/slide-32.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 312,
+    "end": 315.6,
+    "zoomStart": 1.0465,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "speaker_full",
+    "start": 315.6,
+    "end": 320.1
+  },
+  {
+    "type": "text_overlay",
+    "start": 315.6,
+    "end": 319,
+    "text": "4 OUT OF 100s",
+    "style": "center"
+  },
+  {
+    "type": "sfx",
+    "start": 315.6,
+    "end": 316.1,
+    "content": "boop",
+    "volume": 0.2
+  },
+  {
+    "type": "split_5050_right",
+    "start": 320.1,
+    "end": 326,
+    "content": "slides/slide-03.jpg"
+  },
+  {
+    "type": "split_5050_left",
+    "start": 326,
+    "end": 333.4,
+    "content": "slides/slide-04.jpg"
+  },
+  {
+    "type": "cta_overlay",
+    "start": 333.4,
+    "end": 339.4,
+    "text": "Join SaaS Accelerator",
+    "subtitle": "Link in Description",
+    "style": "offer",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "speaker_full",
+    "start": 333.4,
+    "end": 338
+  },
+  {
+    "type": "split_5050_right",
+    "start": 338,
+    "end": 342.3,
+    "content": "slides/slide-14.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 342.3,
+    "end": 348
+  },
+  {
+    "type": "gif_full",
+    "start": 348,
+    "end": 350.3,
+    "content": "gifs/gif-07-money-flying-away.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 350.3,
+    "end": 354
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 354,
+    "end": 358,
+    "zoomStart": 1,
+    "zoomEnd": 1.15
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 358,
+    "end": 361.8,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 361.8,
+    "end": 362.3,
+    "zoom": 1.15
+  },
+  {
+    "type": "speaker_full",
+    "start": 362.3,
+    "end": 365
+  },
+  {
+    "type": "slide_full",
+    "start": 365,
+    "end": 368.8,
+    "content": "slides/slide-15.jpg"
+  },
+  {
+    "type": "sfx",
+    "start": 365,
+    "end": 365.5,
+    "content": "boop",
+    "volume": 0.25
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 368.8,
+    "end": 372.7,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "screen_shake",
+    "start": 368.8,
+    "end": 369.3,
+    "intensity": 0.7,
+    "style": "impact"
+  },
+  {
+    "type": "text_overlay",
+    "start": 368.8,
+    "end": 372.7,
+    "text": "80% WASTED",
+    "style": "center",
+    "color": "#e63946"
+  },
+  {
+    "type": "gif_full",
+    "start": 372.7,
+    "end": 376,
+    "content": "gifs/gif-08-throwing-money-trash.mp4"
+  },
+  {
+    "type": "split_5050_left",
+    "start": 376,
+    "end": 379.5,
+    "content": "slides/slide-33.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 379.5,
+    "end": 382.8,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "slide_full",
+    "start": 382.8,
+    "end": 387,
+    "content": "memes/meme-11-pooh-which-tool.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 387,
+    "end": 391.7
+  },
+  {
+    "type": "text_overlay",
+    "start": 388.5,
+    "end": 391,
+    "text": "$80/mo",
+    "style": "center",
+    "color": "#22c55e"
+  },
+  {
+    "type": "comparison_table",
+    "start": 391.7,
+    "end": 396.3,
+    "leftLabel": "SaaS Stack",
+    "rightLabel": "Claude Code",
+    "rows": [
+      {
+        "left": "$1,000+/mo",
+        "right": "$80/mo",
+        "rightWins": true
+      },
+      {
+        "left": "Use 20%",
+        "right": "Use 100%",
+        "rightWins": true
+      },
+      {
+        "left": "No control",
+        "right": "Own everything",
+        "rightWins": true
+      }
+    ],
+    "winnerSide": "right"
+  },
+  {
+    "type": "speaker_full",
+    "start": 396.3,
+    "end": 400
+  },
+  {
+    "type": "slide_full",
+    "start": 400,
+    "end": 404.1,
+    "content": "memes/meme-07-fry-every-nocode.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 404.1,
+    "end": 407,
+    "zoomStart": 1,
+    "zoomEnd": 1.0453124999999999
+  },
+  {
+    "type": "split_5050_left",
+    "start": 407,
+    "end": 410.5,
+    "content": "slides/slide-16.jpg"
+  },
+  {
+    "type": "sfx",
+    "start": 410,
+    "end": 410.5,
+    "content": "shimmer",
+    "volume": 0.35
+  },
+  {
+    "type": "speaker_full",
+    "start": 410.5,
+    "end": 413
+  },
+  {
+    "type": "slide_full",
+    "start": 413,
+    "end": 416.5,
+    "content": "slides/slide-35.jpg"
+  },
+  {
+    "type": "gif_full",
+    "start": 416.5,
+    "end": 418.5,
+    "content": "gifs/gif-09-flexing-power.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 418.5,
+    "end": 423.7
+  },
+  {
+    "type": "text_overlay",
+    "start": 421,
+    "end": 423.5,
+    "text": "COST EQUATION FLIPPED",
+    "style": "center"
+  },
+  {
+    "type": "sfx",
+    "start": 421,
+    "end": 421.5,
+    "content": "boop",
+    "volume": 0.2
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 423.7,
+    "end": 429.2,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "speaker_full",
+    "start": 429.2,
+    "end": 432.9
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 432.9,
+    "end": 433.2,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 433.2,
+    "end": 437.8,
+    "zoom": 1.2
+  },
+  {
+    "type": "sfx",
+    "start": 436,
+    "end": 436.5,
+    "content": "shimmer",
+    "volume": 0.4
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 437.8,
+    "end": 438.2,
+    "zoom": 1.2
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 438.2,
+    "end": 445.6,
+    "zoomStart": 1,
+    "zoomEnd": 1.1
+  },
+  {
+    "type": "light_leak",
+    "start": 445,
+    "end": 446.5
+  },
+  {
+    "type": "gif_full",
+    "start": 445.6,
+    "end": 448.3,
+    "content": "gifs/gif-10-plot-twist-surprised.mp4"
+  },
+  {
+    "type": "chapter_card",
+    "start": 448.3,
+    "end": 451,
+    "title": "The Wrapper Scam",
+    "number": 3,
+    "subtitle": "Why AI coding tools have the same problem",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "sfx",
+    "start": 448.3,
+    "end": 448.8,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "speaker_full",
+    "start": 451,
+    "end": 454
+  },
+  {
+    "type": "slide_full",
+    "start": 454,
+    "end": 458.9,
+    "content": "slides/slide-36.jpg"
+  },
+  {
+    "type": "slide_full",
+    "start": 458.9,
+    "end": 464.3,
+    "content": "memes/meme-12-captain-anthropic.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 464.3,
+    "end": 469.97
+  },
+  {
+    "type": "split_5050_right",
+    "start": 469.97,
+    "end": 479,
+    "content": "slides/slide-05.jpg"
+  },
+  {
+    "type": "callout",
+    "start": 478,
+    "end": 480.5,
+    "text": "THE MIDDLEMAN",
+    "position": "center",
+    "direction": "down"
+  },
+  {
+    "type": "slide_full",
+    "start": 479,
+    "end": 484.9,
+    "content": "slides/slide-05.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 484.9,
+    "end": 488
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 488,
+    "end": 491.6,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 491.6,
+    "end": 492,
+    "zoom": 1.15
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 492,
+    "end": 498.4,
+    "zoomStart": 1,
+    "zoomEnd": 1.1
+  },
+  {
+    "type": "speaker_full",
+    "start": 498.4,
+    "end": 502
+  },
+  {
+    "type": "text_overlay",
+    "start": 500,
+    "end": 504,
+    "text": "WRAPPERS MADE SENSE",
+    "style": "center"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 502,
+    "end": 505,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "slide_full",
+    "start": 505,
+    "end": 508,
+    "content": "memes/meme-09-exit-ramp-build-yourself.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 508,
+    "end": 510.4,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "slide_full",
+    "start": 510.4,
+    "end": 516,
+    "content": "memes/meme-13-scroll-middlemen.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 516,
+    "end": 519.3
+  },
+  {
+    "type": "gif_full",
+    "start": 519.3,
+    "end": 523,
+    "content": "gifs/gif-11-corporate-coming-for-you.mp4"
+  },
+  {
+    "type": "slide_full",
+    "start": 523,
+    "end": 527,
+    "content": "slides/slide-37.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 527,
+    "end": 530.8,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "speaker_full",
+    "start": 530.8,
+    "end": 534.2
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 534.2,
+    "end": 538.5,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "text_overlay",
+    "start": 534.2,
+    "end": 538.5,
+    "text": "MADE THE AI",
+    "style": "center",
+    "color": "#22c55e"
+  },
+  {
+    "type": "sfx",
+    "start": 534.2,
+    "end": 534.7,
+    "content": "boop",
+    "volume": 0.2
+  },
+  {
+    "type": "slide_full",
+    "start": 538.5,
+    "end": 543,
+    "content": "slides/slide-17.jpg"
+  },
+  {
+    "type": "newspaper_flash",
+    "start": 540,
+    "end": 543,
+    "headlines": [
+      "Cursor Cuts Pro Plan 55%",
+      "CEO Apologizes Publicly",
+      "AI Model Costs Spike"
+    ],
+    "keyword": "Cuts"
+  },
+  {
+    "type": "speaker_full",
+    "start": 543,
+    "end": 545
+  },
+  {
+    "type": "split_5050_left",
+    "start": 545,
+    "end": 552.5,
+    "content": "slides/slide-06.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 552.5,
+    "end": 556
+  },
+  {
+    "type": "text_overlay",
+    "start": 552.5,
+    "end": 555.5,
+    "text": "500 -> 225",
+    "style": "center",
+    "color": "#e63946"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 556,
+    "end": 559.6,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "speaker_full",
+    "start": 559.6,
+    "end": 565.4
+  },
+  {
+    "type": "gif_full",
+    "start": 565.4,
+    "end": 568,
+    "content": "gifs/gif-12-passing-the-buck.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 568,
+    "end": 572
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 572,
+    "end": 575,
+    "zoomStart": 1,
+    "zoomEnd": 1.1
+  },
+  {
+    "type": "slide_full",
+    "start": 575,
+    "end": 578,
+    "content": "memes/meme-10-change-mind-saas-waste.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 578,
+    "end": 580,
+    "zoomStart": 1,
+    "zoomEnd": 1.1
+  },
+  {
+    "type": "split_5050_right",
+    "start": 580,
+    "end": 584,
+    "content": "slides/slide-18.jpg"
+  },
+  {
+    "type": "sfx",
+    "start": 580,
+    "end": 580.5,
+    "content": "shimmer",
+    "volume": 0.35
+  },
+  {
+    "type": "gif_full",
+    "start": 584,
+    "end": 586,
+    "content": "gifs/gif-13-freedom-independence.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 586,
+    "end": 590.2
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 590.2,
+    "end": 590.5,
+    "zoom": 1.18
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 590.5,
+    "end": 595.3,
+    "zoom": 1.18
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 595.3,
+    "end": 595.7,
+    "zoom": 1.18
+  },
+  {
+    "type": "slide_full",
+    "start": 595.7,
+    "end": 600.4,
+    "content": "slides/slide-39.jpg"
+  },
+  {
+    "type": "gif_full",
+    "start": 600.4,
+    "end": 604,
+    "content": "gifs/gif-14-dominos-falling.mp4"
+  },
+  {
+    "type": "slide_full",
+    "start": 604,
+    "end": 608.3,
+    "content": "slides/slide-19.jpg"
+  },
+  {
+    "type": "flow_diagram",
+    "start": 608.3,
+    "end": 614.6,
+    "nodes": [
+      {
+        "label": "Travel Agents"
+      },
+      {
+        "label": "Music Labels"
+      },
+      {
+        "label": "Taxi Companies"
+      },
+      {
+        "label": "AI Wrappers"
+      }
+    ],
+    "accentColor": "#e63946",
+    "direction": "horizontal"
+  },
+  {
+    "type": "speaker_full",
+    "start": 614.6,
+    "end": 619.4
+  },
+  {
+    "type": "slide_full",
+    "start": 619.4,
+    "end": 625.3,
+    "content": "slides/slide-40.jpg"
+  },
+  {
+    "type": "gif_full",
+    "start": 625.3,
+    "end": 627.5,
+    "content": "gifs/gif-15-disappearing-poof.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 627.5,
+    "end": 632
+  },
+  {
+    "type": "split_5050_left",
+    "start": 632,
+    "end": 637.1,
+    "content": "slides/slide-20.jpg"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 637.1,
+    "end": 641,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 641,
+    "end": 641.4,
+    "zoom": 1.15
+  },
+  {
+    "type": "speaker_full",
+    "start": 641.4,
+    "end": 643.5
+  },
+  {
+    "type": "speaker_full",
+    "start": 643.5,
+    "end": 647
+  },
+  {
+    "type": "split_5050_right",
+    "start": 647,
+    "end": 654,
+    "content": "slides/slide-07.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 654,
+    "end": 658
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 658,
+    "end": 662,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "speaker_full",
+    "start": 662,
+    "end": 665
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 665,
+    "end": 673,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "sfx",
+    "start": 665,
+    "end": 665.5,
+    "content": "shimmer",
+    "volume": 0.4
+  },
+  {
+    "type": "cta_overlay",
+    "start": 665,
+    "end": 673,
+    "text": "SaaS Accelerator",
+    "subtitle": "Link in Description",
+    "style": "next_video",
+    "accentColor": "#e63946"
+  }
+]

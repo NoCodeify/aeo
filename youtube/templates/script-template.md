@@ -260,4 +260,5 @@
 After validation, extract clean script for teleprompter:
 - Remove all bracketed instructions
 - Add [SLIDE XX: NAME] markers
-- Save as prompter.txt
+- **Plain text only** - no markdown headings (#), no dividers (---), no bold/italic. Just raw spoken words with blank lines between paragraphs
+- Save as prompter.md

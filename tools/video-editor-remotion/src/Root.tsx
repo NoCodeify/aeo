@@ -98,8 +98,8 @@ const defaultConfig: VideoConfig = {
 // Calculate total duration from timeline
 const calculateDuration = (timeline: Edit[], fps: number): number => {
   if (timeline.length === 0) return fps * 10; // 10 seconds default
-  const lastEdit = timeline[timeline.length - 1];
-  return Math.ceil(lastEdit.end * fps);
+  const maxEnd = Math.max(...timeline.map((e) => e.end));
+  return Math.ceil(maxEnd * fps);
 };
 
 export const RemotionRoot: React.FC = () => {

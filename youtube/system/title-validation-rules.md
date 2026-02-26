@@ -79,11 +79,42 @@ These are ARCHETYPES. Adapt to YOUR niche (Claude Code / AI / vibe coding / deve
 
 ---
 
-## 4. Master Title Formula
+## 4. Reframing Transforms
+
+When a title feels flat, run it through these upgrade paths. Each transforms a weaker frame into a stronger one.
+
+| # | Weak Frame | Strong Frame | The Shift | Example |
+|---|-----------|-------------|-----------|---------|
+| 1 | **Informative** | **Confrontational** | Explain idea → Challenge understanding | "New Ocean Forming in Africa" → "Africa Is Splitting Into Two Continents" |
+| 2 | **How-to** | **Proof** | Teach a process → Show you did it | "How to Design a $10K Brand" → "I Created a $10K Brand Design" |
+| 3 | **List** | **Singular claim** | Browse options → Chase one thing | "6 Ways to Make $100K" → "The Fastest Way to $100K" |
+| 4 | **Update** | **Solution** | Announce what's new → Solve what's broken | "What's New in Filmora 14.3" → "Best CapCut Alternative" |
+| 5 | **Biography** | **Turning point** | Tell the resume → Package the conflict | "Story of CS's Greatest Player" → "How a Banned Player Became the Greatest" |
+
+### The Consequences Test
+
+After drafting a title, ask: **"What changes if this is true?"**
+
+If the answer is more interesting than the title itself, rewrite the title around the consequence.
+
+- "I Built 5 Projects With Claude Code" → consequence: "$100K+ running in production" → "I Built a $100K SaaS With Claude Code"
+- "New AI Coding Tool Released" → consequence: "solo founders replacing dev teams" → "Solo Founders Are Replacing Dev Teams With This"
+
+### Key Principles
+
+- **"I [verb]" beats "How to [verb]"** -- demonstration > instruction. Viewers want to inspect a result, not sit through a lesson.
+- **Singular beats lists for authority content.** Lists ("7 ways") work for utility content. But for proof/authority videos, one bold claim ("The fastest way") removes evaluation friction and positions expertise.
+- **Implications beat explanations.** Don't package the information. Package what the information means for the viewer.
+
+---
+
+## 5. Master Title Formula
 
 ```
 [SPECIFIC IDENTITY] + [ACUTE MOMENT / TIMING] + [SPECIFIC OUTCOME]
 ```
+
+After applying the formula, run the result through the Reframing Transforms (Section 4) to check if a stronger frame exists.
 
 Examples applying the formula:
 
@@ -97,7 +128,7 @@ Not every title needs all three elements. Two out of three is acceptable if the 
 
 ---
 
-## 5. Red Flags
+## 6. Red Flags
 
 STOP and rewrite if ANY of these are true:
 
@@ -113,7 +144,7 @@ STOP and rewrite if ANY of these are true:
 
 ---
 
-## 6. Green Flags
+## 7. Green Flags
 
 Strong titles typically have 3+ of these:
 
@@ -126,12 +157,14 @@ Strong titles typically have 3+ of these:
 | Under 65 characters | Full visibility on all devices |
 | Creates urgency through specificity | Narrow = more urgent than broad |
 | Uses emotional words: MUST, NEVER, Survive, Win, Stop, Secret | Triggers emotional response |
+| Uses "I [verb]" framing (I Built, I Created, I Tested) | Proof/demonstration energy -- viewers inspect results, not sit through lessons |
+| Packages consequences, not explanations | Implications create urgency; explanations create "maybe later" |
 
 ---
 
-## 7. Pre-Flight Validation Checklist
+## 8. Pre-Flight Validation Checklist
 
-Every title candidate must pass ALL four steps.
+Every title candidate must pass ALL five steps.
 
 ### Step 1: Acute Moment Check
 
@@ -151,13 +184,21 @@ If any answer is NO, rewrite before proceeding.
 - [ ] No clickbait that the video can't deliver on?
 - [ ] Reads naturally out loud? (No awkward phrasing)
 
-### Step 3: Curiosity Gap Check
+### Step 3: Reframe Check
+
+- [ ] Run through the 5 Reframing Transforms (Section 4). Is a stronger frame available?
+- [ ] Apply the Consequences Test: "What changes if this is true?" Is the consequence more interesting than the title?
+- [ ] Is the title packaging implications/outcomes, or just explaining the topic?
+- [ ] If "How to [X]" -- would "I [did X]" be stronger? (Proof > instruction for authority content)
+- [ ] If list format -- would a singular claim be stronger? (Only keep lists for utility content)
+
+### Step 4: Curiosity Gap Check
 
 - [ ] Can you complete: "They'll click because they want to know ___"?
 - [ ] Is the gap specific enough to create tension?
 - [ ] Does the video actually answer/resolve the gap?
 
-### Step 4: Final Gut Check
+### Step 5: Final Gut Check
 
 - [ ] Would YOU click this if you saw it in your feed right now?
 - [ ] Does it sound DIFFERENT from the last 5 titles on this channel?
@@ -166,7 +207,7 @@ If any answer is NO, rewrite before proceeding.
 
 ---
 
-## 8. Variety Check System
+## 9. Variety Check System
 
 Apply across a SET of title candidates (for a content calendar or batch of options).
 
@@ -195,7 +236,7 @@ Take any two titles and swap their subjects. If they still work interchangeably,
 
 ---
 
-## 9. Options-First Output Format
+## 10. Options-First Output Format
 
 When presenting title candidates, NEVER pick a winner. Present options in this format:
 

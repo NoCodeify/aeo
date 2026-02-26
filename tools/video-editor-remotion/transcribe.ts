@@ -16,6 +16,8 @@
  * Flags:
  *   --clean   Transcribe speaker-clean.mp4 → transcript-clean.json
  *             (use after manual rough cut in video editor)
+ *   --boost "word1,word2,..."  Boost specific words/phrases for better recognition
+ *             (e.g., --boost "DM Champ,Claude Code,Claudify,Supabase")
  *
  * Prerequisites:
  *   - ffmpeg installed (for audio extraction)
@@ -67,20 +69,34 @@ async function startTranscription(
   apiKey: string,
   audioUrl: string,
   model: string,
-  disfluencies: boolean
+  disfluencies: boolean,
+  wordBoost?: string[]
 ): Promise<string> {
+  const body: any = {
+    audio_url: audioUrl,
+    language_detection: true,
+    disfluencies,
+    speech_models: [model],
+  };
+
+  if (wordBoost && wordBoost.length > 0) {
+    if (model === "universal-3-pro") {
+      // U3P uses keyterms_prompt (list of terms) instead of word_boost
+      body.keyterms_prompt = wordBoost;
+    } else {
+      // U2 and older models use word_boost
+      body.word_boost = wordBoost;
+      body.boost_param = "high";
+    }
+  }
+
   const res = await fetch(`${ASSEMBLYAI_BASE}/transcript`, {
     method: "POST",
     headers: {
       authorization: apiKey,
       "content-type": "application/json",
     },
-    body: JSON.stringify({
-      audio_url: audioUrl,
-      language_detection: true,
-      disfluencies,
-      speech_models: [model],
-    }),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {
@@ -169,7 +185,15 @@ async function transcribe() {
   const args = process.argv.slice(2);
 
   const cleanMode = args.includes("--clean");
-  const filteredArgs = args.filter((a) => a !== "--clean");
+
+  // Parse --boost "word1,word2,..."
+  let wordBoost: string[] = [];
+  const boostIdx = args.indexOf("--boost");
+  if (boostIdx !== -1 && args[boostIdx + 1]) {
+    wordBoost = args[boostIdx + 1].split(",").map((w) => w.trim());
+  }
+
+  const filteredArgs = args.filter((a, i) => a !== "--clean" && a !== "--boost" && (boostIdx === -1 || i !== boostIdx + 1));
 
   if (filteredArgs.length < 1) {
     console.log("Usage: npx ts-node transcribe.ts <video_dir> [--clean]");
@@ -237,6 +261,9 @@ async function transcribe() {
   console.log("Output:", outputPath);
   console.log("Pass 1: Universal-3-Pro (accuracy + false starts)");
   console.log("Pass 2: Universal-2 (filler detection)");
+  if (wordBoost.length > 0) {
+    console.log(`Word boost: ${wordBoost.join(", ")}`);
+  }
   console.log();
 
   // Step 1: Extract audio with ffmpeg
@@ -302,8 +329,8 @@ async function transcribe() {
   console.log("Starting dual transcription...");
 
   const [u3pId, u2Id] = await Promise.all([
-    startTranscription(apiKey, upload_url, "universal-3-pro", false),
-    startTranscription(apiKey, upload_url, "universal-2", true),
+    startTranscription(apiKey, upload_url, "universal-3-pro", false, wordBoost),
+    startTranscription(apiKey, upload_url, "universal-2", true, wordBoost),
   ]);
 
   console.log(`  Universal-3-Pro ID: ${u3pId}`);

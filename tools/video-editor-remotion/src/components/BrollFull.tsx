@@ -27,7 +27,7 @@ export const BrollFull: React.FC<BrollFullProps> = ({
   );
 
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={{ backgroundColor: "#0a0a0a" }}>
       {/* B-roll video - full screen, no loop */}
       <AbsoluteFill style={{ opacity }}>
         <SmartVideo

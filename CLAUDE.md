@@ -7,7 +7,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 AEO (Answer Engine Optimization) Protocol toolkit: consulting methodology, MCP servers, YouTube production, and client delivery.
 
 - `aeo-protocol-sop.md` - Master AEO methodology (3500+ lines, source of truth)
-- `aeo-audit-mcp/` / `seo-agent-mcp/` / `imagen-mcp/` / `giphy-mcp/` / `pexels-mcp/` / `scrapingbee-mcp/` / `trend-scanner-mcp/` - MCP servers
+- `aeo-audit-mcp/` / `seo-agent-mcp/` / `imagen-mcp/` / `giphy-mcp/` / `pexels-mcp/` / `scrapingbee-mcp/` / `trend-scanner-mcp/` / `imgflip-mcp/` - MCP servers
 - `tools/video-editor-remotion/` - React-based video editor (Remotion)
 - `youtube/` - Video production framework
 - `clients/` - Client project files
@@ -22,7 +22,7 @@ cd [server]-mcp && npm run build
 # Dev mode
 cd [server]-mcp && npm run dev
 
-# Servers: aeo-audit-mcp, seo-agent-mcp, imagen-mcp, giphy-mcp, pexels-mcp, scrapingbee-mcp, trend-scanner-mcp
+# Servers: aeo-audit-mcp, seo-agent-mcp, imagen-mcp, giphy-mcp, pexels-mcp, scrapingbee-mcp, trend-scanner-mcp, imgflip-mcp
 ```
 
 ## Environment Variables
@@ -35,6 +35,7 @@ Required in `.env` or MCP config:
 - `GIPHY_API_KEY` - Giphy API key
 - `PEXELS_API_KEY` - Pexels API key
 - `ASSEMBLYAI_API_KEY` - AssemblyAI API key (filler detection enabled)
+- `IMGFLIP_USERNAME` / `IMGFLIP_PASSWORD` - Imgflip credentials (free account)
 
 ## Critical Rules
 
@@ -75,7 +76,7 @@ Domain-specific rules load automatically based on what files you're working with
 |-------|---------|-------------------|
 | `/youtube-hook` | Hook generation (3 options: Safe/Experimental/Hybrid) | hook-generator |
 | `/youtube-script-plan` | Script architecture (4-exchange, beat-level STP) | script-architect |
-| `/youtube-script-writer` | Script execution from locked architecture | script-writer |
+| `/youtube-script-writer` | Script execution from locked architecture (writer + validator team, max 3 rounds) | script-writer + script-validator |
 | `/broll-prompting` | B-roll image prompts | broll-prompter |
 | `/gif-search` | GIF search + download | gif-researcher |
 | `/excalidraw-slides` | Whiteboard slides | slide-prompter |
@@ -98,15 +99,16 @@ Domain-specific rules load automatically based on what files you're working with
 
 ## Agents (`.claude/agents/`)
 
-18 specialized agents with isolated context, tool restrictions, and MCP access. Skills delegate to agents via `context: fork`. See individual agent files for full system prompts.
+19 specialized agents with isolated context, tool restrictions, and MCP access. Skills delegate to agents via `context: fork`. See individual agent files for full system prompts.
 
 ### YouTube Pre-Production Agents (NEW)
 | Agent | Purpose | MCP |
 |-------|---------|-----|
 | `title-validator` | Title generation + acute moment validation + 765 frameworks | seo-agent |
 | `hook-generator` | 6-template hook system, 3 options output | - |
-| `script-architect` | Beat-level script architecture, 4-exchange process | - |
-| `script-writer` | Voice execution from locked architecture + production blueprint | - |
+| `script-architect` | Beat-level script architecture, 4-exchange process + story overlap scan + web research | WebSearch |
+| `script-writer` | Voice execution from locked architecture + production blueprint + fact-checking | WebSearch |
+| `script-validator` | 14-check validation gate for scripts (re-tension, Forward Pulls, punchy sentences, STP, voice, story overlap, fact-check) | WebSearch |
 
 ### YouTube Pre-Production Flow
 ```

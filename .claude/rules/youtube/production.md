@@ -31,7 +31,7 @@ youtube/
 **Claude Code keywords (primary):** `youtube/system/claude-code-keyword-data.csv`
 **AEO keywords (legacy):** `youtube/system/aeo-keyword-data.md`
 
-Channel pivoted to Claude Code content (Feb 2026). All new content decisions use Claude Code keyword data.
+Channel pivoted to SaaS content (Feb 2026). Content decisions informed by keyword data but led by feed-first packaging (curiosity gaps, not keyword stuffing).
 
 **Key Terms (Feb 2026):**
 
@@ -69,7 +69,7 @@ Channel pivoted to Claude Code content (Feb 2026). All new content decisions use
    - Asset lists: screen recordings, slides, Pexels queries, GIF queries, SFX map, text overlays
    - Layout flow: second-by-second guidance for timeline builder
 4. **Generate thumbnail** via `/thumbnail` skill (reads `youtube/system/thumbnail-validation.md` for validation)
-5. **Extract prompter text** (plain text from script, no tables/slide refs)
+5. **Extract prompter text** (plain text from script, no markdown/headings/dividers - just raw spoken words with blank lines between paragraphs)
 
 ### Post-Film
 6. **Transcribe** raw footage (`transcribe.ts` - dual-pass AssemblyAI)
@@ -88,32 +88,95 @@ Channel pivoted to Claude Code content (Feb 2026). All new content decisions use
     - 50/50 slides (`split_5050_left/right`): generate at **1:1**
     - Use `/excalidraw-slides` for whiteboard style (NOT `/broll-prompting`)
 11. **Research GIFs** via `/gif-search` (can run parallel with step 10)
-12. **Source B-roll** via Pexels MCP (can run parallel with steps 10-11)
-    - Search for stock video matching long speaker-only segments
-    - Download to `video/broll/` directory
-    - Every video MUST have at least 3-5 B-roll clips for visual variety
-13. **Preview in Studio** before rendering
+12. **Generate memes** via Imgflip MCP (can run parallel with steps 10-11)
+    - For each long speaker-only segment, pick a meme template matching the speech context
+    - Caption with relevant text, download to `video/memes/` directory
+    - Use as `slide_full` entries in timeline (not `broll_full`)
+    - Every video MUST have at least 10-13 memes for visual variety
+    - Memes replace generic Pexels B-roll (always relevant because captions match speech)
+13. **Build new Remotion component** from the script's NEW COMPONENT candidate (section F of production blueprint)
+    - Read the candidate spec from the script
+    - Implement in `tools/video-editor-remotion/src/components/[ComponentName].tsx`
+    - Register in `Root.tsx` timeline type system
+    - Use `/remotion-best-practices` for animation patterns
+    - Update timeline to reference the new component instead of the static slide it replaces
+14. **Lint timeline** via `node lint-timeline.js` (from `tools/video-editor-remotion/`)
+    - Catches: short speaker flashes (<2s), micro-gaps, text on GIFs/broll, overlapping layouts, text-speech misalignment
+    - Use `--fix` to auto-resolve short speaker segments
+    - Run BEFORE Studio preview to catch issues early
+15. **Preview in Studio** before rendering
     - Copy assets to `public/`: speaker.mp4, slides/, gifs/, broll/, timeline.json
     - Generate speaker proxy: `ffmpeg -y -i public/speaker.mp4 -vf "scale=960:540" -c:v libx264 -preset fast -crf 28 -c:a aac -b:a 64k public/speaker-proxy.mp4`
     - Fix timeline paths: `broll/file.mp4` not `video/broll/file.mp4`
     - Check: overlays only on speaker layouts, SFX not too dense, zooms smooth
-14. **Render** at 4K via `render.ts` (reads from `public/timeline.json`, auto-syncs back to source)
+16. **Render** at 4K via `render.ts` (reads from `public/timeline.json`, auto-syncs back to source)
 
 ### Hook Pacing (First 60 Seconds) - CRITICAL
 
 The first 60 seconds decide if viewers stay. Edit aggressively.
 
-**First 30s:** Max 5 seconds per segment. Something must change every 3-5 seconds (layout, zoom, text overlay, GIF, B-roll). At least 1 text overlay + 1 jump zoom in the first 30s. No long speaker-only stretches.
+**First 10s:** MAXIMUM density. Max 3 seconds per segment. Something every 1.5-3 seconds. At least 1 text overlay in the first 5s, at least 1 jump zoom in the first 10s. This is the hardest, fastest section.
+
+**10-30s:** Still hard and dense. Max 5 seconds per segment. Something every 3-5 seconds. All layout types fair game. Slightly less aggressive than 0-10s but still very fast.
 
 **30-60s:** Max 7 seconds per segment. Maintain visual variety but can breathe slightly more than the opening.
 
 **Requirements:**
-- No segment > 5s in first 30 seconds
+- No segment > 3s in first 10 seconds (maximum density)
+- No segment > 5s from 10-30 seconds
 - No segment > 7s from 30-60 seconds
-- At least 1 text overlay in first 30s
+- At least 1 text overlay in first 5s
+- At least 1 jump zoom in first 10s
 - At least 1 non-speaker layout (slide, B-roll, screen recording) in first 30s
-- Visual change every 3-5 seconds minimum
+- Visual change every 1.5-3 seconds in first 10s, every 3-5 seconds from 10-30s
 - If viewer survives first 60 seconds, they'll likely watch the rest
+
+### GIF Rules
+- **ALWAYS use `gif_full` (hard cut, full-screen)** - NEVER `gif_overlay`. Full-screen GIFs break up talking head far more effectively than tiny overlays in the corner. Hard cut in, hard cut out, no fades.
+- **Target 15-20 GIFs per 10-min video** - GIFs are cheap visual variety. Split underlying speaker/gradual_zoom segments to insert them.
+
+### Slide Density Rules
+- **First slide within 5 seconds** - viewers need visual variety from the start, not just a talking head
+- **Every key concept needs a slide** - target 15-20 Excalidraw slides per 10-min video
+- **Generate slides AFTER timeline** (to know 16:9 vs 1:1), but plan for high density from the start
+- **Slides replace talking head, not supplement it** - `slide_full` (full-screen) is the default, not split layouts
+
+### B-Roll and GIF Content Rules
+- **Males only** - all B-roll clips and GIFs featuring people must show males. Reject and re-search if they feature females.
+
+### New Remotion Component Per Video
+
+Every video must ship one new Remotion animation component to grow the library over time. Current library: `tools/video-editor-remotion/src/components/` (54+ components).
+
+**Flow:**
+1. **Script writer flags the candidate** - identifies the best visual moment that would be more impactful animated than as a static slide (output in section F of the production blueprint)
+2. **Build during post-production** - after timeline, before render. Use `/remotion-best-practices` for implementation patterns
+3. **Component must be generic** - designed for this video's content but reusable. Accepts props for text, colors, counts, etc.
+4. **Register in Root.tsx** - add to the timeline type system so future timelines can reference it
+5. **Wire into the timeline** - replace the static slide it was designed for
+
+**Good components:** Animate data (cost stackers, grids, math reveals), visualize processes (flowcharts, before/after flips), or create reusable effects (countdown timers, progress reveals).
+
+**Bad components:** One-off visuals that only make sense for this specific video with hardcoded content.
+
+### Chapter Strategy (YouTube Description Timestamps)
+
+Chapters create entry points for scrub-arrivals. Every chapter marker is a second chance at a first impression.
+
+**In the script (handled by script-architect + script-writer):**
+- Each block has a **chapter title** (curiosity-gap, not label) and a **re-hook opening** (standalone mini-hook for cold arrivals)
+- Script outputs a **CHAPTER MAP** section ready to paste into the YouTube description
+
+**In post-production (timeline + editing):**
+- **Visual reset at every chapter boundary** - new slide, layout change, or SFX: whoosh. The scrub-arrival needs a visual signal that something new is starting
+- **No soft transitions at chapter starts** - hard cuts, not fades. The viewer just scrubbed here, they need energy not ambience
+- **Chapter titles in description** - paste the CHAPTER MAP from the script. Adjust timestamps after final edit. Format: `0:00 Title` (one per line)
+
+**Chapter title rules:**
+- Curiosity gaps, NOT labels ("Why This Costs You Months" not "The Problem")
+- First chapter (0:00) must hook cold arrivals, not say "Intro"
+- Titles should make sense standalone (someone browsing chapters decides based on title alone)
+- 6-8 chapters max for a 10-min video
 
 ### Common Mistakes
 - **ALWAYS use `transcribe.ts` for transcription** - NEVER call AssemblyAI manually via curl/API. The script does dual-pass (Universal-3-Pro + Universal-2 filler detection), proper audio extraction, and outputs the correct JSON format. Run from `tools/video-editor-remotion/`: `npx ts-node transcribe.ts <video_dir> [--clean]`
@@ -123,9 +186,10 @@ The first 60 seconds decide if viewers stay. Edit aggressively.
 - **DON'T generate slides before timeline** - you won't know which are 16:9 vs 1:1
 - **DON'T use `/broll-prompting` for slides** - that's for premium dark-bg graphics. Use `/excalidraw-slides` for hand-drawn whiteboard style
 - **DO run timeline before any visual generation** - timeline is the source of truth for what goes where
-- **DON'T skip Pexels B-roll** - every video needs stock footage to break up long speaker stretches. Speaker-only segments over 5s should have B-roll inserted (pattern: speaker 2-3s -> broll_full 5-7s -> speaker 1-2s)
+- **DON'T use generic Pexels B-roll** - replaced by captioned memes via Imgflip MCP. Memes are always relevant (captions match speech), more engaging than "man at desk" stock footage, and render as `slide_full` (no fade-in bleed-through issues). Every video needs 10-13 memes for speaker-only stretches over 5s
 - **DON'T skip `split_5050` layouts** - every video needs 2-4 split_5050 entries for variety. Best for: big reveals, result moments, storytelling with equal speaker+visual weight. These require 1:1 slides (regenerate from 16:9 originals)
-- **DON'T put gif_overlay on split/slide layouts** - GIF memes only on speaker_full, gradual_zoom, or jump segments
+- **DON'T use gif_overlay** - ALWAYS use gif_full (hard cut, full-screen). Overlays are too small and don't break up talking head. Split the underlying speaker segment to make room for gif_full.
+- **DON'T have too few slides** - W12 originally had 2 slides for a 10-min video. Rebuilt to 20. Every key concept, stat, comparison, process, or framework needs its own Excalidraw slide. First slide must appear within 5 seconds.
 - **DON'T add SFX to every layout transition** - no clicks on routine transitions, whoosh only at chapter breaks, min 10s gap between SFX. Target 10-15 SFX per 10-min video
 - **DON'T forget to fix timeline paths for Studio** - `broll/` not `video/broll/`, `gifs/` not `video/gifs/`
 - **DO preview in Studio before rendering** - catches zoom resets, misplaced overlays, SFX density issues. Much faster than re-rendering 4K
@@ -133,6 +197,10 @@ The first 60 seconds decide if viewers stay. Edit aggressively.
 - **DON'T leave micro-gaps (<1s) between segments** - a 0.5s speaker_full before a counter_ticker creates a distracting flash. Extend the next segment to fill gaps, or remove the gap segment entirely
 - **DON'T add overlays with <1s display time** - gif_overlays or text_overlays that only show for a fraction of a second before the next segment takes over are invisible flashes. Remove them
 - **DO check z-order of overlapping overlays** - timeline array order = render z-order. Text overlays should come AFTER gif_overlays in the array so text renders on top
+- **DO run `node lint-timeline.js` after every timeline edit** - catches short speaker flashes, micro-gaps, text on non-speaker layouts, overlapping layouts. Use `--fix` to auto-resolve. W12 had 14 short speaker flashes + 9 misplaced text overlays invisible to manual scrubbing
+- **DON'T leave short speaker segments (<2s) between visual layouts** - creates a brief flash of talking head that's jarring. Extend the adjacent visual to cover the gap
+- **DON'T put text overlays on slides, GIFs, broll, splits, or chapter cards** - text overlays are ONLY for speaker layouts (speaker_full, gradual_zoom, jump_cut_in). The slide/visual already conveys the information. Redundant text on slides is visual clutter
+- **DON'T start the timeline with a slide/gif/broll** - first segment must be speaker + animation (gradual_zoom recommended). Viewers need to see who's talking immediately. Slide can come at 1-2s, not 0s
 
 ## Script Length Guide
 
@@ -147,11 +215,15 @@ The first 60 seconds decide if viewers stay. Edit aggressively.
 
 Raw footage runs ~20% longer before auto-cut removes silences/fillers/false starts.
 
-## Key Principles (Search-First Strategy)
+## Key Principles (Feed-First Strategy)
 
-- **Keyword first** - Select from aeo-keyword-data.md BEFORE writing
-- **Search-optimized titles** - Keyword in first 5 words
-- **Answer query in 30 seconds** - Satisfy search intent immediately
+Most views come from Browse (home feed) and Suggested, not Search. Title + thumbnail create curiosity in the feed. Hook justifies the click. Tension mechanics keep them watching.
+
+- **Curiosity-first titles** - Create a gap the viewer needs to close (keywords help discovery but don't lead the title)
+- **Hook justifies the click** - First 30s confirms the title/thumbnail promise and raises a NEW question. Never answer in the hook.
+- **NEVER satisfy curiosity early** - Giving the answer releases tension. Viewers get what they wanted and leave. Withhold payoff until the block's end (STP: Setup 30-40%, Tension 40-50%, Payoff 10-20%).
+- **Re-tension after every payoff** - Every WHY moment (answer/insight) must be followed by new tension within 1-2 sentences. No answer without a new question. (Magnet analogy: place the next magnet before they reach the current one.)
+- **Forward Pulls every 30-60s** - Tell them what's coming and why they should care. Level 3+ only (specific preview, curiosity gap, or implied stakes). Never generic ("Next, I'll show you...").
 - **Stakes-based structure** - Order by urgency, not logic
 - **Mid-video climax** - Big moment at 7-9 minutes
 - **Show, don't explain** - Delete 40% of explanations
@@ -160,15 +232,7 @@ Raw footage runs ~20% longer before auto-cut removes silences/fillers/false star
 
 ## Title & Thumbnail Rules
 
-**Search-First Titles:** Target keywords people actually search for.
-
-| Target Keyword | Search-Optimized Title |
-|----------------|----------------------|
-| claude code use cases | "Claude Code Use Cases: 5 Things I Actually Built" |
-| claude code teams | TBD (video 2) |
-| claude code best practices | TBD (video 3) |
-
-**The 1+1=3 Rule:** Title = search keyword. Thumbnail = emotional reaction (NOT repeating title words).
+**The 1+1=3 Rule:** Title = curiosity gap. Thumbnail = emotional reaction (NOT repeating title words).
 
 **Thumbnail Workflow:**
 1. Pick 2-3 thumbnail types to combine (big numbers, shock, simple, comparison, etc.)
@@ -192,7 +256,8 @@ Raw footage runs ~20% longer before auto-cut removes silences/fillers/false star
 
 ## CTA Strategy (Post-Pivot)
 
-- **YouTube** = awareness (show what's possible with Claude Code)
-- **Claudify** = execution (build real projects together)
-- **Mid-video CTA**: Brief Claudify mention ("link in description")
-- **End CTA**: Fuller Claudify pitch or tease next video
+- **YouTube** = awareness (show what's possible building SaaS)
+- **SaaS Accelerator** = execution (build and launch your SaaS to first paying customer, $47/mo Skool)
+- **Mid-video CTA**: `cta_overlay` with text "Join SaaS Accelerator", style "offer"
+- **End CTA**: `cta_overlay` with text "SaaS Accelerator", style "next_video"
+- **NEVER use "Claudify"** - old branding, superseded

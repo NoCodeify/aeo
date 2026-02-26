@@ -1,0 +1,1058 @@
+[
+  {
+    "type": "gradual_zoom",
+    "start": 0.16,
+    "end": 1.76,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "slide_full",
+    "start": 1.76,
+    "end": 4.08,
+    "content": "slides/slide-03-dm-champ.jpg"
+  },
+  {
+    "type": "counter_ticker",
+    "start": 3.12,
+    "end": 4.08,
+    "from": 0,
+    "to": 100000,
+    "prefix": "$",
+    "suffix": "/yr",
+    "label": "Annual Revenue"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 4.08,
+    "end": 5.68,
+    "zoom": 1.15
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 5.68,
+    "end": 5.98,
+    "zoom": 1.15
+  },
+  {
+    "type": "speaker_full",
+    "start": 5.98,
+    "end": 6.96
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 6.96,
+    "end": 8.2,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "text_overlay",
+    "start": 7.32,
+    "end": 8.2,
+    "text": "CLAUDE CODE",
+    "style": "center"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 8.2,
+    "end": 9.7,
+    "zoom": 1.18
+  },
+  {
+    "type": "text_overlay",
+    "start": 8.5,
+    "end": 9.7,
+    "text": "1 DEV. THAT'S IT.",
+    "style": "center"
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 9.7,
+    "end": 10,
+    "zoom": 1.18
+  },
+  {
+    "type": "slide_full",
+    "start": 10,
+    "end": 11.84,
+    "content": "slides/slide-04-one-dev-zero-code.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 11.84,
+    "end": 14.16,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "speaker_full",
+    "start": 14.16,
+    "end": 16.64
+  },
+  {
+    "type": "slide_full",
+    "start": 16.64,
+    "end": 18.8,
+    "content": "slides/slide-05-tutorials-vs-reality.jpg"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 18.8,
+    "end": 22.08,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 22.08,
+    "end": 22.38,
+    "zoom": 1.2
+  },
+  {
+    "type": "speaker_full",
+    "start": 22.38,
+    "end": 25.6
+  },
+  {
+    "type": "chapter_card",
+    "start": 25.6,
+    "end": 28,
+    "title": "The Origin Story",
+    "number": 1,
+    "subtitle": "From no-code to Claude Code",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "speaker_full",
+    "start": 28,
+    "end": 31.2
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 31.2,
+    "end": 34.84,
+    "zoomStart": 1,
+    "zoomEnd": 1.03
+  },
+  {
+    "type": "gif_full",
+    "start": 34.84,
+    "end": 40.08,
+    "content": "gifs/gif-11-proud.mp4"
+  },
+  {
+    "type": "slide_full",
+    "start": 40.08,
+    "end": 46,
+    "content": "memes/meme-01-zapier-vs-code.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 46,
+    "end": 48.5
+  },
+  {
+    "type": "gif_full",
+    "start": 48.5,
+    "end": 51.04,
+    "content": "gifs/gif-03-awkward-look.mp4"
+  },
+  {
+    "type": "slide_full",
+    "start": 51.04,
+    "end": 55,
+    "content": "slides/slide-06-no-code-stack.jpg"
+  },
+  {
+    "type": "slide_full",
+    "start": 55,
+    "end": 58,
+    "content": "slides/slide-07-flutterflow-walls.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 58,
+    "end": 60
+  },
+  {
+    "type": "slide_full",
+    "start": 60,
+    "end": 66,
+    "content": "slides/slide-10-walls-ceiling.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 66,
+    "end": 68.27
+  },
+  {
+    "type": "slide_full",
+    "start": 68.27,
+    "end": 71.77,
+    "content": "slides/slide-08-cursor.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 71.77,
+    "end": 75,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "slide_full",
+    "start": 75,
+    "end": 82,
+    "content": "memes/meme-02-visual-vs-real.jpg"
+  },
+  {
+    "type": "gif_full",
+    "start": 82,
+    "end": 84.5,
+    "content": "gifs/gif-12-grinding.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 84.5,
+    "end": 88
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 88,
+    "end": 96.14,
+    "zoomStart": 1,
+    "zoomEnd": 1.12
+  },
+  {
+    "type": "text_overlay",
+    "start": 95.5,
+    "end": 96.14,
+    "text": "DIRECTING AI",
+    "style": "center",
+    "color": "#e8e4e0"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 96.14,
+    "end": 100,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 100,
+    "end": 100.3,
+    "zoom": 1.2
+  },
+  {
+    "type": "gif_full",
+    "start": 100.3,
+    "end": 103.94,
+    "content": "gifs/gif-04-mind-blown.mp4"
+  },
+  {
+    "type": "slide_full",
+    "start": 103.94,
+    "end": 114,
+    "content": "slides/slide-01.jpg"
+  },
+  {
+    "type": "sfx",
+    "start": 103.94,
+    "end": 104.44,
+    "content": "shimmer",
+    "volume": 0.15
+  },
+  {
+    "type": "speaker_full",
+    "start": 114,
+    "end": 120
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 120,
+    "end": 130,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "slide_full",
+    "start": 130,
+    "end": 136,
+    "content": "slides/slide-09-five-projects.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 136,
+    "end": 140.67
+  },
+  {
+    "type": "slide_full",
+    "start": 140.67,
+    "end": 147,
+    "content": "slides/slide-10-walls-ceiling.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 147,
+    "end": 152
+  },
+  {
+    "type": "gif_full",
+    "start": 152,
+    "end": 155.91,
+    "content": "gifs/gif-05-impressed.mp4"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 155.91,
+    "end": 167,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "slide_full",
+    "start": 167,
+    "end": 173,
+    "content": "memes/meme-03-shipped-or-bugs.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 173,
+    "end": 175
+  },
+  {
+    "type": "cta_overlay",
+    "start": 175,
+    "end": 180,
+    "text": "Claudify",
+    "subtitle": "Link in Description",
+    "style": "offer",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 180,
+    "end": 185,
+    "zoomStart": 1,
+    "zoomEnd": 1.05
+  },
+  {
+    "type": "chapter_card",
+    "start": 185,
+    "end": 188,
+    "title": "A Real Day",
+    "number": 2,
+    "subtitle": "Bug fixes and surprises",
+    "accentColor": "#457b9d"
+  },
+  {
+    "type": "sfx",
+    "start": 185,
+    "end": 185.5,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "gif_full",
+    "start": 188,
+    "end": 191.61,
+    "content": "gifs/gif-01-oh-no.mp4"
+  },
+  {
+    "type": "text_overlay",
+    "start": 191.61,
+    "end": 193.5,
+    "text": "2 ALREADY FIXED",
+    "style": "center",
+    "color": "#22c55e"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 191.61,
+    "end": 191.91,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 191.91,
+    "end": 194.5,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 194.5,
+    "end": 194.8,
+    "zoom": 1.2
+  },
+  {
+    "type": "speaker_full",
+    "start": 194.8,
+    "end": 197.05
+  },
+  {
+    "type": "slide_full",
+    "start": 197.05,
+    "end": 203,
+    "content": "slides/slide-11-bug-pipeline.jpg"
+  },
+  {
+    "type": "slide_full",
+    "start": 203,
+    "end": 209,
+    "content": "memes/meme-04-handled-before-wake.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 209,
+    "end": 215
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 215,
+    "end": 219,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "gif_full",
+    "start": 219,
+    "end": 221.5,
+    "content": "gifs/gif-13-no-way.mp4"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 221.5,
+    "end": 225,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "speaker_full",
+    "start": 225,
+    "end": 235
+  },
+  {
+    "type": "toggle_switch",
+    "start": 235,
+    "end": 238,
+    "labelOff": "Fixing Bugs",
+    "labelOn": "Approving Fixes",
+    "accentColor": "#22c55e"
+  },
+  {
+    "type": "speaker_full",
+    "start": 238,
+    "end": 244
+  },
+  {
+    "type": "slide_full",
+    "start": 244,
+    "end": 250,
+    "content": "memes/meme-05-old-prices-surprise.jpg"
+  },
+  {
+    "type": "gif_full",
+    "start": 250,
+    "end": 254.35,
+    "content": "gifs/gif-06-stressed.mp4"
+  },
+  {
+    "type": "slide_full",
+    "start": 254.35,
+    "end": 260,
+    "content": "slides/slide-12-scope-blindness.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 260,
+    "end": 270,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "slide_full",
+    "start": 270,
+    "end": 276,
+    "content": "memes/meme-06-didnt-give-context.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 276,
+    "end": 280
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 280,
+    "end": 290.05,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "speaker_full",
+    "start": 290.05,
+    "end": 296
+  },
+  {
+    "type": "text_overlay",
+    "start": 290.05,
+    "end": 293,
+    "text": "CHAT EXPORT",
+    "style": "center",
+    "color": "#e8e4e0"
+  },
+  {
+    "type": "gif_full",
+    "start": 296,
+    "end": 298.5,
+    "content": "gifs/gif-07-fast-typing.mp4"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 298.5,
+    "end": 304.51,
+    "zoomStart": 1,
+    "zoomEnd": 1.12
+  },
+  {
+    "type": "text_overlay",
+    "start": 304.5,
+    "end": 307,
+    "text": "5 MINUTES",
+    "style": "center",
+    "color": "#22c55e"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 304.51,
+    "end": 304.81,
+    "zoom": 1.25
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 304.81,
+    "end": 307,
+    "zoom": 1.25
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 307,
+    "end": 307.3,
+    "zoom": 1.25
+  },
+  {
+    "type": "speaker_full",
+    "start": 307.3,
+    "end": 314.87
+  },
+  {
+    "type": "slide_full",
+    "start": 314.87,
+    "end": 319,
+    "content": "slides/slide-13-hours-vs-minutes.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 319,
+    "end": 326
+  },
+  {
+    "type": "slide_full",
+    "start": 326,
+    "end": 332,
+    "content": "memes/meme-07-wins-vs-losses.jpg"
+  },
+  {
+    "type": "slide_full",
+    "start": 332,
+    "end": 336,
+    "content": "slides/slide-14-wins-vs-losses.jpg"
+  },
+  {
+    "type": "gif_full",
+    "start": 336,
+    "end": 338.5,
+    "content": "gifs/gif-14-level-up.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 338.5,
+    "end": 342
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 342,
+    "end": 349,
+    "zoomStart": 1,
+    "zoomEnd": 1.05
+  },
+  {
+    "type": "speaker_full",
+    "start": 349,
+    "end": 353.71
+  },
+  {
+    "type": "chapter_card",
+    "start": 353.71,
+    "end": 356.5,
+    "title": "The V2 Rewrite",
+    "number": 3,
+    "subtitle": "Surgery on a live patient",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "sfx",
+    "start": 353.71,
+    "end": 354.21,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "counter_ticker",
+    "start": 356.5,
+    "end": 358,
+    "from": 0,
+    "to": 360,
+    "prefix": "",
+    "suffix": " functions",
+    "label": "Cloud Functions"
+  },
+  {
+    "type": "gif_full",
+    "start": 356.5,
+    "end": 362,
+    "content": "gifs/gif-17-surgery.mp4"
+  },
+  {
+    "type": "slide_full",
+    "start": 362,
+    "end": 367,
+    "content": "slides/slide-15-v2-monster.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 367,
+    "end": 375,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "speaker_full",
+    "start": 375,
+    "end": 382
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 382,
+    "end": 382.3,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 382.3,
+    "end": 385.23,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 385.23,
+    "end": 385.53,
+    "zoom": 1.2
+  },
+  {
+    "type": "gif_full",
+    "start": 385.53,
+    "end": 389.17,
+    "content": "gifs/gif-02-this-is-fine.mp4"
+  },
+  {
+    "type": "split_5050_right",
+    "start": 389.17,
+    "end": 400,
+    "content": "slides/slide-02.jpg"
+  },
+  {
+    "type": "sfx",
+    "start": 389.17,
+    "end": 389.67,
+    "content": "shimmer",
+    "volume": 0.35
+  },
+  {
+    "type": "split_5050_right",
+    "start": 400,
+    "end": 405,
+    "content": "slides/slide-16-migration-plan-square.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 405,
+    "end": 407
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 407,
+    "end": 410,
+    "zoomStart": 1,
+    "zoomEnd": 1.1
+  },
+  {
+    "type": "gif_full",
+    "start": 410,
+    "end": 412.5,
+    "content": "gifs/gif-15-thinking.mp4"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 412.5,
+    "end": 418,
+    "zoomStart": 1,
+    "zoomEnd": 1.1
+  },
+  {
+    "type": "slide_full",
+    "start": 418,
+    "end": 424,
+    "content": "memes/meme-08-parallel-systems.jpg"
+  },
+  {
+    "type": "slide_full",
+    "start": 424,
+    "end": 428,
+    "content": "slides/slide-17-parallel-systems.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 428,
+    "end": 430
+  },
+  {
+    "type": "slide_full",
+    "start": 430,
+    "end": 437,
+    "content": "memes/meme-09-waiting-to-hire.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 437,
+    "end": 443
+  },
+  {
+    "type": "gif_full",
+    "start": 443,
+    "end": 445.5,
+    "content": "gifs/gif-09-shrug.mp4"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 445.5,
+    "end": 449.66,
+    "zoomStart": 1,
+    "zoomEnd": 1.1
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 449.66,
+    "end": 449.96,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 449.96,
+    "end": 453,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 453,
+    "end": 453.3,
+    "zoom": 1.2
+  },
+  {
+    "type": "speaker_full",
+    "start": 453.3,
+    "end": 460
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 460,
+    "end": 465,
+    "zoomStart": 1,
+    "zoomEnd": 1.04
+  },
+  {
+    "type": "slide_full",
+    "start": 465,
+    "end": 472,
+    "content": "memes/meme-10-do-i-need-team.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 472,
+    "end": 474
+  },
+  {
+    "type": "gif_full",
+    "start": 474,
+    "end": 476.5,
+    "content": "gifs/gif-18-transformation.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 476.5,
+    "end": 485
+  },
+  {
+    "type": "text_overlay",
+    "start": 480,
+    "end": 483,
+    "text": "360 TO 3",
+    "style": "center",
+    "color": "#22c55e"
+  },
+  {
+    "type": "gif_full",
+    "start": 485,
+    "end": 487.5,
+    "content": "gifs/gif-16-connected.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 487.5,
+    "end": 490
+  },
+  {
+    "type": "text_overlay",
+    "start": 489.5,
+    "end": 490,
+    "text": "WILLING TO ATTEMPT",
+    "style": "center",
+    "color": "#e8e4e0"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 490,
+    "end": 490.3,
+    "zoom": 1.18
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 490.3,
+    "end": 493,
+    "zoom": 1.18
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 493,
+    "end": 493.3,
+    "zoom": 1.18
+  },
+  {
+    "type": "slide_full",
+    "start": 493.3,
+    "end": 499,
+    "content": "slides/slide-18-team-vs-solo.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 499,
+    "end": 505,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "chapter_card",
+    "start": 505,
+    "end": 508,
+    "title": "Do You Need a CS Degree?",
+    "number": 4,
+    "subtitle": "The honest answer",
+    "accentColor": "#2a9d8f"
+  },
+  {
+    "type": "sfx",
+    "start": 505,
+    "end": 505.5,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 508,
+    "end": 510,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "gif_full",
+    "start": 510,
+    "end": 512.5,
+    "content": "gifs/gif-10-thumbs-up.mp4"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 512.5,
+    "end": 516,
+    "zoomStart": 1,
+    "zoomEnd": 1.08
+  },
+  {
+    "type": "speaker_full",
+    "start": 516,
+    "end": 520
+  },
+  {
+    "type": "slide_full",
+    "start": 520,
+    "end": 526,
+    "content": "memes/meme-11-no-code-editor.jpg"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 526,
+    "end": 536,
+    "zoomStart": 1,
+    "zoomEnd": 1.06
+  },
+  {
+    "type": "speaker_full",
+    "start": 536,
+    "end": 545
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 545,
+    "end": 550,
+    "zoomStart": 1,
+    "zoomEnd": 1.05
+  },
+  {
+    "type": "text_overlay",
+    "start": 547.5,
+    "end": 550,
+    "text": "DIRECTING > CODING",
+    "style": "center",
+    "color": "#e8e4e0"
+  },
+  {
+    "type": "slide_full",
+    "start": 550,
+    "end": 556.12,
+    "content": "memes/meme-12-messy-refactor.jpg"
+  },
+  {
+    "type": "slide_full",
+    "start": 556.12,
+    "end": 565,
+    "content": "slides/slide-19-sixty-three-percent.jpg"
+  },
+  {
+    "type": "sfx",
+    "start": 556.12,
+    "end": 556.62,
+    "content": "shimmer",
+    "volume": 0.35
+  },
+  {
+    "type": "speaker_full",
+    "start": 565,
+    "end": 570
+  },
+  {
+    "type": "slide_full",
+    "start": 570,
+    "end": 576,
+    "content": "slides/slide-20-four-skills.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 576,
+    "end": 578
+  },
+  {
+    "type": "gif_full",
+    "start": 578,
+    "end": 580.5,
+    "content": "gifs/gif-08-mic-drop.mp4"
+  },
+  {
+    "type": "speaker_full",
+    "start": 580.5,
+    "end": 585
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 585,
+    "end": 590,
+    "zoomStart": 1,
+    "zoomEnd": 1.04
+  },
+  {
+    "type": "slide_full",
+    "start": 590,
+    "end": 596,
+    "content": "memes/meme-13-test-before-ship.jpg"
+  },
+  {
+    "type": "speaker_full",
+    "start": 596,
+    "end": 603.65
+  },
+  {
+    "type": "check_x_mark",
+    "start": 596,
+    "end": 598,
+    "markType": "check",
+    "position": "center"
+  },
+  {
+    "type": "text_overlay",
+    "start": 603,
+    "end": 603.65,
+    "text": "THE REAL UNLOCK",
+    "style": "center",
+    "color": "#e8e4e0"
+  },
+  {
+    "type": "jump_zoom_in",
+    "start": 603.65,
+    "end": 603.95,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 603.95,
+    "end": 608,
+    "zoom": 1.2
+  },
+  {
+    "type": "jump_zoom_out",
+    "start": 608,
+    "end": 608.3,
+    "zoom": 1.2
+  },
+  {
+    "type": "speaker_full",
+    "start": 608.3,
+    "end": 614
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 614,
+    "end": 622,
+    "zoomStart": 1,
+    "zoomEnd": 1.05
+  },
+  {
+    "type": "speaker_full",
+    "start": 622,
+    "end": 626
+  },
+  {
+    "type": "cta_overlay",
+    "start": 622,
+    "end": 626,
+    "text": "Claudify",
+    "subtitle": "Link in Description",
+    "style": "offer",
+    "accentColor": "#e63946"
+  }
+]

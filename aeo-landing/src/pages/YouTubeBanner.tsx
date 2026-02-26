@@ -255,27 +255,27 @@ export function YouTubeBanner() {
                 <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#febc2e" }} />
                 <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#28c840" }} />
                 <span className="ml-3 font-mono text-white/30" style={{ fontSize: "15px" }}>
-                  claude-code
+                  saas-accelerator
                 </span>
               </div>
 
               <div className="font-mono space-y-2.5" style={{ fontSize: "18px", lineHeight: "1.6" }}>
                 <div className="flex items-center gap-2">
                   <span style={{ color: "#00d4ff" }}>$</span>
-                  <span className="text-white/70">claude &quot;build the pipeline&quot;</span>
+                  <span className="text-white/70">find niche + validate demand</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span style={{ color: "#28c840" }}>&#10003;</span>
-                  <span className="text-white/50">3 agents deployed</span>
+                  <span className="text-white/50">MVP built and deployed</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span style={{ color: "#28c840" }}>&#10003;</span>
-                  <span className="text-white/50">CI/CD pipeline active</span>
+                  <span className="text-white/50">Launch strategy locked</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span style={{ color: "#febc2e" }}>&#9654;</span>
-                  <span style={{ color: "#00d4ff" }}>$100K ARR</span>
-                  <span className="text-white/30">and counting</span>
+                  <span style={{ color: "#00d4ff" }}>First paying customer</span>
+                  <span className="text-white/30">&#10003;</span>
                 </div>
               </div>
             </div>
@@ -288,19 +288,19 @@ export function YouTubeBanner() {
                 className="font-heading font-bold text-foreground leading-tight"
                 style={{ fontSize: "58px" }}
               >
-                Build Real Systems
+                Build Your SaaS
               </h1>
               <h1
                 className="font-heading font-bold leading-tight text-gradient"
                 style={{ fontSize: "58px" }}
               >
-                With Claude Code
+                Get Paying Customers
               </h1>
               <p
                 className="mt-3 text-foreground/50 font-sans"
                 style={{ fontSize: "22px" }}
               >
-                SaaS. Agentic Pipelines. Full Infrastructure.
+                From idea to first revenue. Coaching. Community. Launch strategies.
               </p>
             </div>
           </div>

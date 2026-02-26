@@ -82,3 +82,21 @@ Monitors 3 trend sources for emerging AI/agent topics before they peak on YouTub
 > Signal chain: GitHub stars spike -> HN front page -> Reddit hot -> YouTube content wave. This server catches stages 1-3.
 
 **Tools:** `scan_github_trending`, `scan_hackernews`, `scan_reddit_trending`, `scan_all_sources`
+
+## Imgflip MCP (`imgflip-mcp/src/index.ts`)
+
+Meme generation via Imgflip API. Search 100+ templates, caption with custom text, download. Replaces generic Pexels B-roll with relevant, captioned memes rendered as `slide_full` entries.
+
+| Function | Endpoint | Purpose |
+|----------|----------|---------|
+| `searchMemes()` | GET `/get_memes` + client filter | Fuzzy search templates by name/emotion keyword |
+| `getPopularMemes()` | GET `/get_memes` | Top N templates by popularity |
+| `captionMeme()` | POST `/caption_image` | Generate meme with custom top/bottom text |
+| `downloadMeme()` | HTTP GET image URL | Save generated meme to project dir |
+| `batchCaptionAndDownload()` | Sequential caption + download | Bulk meme generation (750ms delay for rate limits) |
+
+> Keyword aliases map 20 emotion categories (frustrated, sarcastic, thinking, comparison, etc.) to likely templates. Free tier, no payment needed.
+
+**Tools:** `search_memes`, `get_popular_memes`, `caption_meme`, `download_meme`, `batch_caption_and_download`
+
+**Pipeline:** Script marks `MEME:` beats -> pick template + write caption -> imgflip-mcp (caption + download) -> timeline uses `slide_full`

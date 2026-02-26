@@ -20,6 +20,7 @@ import { Learn } from "./pages/Learn";
 import { NotFound } from "./pages/NotFound";
 import { SkoolBanner } from "./pages/SkoolBanner";
 import { SkoolIcon } from "./pages/SkoolIcon";
+import { SquareBanner } from "./pages/SquareBanner";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       <Route path="/yt-banner" element={<YouTubeBanner />} />
       <Route path="/skool-banner" element={<SkoolBanner />} />
       <Route path="/skool-icon" element={<SkoolIcon />} />
+      <Route path="/square-banner" element={<SquareBanner />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     </>

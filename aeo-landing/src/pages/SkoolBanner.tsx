@@ -166,27 +166,27 @@ export function SkoolBanner() {
               <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#febc2e" }} />
               <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "#28c840" }} />
               <span className="ml-3 font-mono text-white/30" style={{ fontSize: "14px" }}>
-                claude-code
+                saas-accelerator
               </span>
             </div>
 
             <div className="font-mono space-y-2" style={{ fontSize: "16px", lineHeight: "1.6" }}>
               <div className="flex items-center gap-2">
                 <span style={{ color: "#00d4ff" }}>$</span>
-                <span className="text-white/70">claude &quot;build the pipeline&quot;</span>
+                <span className="text-white/70">find niche + validate</span>
               </div>
               <div className="flex items-center gap-2">
                 <span style={{ color: "#28c840" }}>&#10003;</span>
-                <span className="text-white/50">3 agents deployed</span>
+                <span className="text-white/50">MVP built and deployed</span>
               </div>
               <div className="flex items-center gap-2">
                 <span style={{ color: "#28c840" }}>&#10003;</span>
-                <span className="text-white/50">CI/CD pipeline active</span>
+                <span className="text-white/50">Launch strategy locked</span>
               </div>
               <div className="flex items-center gap-2">
                 <span style={{ color: "#febc2e" }}>&#9654;</span>
-                <span style={{ color: "#00d4ff" }}>$100K ARR</span>
-                <span className="text-white/30">and counting</span>
+                <span style={{ color: "#00d4ff" }}>First paying customer</span>
+                <span className="text-white/30">&#10003;</span>
               </div>
             </div>
           </div>
@@ -199,19 +199,19 @@ export function SkoolBanner() {
               className="font-heading font-bold text-foreground leading-tight"
               style={{ fontSize: "56px" }}
             >
-              Build Real Systems
+              Build Your SaaS
             </h1>
             <h1
               className="font-heading font-bold leading-tight text-gradient"
               style={{ fontSize: "56px" }}
             >
-              With Claude Code
+              Get Paying Customers
             </h1>
             <p
               className="mt-2 text-foreground/50 font-sans"
               style={{ fontSize: "20px" }}
             >
-              SaaS. Agentic Pipelines. Full Infrastructure.
+              Coaching. Community. Launch Strategies.
             </p>
           </div>
         </div>

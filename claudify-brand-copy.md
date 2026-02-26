@@ -1,4 +1,4 @@
-# Claudify - Brand Copy (v5)
+# Claudify - Brand Copy (v6)
 
 ## Name
 Claudify
@@ -6,25 +6,29 @@ Claudify
 ## Tagline
 What used to take a team or an expert now takes a subscription.
 
+## Hook
+You're already using AI. You're just using it wrong.
+
 ## Transformation phrase
-From needing a team and an expert to being both.
+From chatting with AI to building with it.
 
 ## Short Description (Skool discovery / bio)
 
-Run a consulting agency. Ship a $100K SaaS. Deliver services that used to need a dev team or a specialist. All from one person with Claude Code. Claudify is where professionals and business owners learn what's actually possible - and how to do it.
+Everyone's using AI. Almost everyone's using it wrong. Prompting ChatGPT one question at a time, starting over every session, getting frustrated when it forgets everything. Claude Code is different: it remembers your rules, follows your workflows, and builds real systems. Claudify is where professionals and business owners learn to ship products, automate delivery, and do things that used to need a dev team.
 
 ## About Section (Skool community page, max 1000 chars)
 
-Ready to do things in 2026 that used to require a dev team, a specialist, or a six-figure budget?
+You're already using AI. You're probably using it wrong.
 
-The founder built a $100K/yr SaaS, a self-healing CI/CD pipeline, a consulting delivery system, and an NFC smart lock system. All with Claude Code. No agency. No dev team. No co-founder.
+ChatGPT forgets everything between sessions. It doesn't follow your process. It gives different answers every time. That's not AI's fault. That's a system problem.
 
-Claudify is where professionals and business owners learn to do the same. Ship SaaS products. Automate client delivery. Launch new service lines. Replace expensive software with custom tools you own.
+Claude Code turns AI into a system: it remembers your rules, follows your workflows, and builds real things. The founder used it to build a $100K/yr SaaS, a CI/CD pipeline, a consulting delivery system, and an NFC smart lock. No agency. No dev team.
 
-What you get for $97/mo:
-Foundations (20+ modules), 5 real-world case studies, a service track for selling implementation work at $2-5K per project, and The Build Lab (weekly live coaching).
+Claudify teaches you to do the same.
 
-Annual members also get: The Vault (production-grade templates), 1-on-1 project reviews, and 2 months free.
+$97/mo: Foundations (20+ modules), 5 case studies, Service Track ($2-5K projects), and The Build Lab (weekly live coaching).
+
+Annual: add The Vault (production templates), 1-on-1 reviews, and 2 months free.
 
 Three tracks: build for yourself, build a product, build a service. First working system in 21 days.
 
@@ -50,19 +54,31 @@ This is what the community is built around: shipping SaaS products, automating c
 
 Every module, template, and case study inside Claudify comes directly from these production systems. Nothing is theoretical. You are studying real infrastructure that runs real businesses.
 
-Every month you spend paying for SaaS that almost works, or outsourcing work you could do yourself, is money and time you don't get back. The gap between "I'd need a team for that" and "I did it myself" is already closed. Most people just don't know it yet.
-
 What is Claudify?
 
-Claudify is where professionals and business owners learn to use Claude Code to do things that were previously out of reach.
+Everyone's using AI. Almost no one is using it well.
 
-Not productivity hacks. Not "automate your email." Real capabilities:
+You've seen it. A friend says "ChatGPT sucks, it just doesn't work." An accountant prompts it for the same thing every week and starts from scratch every time. A scientist checks ingredient safety combinations in ChatGPT and it forgets the rules between sessions.
 
-- Run a consulting agency where Claude Code handles the delivery
-- Ship a SaaS that generates real revenue
-- Offer services you'd normally need an expert or a team to deliver
-- Replace SaaS tools that do 80% of what you need with ones that do exactly 100%
-- Launch an entire business line from a single subscription
+ChatGPT doesn't suck. It's a skill issue. They're using a chatbot and expecting a system.
+
+Claude Code is not a chatbot. It's an operating system for AI:
+
+- Memory (CLAUDE.md) - it knows your rules, your preferences, your standards
+- Skills (slash commands) - it follows your workflows, the same way, every time
+- Files - it reads, writes, and tracks progress across sessions
+- Agents - specialized workers that do one thing well
+- Automation - hooks and triggers that run without you
+
+The difference: ChatGPT can do something once. Claude Code can do it forever.
+
+Claudify teaches you to build these systems. Not better prompts. Not productivity hacks. Real, persistent systems that remember, track, and improve:
+
+- A language tutor that remembers what you learned yesterday and quizzes you on your weak areas
+- An ingredient safety checker that knows the rules without being told every session
+- A client proposal generator that follows your format automatically
+- A consulting delivery system that runs an entire client pipeline
+- A SaaS product that generates real revenue in production
 
 What do you get? ($97/mo)
 
@@ -99,6 +115,7 @@ Who is this for?
 - Consultants who want to deliver 5x more work without 5x more hours
 - Business owners paying for SaaS tools that don't quite fit and want to build exactly what they need
 - Professionals who see what Claude Code can do and want to go from "that's cool" to "I built that"
+- Anyone using ChatGPT for work and frustrated by inconsistency, memory loss, and starting over every session
 - Anyone who has a business idea but thought they needed a technical co-founder or an expensive specialist to make it real
 
 Who is this NOT for?
@@ -130,22 +147,24 @@ Book a quick call or DM us directly. No pressure, no pitch - just answers.
 Claudify
 
 **Subheadline:**
-What used to take a team or an expert now takes a subscription.
+You're already using AI. You're just using it wrong.
 
 **One-liner (below subheadline):**
-From needing a team and an expert to being both. First working system in 21 days.
+From chatting with AI to building with it. First working system in 21 days.
 
 **Body:**
 
-The founder built a $100K/yr SaaS, a self-healing CI/CD pipeline, a full consulting delivery system, and an NFC smart lock - all with Claude Code.
+You're already using AI. You're probably using it wrong.
 
-Claudify is where professionals and business owners learn to do the same. Not tutorials. Not theory. Real systems, real templates, production-grade infrastructure you can study and adapt.
+ChatGPT forgets everything between sessions. It doesn't follow your process. It gives different answers every time. That's not a tool problem. That's a system problem.
 
-Every month you spend paying for SaaS that almost works, or outsourcing work you could handle yourself, is money and time you don't get back.
+Claude Code turns AI into a system. It remembers your rules. It follows your workflows. It builds real things that work the same way every time.
 
-Three tracks: build for yourself, build a product, build a service.
+The founder used it to build a $100K/yr SaaS, a self-healing CI/CD pipeline, a full consulting delivery system, and an NFC smart lock.
 
-The Build Lab (weekly live coaching). 20+ modules. 5 case studies from real businesses. Templates from real production systems.
+Claudify teaches you to do the same. Three tracks: build for yourself, build a product, build a service.
+
+The Build Lab (weekly live coaching). 20+ modules. 5 case studies from real businesses. Production-grade templates from real systems.
 
 **CTA:**
 $97/mo - Join Claudify
@@ -162,6 +181,17 @@ Build your first working system in 21 days. Six modules. Day-by-day milestones. 
 ---
 
 ## Copy Notes (internal, not published)
+
+**v6 changes:**
+
+1. **Added "chatbot vs operating system" angle.** The core differentiator: ChatGPT is a chatbot (forgets, inconsistent, no workflows). Claude Code is an operating system (memory, skills, files, agents, automation). "ChatGPT can do something once. Claude Code can do it forever."
+2. **New hook line.** "You're already using AI. You're just using it wrong." Sits alongside the existing tagline. More provocative, more differentiating.
+3. **New transformation phrase.** "From chatting with AI to building with it." Replaces "From needing a team and an expert to being both." The old one was about capability. The new one is about methodology.
+4. **Added real-world examples to "What is Claudify?" section.** Language tutor, ingredient safety checker, client proposal generator. These are not hypothetical - they come from the founder's actual conversations and builds.
+5. **Updated Short Description.** Leads with the problem (everyone's using AI wrong) instead of the outcomes (run an agency, ship SaaS). The outcomes are still there, just repositioned.
+6. **Updated Landing Page.** Subheadline is now the hook. Body leads with the chatbot vs system problem, then the founder proof.
+7. **Added "frustrated ChatGPT users" to Who is this for.** This is a real audience segment that the chatbot vs OS angle directly addresses.
+8. **Old tagline preserved.** "What used to take a team or an expert now takes a subscription" is still the top-level tagline. The hook is a secondary line. Both are true; the hook is more provocative for landing pages.
 
 **v5 changes:**
 

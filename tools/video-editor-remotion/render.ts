@@ -162,6 +162,19 @@ async function render() {
     console.log(`  Copied ${brollFiles.length} B-roll clips`);
   }
 
+  // Copy memes folder (if it exists)
+  const memesDir = path.join(videoDir, "memes");
+  const memesDest = path.join(publicDir, "memes");
+  if (fs.existsSync(memesDir)) {
+    if (fs.existsSync(memesDest)) fs.rmSync(memesDest, { recursive: true, force: true });
+    fs.mkdirSync(memesDest, { recursive: true });
+    const memeFiles = fs.readdirSync(memesDir).filter(f => f.endsWith('.jpg') || f.endsWith('.png'));
+    for (const file of memeFiles) {
+      fs.copyFileSync(path.join(memesDir, file), path.join(memesDest, file));
+    }
+    console.log(`  Copied ${memeFiles.length} memes`);
+  }
+
   // Copy screen-recordings folder (if it exists)
   const screenRecDir = path.join(videoDir, "video", "screen-recordings");
   const screenRecDest = path.join(publicDir, "screen-recordings");
@@ -191,6 +204,10 @@ async function render() {
       }
       if (edit.type === "sfx") {
         return edit;
+      }
+      // Preserve memes/ path prefix
+      if (edit.content.includes("memes/")) {
+        return { ...edit, content: `memes/${filename}` };
       }
       return { ...edit, content: `slides/${filename}` };
     }

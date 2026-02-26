@@ -78,6 +78,9 @@ interface MainVideoProps {
 const OVERLAY_TYPES = new Set([
   "text_overlay", "sfx", "gif_overlay", "lower_third", "callout",
   "light_leak", "confetti_burst", "check_x_mark", "cta_overlay",
+  "counter_ticker", "screen_shake", "newspaper_flash", "social_proof_flash",
+  "circle_timer", "text_reveal_wipe", "toggle_switch", "countdown_flip",
+  "notification_stack",
 ]);
 
 // ---------------------------------------------------------------------------
@@ -152,15 +155,17 @@ export const MainVideo: React.FC<MainVideoProps> = ({ config }) => {
   // Ensures zoom sequences look identical in Studio and render.
   const useContinuous = true;
 
-  // Find current layout edit for base video CSS (skip overlays)
-  const currentTime = frame / fps;
+  // Find current layout edit for base video CSS (skip overlays).
+  // Use frame-based boundaries (same Math.round as Sequences) to avoid
+  // off-by-one mismatches between continuous time and discrete frames.
   const layoutEdits = useContinuous
     ? timeline.filter((e) => !OVERLAY_TYPES.has(e.type))
     : [];
   const currentEdit = useContinuous
-    ? (layoutEdits.find((e, i) => {
-        const next = layoutEdits[i + 1];
-        return currentTime >= e.start && (!next || currentTime < next.start);
+    ? (layoutEdits.find((e) => {
+        const eStart = Math.round(e.start * fps);
+        const eEnd = Math.round(e.end * fps);
+        return frame >= eStart && frame < eEnd;
       }) ?? null)
     : null;
 
@@ -457,6 +462,8 @@ function renderEdit(
           style={edit.style ?? "caption"}
           color={edit.color}
           glow={edit.glow}
+          sfx={edit.sfx}
+          sfxVolume={edit.sfxVolume}
         />
       );
 

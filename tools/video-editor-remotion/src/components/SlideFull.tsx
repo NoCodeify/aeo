@@ -13,8 +13,9 @@ export const SlideFull: React.FC<SlideFullProps> = ({
   speakerSrc,
   startFrom,
 }) => {
+  const isMeme = slideSrc.startsWith("memes/");
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={isMeme ? { backgroundColor: "#0a0a0a" } : undefined}>
       {/* Slide image fills screen */}
       <Img
         src={staticFile(slideSrc)}
@@ -22,7 +23,7 @@ export const SlideFull: React.FC<SlideFullProps> = ({
         style={{
           width: "100%",
           height: "100%",
-          objectFit: "cover",
+          objectFit: isMeme ? "contain" : "cover",
         }}
       />
       {/* Audio from speaker video */}
