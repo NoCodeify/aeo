@@ -68,25 +68,42 @@ Build the queries array from Phase 2:
 
 If `batch_search_and_download` returns poor results for any query, use `search_gifs` to try alternative queries and `download_gif` to save the best match.
 
-### Phase 4: Generate Timeline Entries
+### Phase 4: Write Asset Manifest (CRITICAL)
 
-For each downloaded GIF, output the timeline entry for the timeline-builder agent:
+After downloading all GIFs, write a `manifest.json` file in the gifs/ directory. This is how the timeline-builder knows what each GIF is for and where to place it.
 
+**The manifest is the ONLY way the builder agent knows what your GIFs mean.** Without it, the builder just sees filenames like `gif-04-crushed-squeezed.mp4` and guesses where to put them. With the manifest, it knows exactly which speech moment each GIF matches.
+
+Write to `<video_dir>/gifs/manifest.json`:
 ```json
-{"type": "gif_overlay", "start": 45.0, "end": 47.5, "content": "gifs/gif-01-mind-blown.gif", "position": "bottom-right", "size": 0.3}
+{
+  "gifs/gif-01-mind-blown.mp4": {
+    "script_quote": "the cost difference isn't even close",
+    "description": "Person's mind visibly exploding with shock",
+    "emotion": "disbelief at how cheap the replacement is",
+    "search_query": "mind blown gif"
+  },
+  "gifs/gif-02-money-burning.mp4": {
+    "script_quote": "they stopped needing to pay someone else to build it",
+    "description": "Stack of money on fire burning away",
+    "emotion": "wasting money on unnecessary SaaS",
+    "search_query": "money burning gif"
+  }
+}
 ```
 
-Or for full-screen GIF moments:
-```json
-{"type": "gif_full", "start": 120.0, "end": 122.0, "content": "gifs/gif-02-frustrated.gif"}
-```
+**Rules for manifest entries:**
+- `script_quote`: The EXACT words from the script that this GIF should appear during. The builder will grep the transcript for these words to find the timestamp.
+- `description`: What the GIF actually shows visually. Be specific (not "funny reaction" but "man staring at camera with wide eyes and slowly backing away").
+- `emotion`: Why this GIF matches this moment - what feeling it creates.
+- `search_query`: The Giphy query used to find it (for re-searching if needed).
 
 ### Phase 5: Compile Output
 
 Organize results in a production-ready document:
 - Summary table of all GIFs with timestamps
 - Downloaded file paths
-- Timeline entries ready to merge into timeline.json
+- Manifest file path (`gifs/manifest.json`)
 
 ---
 

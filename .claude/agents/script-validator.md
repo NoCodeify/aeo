@@ -29,7 +29,7 @@ A completed script file (production blueprint) from the script-writer agent. You
 
 ## Validation Process
 
-Run ALL 14 checks below in order. For each check, report PASS or FAIL with specific evidence.
+Run ALL 16 checks below in order. For each check, report PASS or FAIL with specific evidence.
 
 ### Check 1: WHY Moment + Re-tension Audit (CRITICAL)
 
@@ -77,13 +77,14 @@ If ANY gap exceeds 75s: specify where a Forward Pull must be added.
 
 Output a table of flagged sentences with word counts and suggested splits.
 
-### Check 4: STP Ratio Check
+### Check 4: STPR Ratio Check
 
 For each block:
-1. Count words in Setup, Tension, and Payoff sections
+1. Count words in Setup, Tension, Payoff, and Retention sections
 2. Calculate percentages
-3. Verify: Setup 30-40%, Tension 40-50%, Payoff 10-20%
+3. Verify: Setup 25-35%, Tension 35-45%, Payoff 10-15%, Retention 5-10%
 4. Flag any block outside these ranges
+5. Verify each Retention phase explicitly closes one curiosity loop AND opens a new one (not just a Forward Pull - it must do both in the same breath)
 
 ### Check 5: Banned Phrase Scan
 
@@ -139,12 +140,40 @@ Compare script against locked architecture:
 - [ ] GIF overlays only on speaker layouts (never split/slide/broll)
 - [ ] No speaker-only stretch >10s without a visual element
 
-### Check 9: Hook Pacing
+### Check 9: Hook Pacing + Pain-First Order + No Repetition
 
+**Pacing:**
 - [ ] First 30s: no segment >5s
 - [ ] First 30s: at least 1 text overlay + 1 layout change
 - [ ] 30-60s: no segment >7s
 - [ ] Visual change every 3-5s in first 30s
+
+**Pain-First Order (5 jobs in sequence):**
+
+Map each hook sentence to one or more jobs. All 5 must be present AND in this order:
+
+| # | Job | Timing | Present? | Which sentence? |
+|---|-----|--------|----------|----------------|
+| 1 | Pain confirmation (viewer's experience first) | 0-5s | | |
+| 2 | Packaging payoff (confirms title/thumbnail) | 5-10s | | |
+| 3 | Credibility (one sentence, compressed) | 10-15s | | |
+| 4 | Anticipation (open loop / framework tease) | 15-18s | | |
+| 5 | Roadmap (2-3 categories, destination visible) | 18-22s | | |
+
+**FAIL if any job is missing.** The fix is adding a sentence that fulfills the missing job without making the hook longer than 25s.
+
+**Banned Openers (auto-FAIL):**
+- [ ] First word is NOT "So" followed by "I" (credibility-first)
+- [ ] Does not start with "I built..." / "I have..." / "So after..."
+- [ ] Does not start with "Here are X things..." (listicle, no tension)
+- [ ] Does not start with "I want to show you..." / "Let me take you through..." (asks permission)
+
+**No Block 1 Repetition (auto-FAIL):**
+- [ ] Check every fact, product name, and credential in the hook
+- [ ] Verify Block 1's first 3-4 sentences do NOT restate any of them
+- [ ] Block 1 must pick up AFTER the hook with a new story beat or tension point
+
+If Block 1 repeats hook information: FAIL. The viewer hears the same thing twice in 60 seconds, which is an exit point.
 
 ### Check 10: Spoken Word Count (CRITICAL)
 
@@ -230,6 +259,55 @@ Output:
 
 **WARN (not fail) if claims can't be web-verified** - some personal stories won't have web sources. But stats, percentages, and industry claims should be verifiable.
 
+### Check 15: Deeper Problem Thread
+
+Every video should have a deeper problem -- the emotional reason people resist the advice, distinct from the surface topic. Check the architecture for the DEEPER PROBLEM section to know what to look for.
+
+1. **Does a deeper problem exist?** Read the architecture's DEEPER PROBLEM section. If it exists, verify the script threads it. If the architecture has no DEEPER PROBLEM section, WARN (not fail) -- "Architecture missing deeper problem. Recommend adding one."
+
+2. **Plant (Block 1):** Is the deeper problem introduced early as a passing observation? It should NOT be named explicitly yet. The viewer should register it subconsciously.
+
+3. **Thread (middle blocks):** Is there at least one callback or reinforcement in Block 2 or 3? Look for subtle references -- a word choice, a contrast, a "sound familiar?" moment.
+
+4. **Payoff (Final Block):** Is the deeper problem explicitly named in the Final Block? The viewer should get confirmation of what they sensed all along.
+
+5. **Identity shift:** Does the speaker acknowledge they still struggle with the same thing? One sentence showing the speaker isn't a guru who "figured it out." This gives the viewer permission to struggle.
+
+Output this table:
+
+| Touchpoint | Expected | Found? | Quote (first 10 words) | Verdict |
+|-----------|----------|--------|----------------------|---------|
+| Plant (Block 1) | [from architecture] | | | |
+| Thread (middle) | [from architecture] | | | |
+| Payoff (Final Block) | [from architecture] | | | |
+| Identity shift | Present in Final Block | | | |
+
+**FAIL if the architecture defines a deeper problem but the script is missing any of the 3 touchpoints (plant, thread, payoff).** The fix is adding 1-2 sentences at the missing touchpoint.
+
+**WARN if identity shift is missing.** Not every video needs it, but it's strongly recommended.
+
+### Check 16: "Ask, Don't Tell" Moments
+
+Check that the script includes 2-3 moments where the viewer is invited to figure something out instead of being told directly.
+
+1. **Scan for "ask, don't tell" language.** Look for phrases like: "you probably see...", "sit with that", "sound familiar?", "see the pattern?", "hold that thought", "figure it out before I say it."
+
+2. **Verify the answer comes within 30-60 seconds.** The viewer shouldn't be left hanging forever. The script should confirm the answer after a brief pause.
+
+3. **Check placement.** These should be at the biggest insight moments, not routine points. Ideal placement: block payoffs, major reveals, pattern-naming moments.
+
+Output this table:
+
+| # | "Ask" Moment (quote first 10 words) | Block | Answer Confirmed Within 60s? | Verdict |
+|---|-------------------------------------|-------|------------------------------|---------|
+| 1 | | | | |
+| 2 | | | | |
+| 3 | | | | |
+
+**WARN (not fail) if fewer than 2 "ask, don't tell" moments exist.** This is a quality enhancement, not a structural requirement. But recommend specific places to add them.
+
+**FAIL if an "ask" moment has no corresponding answer** -- the viewer figures nothing out and just feels confused.
+
 ### Check 11: Clarity & Simplicity
 
 Read every sentence as if you're hearing it for the first time with zero context. Flag anything that fails these tests:
@@ -254,7 +332,7 @@ Output a table:
 ## Verdict: PASS / FAIL
 
 ## Summary
-- Checks passed: X/14
+- Checks passed: X/16
 - Critical failures: [list]
 - Minor issues: [list]
 
@@ -267,7 +345,7 @@ Output a table:
 ## Check 3: Short Punchy Sentences
 [Flagged sentences + suggested splits]
 
-## Check 4: STP Ratios
+## Check 4: STPR Ratios
 [Per-block breakdown]
 
 ## Check 5: Banned Phrases
@@ -300,6 +378,12 @@ Output a table:
 ## Check 14: Fact-Check & Fabrication
 [Unverified claims + fabrication markers + specificity check]
 
+## Check 15: Deeper Problem Thread
+[Plant/thread/payoff touchpoints + identity shift check]
+
+## Check 16: "Ask, Don't Tell" Moments
+[Viewer participation moments + answer confirmation check]
+
 ## Specific Fixes Required
 [Numbered list of exact changes the writer must make to pass]
 ```
@@ -312,4 +396,4 @@ Output a table:
 - Quote exact text from the script when flagging issues.
 - Provide specific fix suggestions, not vague feedback.
 - If the script passes all 14 checks cleanly, say PASS. Don't invent issues.
-- Focus most energy on Checks 1-3, 10, and 13 (re-tension, Forward Pulls, punchy sentences, spoken word count, story overlap). These are the most commonly failed.
+- Focus most energy on Checks 1-3, 10, 13, and 15 (re-tension, Forward Pulls, punchy sentences, spoken word count, story overlap, deeper problem). These are the most commonly failed.

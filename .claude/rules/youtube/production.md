@@ -12,8 +12,7 @@ The `youtube/` folder contains the video production framework (Ed Lawrence metho
 ```
 youtube/
   templates/           # Production templates (brief, script, prompter, shot-list, editing-guide, work-log, brain-dump, thumbnail-style-guide)
-  system/              # SOPs, keyword data, and reference docs
-    claude-code-keyword-data.csv  # PRIMARY KEYWORD SOURCE (Feb 2026)
+  system/              # SOPs and reference docs
     title-frameworks.md           # 765 proven title frameworks
     title-validation-rules.md     # Acute moments, 16 patterns, red/green flags
     hook-templates.md             # 6 hook templates (F/A/B/C/D/E)
@@ -26,37 +25,16 @@ youtube/
   published-videos/    # Completed archives
 ```
 
-## Keyword Data (Source of Truth)
+## Content Strategy (Feed-First)
 
-**Claude Code keywords (primary):** `youtube/system/claude-code-keyword-data.csv`
-**AEO keywords (legacy):** `youtube/system/aeo-keyword-data.md`
+No keyword research step. Topics come from the curriculum (8 modules) and standalone video ideas in the community plan (`saas-accelerator-community-plan.md`). Most views come from Browse and Suggested, not Search. Good packaging (title + thumbnail + hook) drives clicks, not keyword targeting.
 
-Channel pivoted to SaaS content (Feb 2026). Content decisions informed by keyword data but led by feed-first packaging (curiosity gaps, not keyword stuffing).
-
-**Key Terms (Feb 2026):**
-
-| Keyword | Volume | Growth |
-|---------|--------|--------|
-| claude code | 500K | +99,900% |
-| vibe coding | 500K | +999,900% |
-| mcp servers | 500K | +9,900% |
-| ai agents | 500K | stable |
-| ai app builder | 50K | +900% |
-
-**Hottest Rising YouTube Queries:**
-
-| Query | YouTube Growth |
-|-------|---------------|
-| claude code teams | +73,500% |
-| claude code use cases | +65,150% |
-| agent teams claude code | +55,700% |
-| claude code masterclass | +30,750% |
-| claude code best practices | +30,450% |
+Legacy keyword files (`claude-code-keyword-data.csv`, `aeo-keyword-data.md`) are from the old Claude Code channel and no longer drive content decisions.
 
 ## Production Pipeline (CORRECT ORDER)
 
 ### Pre-Production (New 5-Step Pipeline)
-1. **Ideation + Packaging** via `/youtube-video-ideation` - keyword selection, title generation (5-7 options, user picks), thumbnail concept (3+ options, user picks), hook generation (3 options: Safe/Experimental/Hybrid, user picks). Output: locked packaging document.
+1. **Ideation + Packaging** via `/youtube-video-ideation` - title generation (5-7 options, user picks), thumbnail concept (3+ options, user picks), hook generation (3 options: Safe/Experimental/Hybrid, user picks). No keyword research - topic is already decided. Output: locked packaging document.
 2. **Script Architecture** via `/youtube-script-plan` - 4-exchange process producing beat-level architecture with STP ratios, tension loops, Forward Pull map, creative elements. Output: locked architecture.
 3. **Script Writing** via `/youtube-script-writer` - executes locked architecture with retention mechanics. **Script = full production blueprint** including:
    - Dialogue in `| Visual | What You Say |` tables with inline production markers
@@ -72,62 +50,69 @@ Channel pivoted to SaaS content (Feb 2026). Content decisions informed by keywor
 5. **Extract prompter text** (plain text from script, no markdown/headings/dividers - just raw spoken words with blank lines between paragraphs)
 
 ### Post-Film
-6. **Transcribe** raw footage (`transcribe.ts` - dual-pass AssemblyAI)
-7. **Rough cut** speaker video manually in a video editor (DaVinci Resolve, CapCut, etc.)
-   - Remove silences, fillers, false starts, repeated phrases, mistakes
-   - Export as `speaker-clean.mp4` to `<video_dir>/video/`
-   - This is faster and more reliable than automated cutting - you catch everything by ear
-   - Optional: run `/auto-cutter` first to generate `cuts.json` as a reference for where issues are
-8. **Re-transcribe** the clean video (`transcribe.ts --clean` → `transcript-clean.json`)
-9. **Build timeline** via `/video-timeline` on clean transcript
+6. **Transcribe** the pre-cut footage (`transcribe.ts` - dual-pass AssemblyAI)
+   - Videos are pre-cut before delivery (silences, fillers, mistakes already removed)
+   - No rough cut or auto-cut step needed
+7. **Clean transcript** - fix ASR mistakes in `transcript.json`
+   - Brand names: "Cloud Code" → "Claude Code", "ReMotion" → "Remotion", "Data4SEO" → "DataForSEO"
+   - Product names: "ImageGen" → "Imagen", "Volt" → "Bolt", "Rapid Agent" → "Replit Agent"
+   - Terms: "Market SaaS" → "Micro SaaS" (context-dependent)
+   - Read full `text` field, identify misheard words, fix in `words` array, rebuild `text` and `segments`
+   - This matters because text overlays and captions pull directly from transcript words
+8. **Build timeline** via `/video-timeline` on transcript
    - Timeline decides layouts: speaker_full, slide_full, split_5050, gif_overlay, broll_full, etc.
    - This step determines which slides are 16:9 (full-screen) vs 1:1 (50/50 layout)
    - Timeline MUST include `broll_full` entries for long speaker-only stretches (5s+)
-10. **Generate slides** at correct aspect ratios based on timeline
+9. **Generate slides** at correct aspect ratios based on timeline
     - Full-screen slides (`slide_full`): generate at **16:9**
     - 50/50 slides (`split_5050_left/right`): generate at **1:1**
     - Use `/excalidraw-slides` for whiteboard style (NOT `/broll-prompting`)
-11. **Research GIFs** via `/gif-search` (can run parallel with step 10)
-12. **Generate memes** via Imgflip MCP (can run parallel with steps 10-11)
-    - For each long speaker-only segment, pick a meme template matching the speech context
+10. **Research GIFs** via `/gif-search` (can run parallel with step 9)
+    - gif-researcher writes `gifs/manifest.json` mapping each GIF to its script quote and description
+    - Manifest is how the timeline builder knows where to place each GIF
+11. **Generate memes** via Imgflip MCP + Imagen MCP (can run parallel with steps 9-10)
+    - **Imgflip** for famous templates (Drake, distracted boyfriend, this is fine, expanding brain, etc.) — recognition IS the joke. Use `boxes` param for 3+ text area templates.
+    - **Imagen** for custom scenes with Impact font (no template exists), layout-based memes (starter pack, tier list), or multi-label memes. Describe exact meme format + art style in prompt. Do NOT prompt for vague "funny images" — always anchor to a recognizable format.
     - Caption with relevant text, download to `video/memes/` directory
+    - **Write `memes/manifest.json`** mapping each meme to its script quote, template, and captions
     - Use as `slide_full` entries in timeline (not `broll_full`)
     - Every video MUST have at least 10-13 memes for visual variety
     - Memes replace generic Pexels B-roll (always relevant because captions match speech)
-13. **Build new Remotion component** from the script's NEW COMPONENT candidate (section F of production blueprint)
+12. **Build new Remotion component** from the script's NEW COMPONENT candidate (section F of production blueprint)
     - Read the candidate spec from the script
     - Implement in `tools/video-editor-remotion/src/components/[ComponentName].tsx`
     - Register in `Root.tsx` timeline type system
     - Use `/remotion-best-practices` for animation patterns
     - Update timeline to reference the new component instead of the static slide it replaces
-14. **Lint timeline** via `node lint-timeline.js` (from `tools/video-editor-remotion/`)
+13. **Lint timeline** via `node lint-timeline.js` (from `tools/video-editor-remotion/`)
     - Catches: short speaker flashes (<2s), micro-gaps, text on GIFs/broll, overlapping layouts, text-speech misalignment
     - Use `--fix` to auto-resolve short speaker segments
     - Run BEFORE Studio preview to catch issues early
-15. **Preview in Studio** before rendering
+14. **Preview in Studio** before rendering
     - Copy assets to `public/`: speaker.mp4, slides/, gifs/, broll/, timeline.json
     - Generate speaker proxy: `ffmpeg -y -i public/speaker.mp4 -vf "scale=960:540" -c:v libx264 -preset fast -crf 28 -c:a aac -b:a 64k public/speaker-proxy.mp4`
     - Fix timeline paths: `broll/file.mp4` not `video/broll/file.mp4`
     - Check: overlays only on speaker layouts, SFX not too dense, zooms smooth
-16. **Render** at 4K via `render.ts` (reads from `public/timeline.json`, auto-syncs back to source)
+15. **Render** at 4K via `render.ts` (reads from `public/timeline.json`, auto-syncs back to source)
 
 ### Hook Pacing (First 60 Seconds) - CRITICAL
 
-The first 60 seconds decide if viewers stay. Edit aggressively.
+The first 60 seconds decide if viewers stay. This is the #1 thing timeline builders get wrong. Be BRUTAL.
 
-**First 10s:** MAXIMUM density. Max 3 seconds per segment. Something every 1.5-3 seconds. At least 1 text overlay in the first 5s, at least 1 jump zoom in the first 10s. This is the hardest, fastest section.
+| Time Range | Max Segment | Visual Change Every | Requirements |
+|-----------|-------------|--------------------|-|
+| **0-5s** | 2s | 1-2s | Text overlay in first 2s. Jump cut or slide within 3s. |
+| **5-10s** | 3s | 2-3s | At least 1 slide/GIF/meme. At least 1 jump cut. |
+| **10-20s** | 3s | 2-3s | Keep alternating layouts. No bare speaker_full. |
+| **20-30s** | 4s | 3-4s | Slightly more room but still fast. |
+| **30-60s** | 5s | 3-5s | Normal fast pacing. |
 
-**10-30s:** Still hard and dense. Max 5 seconds per segment. Something every 3-5 seconds. All layout types fair game. Slightly less aggressive than 0-10s but still very fast.
-
-**30-60s:** Max 7 seconds per segment. Maintain visual variety but can breathe slightly more than the opening.
-
-**Requirements:**
-- No segment > 3s in first 10 seconds (maximum density)
-- No segment > 5s from 10-30 seconds
-- No segment > 7s from 30-60 seconds
-- At least 1 text overlay in first 5s
-- At least 1 jump zoom in first 10s
-- At least 1 non-speaker layout (slide, B-roll, screen recording) in first 30s
+**Hard rules:**
+- No bare speaker_full in first 20s (every speaker segment needs an overlay or be a zoom)
+- First visual (slide/GIF/meme) within 3s
+- Minimum 6 visual changes in first 10s
+- Minimum 12 visual changes in first 20s
+- Minimum 20 visual changes in first 30s
 - Visual change every 1.5-3 seconds in first 10s, every 3-5 seconds from 10-30s
 - If viewer survives first 60 seconds, they'll likely watch the rest
 
@@ -179,10 +164,9 @@ Chapters create entry points for scrub-arrivals. Every chapter marker is a secon
 - 6-8 chapters max for a 10-min video
 
 ### Common Mistakes
-- **ALWAYS use `transcribe.ts` for transcription** - NEVER call AssemblyAI manually via curl/API. The script does dual-pass (Universal-3-Pro + Universal-2 filler detection), proper audio extraction, and outputs the correct JSON format. Run from `tools/video-editor-remotion/`: `npx ts-node transcribe.ts <video_dir> [--clean]`
+- **ALWAYS use `transcribe.ts` for transcription** - NEVER call AssemblyAI manually via curl/API. The script does dual-pass (Universal-3-Pro + Universal-2 filler detection), proper audio extraction, and outputs the correct JSON format. Run from `tools/video-editor-remotion/`: `npx ts-node transcribe.ts <video_dir>`
 - **ALWAYS use dedicated skills/agents for pipeline steps** - don't manually do what a skill is built for. `/video-timeline` for timelines, `/excalidraw-slides` for slides, `/gif-search` for GIFs, `transcribe.ts` for transcription
-- **DON'T skip the manual rough cut** - automated cutting misses repeated phrases, partial word bleeds, and splice artifacts. Manual editing with ears is faster and catches everything
-- **DON'T forget to re-transcribe** after manual cut - `transcript-clean.json` must match `speaker-clean.mp4` timestamps. Run `transcribe.ts --clean`
+- **Videos are pre-cut** - no rough cut or auto-cut step. Speaker video arrives ready to transcribe and edit
 - **DON'T generate slides before timeline** - you won't know which are 16:9 vs 1:1
 - **DON'T use `/broll-prompting` for slides** - that's for premium dark-bg graphics. Use `/excalidraw-slides` for hand-drawn whiteboard style
 - **DO run timeline before any visual generation** - timeline is the source of truth for what goes where
@@ -213,15 +197,15 @@ Chapters create entry points for scrub-arrivals. Every chapter marker is a secon
 | 12 min | ~2,600 |
 | 15 min | ~3,250 |
 
-Raw footage runs ~20% longer before auto-cut removes silences/fillers/false starts.
+Videos are pre-cut before delivery - no auto-cut step needed.
 
 ## Key Principles (Feed-First Strategy)
 
 Most views come from Browse (home feed) and Suggested, not Search. Title + thumbnail create curiosity in the feed. Hook justifies the click. Tension mechanics keep them watching.
 
-- **Curiosity-first titles** - Create a gap the viewer needs to close (keywords help discovery but don't lead the title)
-- **Hook justifies the click** - First 30s confirms the title/thumbnail promise and raises a NEW question. Never answer in the hook.
-- **NEVER satisfy curiosity early** - Giving the answer releases tension. Viewers get what they wanted and leave. Withhold payoff until the block's end (STP: Setup 30-40%, Tension 40-50%, Payoff 10-20%).
+- **Curiosity-first titles** - Create a gap the viewer needs to close. No keyword stuffing.
+- **Hook justifies the click** - Pain-first order: viewer's experience (0-5s), packaging payoff (5-10s), credibility (10-15s), anticipation (15-18s), roadmap (18-22s). First word is "You", never "So I" or "I built." Block 1 must NOT repeat what the hook already established.
+- **NEVER satisfy curiosity early** - Giving the answer releases tension. Viewers get what they wanted and leave. Withhold payoff until the block's end (STPR: Setup 25-35%, Tension 35-45%, Payoff 10-15%, Retention 5-10%). Every block ends by closing one loop and opening the next.
 - **Re-tension after every payoff** - Every WHY moment (answer/insight) must be followed by new tension within 1-2 sentences. No answer without a new question. (Magnet analogy: place the next magnet before they reach the current one.)
 - **Forward Pulls every 30-60s** - Tell them what's coming and why they should care. Level 3+ only (specific preview, curiosity gap, or implied stakes). Never generic ("Next, I'll show you...").
 - **Stakes-based structure** - Order by urgency, not logic

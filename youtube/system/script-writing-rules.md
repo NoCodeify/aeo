@@ -12,11 +12,19 @@ Operational reference for the script-writer agent. Read this file before writing
 
 ---
 
+## Design Principle
+
+**At no point in the video does a viewer reach a natural exit point where their curiosity is fully satisfied and nothing is pulling them forward.**
+
+Viewers leave for exactly three reasons: **Lost** (don't know where the video is going), **Bored** (nothing pulling them forward), or **Satisfied too early** (got the answer, no reason to stay). Every mechanic below prevents one of these three exits.
+
+---
+
 ## Three Core Mechanics
 
 Every script decision must serve one of these three mechanics.
 
-### Mechanic 1: Orientation (Where Am I?)
+### Mechanic 1: Orientation (Where Am I?) -- Prevents "Lost"
 
 | Where | What to do |
 |-------|-----------|
@@ -24,7 +32,7 @@ Every script decision must serve one of these three mechanics.
 | Block openers | Remind viewer where they are |
 | Structural reminders | Every 2-3 minutes, reconnect to main promise |
 
-### Mechanic 2: Anticipation (What's Coming?)
+### Mechanic 2: Anticipation (What's Coming?) -- Prevents "Bored"
 
 | Element | Cadence |
 |---------|---------|
@@ -33,13 +41,16 @@ Every script decision must serve one of these three mechanics.
 
 **Pattern:** Tell what's coming -> Make them want it -> Deliver -> Immediately tell what's next
 
-### Mechanic 3: Withholding (Delayed Gratification)
+### Mechanic 3: Withholding (Delayed Gratification) -- Prevents "Satisfied Too Early"
 
 | Phase | % of block | Rule |
 |-------|-----------|------|
-| SETUP | 30-40% | Present problem, create questions. DON'T hint at solution. |
-| TENSION | 40-50% | Show journey to answer. DON'T give action steps yet. |
-| PAYOFF | 10-20% | Deliver answer. DON'T over-explain once they get it. |
+| SETUP | 25-35% | Present problem, create questions. DON'T hint at solution. |
+| TENSION | 35-45% | Show journey to answer. DON'T give action steps yet. |
+| PAYOFF | 10-15% | Deliver answer. DON'T over-explain once they get it. |
+| RETENTION | 5-10% | Close this loop AND open the next. New curiosity gap before next block starts. |
+
+**The 4th phase is structural, not optional.** Every block ends by closing one curiosity loop and immediately opening another. No gap where the viewer thinks "Cool, I got what I needed. I can leave now." The retention phase is the cliffhanger that pulls them into the next block.
 
 **DEADLY MISTAKE:** Giving payoff in first 30 seconds of a block.
 
@@ -152,23 +163,33 @@ Never generalize what architecture made specific. Use exact numbers.
 
 ---
 
-## Setup-Tension-Payoff Execution
+## Setup-Tension-Payoff-Retention (STPR) Execution
 
-### Preferred Teaching Pattern: Problem -> Story -> Action
+### Preferred Teaching Pattern: Problem -> Story -> Action -> Cliffhanger
 
 | Phase | Role | Rule |
 |-------|------|------|
 | Setup (Problem) | Introduce problem without solving it | No hints at the answer |
 | Tension (Story) | Journey, failures, breakthrough | No action steps yet |
-| Payoff (Action) | What they should do now | Don't over-explain once it lands |
+| Payoff (Action) | What they should do now | Short and punchy. Don't over-explain once it lands |
+| Retention (Cliffhanger) | Close this loop, open the next | New curiosity gap in the same breath as the payoff |
 
 ### Payoff Protection
 
 Before writing a block, identify the answer. If it appears in Setup or Tension, RESTRUCTURE.
 
+### Retention Phase Writing
+
+The Retention phase is NOT just a Forward Pull. It must do two things in the same breath:
+1. **Close the current loop** - acknowledge the payoff just delivered ("So now you have X")
+2. **Open the next loop** - create a new curiosity gap that makes the next block irresistible
+
+**Good:** "So now you know what kills retention. But knowing what kills it and knowing how to engineer the opposite are two completely different things."
+**Bad:** "Next, let me show you the solution." (generic Forward Pull, doesn't close anything)
+
 ### Lists Within Blocks
 
-Still use Setup-Tension-Payoff for EACH item in a list.
+Still use Setup-Tension-Payoff-Retention for EACH item in a list.
 
 **BAD:**
 > "First - stop comparing yourself. Here's why..."
@@ -271,23 +292,29 @@ Use `| Visual | What You Say |` tables for all spoken content.
 
 | Marker | Purpose |
 |--------|---------|
-| `LAYOUT:` | Speaker layout (speaker_full, split_right, split_5050, etc.) |
-| `SLIDE XX:` | Slide reference for visual |
-| `SCREEN XX:` | Screen recording reference |
-| `BROLL:` | B-roll description or Pexels search query |
-| `GIF:` | GIF description or Giphy search query |
-| `SFX:` | Sound effect trigger |
-| `TEXT:` | Text overlay content |
+| `LAYOUT:` | Speaker layout (speaker_full, gradual_zoom, jump_cut, split_5050, slide_full, gif_full) |
+| `[SLIDE]` | Visual beat marker (concept needs a slide) |
+| `[SCREEN]` | Screen recording marker (proof moment) |
+| `[GIF]` | GIF beat marker (humor, pattern interrupt) |
+| `[MEME]` | Meme beat marker (sarcasm, relatable pain) |
 
-### Required Asset Lists
+### Script Writer Output
 
-- Screens list (if any screen recordings)
-- Slides list with descriptions
-- Pexels B-roll queries
-- GIF queries
-- SFX map (which sounds, where)
-- Text overlay list
-- Layout flow section for timeline builder
+- Dialogue in `| Visual | What You Say |` tables with layout and visual beat markers
+- Layout flow section (second-by-second layout guidance for timeline builder)
+- Chapter map (for YouTube description)
+- Word count breakdown
+
+### NOT the Script Writer's Job
+
+These are handled by the production pipeline agents:
+- Slide descriptions, search queries, generation (slide-prompter + Imagen)
+- GIF search queries, download (gif-researcher + Giphy)
+- Meme template selection, captioning (Imgflip MCP)
+- SFX placement and timing (timeline-builder)
+- Text overlay placement and timing (timeline-builder)
+- Asset density enforcement (production rules)
+- New Remotion component identification (production pipeline)
 
 ### Word Count
 
@@ -468,7 +495,8 @@ If ANY row shows "No" for re-tension, add a new question/curiosity gap within 1-
 
 - [ ] All beats from architecture used in order
 - [ ] Payoff withheld until end of block
-- [ ] Problem -> Story -> Action pattern followed
+- [ ] Problem -> Story -> Action -> Cliffhanger pattern followed (STPR)
+- [ ] Retention phase present: closes one curiosity loop AND opens the next in the same breath
 - [ ] Forward Pulls every 45-60s at Level 3+
 - [ ] WHY moments every 30-60s with natural phrasing
 - [ ] Re-tension after every WHY moment (verified in Step 1)
@@ -479,6 +507,18 @@ If ANY row shows "No" for re-tension, add a new question/curiosity gap within 1-
 - [ ] Stories follow vulnerability-first pattern
 - [ ] All specific numbers present
 
+### Step 2.5: Hook - Pain-First Order + 5 Jobs
+
+All 5 jobs must be present in this order within ~20 seconds:
+
+- [ ] Pain confirmation FIRST (0-5s) -- reflects viewer's specific experience. First word is "You" or a direct claim about their situation.
+- [ ] Packaging payoff (5-10s) -- bridges from pain to title/thumbnail promise
+- [ ] Credibility (10-15s) -- one sentence, compressed
+- [ ] Anticipation (15-18s) -- open loop or framework tease
+- [ ] Roadmap (18-22s) -- 2-3 categories, destination visible
+- [ ] No banned openers: "So I..." / "I built..." / "I have..." / "So after..." / "Here are X things..." / "I want to show you..."
+- [ ] Block 1 does NOT repeat any fact, product name, or credential already stated in the hook
+
 ### Step 3: Full Draft
 
 - [ ] Delivers on title/thumbnail promise
@@ -488,6 +528,7 @@ If ANY row shows "No" for re-tension, add a new question/curiosity gap within 1-
 - [ ] CTA placements natural with 140+ word spacing
 - [ ] Blocks flow naturally
 - [ ] No ending signals before final CTA
+- [ ] No natural exit point where curiosity is fully satisfied and nothing pulls forward
 
 ---
 

@@ -48,6 +48,7 @@ import { TypewriterText } from "./TypewriterText";
 import { CheckXMark } from "./CheckXMark";
 import { CircleTimer } from "./CircleTimer";
 import { TextRevealWipe } from "./TextRevealWipe";
+import { KillList } from "./KillList";
 import { BarChart } from "./BarChart";
 import { LineChart } from "./LineChart";
 import { BulletList } from "./BulletList";
@@ -906,6 +907,18 @@ function renderEdit(
           accentColor={edit.accentColor}
         />
       ));
+
+    case "kill_list":
+      return (
+        <KillList
+          speakerSrc={speakerVideo}
+          startFrom={speakerStartFrom}
+          items={edit.items}
+          title={edit.title}
+          replacement={edit.replacement}
+          color={edit.color}
+        />
+      );
 
     default:
       return null;

@@ -1,7 +1,7 @@
 ---
 name: youtube-video-ideation
 description: "Full YouTube video packaging: title generation + thumbnail concept + hook selection. Orchestrates /youtube-title, thumbnail validation, and /youtube-hook into a complete packaging document. Use when user says 'video idea', 'video title', 'thumbnail concept', 'next video', or 'what video should I make'. Do NOT use for script planning (/youtube-script-plan), script writing (/youtube-script-writer), or editing (/youtube-video-editor)."
-allowed-tools: Read;Glob;Grep;WebSearch;mcp__seo-agent__google_trends_explore;mcp__seo-agent__keyword_overview
+allowed-tools: Read;Glob;Grep;WebSearch
 ---
 
 # YouTube Video Ideation (Packaging Orchestrator)
@@ -12,39 +12,19 @@ Generate a complete video packaging document: validated title + thumbnail concep
 
 ```
 /youtube-video-ideation [topic]
-  Step 1: Keyword selection
-  Step 2: Title generation -> USER PICKS (via /youtube-title)
-  Step 3: Thumbnail concept -> USER PICKS (options-first)
-  Step 4: Hook generation -> USER PICKS (via /youtube-hook)
+  Step 1: Title generation -> USER PICKS (via /youtube-title)
+  Step 2: Thumbnail concept -> USER PICKS (options-first)
+  Step 3: Hook generation -> USER PICKS (via /youtube-hook)
   Output: Locked packaging document
 ```
 
----
-
-## Step 1: Keyword Selection
-
-**Before generating ANY ideas, identify the target keyword.**
-
-### Primary Keyword Source
-Read `youtube/system/claude-code-keyword-data.csv` for Claude Code / AI / vibe coding keywords.
-
-### Keyword Selection Criteria
-- **High growth** - YoY growth signals emerging demand
-- **Reasonable volume** - 1K+ monthly searches preferred
-- **Low competition** - First-mover advantage on rising terms
-- **Intent match** - Keyword matches the video's actual content
-
-### If User Already Has a Topic
-Skip keyword research. Map the topic to the closest high-volume keyword and proceed.
-
-### Present Keyword Options
-If multiple viable keywords exist, present 3-5 with volume + growth data. User picks.
+**No keyword research step.** The topic is already decided by the user. This is a feed-first channel - most views come from Browse and Suggested, not Search. Good packaging (title + thumbnail + hook) drives clicks, not keyword targeting.
 
 ---
 
-## Step 2: Title Generation
+## Step 1: Title Generation
 
-**Invoke `/youtube-title` with the selected keyword + topic context.**
+**Invoke `/youtube-title` with the topic context.**
 
 The title-validator agent will:
 1. Identify acute moments relevant to the topic
@@ -63,7 +43,7 @@ The title-validator agent will:
 
 ---
 
-## Step 3: Thumbnail Concept
+## Step 2: Thumbnail Concept
 
 **After the title is locked, generate 3+ thumbnail concepts.**
 
@@ -109,6 +89,8 @@ The title-validator agent will:
 | NFC/Access | Gold | NFC waves |
 | Search/AEO | Orange | Magnifying glass |
 | Claude/AI | Coral-orange | Stylized "A" |
+| SaaS/Business | Green | Dollar/chart icon |
+| Distribution | Red-orange | Megaphone/funnel |
 
 ### Pre-Flight Checklist (Per Concept)
 - [ ] Text reinforces (not repeats) title
@@ -131,7 +113,7 @@ For each concept show:
 
 ---
 
-## Step 4: Hook Generation
+## Step 3: Hook Generation
 
 **Invoke `/youtube-hook` with the locked title + thumbnail concept.**
 
@@ -155,8 +137,6 @@ After all selections are made, produce this document:
 ## TITLE (Locked)
 **Title:** [exact title]
 **Characters:** [count]
-**Target Keyword:** [keyword]
-**Search Volume:** [X/month]
 **Acute Moment:** [which one]
 **Pattern:** [which title pattern]
 
@@ -184,5 +164,5 @@ Invoke `/youtube-script-plan` with this packaging document + brain dump + CTA in
 2. **Title = acute moment** - Must tap into something urgent, not chronic
 3. **Thumbnail = emotion** - Reinforce, never repeat the title
 4. **Hook = anticipation** - Set up script without spoiling it
-5. **Keyword source** - `youtube/system/claude-code-keyword-data.csv`
+5. **No keyword research** - Topic is already decided. Feed-first, not search-first.
 6. **Sequence** - This skill feeds into `/youtube-script-plan` then `/youtube-script-writer`

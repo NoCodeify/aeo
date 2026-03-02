@@ -2,7 +2,6 @@ Two hundred and eighty-five billion dollars got wiped off software stocks in a s
 
 And it's not because people stopped needing software.
 
-[SLIDE 01: $285B crash]
 
 It's because they stopped needing to pay someone else to build it for them.
 
@@ -25,7 +24,6 @@ AI replaces the humans. The seats empty. Revenue collapses. The entire model bre
 
 And that's just the squeeze from above. There's a second squeeze coming from below. Solo builders are replacing entire SaaS products by building custom tools with Claude Code. Not prototypes. Not demos. Production tools that run real businesses. Two directions. Both lethal. The traditional SaaS company is getting crushed from both sides at once.
 
-[SLIDE 02: Two-way squeeze]
 
 But while enterprise SaaS crashes, something weird is happening on the other side. Micro SaaS is growing thirty percent year over year. Solo founders pulling five to fifty thousand a month with seventy percent margins.
 
@@ -50,13 +48,11 @@ GoHighLevel at four hundred ninety-seven a month. All cancelled.
 
 Here's what replaced every single one of them.
 
-[SLIDE 03: Kill List table]
 
 Six subscriptions. Seven hundred to eleven hundred dollars a month. And the replacement cost for all six combined is eighty bucks. One Claude Code Max subscription. So let me walk you through each one.
 
 Semrush. The SEO platform everyone swears by. Ranked keywords, competitor analysis, keyword gaps, Google Trends. Serious tools for serious marketers.
 
-[SLIDE 04: Semrush vs seo-agent-mcp]
 
 Most people assume you need a massive platform for real SEO data. You don't. I only used four things: ranked keywords, competitor analysis, keyword gaps, and trends. Semrush charges up to four hundred fifty a month for a dashboard with hundreds of features I never touched. Sound familiar?
 
@@ -68,7 +64,6 @@ Zapier. If you've never used it, it's the glue between your apps. Trigger fires,
 
 Until you need actual logic. Conditional branches. Error handling. Retries. Multi-step workflows where step four depends on what step two returned. That's when Zapier gets expensive. They charge per task. And complex automations eat through those tasks fast. You end up paying fifty, sixty, seventy dollars a month just to move data between apps.
 
-[SLIDE 05: Zapier vs agents]
 
 I replaced all of it with nineteen Claude Code agents and twenty-four custom skills. And I don't mean simple if-this-then-that automations. Full client delivery pipelines that take in a brand, run an audit across three search engines, build a playbook, and generate a report. Video production workflows that go from script to rendered four-K video. Audit-to-report chains that run end to end without me touching them.
 
@@ -88,7 +83,6 @@ Premiere Pro. This is the one where people say you're crazy for replacing it. Th
 
 But for YouTube content, ninety percent of editing is repetitive. Cuts. Layouts. Overlays. Text. Zooms. The same patterns every single video. You're paying monthly for a Swiss Army knife when all you use is the blade. And Adobe keeps raising the price while you keep doing the same ten things.
 
-[SLIDE 06: Premiere vs remotion]
 
 video-editor-remotion. Open source. Four-K rendering. Twenty-five-plus layout types. Programmatic, so I define the edit once and it renders every time. Cost: zero.
 
@@ -98,7 +92,6 @@ Those five were each twenty to a hundred thirty a month. Annoying but manageable
 
 GoHighLevel. If you've never heard of it, it's the all-in-one platform for agencies. CRM, funnels, email, SMS, scheduling, automation. Hundreds of features crammed into one dashboard. Four hundred ninety-seven dollars a month. Every month. Like clockwork.
 
-[SLIDE 07: GHL features]
 
 I used four features. Four. Out of hundreds. Paying four hundred ninety-seven dollars every single month for a platform where ninety-six percent of the features were dead weight just sitting there doing nothing.
 
@@ -110,7 +103,6 @@ They're not. The SEO tool runs real competitor analysis on live production data.
 
 These aren't weekend projects I built to prove a point. They're tools I use every single day to run a real business that does real revenue.
 
-[SLIDE 08: The math]
 
 Total before: seven hundred to eleven hundred a month. Total after: eighty bucks. That's seventy-four hundred to twelve thousand two hundred dollars per year back in your pocket. Not theoretical savings. Real money I used to spend every single month that now stays in my bank account.
 
@@ -129,11 +121,9 @@ Look at the pattern. Every single SaaS on the kill list had the exact same struc
 
 Semrush sat between you and SEO data. Zapier sat between you and raw API connections. Premiere sat between you and FFmpeg, which is free and open source. GoHighLevel sat between you and four basic features you could build in a weekend.
 
-[SLIDE 09: Four middleman rows]
 
 Now look at AI coding tools. Cursor sits between you and Claude. Lovable sits between you and Claude. Bolt sits between you and Claude. Same pattern. They add a UI on top. They charge you a markup. And they control how many requests you get to make. They're wrappers. Same exact structure as every SaaS on the kill list. Just with a different label and a fancier landing page.
 
-[SLIDE 10: Wrapper stack]
 
 And the proof this is already happening landed in June 2025. Cursor, the most popular AI coding tool in the world, cut their Pro plan from five hundred requests down to two hundred twenty-five. Just like that. Cut in half. Their CEO had to publicly apologize on Twitter.
 
@@ -145,7 +135,6 @@ Every wrapper-based tool has a ticking clock. The moment the model provider offe
 
 And this pattern isn't new. It's ancient. Travel agents sat between you and airlines. Music labels sat between you and artists. Taxi companies sat between you and drivers.
 
-[SLIDE 11: Middleman casualties timeline]
 
 Every single time the underlying capability becomes directly accessible, the middleman gets squeezed out. No exceptions.
 
@@ -153,7 +142,6 @@ Claude Code talks directly to the Anthropic API. No wrapper. No middleman. No co
 
 Stop asking which tool should I use. Start asking a different question: what's the layer I'm paying for, and can I remove it?
 
-[SLIDE 12: Mindset shift]
 
 Every subscription is a bet that the vendor can do something you can't. That bet is expiring. Fast.
 

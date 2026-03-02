@@ -2,6 +2,7 @@ import React from "react";
 import { Composition } from "remotion";
 import { z } from "zod";
 import timelineData from "../public/timeline.json";
+import transcriptData from "../public/transcript.json";
 import { MainVideo } from "./components/MainVideo";
 import { NewspaperFlash } from "./components/NewspaperFlash";
 import { LowerThird } from "./components/LowerThird";
@@ -41,6 +42,7 @@ import { NotificationStack } from "./components/NotificationStack";
 import { PricingCard } from "./components/PricingCard";
 import { CountdownFlip } from "./components/CountdownFlip";
 import { TextHighlight } from "./components/TextHighlight";
+import { PixelArtGame } from "./components/PixelArtGame";
 import { VideoConfig, Edit, BgMusicConfig } from "./types/timeline";
 
 // Zod schema for Studio props editing
@@ -95,11 +97,13 @@ const defaultConfig: VideoConfig = {
   },
 };
 
-// Calculate total duration from timeline
+// Calculate total duration from timeline, using transcript duration as floor
+// so the render never cuts short even if timeline entries don't reach the end.
 const calculateDuration = (timeline: Edit[], fps: number): number => {
   if (timeline.length === 0) return fps * 10; // 10 seconds default
   const maxEnd = Math.max(...timeline.map((e) => e.end));
-  return Math.ceil(maxEnd * fps);
+  const transcriptDuration = (transcriptData as any)?.duration ?? 0;
+  return Math.ceil(Math.max(maxEnd, transcriptDuration) * fps);
 };
 
 export const RemotionRoot: React.FC = () => {
@@ -622,6 +626,17 @@ export const RemotionRoot: React.FC = () => {
           paragraph: "By 2027, over 50% of all searches will be zero-click, answered directly by AI without users visiting any website.",
           highlight: "50% of all searches will be zero-click",
           accentColor: "#e63946",
+        }}
+      />
+      <Composition
+        id="PixelArtGame"
+        component={PixelArtGame as any}
+        durationInFrames={300}
+        fps={30}
+        width={3840}
+        height={2160}
+        defaultProps={{
+          durationSec: 10,
         }}
       />
     </>

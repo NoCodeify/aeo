@@ -11,7 +11,6 @@ paths:
 ## ALWAYS use dedicated agents for video tasks
 
 - Video timelines: `/video-timeline` skill (pipeline: timeline-builder + timeline-validator agents)
-- Auto-cut: `/auto-cutter` skill (forks to auto-cutter agent)
 - B-roll prompts: `/broll-prompting` skill (forks to broll-prompter agent)
 - GIF search: `/gif-search` skill (forks to gif-researcher agent)
 - Slides: `/excalidraw-slides` skill (forks to slide-prompter agent)
@@ -20,8 +19,8 @@ paths:
 
 ## Pipeline (Post-Film)
 
-1. **Transcribe** raw footage (`transcribe.ts`)
-2. **Auto-cut** silences/fillers (`/auto-cutter` -> `autocut.ts`)
+1. **Transcribe** footage (`transcribe.ts`)
+2. **Clean transcript** - fix ASR mistakes (brand names, product names, misheard words) in `transcript.json`
 3. **Build timeline** (`/video-timeline`) - MUST happen before slide generation
    - Timeline decides layouts per segment (speaker_full, slide_full, split_5050, etc.)
    - This determines slide aspect ratios: 16:9 for `slide_full`, 1:1 for `split_5050`
@@ -43,14 +42,10 @@ npm run proxy
 # 1. Transcribe speaker video (word-level timestamps + filler detection)
 ASSEMBLYAI_API_KEY=... npx ts-node transcribe.ts ../../youtube/weekly-production/2026-w08-rank-in-chatgpt
 
-# 2. Auto-cut silences/fillers (via Claude Code agent)
-# Say: "use the auto-cutter agent on the w08 video"
-# → generates cuts.json → runs autocut.ts → speaker-clean.mp4 + transcript-clean.json
-
-# 3. Preview in browser (uses proxy videos automatically)
+# 2. Preview in browser (uses proxy videos automatically)
 npm run dev
 
-# 4. Render video (uses full 4K source automatically)
+# 3. Render video (uses full 4K source automatically)
 npx ts-node render.ts ../../youtube/weekly-production/2026-w08-rank-in-chatgpt
 ```
 
@@ -186,27 +181,26 @@ Mouse cursor, typing, clicking interactions for realistic UI demos.
 
 ### Jump Zoom Emphasis Rules
 
-Use jump zooms to punch key words/sentences. Rules:
+**`jump_zoom_in` and `jump_zoom_out` are DEPRECATED.** The 0.3s animated zoom creates a visible bounce at the boundary with `jump_cut_in` (the cut component renders at 1x for a frame before applying zoom). Use `jump_cut_in` and `jump_cut_out` only - instant hard snaps, no animation.
 
-| When to Use | Zoom Amount | Duration |
-|-------------|-------------|----------|
-| Key statistic ("$100k ARR") | 20% | 0.3-0.5s |
-| Surprising claim | 20-25% | 0.3-0.5s |
-| Framework name reveal | 15% | 0.3s |
-| Sentence emphasis | 15% | 0.3s |
-| Word punch (single word) | 15-20% | 0.2-0.3s |
+| When to Use | Zoom Amount |
+|-------------|-------------|
+| Key statistic ("$100k ARR") | 20% |
+| Surprising claim | 20-25% |
+| Framework name reveal | 15% |
+| Sentence emphasis | 15% |
+| Word punch (single word) | 15-20% |
 
 **Frequency rules:**
 - Max 1 jump zoom per 30-60 seconds
-- **Never back-to-back jump zooms** - minimum 1s `speaker_full` breather between any two zoom sequences. A zoom-out immediately followed by a zoom-in feels abrupt and jarring.
+- **Never back-to-back jump zooms** - minimum 1s `speaker_full` breather between any two zoom sequences
 - Save 25% zooms for 1-2 moments per video
 
-**Word punch pattern:**
+**Jump cut pattern (instant snap in and out):**
 ```json
 {"type": "speaker_full", "start": 10.0, "end": 12.5},
-{"type": "jump_zoom_in", "start": 12.5, "end": 12.7, "zoom": 1.15},
-{"type": "jump_cut_in", "start": 12.7, "end": 13.5, "zoom": 1.15},
-{"type": "jump_zoom_out", "start": 13.5, "end": 13.8, "zoom": 1.15},
+{"type": "jump_cut_in", "start": 12.5, "end": 13.5, "zoom": 1.15},
+{"type": "jump_cut_out", "start": 13.5, "end": 13.8, "zoom": 1.15},
 {"type": "speaker_full", "start": 13.8, "end": 18.0}
 ```
 
@@ -418,13 +412,29 @@ speaker_full (intro)
 
 ## Hook Pacing (First 60 Seconds) - CRITICAL
 
-The first 60 seconds decide if viewers stay. Edit aggressively.
+The first 60 seconds decide if viewers stay. Edit aggressively. This is the #1 thing timeline builders get wrong - they make the hook too loose. Be BRUTAL with density.
 
-- **First 30s:** Max 5s per segment. Visual change every 3-5s. At least 1 text overlay + 1 jump zoom. No speaker-only stretches.
-- **30-60s:** Max 7s per segment. Maintain variety.
+**Tiered pacing rules (MANDATORY - enforced by linter):**
+
+| Time Range | Max Segment | Visual Change Every | Requirements |
+|-----------|-------------|--------------------|-|
+| **0-5s** | 2s | 1-2s | Text overlay in first 2s. Jump cut or slide within 3s. MAXIMUM density. |
+| **5-10s** | 3s | 2-3s | At least 1 slide/GIF/meme. At least 1 jump cut. |
+| **10-15s** | 3s | 2-3s | Different layout than 5-10s. Another text overlay or visual. |
+| **15-20s** | 3s | 2-3s | Keep alternating. No speaker_full without overlay. |
+| **20-30s** | 4s | 3-4s | Slightly more breathing room but still fast. |
+| **30-60s** | 5s | 3-5s | Maintain variety. At least 1 new visual every 5s. |
+| **60s+** | 7s | 5-7s | Normal pacing. Still no speaker stretch >10s. |
+
+**Hard rules:**
+- **No bare speaker_full in first 20s** - every speaker segment must have an overlay (text, GIF) or be a zoom variant
+- **First visual (slide/GIF/meme) within 3s** - not 5s, not 8s, within 3 seconds
+- **Minimum 6 visual changes in first 10s** - that's a change every 1.5s average
+- **Minimum 12 visual changes in first 20s**
+- **Minimum 20 visual changes in first 30s**
 - **Entire video:** No speaker-only stretch > 10s ANYWHERE. Break up with text overlays, gradual_zoom changes, or layout switches.
 
-W11 lesson: First timeline had a 12s gradual_zoom in the hook and 15s+ speaker stretches throughout. Had to completely rebuild from 80 to 162 entries. Design this in from the start - don't rely on the validator to catch it after the fact.
+W11 lesson: First timeline had a 12s gradual_zoom in the hook and 15s+ speaker stretches throughout. Had to completely rebuild from 80 to 162 entries. W14 lesson: Even with rules, builder made 4s gradual_zoom segments in the 15-20s range. Must enforce per-tier maximums.
 
 ## Timeline Format
 
@@ -532,31 +542,6 @@ ASSEMBLYAI_API_KEY=... npx ts-node transcribe.ts <video_dir>
 
 ---
 
-## Auto-Cut (Smart Silence/Filler Removal)
-
-**Agent:** `.claude/agents/auto-cutter.md` — Claude Code reads the transcript and intelligently decides what to cut.
-**Script:** `autocut.ts` — Applies the cuts mechanically with ffmpeg.
-
-```bash
-# Step 1: Agent generates cuts.json (say: "use the auto-cutter agent on the w08 video")
-# Step 2: Script applies cuts
-npx ts-node autocut.ts <video_dir>
-```
-
-**What gets cut:** Filler words (um, uh, like), silences > 0.7s, repeated words, false starts, trailing fillers.
-**What gets kept:** Dramatic pauses before key reveals, sentence-end breaths, emphasis pauses.
-
-**Output:**
-- `speaker-clean.mp4` — clean video with cuts applied (ffmpeg concat, no re-encoding)
-- `transcript-clean.json` — remapped word timestamps matching the clean video
-- `cuts.json` — the cut decisions (for review)
-
-**Typical results:** 8-15% time savings for a 5-10 min video.
-
-`render.ts` auto-detects `speaker-clean.mp4` and uses it over the original.
-
----
-
 ## Project Structure
 
 ```
@@ -638,7 +623,6 @@ video-editor-remotion/
 │   └── sfx/                     # Audio (boop.mp3, click.mp3, lofi-beat-bg.mp3, upbeat-bg.mp3) - permanent
 ├── render.ts
 ├── transcribe.ts              # Dual-pass AssemblyAI transcription (U3P + U2 fillers)
-├── autocut.ts                 # Apply cuts.json (ffmpeg + timestamp remap)
 ├── lint-timeline.js           # Timeline linter (short speakers, gaps, text-on-gif, overlaps)
 ├── remotion.config.ts
 └── package.json
@@ -650,7 +634,7 @@ To preview a video in Remotion Studio, copy all assets to `public/`:
 
 ```bash
 # Copy from production dir to public/
-cp <video_dir>/video/speaker-clean.mp4 public/speaker.mp4
+cp <video_dir>/video/speaker.mp4 public/speaker.mp4
 cp -r <video_dir>/slides/ public/slides/
 cp -r <video_dir>/gifs/ public/gifs/
 cp -r <video_dir>/video/broll/ public/broll/

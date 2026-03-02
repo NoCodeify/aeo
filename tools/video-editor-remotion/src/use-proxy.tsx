@@ -74,8 +74,10 @@ export const SmartVideo: React.FC<React.ComponentProps<typeof OffthreadVideo>> =
   }
 
   // Rendering: frame-accurate OffthreadVideo
+  // Strip pauseWhenBuffering (not supported by OffthreadVideo, can interfere with other props)
   if (env.isRendering) {
-    return <OffthreadVideo {...props} />;
+    const { pauseWhenBuffering: _pwb, ...renderProps } = props as any;
+    return <OffthreadVideo {...renderProps} />;
   }
 
   // Studio (non-continuous or no startFrom): native Video

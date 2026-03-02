@@ -140,34 +140,45 @@ Everything the user has. Do not organize. Do not filter. More = better.
 
 Ask these questions. Wait for the user to answer all of them before proceeding.
 
-### Part A: Video Approach
+### Part A: Deeper Problem (MANDATORY)
 
-1. **What are you actually showing them?**
+1. **What's the emotional struggle underneath this topic?** Every video has a surface problem (the topic) and a deeper problem (the emotional reason people resist the advice). The deeper problem is WHY viewers do the wrong thing even when they know better. Examples:
+   - Surface: "distribution before product." Deeper: building feels productive, selling feels scary.
+   - Surface: "how to edit videos." Deeper: perfectionism -- you never hit publish.
+   - Surface: "how to write scripts." Deeper: authenticity vs manipulation -- do you optimize for retention or soul?
+
+   Ask the user: **"Why do people resist this advice? What's the emotional barrier, not the knowledge gap?"**
+
+   This answer gets threaded through the script: planted in Block 1, referenced in the middle, paid off in the Final Block. It's what makes the video feel like more than a tutorial.
+
+### Part B: Video Approach
+
+2. **What are you actually showing them?**
    - A: Results (proof it works)
    - B: Method (how to do it)
    - C: Mindset Shift (new way of thinking)
    - D: Demonstration (building/doing it live)
    - E: Combination (specify which)
 
-2. **If demonstrating: which approach?**
+3. **If demonstrating: which approach?**
    - Live (building in real-time)
    - Walkthrough (pre-built, explaining after)
    - Hypothetical (theoretical example)
    - Real project (actual client/personal project)
 
-3. **How will you prove it works?**
+4. **How will you prove it works?**
    - Your results
    - Others' results
    - Demo itself
    - Combination
 
-4. **What's the hardest part of delivering this promise?** Where does the audience typically get stuck or skeptical? How will you address that in the video?
+5. **What's the hardest part of delivering this promise?** Where does the audience typically get stuck or skeptical? How will you address that in the video?
 
-### Part B: Story Verification (MANDATORY)
+### Part C: Story Verification (MANDATORY)
 
 For EVERY story, example, or personal anecdote in the brain dump, ask:
 
-5. **Story-by-story verification.** For each story in the brain dump, present it back and ask:
+6. **Story-by-story verification.** For each story in the brain dump, present it back and ask:
    - "Is this a real experience? When did it happen?"
    - "What were the exact numbers? (dollars, hours, percentages, dates)"
    - "What specifically went wrong/right? Walk me through the moment."
@@ -185,9 +196,9 @@ For EVERY story, example, or personal anecdote in the brain dump, ask:
    ...
    ```
 
-6. **Are any of these stories also in the "Stories Already Used" table from the Pre-Exchange scan?** If yes, flag the overlap and ask: "This story was used in [video]. Can you give me a different story that makes the same point?"
+7. **Are any of these stories also in the "Stories Already Used" table from the Pre-Exchange scan?** If yes, flag the overlap and ask: "This story was used in [video]. Can you give me a different story that makes the same point?"
 
-7. **Do you have any stories you WANT to include that aren't in the brain dump?** Sometimes the best stories surface during conversation, not during planning.
+8. **Do you have any stories you WANT to include that aren't in the brain dump?** Sometimes the best stories surface during conversation, not during planning.
 
 **NEVER proceed to Exchange 3 with unverified stories. Every story that makes it into the architecture must have real specifics confirmed by the user.**
 
@@ -197,18 +208,25 @@ For EVERY story, example, or personal anecdote in the brain dump, ask:
 
 Using the user's answers from Exchanges 1-2, propose a complete video structure. **Present alternatives where they exist.** User confirms or adjusts before locking.
 
-### Hook Framework (20-30s)
+### Hook Framework (15-25s) -- The 20-Second Rule
 
-4-part structure using the LOCKED hook from packaging:
+The hook must complete 5 psychological jobs in ~20 seconds, in this specific order. Pain comes FIRST because the viewer needs to hear their own experience before they care about credentials.
 
-| Part | Purpose |
-|------|---------|
-| Opening statement | Pattern interrupt or bold claim |
-| Credibility | Why you can deliver this promise |
-| Enemy (optional) | Common approach that fails |
-| Promise with roadmap | What they'll get, with 2-3 categories embedded |
+| Beat | Timing | Job | What it does |
+|------|--------|-----|-------------|
+| 1 | 0-5s | **Pain confirmation** | Describe the viewer's specific experience. First word should be "You" or a direct claim about their situation. NOT "I" or "So." |
+| 2 | 5-10s | **Packaging payoff** | Confirm the title/thumbnail promise. Bridge from their pain to what this video delivers. |
+| 3 | 10-15s | **Credibility** | One sentence. Not a resume. Compressed. |
+| 4 | 15-18s | **Anticipation** | Name the framework or tease an open loop ("and one thing that..."). |
+| 5 | 18-22s | **Roadmap** | 2-3 categories embedded in the promise (NOT a numbered list of blocks). |
 
-**Roadmap rule:** Embed categories in the promise statement. 2-3 categories, NOT a numbered list of blocks.
+**Banned hook openers:** "So I..." / "I built..." / "I have..." (credibility-first), "So after..." (buries the lead), "Here are X things..." (listicle, no tension), "I want to show you..." (asks permission).
+
+Use the LOCKED hook from packaging. Map each sentence to one or more of the 5 jobs. If any job is missing, the hook has a gap.
+
+### No Block 1 Repetition Rule
+
+**Block 1 must NEVER re-explain what the hook already established.** If the hook mentions a product, revenue number, or credential, Block 1 picks up AFTER that and immediately hits a new story beat or tension point. Hearing the same information twice in 60 seconds is an exit point.
 
 ### Block Outline
 
@@ -274,6 +292,8 @@ Present analysis and options for each:
 | 4. Specificity Audit | Flag every vague statement from brain dump, suggest concrete replacements | List of vague -> specific upgrades |
 | 5. Credibility Through Vulnerability | Identify: specific struggle + turning point + contrast + which block it belongs in | One vulnerability arc placed in structure |
 | 6. "So What" Test | For 3-5 major points, build the chain | Point -> So what -> Which means -> Therefore |
+| 7. Deeper Problem Threading | Map the 3 touchpoints: plant (Block 1), thread (middle), payoff (Final Block). Each touchpoint should feel natural, not announced. The plant is a passing observation. The thread is a callback. The payoff names it explicitly. | 3 specific beats with draft language |
+| 8. "Ask, Don't Tell" Moments | Identify 2-3 places where the script can invite the viewer to figure something out instead of stating it directly. "You probably see the pattern" instead of "The pattern is X." Creates engagement, not just information transfer. | 2-3 specific beats with draft language |
 
 ### Per-Block Creative Elements
 
@@ -308,32 +328,44 @@ After all 4 exchanges are complete and the user has confirmed, produce the locke
 # VIDEO ARCHITECTURE: [Title]
 **Length:** ~X minutes | **Blocks:** X
 
-## HOOK (20-30s)
-- Opening: [type + direction]
-- Credibility: [moment]
-- Enemy: [if applicable]
-- Promise + Roadmap: [statement with 2-3 embedded categories]
+## DEEPER PROBLEM
+Surface: [the topic/advice]
+Deeper: [the emotional reason people resist it]
+Plant: [Block 1 -- where and how it's introduced without naming it]
+Thread: [Block 2 or 3 -- where it's referenced or reinforced]
+Payoff: [Final Block -- where it's explicitly named and resolved]
+
+## HOOK (15-25s) -- Pain-First, 5 Jobs in Order
+- Pain confirmation (0-5s): [viewer's specific experience reflected back -- first word "You" or direct claim about their situation]
+- Packaging payoff (5-10s): [bridge from their pain to what this video delivers]
+- Credibility (10-15s): [one sentence, compressed]
+- Anticipation (15-18s): [open loop or framework tease]
+- Roadmap (18-22s): [2-3 embedded categories]
+- Block 1 handoff: [what Block 1 opens with -- must NOT repeat anything from the hook]
 
 ## BLOCK 1: [Working Title]
 **Purpose:** [what this block accomplishes]
 **Estimated Length:** ~Xs
 
-### SETUP (30-40%)
+### SETUP (25-35%)
 - Beat 1: [description]
 - Beat 2: [description]
 - Problem statement: [specific]
 
-### TENSION (40-50%)
+### TENSION (35-45%)
 - Story opening: [specific]
 - Complication: [specific]
 - Discovery: [specific]
 - Resolution: [specific]
 - Lesson lead-in: [bridge to payoff]
 
-### PAYOFF (10-20%)
+### PAYOFF (10-15%)
 - Revelation: [specific]
 - Action steps: [numbered]
-- Closing: [natural transition]
+
+### RETENTION (5-10%)
+- Loop close: [what curiosity this block satisfied]
+- New loop open: [what new question/gap pulls them into next block]
 
 ### WHY THIS MATTERS
 - After [point]: "[implication]" (natural, not announced)
@@ -403,7 +435,7 @@ Rules:
 
 1. **Present OPTIONS at every decision point** -- block ordering, stories, metaphors, demos, visual approaches. Present with reasoning. Let the user decide. NEVER auto-select.
 
-2. **Every block MUST have STP ratios** -- Setup 30-40%, Tension 40-50%, Payoff 10-20%. No exceptions.
+2. **Every block MUST have STPR ratios** -- Setup 25-35%, Tension 35-45%, Payoff 10-15%, Retention 5-10%. No exceptions. Retention = close one curiosity loop and open the next in the same breath.
 
 3. **Every block MUST have a tension loop** -- Raise, Tease, Deepen, Release, Re-tension mapped across the block.
 
@@ -442,5 +474,7 @@ After the architecture is locked, it goes to the script-writer agent. Be clear a
 - All content decisions (which stories, which examples, which data)
 - The FUNCTION of each beat (even if wording changes)
 - All engagement patterns (vulnerability arcs, specificity upgrades)
+- Deeper problem threading (plant, thread, payoff -- all 3 touchpoints)
+- "Ask, don't tell" moments (viewer figures it out, not told directly)
 - CTA placement and spacing (140+ word gaps)
 - Block order and block count

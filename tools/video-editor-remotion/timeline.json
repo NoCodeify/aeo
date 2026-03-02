@@ -1,0 +1,1375 @@
+[
+  {
+    "type": "gradual_zoom",
+    "start": 0,
+    "end": 4.5,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "$285 billion got wiped off software stocks in a single quarter"
+  },
+  {
+    "type": "counter_ticker",
+    "start": 0.16,
+    "end": 4.5,
+    "from": 0,
+    "to": 285,
+    "prefix": "$",
+    "suffix": "B",
+    "label": "Wiped from Software Stocks"
+  },
+  {
+    "type": "sfx",
+    "start": 0.16,
+    "end": 0.7,
+    "content": "boop",
+    "volume": 0.2
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 4.5,
+    "end": 4.8,
+    "zoom": 1.2,
+    "words": "not because people stopped needing software"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 4.8,
+    "end": 6.4,
+    "zoom": 1.2,
+    "words": "not because people stopped needing software"
+  },
+  {
+    "type": "jump_cut_out",
+    "start": 6.4,
+    "end": 6.7,
+    "zoom": 1.2
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 6.7,
+    "end": 9.7,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "words": "they stopped needing to pay someone else to build it for them"
+  },
+  {
+    "type": "gif_full",
+    "start": 9.7,
+    "end": 12.7,
+    "content": "gifs/gif-01-throwing-money.mp4",
+    "words": "build it for them confident walk away"
+  },
+  {
+    "type": "slide_full",
+    "start": 12.7,
+    "end": 15.5,
+    "content": "slides/slide-15_1.jpg",
+    "words": "$1000 per month replaced with $80 Claude Code"
+  },
+  {
+    "type": "gif_full",
+    "start": 15.5,
+    "end": 20,
+    "content": "gifs/gif-02-money-burning.mp4",
+    "words": "I used to pay over $1000 a month in software subscriptions"
+  },
+  {
+    "type": "gif_full",
+    "start": 20,
+    "end": 22.3,
+    "content": "gifs/gif-05-industry-dominos.mp4",
+    "words": "This is happening across the entire industry"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 22.3,
+    "end": 25.7,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "words": "SaaS no-code platforms even the AI coding tools themselves"
+  },
+  {
+    "type": "slide_full",
+    "start": 25.7,
+    "end": 27.3,
+    "content": "memes/meme-16.jpg",
+    "words": "they are all getting eaten alive squeezed both sides"
+  },
+  {
+    "type": "gif_full",
+    "start": 27.3,
+    "end": 32,
+    "content": "gifs/gif-21-eaten-alive.mp4",
+    "words": "$285 billion That's how much got wiped from software stocks in a single quarter"
+  },
+  {
+    "type": "sfx",
+    "start": 29,
+    "end": 29.8,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "screen_shake",
+    "start": 31.5,
+    "end": 32,
+    "intensity": 0.7,
+    "style": "impact",
+    "words": "Not a dip Not a correction A structural collapse"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 32,
+    "end": 37,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "words": "a structural collapse and most SaaS founders still think it is temporary"
+  },
+  {
+    "type": "text_overlay",
+    "start": 33.3,
+    "end": 35.5,
+    "text": "STRUCTURAL",
+    "style": "center",
+    "words": "structural collapse and most SaaS founders"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 37,
+    "end": 37.3,
+    "zoom": 1.2,
+    "words": "It is not"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 37.3,
+    "end": 38,
+    "zoom": 1.2,
+    "words": "It is not"
+  },
+  {
+    "type": "jump_cut_out",
+    "start": 38,
+    "end": 38.3,
+    "zoom": 1.2
+  },
+  {
+    "type": "split_right",
+    "start": 38.3,
+    "end": 45.4,
+    "content": "slides/slide-14_1.jpg",
+    "words": "Enterprise SaaS is structurally breaking Seat-based pricing per seat"
+  },
+  {
+    "type": "gif_full",
+    "start": 45.4,
+    "end": 46.6,
+    "content": "gifs/gif-03-empty-office.mp4",
+    "words": "Salesforce charges per seat HubSpot charges per seat ServiceNow charges per seat"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 46.6,
+    "end": 52,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "Entire business model assumes a human is sitting in each seat using the product every day"
+  },
+  {
+    "type": "slide_full",
+    "start": 52,
+    "end": 55.5,
+    "content": "slides/slide-14_1.jpg",
+    "words": "AI replaces the humans The seats are empty Revenue collapses"
+  },
+  {
+    "type": "newspaper_flash",
+    "start": 55.5,
+    "end": 58,
+    "keyword": "COLLAPSES",
+    "words": "Revenue collapses The entire model breaks when the user disappears"
+  },
+  {
+    "type": "speaker_full",
+    "start": 55.5,
+    "end": 58,
+    "words": "Revenue collapses underlying speaker"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 58,
+    "end": 61.5,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "nobody is coming back to fill those seats And that is just the squeeze from above"
+  },
+  {
+    "type": "slide_full",
+    "start": 61.5,
+    "end": 65,
+    "content": "slides/slide-02_1.jpg",
+    "words": "second squeeze coming from below Solo builders replacing entire SaaS products"
+  },
+  {
+    "type": "gif_full",
+    "start": 65,
+    "end": 67,
+    "content": "gifs/gif-04-crushed-squeezed.mp4",
+    "words": "second squeeze coming from below crushed squeezed"
+  },
+  {
+    "type": "split_left",
+    "start": 67,
+    "end": 72,
+    "content": "slides/slide-02_2.jpg",
+    "words": "building custom tools with Claude Code Not prototypes production tools"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 72,
+    "end": 76,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "words": "Two directions both lethal The traditional SaaS company getting crushed from both sides"
+  },
+  {
+    "type": "chapter_card",
+    "start": 76,
+    "end": 78.5,
+    "title": "The Weird Opportunity Nobody Sees",
+    "number": 2,
+    "subtitle": "Micro SaaS is thriving while enterprise crumbles",
+    "accentColor": "#22c55e"
+  },
+  {
+    "type": "sfx",
+    "start": 76,
+    "end": 76.8,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "slide_full",
+    "start": 78.5,
+    "end": 83,
+    "content": "slides/slide-17_1.jpg",
+    "words": "Micro SaaS growing 30% year over year Solo founders $5K to $50K with 70% margins"
+  },
+  {
+    "type": "stat_cards",
+    "start": 83,
+    "end": 87,
+    "cards": [
+      {
+        "value": "30%",
+        "label": "YoY Growth",
+        "trend": "up",
+        "trendValue": "Micro SaaS",
+        "color": "#22c55e"
+      },
+      {
+        "value": "$50K",
+        "label": "Monthly Revenue",
+        "trend": "up",
+        "trendValue": "Solo founders"
+      },
+      {
+        "value": "70%+",
+        "label": "Profit Margins",
+        "trend": "up",
+        "color": "#22c55e"
+      }
+    ],
+    "words": "Micro SaaS growing 30 percent year over year"
+  },
+  {
+    "type": "slide_full",
+    "start": 87,
+    "end": 92,
+    "content": "memes/meme-19.jpg",
+    "words": "SaaS is not dying It is being redistributed Like music"
+  },
+  {
+    "type": "split_right",
+    "start": 92,
+    "end": 97,
+    "content": "slides/slide-13_1.jpg",
+    "words": "from companies with 500 employees to individuals with one API key"
+  },
+  {
+    "type": "toggle_switch",
+    "start": 97,
+    "end": 100,
+    "labelOff": "Enterprise SaaS",
+    "labelOn": "Solo Builders",
+    "accentColor": "#22c55e",
+    "words": "the opportunity is not disappearing it is moving"
+  },
+  {
+    "type": "slide_full",
+    "start": 100,
+    "end": 103,
+    "content": "memes/meme-05.jpg",
+    "words": "PER SEAT PRICING vs ONE API KEY INFINITE AGENTS Drake Hotline Bling"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 103,
+    "end": 106,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "if you are not paying attention to where it is going it is moving without you"
+  },
+  {
+    "type": "slide_full",
+    "start": 106,
+    "end": 109.5,
+    "content": "memes/meme-01.jpg",
+    "words": "I run a SaaS $100K a year even my own product is vulnerable"
+  },
+  {
+    "type": "gif_full",
+    "start": 109.5,
+    "end": 111.5,
+    "content": "gifs/gif-08-side-eye.mp4",
+    "words": "even my own product is vulnerable Nobody is immune"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 111.5,
+    "end": 117,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "words": "I know this because I have been on both sides I have built SaaS I have sold SaaS"
+  },
+  {
+    "type": "split_left",
+    "start": 117,
+    "end": 123,
+    "content": "slides/slide-01_1.jpg",
+    "words": "watched SaaS eat entire industries for a decade now I am watching something eat SaaS itself"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 123,
+    "end": 123.3,
+    "zoom": 1.2,
+    "words": "macro data says it is structural"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 123.3,
+    "end": 125.5,
+    "zoom": 1.2,
+    "words": "macro data but I have got something better I have got receipts"
+  },
+  {
+    "type": "jump_cut_out",
+    "start": 125.5,
+    "end": 125.8,
+    "zoom": 1.2
+  },
+  {
+    "type": "gif_full",
+    "start": 125.8,
+    "end": 128,
+    "content": "gifs/gif-06-receipts.mp4",
+    "words": "I have got receipts Let me show you"
+  },
+  {
+    "type": "chapter_card",
+    "start": 128,
+    "end": 130.5,
+    "title": "The Kill List",
+    "number": 3,
+    "subtitle": "6 subscriptions I cancelled and what replaced them",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "sfx",
+    "start": 128,
+    "end": 128.8,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "kill_list",
+    "start": 130.5,
+    "end": 138,
+    "items": [
+      {
+        "name": "Semrush",
+        "price": "$130-$450"
+      },
+      {
+        "name": "Zapier",
+        "price": "$20-$70"
+      },
+      {
+        "name": "Midjourney",
+        "price": "$10-$30"
+      },
+      {
+        "name": "Premiere Pro",
+        "price": "$20-$45"
+      },
+      {
+        "name": "VidIQ",
+        "price": "$20-$50"
+      },
+      {
+        "name": "GoHighLevel",
+        "price": "$497"
+      }
+    ],
+    "title": "THE KILL LIST",
+    "replacement": "$80/mo Claude Code",
+    "words": "Semrush cancelled Zapier cancelled Midjourney Premiere VidIQ GoHighLevel all cancelled"
+  },
+  {
+    "type": "slide_full",
+    "start": 138,
+    "end": 141,
+    "content": "memes/meme-14.jpg",
+    "words": "The Kill List table six SaaS tools with costs"
+  },
+  {
+    "type": "gif_full",
+    "start": 141,
+    "end": 143,
+    "content": "gifs/gif-07-checklist.mp4",
+    "words": "Here is what replaced every single one of them"
+  },
+  {
+    "type": "slide_full",
+    "start": 143,
+    "end": 146.5,
+    "content": "memes/meme-10.jpg",
+    "words": "6 subscriptions $700 to $1100 expanding brain meme"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 146.5,
+    "end": 152,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "replacement cost for all 6 combined is $80 one Claude Code Max subscription"
+  },
+  {
+    "type": "text_overlay",
+    "start": 149,
+    "end": 151.5,
+    "text": "$80/MO",
+    "style": "center",
+    "words": "a month and the replacement cost for all 6"
+  },
+  {
+    "type": "sfx",
+    "start": 149,
+    "end": 149.5,
+    "content": "boop",
+    "volume": 0.2
+  },
+  {
+    "type": "split_right",
+    "start": 152,
+    "end": 158,
+    "content": "slides/slide-04_1.jpg",
+    "words": "Semrush the SEO platform ranked keywords competitor analysis keyword gaps"
+  },
+  {
+    "type": "slide_full",
+    "start": 158,
+    "end": 163,
+    "content": "slides/slide-04_1.jpg",
+    "words": "Semrush vs seo-agent-mcp same data source DataForSEO"
+  },
+  {
+    "type": "slide_full",
+    "start": 163,
+    "end": 168.5,
+    "content": "memes/meme-06.jpg",
+    "words": "Most people assume you need a massive platform only used 4 things clown makeup"
+  },
+  {
+    "type": "comparison_table",
+    "start": 168.5,
+    "end": 174,
+    "leftLabel": "Semrush",
+    "rightLabel": "seo-agent-mcp",
+    "rows": [
+      {
+        "left": "$130-$450/mo",
+        "right": "~$50/mo API",
+        "rightWins": true
+      },
+      {
+        "left": "100+ features",
+        "right": "4 features you use",
+        "rightWins": true
+      },
+      {
+        "left": "Dashboard UI",
+        "right": "Direct API calls",
+        "rightWins": true
+      }
+    ],
+    "winnerSide": "right",
+    "words": "Semrush charges up to $450 for hundreds of features I never touched"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 174,
+    "end": 180,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "I built seo-agent-mcp hits DataForSEO API directly ranked keywords competitor analysis keyword gaps"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 180,
+    "end": 187,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "The MCP server itself is free Not a downgrade just no $400 dashboard"
+  },
+  {
+    "type": "text_overlay",
+    "start": 182,
+    "end": 184.5,
+    "text": "SEO-AGENT-MCP",
+    "style": "center",
+    "words": "APIs directly Ranked keywords competitor"
+  },
+  {
+    "type": "split_5050_left",
+    "start": 187,
+    "end": 193,
+    "content": "slides/slide-04_2.jpg",
+    "words": "Not a downgrade just no $400 dashboard wrapped around it"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 193,
+    "end": 198,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "Semrush was the easy one the data was already available through an API"
+  },
+  {
+    "type": "light_leak",
+    "start": 198,
+    "end": 199.5,
+    "words": "transition to Zapier section"
+  },
+  {
+    "type": "speaker_full",
+    "start": 198,
+    "end": 199.5,
+    "words": "transition to Zapier section underlying speaker"
+  },
+  {
+    "type": "split_right",
+    "start": 199.5,
+    "end": 206,
+    "content": "slides/slide-05_1.jpg",
+    "words": "Zapier the glue between apps Trigger fires action runs done"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 206,
+    "end": 212,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "Clean and simple Connect Stripe to Slack send a notification when someone pays"
+  },
+  {
+    "type": "slide_full",
+    "start": 212,
+    "end": 218,
+    "content": "slides/slide-05_1.jpg",
+    "words": "Until you need actual logic conditional branches error handling retries multi-step workflows"
+  },
+  {
+    "type": "slide_full",
+    "start": 218,
+    "end": 222,
+    "content": "memes/meme-12.jpg",
+    "words": "Zapier gets expensive They charge per task complex automations eat through tasks"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 222,
+    "end": 228,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "$60 $70 a month just to move data between apps"
+  },
+  {
+    "type": "split_left",
+    "start": 228,
+    "end": 235,
+    "content": "slides/slide-05_1.jpg",
+    "words": "replaced all of it with 19 Claude Code agents and 24 custom skills"
+  },
+  {
+    "type": "flow_diagram",
+    "start": 235,
+    "end": 241,
+    "nodes": [
+      {
+        "label": "Brand Input"
+      },
+      {
+        "label": "Audit (3 engines)"
+      },
+      {
+        "label": "Playbook"
+      },
+      {
+        "label": "Report"
+      }
+    ],
+    "accentColor": "#e63946",
+    "direction": "horizontal",
+    "words": "Full client delivery pipelines audit across 3 search engines build playbook generate report"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 241,
+    "end": 247,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "Video production workflows from script to rendered 4K video"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 247,
+    "end": 253,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "Audit-to-report chains run end to end Cost beyond Claude subscription zero"
+  },
+  {
+    "type": "text_overlay",
+    "start": 249.5,
+    "end": 252,
+    "text": "COST: $0",
+    "style": "center",
+    "words": "beyond the Claude code subscription is zero Every"
+  },
+  {
+    "type": "sfx",
+    "start": 249.5,
+    "end": 250,
+    "content": "boop",
+    "volume": 0.2
+  },
+  {
+    "type": "slide_full",
+    "start": 253,
+    "end": 257,
+    "content": "memes/meme-07.jpg",
+    "words": "Every workflow you are paying Zapier to run is really just paying for a UI"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 257,
+    "end": 264,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "UI that limits what your automation can do When you remove that layer automations are not bound"
+  },
+  {
+    "type": "cta_overlay",
+    "start": 264,
+    "end": 271,
+    "text": "Join SaaS Accelerator",
+    "subtitle": "Link in Description",
+    "style": "offer",
+    "accentColor": "#e63946",
+    "words": "SaaS Accelerator link in the description"
+  },
+  {
+    "type": "chapter_card",
+    "start": 271,
+    "end": 273.5,
+    "title": "The Kills Nobody Believes",
+    "number": 4,
+    "subtitle": "Midjourney, Premiere Pro, VidIQ",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "sfx",
+    "start": 271,
+    "end": 271.8,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "gif_full",
+    "start": 273.5,
+    "end": 275.5,
+    "content": "gifs/gif-09-surprised.mp4",
+    "words": "people push back hardest Midjourney"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 275.5,
+    "end": 279,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "Midjourney $10 to $30 a month replaced it with Imagen MCP"
+  },
+  {
+    "type": "slide_full",
+    "start": 279,
+    "end": 282,
+    "content": "memes/meme-02.jpg",
+    "words": "Midjourney users paying $30 per month Is This a Pigeon"
+  },
+  {
+    "type": "gif_full",
+    "start": 282,
+    "end": 284,
+    "content": "gifs/gif-10-mind-blown.mp4",
+    "words": "pennies per image batch generation 4K output"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 284,
+    "end": 290,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "You give it a prompt it gives you three variations business imagery product shots slides thumbnails"
+  },
+  {
+    "type": "check_x_mark",
+    "start": 290,
+    "end": 291.5,
+    "markType": "check",
+    "position": "center",
+    "words": "Gemini handles it cost difference is not close"
+  },
+  {
+    "type": "speaker_full",
+    "start": 290,
+    "end": 291.5,
+    "words": "Gemini handles it underlying speaker"
+  },
+  {
+    "type": "split_right",
+    "start": 291.5,
+    "end": 297,
+    "content": "slides/slide-06_1.jpg",
+    "words": "Premiere Pro the creative tool everyone assumes you need Adobe charges $20 to $45"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 297,
+    "end": 306,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "for YouTube content 90 percent of editing is repetitive cuts layouts overlays text zooms same patterns"
+  },
+  {
+    "type": "text_overlay",
+    "start": 302,
+    "end": 304.5,
+    "text": "90% REPETITIVE",
+    "style": "center",
+    "words": "for YouTube content 90% of editing is repetitive\u2014"
+  },
+  {
+    "type": "slide_full",
+    "start": 306,
+    "end": 312,
+    "content": "slides/slide-06_1.jpg",
+    "words": "paying monthly for a Swiss Army knife when all you use is the blade Adobe keeps raising the price"
+  },
+  {
+    "type": "terminal",
+    "start": 312,
+    "end": 319,
+    "commands": [
+      {
+        "input": "npx remotion render MainVideo --4k",
+        "output": "Rendering 25+ layouts at 3840x2160\nOutput: video.mp4 (4K, 35Mbps)"
+      }
+    ],
+    "words": "video-editor-remotion open source 4K rendering 25+ layout types programmatic cost zero"
+  },
+  {
+    "type": "split_left",
+    "start": 319,
+    "end": 325,
+    "content": "slides/slide-16_1.jpg",
+    "words": "VidIQ $20 to $50 a month trend data keyword research replaced with trend-scanner-mcp"
+  },
+  {
+    "type": "slide_full",
+    "start": 325,
+    "end": 334,
+    "content": "slides/slide-16_1.jpg",
+    "words": "Scans GitHub Trending Hacker News Reddit in parallel catches trends at stage 1 before YouTube"
+  },
+  {
+    "type": "gif_full",
+    "start": 334,
+    "end": 336,
+    "content": "gifs/gif-11-free-zero-cost.mp4",
+    "words": "All free APIs $0 a month"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 336,
+    "end": 342,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "Those 5 were each $20 to $130 annoying but manageable"
+  },
+  {
+    "type": "gif_full",
+    "start": 342,
+    "end": 344,
+    "content": "gifs/gif-13-sticker-shock-497.mp4",
+    "words": "The next one was $497 and killing it felt like jumping off a cliff"
+  },
+  {
+    "type": "chapter_card",
+    "start": 344,
+    "end": 346.5,
+    "title": "The $497/mo Monster",
+    "number": 5,
+    "subtitle": "GoHighLevel and the 96% dead weight",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "sfx",
+    "start": 344,
+    "end": 344.8,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "slide_full",
+    "start": 346.5,
+    "end": 352,
+    "content": "slides/slide-07_1.jpg",
+    "words": "GoHighLevel all-in-one platform CRM funnels email SMS scheduling $497 per month"
+  },
+  {
+    "type": "counter_ticker",
+    "start": 352,
+    "end": 360,
+    "from": 0,
+    "to": 497,
+    "prefix": "$",
+    "suffix": "/mo",
+    "label": "GoHighLevel",
+    "words": "$497 a month every month like clockwork"
+  },
+  {
+    "type": "speaker_full",
+    "start": 352,
+    "end": 360,
+    "words": "$497 a month underlying speaker"
+  },
+  {
+    "type": "slide_full",
+    "start": 360,
+    "end": 365,
+    "content": "memes/meme-03.jpg",
+    "words": "I used 4 features out of hundreds Buff Doge vs Cheems"
+  },
+  {
+    "type": "slide_full",
+    "start": 365,
+    "end": 370,
+    "content": "memes/meme-11.jpg",
+    "words": "paying $497 every single month 96 percent dead weight Trade Offer"
+  },
+  {
+    "type": "gif_full",
+    "start": 370,
+    "end": 372,
+    "content": "gifs/gif-12-overkill.mp4",
+    "words": "96 percent of features were deadweight sitting there doing nothing"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 372,
+    "end": 380,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "So I built exactly what I needed with Claude Code Only the 4 features I actually use"
+  },
+  {
+    "type": "text_overlay",
+    "start": 372,
+    "end": 373,
+    "text": "4 FEATURES",
+    "style": "center",
+    "words": "So I built exactly"
+  },
+  {
+    "type": "split_5050_right",
+    "start": 380,
+    "end": 386,
+    "content": "slides/slide-07_2.jpg",
+    "words": "Leaner faster does exactly what I tell it to do nothing more nothing less"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 386,
+    "end": 392,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "does not charge me $500 a month for the privilege of ignoring 96 percent of it"
+  },
+  {
+    "type": "gif_full",
+    "start": 392,
+    "end": 394,
+    "content": "gifs/gif-15-skeptical.mp4",
+    "words": "probably toy replacements Simple scripts pretending to be real tools"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 394,
+    "end": 400,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "They are not The SEO tool runs real competitor analysis on live production data"
+  },
+  {
+    "type": "bullet_list",
+    "start": 400,
+    "end": 406,
+    "title": "Production Tools",
+    "items": [
+      "SEO: real competitor analysis, live data",
+      "Video: 4K, 25+ layouts, this video",
+      "Agents: full client pipelines, end to end"
+    ],
+    "icon": "check",
+    "color": "#22c55e",
+    "words": "same queries same data sources same results 4K video 25+ layout patterns agent system handles full pipelines"
+  },
+  {
+    "type": "typewriter_text",
+    "start": 406,
+    "end": 411,
+    "text": "This video you're watching right now was edited with it.",
+    "words": "This video you are watching right now was edited with it"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 411,
+    "end": 419,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "These are not weekend projects tools I use every single day to run a real business"
+  },
+  {
+    "type": "chapter_card",
+    "start": 419,
+    "end": 421.5,
+    "title": "The Math That Changes Everything",
+    "number": 6,
+    "subtitle": "$12,200/yr back in your pocket",
+    "accentColor": "#22c55e"
+  },
+  {
+    "type": "sfx",
+    "start": 419,
+    "end": 419.8,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "slide_full",
+    "start": 421.5,
+    "end": 427,
+    "content": "slides/slide-08_1.jpg",
+    "words": "Total before $700 to $1100 Total after $80 equals $12200 per year saved"
+  },
+  {
+    "type": "counter_ticker",
+    "start": 427,
+    "end": 435,
+    "from": 0,
+    "to": 12200,
+    "prefix": "$",
+    "suffix": "/yr",
+    "label": "Annual Savings",
+    "color": "#22c55e",
+    "words": "$7400 to $12200 per year back in your pocket"
+  },
+  {
+    "type": "speaker_full",
+    "start": 427,
+    "end": 435,
+    "words": "$12200 per year underlying speaker"
+  },
+  {
+    "type": "slide_full",
+    "start": 435,
+    "end": 440,
+    "content": "memes/meme-20.jpg",
+    "words": "Not theoretical savings Real money I used to spend every single month"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 440,
+    "end": 447,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "Every dollar you save on SaaS is a dollar you do not need to earn from clients to break even"
+  },
+  {
+    "type": "text_overlay",
+    "start": 440,
+    "end": 441,
+    "text": "BREAKEVEN",
+    "style": "center",
+    "words": "to earn from clients"
+  },
+  {
+    "type": "split_right",
+    "start": 447,
+    "end": 453,
+    "content": "slides/slide-08_1.jpg",
+    "words": "A business that costs $800 less per month survives 8 months longer on the same runway"
+  },
+  {
+    "type": "gif_full",
+    "start": 453,
+    "end": 455,
+    "content": "gifs/gif-14-flexing-stronger.mp4",
+    "words": "replacements actually do more than the originals"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 455,
+    "end": 462,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "built for exactly how I work No features I never touch no UI standing between me"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 462,
+    "end": 468,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "no monthly price creeping up every year because some board decided to hit quarterly targets"
+  },
+  {
+    "type": "callout",
+    "start": 468,
+    "end": 470.5,
+    "text": "HIT LIKE",
+    "position": "bottom-right",
+    "arrowDirection": "down",
+    "words": "hit like so more builders see this"
+  },
+  {
+    "type": "chapter_card",
+    "start": 470.5,
+    "end": 473,
+    "title": "The Tools That Claim To Help You",
+    "number": 7,
+    "subtitle": "Cursor, Lovable, Bolt, Replit Agent",
+    "accentColor": "#e63946"
+  },
+  {
+    "type": "sfx",
+    "start": 470.5,
+    "end": 471.3,
+    "content": "whoosh",
+    "volume": 0.3
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 473,
+    "end": 477,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "ones that claim to be on your side of this shift ones you think are helping you"
+  },
+  {
+    "type": "freeze_frame",
+    "start": 477,
+    "end": 478.5,
+    "text": "MOST VULNERABLE",
+    "style": "record_scratch",
+    "words": "they might be the most vulnerable of all"
+  },
+  {
+    "type": "slide_full",
+    "start": 478.5,
+    "end": 482,
+    "content": "slides/slide-10_1.jpg",
+    "words": "Cursor Lovable Bolt wrapper trap"
+  },
+  {
+    "type": "slide_full",
+    "start": 482,
+    "end": 485,
+    "content": "memes/meme-04.jpg",
+    "words": "middlemen and middlemen always get squeezed distracted boyfriend"
+  },
+  {
+    "type": "gif_full",
+    "start": 485,
+    "end": 487,
+    "content": "gifs/gif-16-suspicious.mp4",
+    "words": "middlemen and middlemen always get squeezed"
+  },
+  {
+    "type": "slide_full",
+    "start": 487,
+    "end": 493,
+    "content": "slides/slide-09_1.jpg",
+    "words": "Every single SaaS on the kill list had the exact same structure middleman pattern"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 493,
+    "end": 500.5,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "A company sitting between you and the underlying capability charging you a markup for a UI"
+  },
+  {
+    "type": "text_overlay",
+    "start": 498,
+    "end": 500.5,
+    "text": "MIDDLEMAN",
+    "style": "center",
+    "words": "That's the entire business model Take something that exists"
+  },
+  {
+    "type": "sfx",
+    "start": 498,
+    "end": 498.5,
+    "content": "boop",
+    "volume": 0.2
+  },
+  {
+    "type": "slide_full",
+    "start": 500.5,
+    "end": 507,
+    "content": "slides/slide-09_1.jpg",
+    "words": "Semrush sat between you and SEO data Zapier sat between you and raw API connections"
+  },
+  {
+    "type": "split_left",
+    "start": 507,
+    "end": 513,
+    "content": "slides/slide-10_1.jpg",
+    "words": "Premiere sat between you and FFmpeg GoHighLevel sat between you and 4 basic features"
+  },
+  {
+    "type": "slide_full",
+    "start": 513,
+    "end": 518,
+    "content": "memes/meme-15.jpg",
+    "words": "Now look at AI coding tools Cursor sits between you and Claude middleman layer diagram"
+  },
+  {
+    "type": "slide_full",
+    "start": 518,
+    "end": 523,
+    "content": "slides/slide-10_1.jpg",
+    "words": "They add a UI on top charge you a markup control how many requests wrapper trap"
+  },
+  {
+    "type": "slide_full",
+    "start": 523,
+    "end": 528,
+    "content": "memes/meme-13.jpg",
+    "words": "wrappers Same exact structure as every SaaS on the kill list two buttons sweating man"
+  },
+  {
+    "type": "slide_full",
+    "start": 528,
+    "end": 535,
+    "content": "slides/slide-18_1.jpg",
+    "words": "proof Cursor cut Pro plan from 500 to 225 requests wrapper economics"
+  },
+  {
+    "type": "slide_full",
+    "start": 535,
+    "end": 540,
+    "content": "memes/meme-08.jpg",
+    "words": "Cursor cuts requests cut in half CEO apologize Surprised Pikachu"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 540,
+    "end": 547,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "underlying API costs from Anthropic rose Cursor absorbed the hit no choice"
+  },
+  {
+    "type": "slide_full",
+    "start": 547,
+    "end": 553,
+    "content": "memes/meme-09.jpg",
+    "words": "could not raise prices could not eat the cost so they cut what you get in half UNO Draw 25"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 553,
+    "end": 553.3,
+    "zoom": 1.2,
+    "words": "When you are a wrapper"
+  },
+  {
+    "type": "jump_cut_in",
+    "start": 553.3,
+    "end": 556,
+    "zoom": 1.2,
+    "words": "your economics are controlled by the company you wrap"
+  },
+  {
+    "type": "slide_full",
+    "start": 556,
+    "end": 560,
+    "content": "memes/meme-18.jpg",
+    "words": "You do not set your own margins They do wrapper tax receipt"
+  },
+  {
+    "type": "gif_full",
+    "start": 560,
+    "end": 562,
+    "content": "gifs/gif-19-ticking-clock.mp4",
+    "words": "Every wrapper-based tool has a ticking clock"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 562,
+    "end": 566.5,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "moment the model provider offers direct access the wrapper collapses overnight"
+  },
+  {
+    "type": "kinetic_type",
+    "start": 566.5,
+    "end": 570,
+    "words": "EVERY MIDDLEMAN GETS SQUEEZED OUT",
+    "size": "huge"
+  },
+  {
+    "type": "slide_full",
+    "start": 570,
+    "end": 576,
+    "content": "slides/slide-11_1.jpg",
+    "words": "Travel agents sat between you and airlines music labels sat between you and artists"
+  },
+  {
+    "type": "slide_full",
+    "start": 576,
+    "end": 582,
+    "content": "memes/meme-17.jpg",
+    "words": "Travel agents music labels taxi companies middlemen graveyard"
+  },
+  {
+    "type": "gif_full",
+    "start": 582,
+    "end": 584,
+    "content": "gifs/gif-17-middleman-squeeze.mp4",
+    "words": "Every single time the underlying capability becomes directly accessible middleman squeezed out"
+  },
+  {
+    "type": "slide_full",
+    "start": 584,
+    "end": 590,
+    "content": "slides/slide-20_1.jpg",
+    "words": "Claude Code direct access Anthropic API no wrapper no middleman"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 590,
+    "end": 596,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "no company between you and the capability that can decide to slash your requests in half"
+  },
+  {
+    "type": "slide_full",
+    "start": 596,
+    "end": 602,
+    "content": "slides/slide-12_1.jpg",
+    "words": "Stop asking which tool should I use Start asking what layer am I paying for"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 602,
+    "end": 607,
+    "zoomStart": 1,
+    "zoomEnd": 1.08,
+    "words": "Every subscription is a bet that the vendor can do something you can not that bet is expiring fast"
+  },
+  {
+    "type": "text_overlay",
+    "start": 603,
+    "end": 605.5,
+    "text": "REMOVE THE LAYER",
+    "style": "center",
+    "words": "different question What's the layer I'm paying for"
+  },
+  {
+    "type": "cta_overlay",
+    "start": 607,
+    "end": 614,
+    "text": "Join SaaS Accelerator",
+    "subtitle": "Link in Description",
+    "style": "offer",
+    "accentColor": "#e63946",
+    "words": "SaaS Accelerator link in the description"
+  },
+  {
+    "type": "slide_full",
+    "start": 614,
+    "end": 618,
+    "content": "slides/slide-19_1.jpg",
+    "words": "6 subscriptions expire 6 bets that lost"
+  },
+  {
+    "type": "gif_full",
+    "start": 618,
+    "end": 620,
+    "content": "gifs/gif-20-mic-drop.mp4",
+    "words": "6 middlemen every single one lost mic drop"
+  },
+  {
+    "type": "gif_full",
+    "start": 620,
+    "end": 622,
+    "content": "gifs/gif-18-cutting.mp4",
+    "words": "replaced almost all of it cutting subscriptions"
+  },
+  {
+    "type": "gradual_zoom",
+    "start": 622,
+    "end": 628,
+    "zoomStart": 1,
+    "zoomEnd": 1.1,
+    "words": "Knowing what to kill is half of it knowing what to build first in what order"
+  },
+  {
+    "type": "cta_overlay",
+    "start": 628,
+    "end": 635.6,
+    "text": "SaaS Accelerator",
+    "subtitle": "Coaching builders through this transition",
+    "style": "next_video",
+    "accentColor": "#e63946",
+    "words": "SaaS Accelerator I am coaching builders link in the description"
+  }
+]

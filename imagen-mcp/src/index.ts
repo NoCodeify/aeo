@@ -6,7 +6,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import { GoogleGenAI } from "@google/genai";
 import mime from "mime";
-import { writeFile, mkdir } from "fs/promises";
+import { writeFile, readFile, mkdir } from "fs/promises";
 import { existsSync } from "fs";
 import path from "path";
 
@@ -360,6 +360,174 @@ server.tool(
         successful: results.filter((r) => r.success).length,
         failed: results.filter((r) => !r.success).length,
         results,
+      };
+
+      return {
+        content: [
+          {
+            type: "text" as const,
+            text: JSON.stringify(summary, null, 2),
+          },
+        ],
+      };
+    } catch (error) {
+      return {
+        content: [
+          {
+            type: "text" as const,
+            text: `Error: ${error instanceof Error ? error.message : String(error)}`,
+          },
+        ],
+        isError: true,
+      };
+    }
+  }
+);
+
+// Edit a single image from a reference
+async function editImageFromReference(
+  referenceImagePath: string,
+  prompt: string,
+  outputDir: string,
+  baseName: string,
+  index: number,
+  aspectRatio?: AspectRatio
+): Promise<GeneratedImage | null> {
+  try {
+    // Read reference image and convert to base64
+    const imageBuffer = await readFile(referenceImagePath);
+    const mimeType = mime.getType(referenceImagePath) || "image/jpeg";
+    const base64Data = imageBuffer.toString("base64");
+
+    const imageConfig: Record<string, string> = {
+      imageSize: "1K",
+      personGeneration: "ALLOW_ADULT",
+    };
+    if (aspectRatio) {
+      imageConfig.aspectRatio = aspectRatio;
+    }
+
+    const config = {
+      responseModalities: ["IMAGE", "TEXT"],
+      imageConfig,
+    };
+
+    const contents = [
+      {
+        role: "user" as const,
+        parts: [
+          {
+            inlineData: {
+              mimeType,
+              data: base64Data,
+            },
+          },
+          { text: prompt },
+        ],
+      },
+    ];
+
+    const response = await geminiClient.models.generateContentStream({
+      model: "gemini-3-pro-image-preview",
+      config,
+      contents,
+    });
+
+    for await (const chunk of response) {
+      if (!chunk.candidates?.[0]?.content?.parts) {
+        continue;
+      }
+
+      const inlineData = chunk.candidates[0].content.parts[0]?.inlineData;
+      if (inlineData?.data && inlineData?.mimeType) {
+        const fileExtension = mime.getExtension(inlineData.mimeType) || "png";
+        const filename = `${baseName}_${index}.${fileExtension}`;
+        const filePath = path.join(outputDir, filename);
+        const buffer = Buffer.from(inlineData.data, "base64");
+
+        await writeFile(filePath, buffer);
+
+        return {
+          filename,
+          path: filePath,
+          mimeType: inlineData.mimeType,
+          size: buffer.length,
+        };
+      }
+    }
+
+    return null;
+  } catch (error) {
+    throw new Error(`Image edit failed: ${error instanceof Error ? error.message : String(error)}`);
+  }
+}
+
+// Tool: Edit an image using a reference image
+server.tool(
+  "edit_image",
+  "Edit/modify an existing image by passing it as a reference along with a prompt describing what to change. Supports person generation for thumbnails. Generates multiple variations.",
+  {
+    reference_image: z.string().describe("Absolute path to the reference image file"),
+    prompt: z.string().describe("Description of what to change in the reference image"),
+    output_dir: z.string().describe("Directory path to save the generated images"),
+    name: z.string().describe("Base name for the output files (e.g., 'thumbnail-v2')"),
+    count: z.number().min(1).max(5).optional().describe("Number of variations to generate (default: 3, max: 5)"),
+    aspect_ratio: z.enum(["1:1", "3:4", "4:3", "9:16", "16:9"]).optional().describe("Aspect ratio for output images (default: unset)"),
+  },
+  async ({ reference_image, prompt, output_dir, name, count, aspect_ratio }) => {
+    try {
+      // Validate reference image exists
+      if (!existsSync(reference_image)) {
+        return {
+          content: [
+            {
+              type: "text" as const,
+              text: `Error: Reference image not found at ${reference_image}`,
+            },
+          ],
+          isError: true,
+        };
+      }
+
+      // Ensure output directory exists
+      if (!existsSync(output_dir)) {
+        await mkdir(output_dir, { recursive: true });
+      }
+
+      const imageCount = count || 3;
+      const images: GeneratedImage[] = [];
+      const errors: string[] = [];
+
+      // Generate variations in parallel
+      const promises = Array.from({ length: imageCount }, (_, i) =>
+        editImageFromReference(reference_image, prompt, output_dir, name, i + 1, aspect_ratio as AspectRatio | undefined)
+          .then((result) => {
+            if (result) {
+              images.push(result);
+            } else {
+              errors.push(`Variation ${i + 1}: No image returned`);
+            }
+          })
+          .catch((error) => {
+            errors.push(`Variation ${i + 1}: ${error instanceof Error ? error.message : String(error)}`);
+          })
+      );
+
+      await Promise.all(promises);
+
+      const summary = {
+        success: images.length > 0,
+        referenceImage: reference_image,
+        prompt: prompt.slice(0, 200) + (prompt.length > 200 ? "..." : ""),
+        outputDir: output_dir,
+        generatedImages: images
+          .sort((a, b) => a.filename.localeCompare(b.filename))
+          .map((img) => ({
+            filename: img.filename,
+            path: img.path,
+            size: `${Math.round(img.size / 1024)} KB`,
+          })),
+        errors: errors.length > 0 ? errors : undefined,
       };
 
       return {

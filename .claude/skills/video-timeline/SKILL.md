@@ -19,14 +19,16 @@ Create an agent team called "timeline-edit" with these teammates:
 1. Read the prompter/script file (or READ each slide image if no prompter exists)
 2. Read the transcript (transcript-clean.json > transcript.json > SRT)
 3. List available slides, GIFs, and memes in the video directory
-4. If GIFs are missing or below density minimum, search and download via Giphy MCP
-5. If memes are missing or below density minimum, search templates and caption via Imgflip MCP (NEVER use Pexels)
-6. Calculate minimum slide count from video duration (1 per 18s) - do NOT rely on script SLIDE markers
-7. Match slides to speech moments using content understanding
-8. Generate creative edit decisions with ~20% distribution per layout type
-9. Write timeline.json to the video directory
-10. **Run lint**: `node tools/video-editor-remotion/lint-timeline.js --fix` to auto-fix short segments
-11. Mark task complete and notify the lead
+4. **Read asset manifests** (`gifs/manifest.json` and `memes/manifest.json`) - these tell you what each GIF/meme is for and which speech moment it matches. If manifests are missing, flag as pipeline error.
+5. If GIFs are missing or below density minimum, search and download via Giphy MCP, then write manifest
+6. If memes are missing or below density minimum, search templates and caption via Imgflip MCP (NEVER use Pexels), then write manifest
+7. Calculate minimum slide count from video duration (1 per 18s) - do NOT rely on script SLIDE markers
+8. Match slides to speech moments using content understanding
+9. **Place GIFs/memes using manifest `script_quote`** - grep transcript for each quote to find exact timestamp. NEVER guess from filenames. NEVER use same asset twice.
+10. Generate creative edit decisions with ~20% distribution per layout type
+11. Write timeline.json to the video directory
+12. **Run lint**: `node tools/video-editor-remotion/lint-timeline.js --fix` to auto-fix short segments
+13. Mark task complete and notify the lead
 
 ### validator (general-purpose agent)
 **Role:** Validate timeline.json against 26 quality checks.
@@ -54,6 +56,9 @@ Create an agent team called "timeline-edit" with these teammates:
 
 ## Key Rules (W14 Lessons Learned)
 
+- **Asset manifests are REQUIRED** - `gifs/manifest.json` and `memes/manifest.json` map each file to its script quote, description, and intended placement. Builder MUST read these before placing any GIF or meme. Never guess from filenames.
+- **Place assets by script quote** - Grep transcript for each manifest entry's `script_quote` to find the exact timestamp. This prevents contextual mismatches (e.g., "crushed" GIF placed at "eaten alive" moment).
+- **Never reuse assets** - Each GIF and meme file appears exactly once in the timeline. No duplicates.
 - **NO Pexels B-roll** - Use Imgflip memes as `slide_full` instead. Generic stock footage is never relevant.
 - **Slide count from duration** - Calculate `floor(duration_seconds / 18)` minimum. Script SLIDE markers are always too few.
 - **No text overlays in first 30s** - Use slides/GIFs/memes for hook pattern interrupts. Text overlays are weak.

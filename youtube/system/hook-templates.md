@@ -6,11 +6,54 @@ Operational reference for the hook-generator agent. Read fully before generating
 
 ## 1. Hook Philosophy
 
-Every hook must:
+The brain makes a split-second cost-benefit analysis the moment the video starts: "Is this worth my time?" Every second spent on greetings, subscribe asks, or preamble tips the scale towards "no."
 
-- Confirm the click within 5-10s (viewer thinks "yes, this is what I wanted")
+**The 20-Second Rule:** In about 20 seconds, the hook must complete 5 psychological jobs. Miss even one and you leak viewers before the content starts.
+
+| Job | Function | What it does |
+|-----|----------|-------------|
+| 1. **Packaging payoff** | Orientation | Confirm they're in the right place. Pay off the title/thumbnail promise. |
+| 2. **Pain confirmation** | Withholding | Reflect their specific experience back at them so they know this video is about THEM. |
+| 3. **Credibility** | Orientation | Signal you understand something most people don't. One sentence, not a resume. |
+| 4. **Anticipation** | Anticipation | Give them a reason to stay for what's next. Name the framework, tease the reveal. |
+| 5. **Roadmap** | Orientation | 2-3 categories (NOT a list of blocks) so they see the destination and feel safe committing time. |
+
+Every one of these tips the cost-benefit analysis towards "worth it."
+
+### Pain-First Order (MANDATORY)
+
+The 5 jobs have a required execution order. Pain confirmation comes FIRST because the viewer needs to hear their own experience before they care about your credentials.
+
+| Beat | Timing | What it does |
+|------|--------|-------------|
+| Pain confirmation | 0-5s | Describe the viewer's specific experience. First word should be "You" or a direct claim about their situation. |
+| Packaging payoff | 5-10s | Confirm the title/thumbnail promise. Bridge from their pain to what this video delivers. |
+| Credibility | 10-15s | One sentence. Not a resume. Compressed. |
+| Anticipation | 15-18s | Name the framework, tease an open loop ("and one thing that...") |
+| Roadmap | 18-22s | 2-3 categories so they see the destination |
+
+**Why this order matters:** Credibility-first hooks ("I built a $100K SaaS...") consistently underperform pain-first hooks ("You've tried building with AI and after the first demo it stopped working..."). The viewer's brain asks "why should I care?" in the first 3 seconds. "Because I'm impressive" is a weaker answer than "because this is about YOU."
+
+### Banned Hook Openers
+
+| Banned | Why | Fix |
+|--------|-----|-----|
+| "So I..." / "I built..." / "I have..." | Credibility-first, not pain-first | Start with "You" or a claim about the viewer's situation |
+| "So after..." | Low energy, buries the lead | Open with the insight or pain, not the setup |
+| "Here are X things..." | Listicle format, no tension | Create a curiosity gap instead |
+| "I want to show you..." / "Let me take you through..." | Asks permission to teach | State a claim with stakes |
+
+### No Block 1 Repetition Rule
+
+**Block 1 must NEVER re-explain what the hook already established.** If the hook mentions DM Champ, $100K, or any specific fact, Block 1 must NOT re-introduce it. Block 1 picks up where the hook left off and immediately hits a new story beat or tension point.
+
+**Bad:** Hook says "I have a SaaS doing $100K." Block 1 says "DM Champ is an AI sales agent. You connect it to Instagram, WhatsApp... About $100K a year." (Viewer hears the same info twice in 60 seconds = exit point.)
+
+**Good:** Hook says "I run a SaaS on Claude Code. Hundred K a year." Block 1 opens with: "It started on GoHighLevel with Zapier. Classic no-code stack. And it worked. Until..."
+
+### Additional Hook Rules
+
 - Build trust through vulnerability OR credibility (never both at once)
-- Create anticipation (need to see what comes next)
 - Feel authentic and conversational (no guru energy, no hype)
 - Work for first-time viewers (no assumed context)
 - Set up the script WITHOUT spoiling it

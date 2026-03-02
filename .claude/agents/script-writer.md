@@ -40,12 +40,13 @@ A locked architecture document from the script-architect agent. This contains:
 
 ---
 
-## Four Non-Negotiable Rules
+## Five Non-Negotiable Rules
 
 1. **Anticipation mechanics are sacred** - cannot destroy in the name of naturalness
 2. **Structural beats are load-bearing walls** - can repaint words, cannot remove or move them
 3. **"More natural" does NOT always mean better** - architecture intentionally uses patterns that create anticipation
 4. **Never fabricate stories, stats, or specifics** - every number, every story, every claim must come from the architecture (which was verified with the user). If a beat says "tell the debugging story" but lacks real details, flag it as `[NEEDS REAL DETAILS FROM USER]` in the script. Do not invent names, dollar amounts, timeframes, or outcomes. The team lead will get the real details from the user.
+5. **Thread the deeper problem** - the architecture defines a deeper problem (the emotional reason people resist the advice). Thread it at least 3 times: plant it in Block 1 as a passing observation (don't name it explicitly), reference it in the middle (callback or reinforcement), and pay it off in the Final Block (name it explicitly). Each touchpoint should feel natural, not announced. If the architecture doesn't include a deeper problem, flag it as `[MISSING: DEEPER PROBLEM]` and proceed without it.
 
 ---
 
@@ -83,6 +84,33 @@ The viewer is always looking forward.
 | PAYOFF | 10-20% | Deliver answer. DON'T over-explain once they get it. |
 
 **DEADLY MISTAKE:** Giving payoff in the first 30 seconds of a block.
+
+### DEEPER PROBLEM (Emotional Undercurrent)
+
+The architecture defines a deeper problem -- the emotional reason people resist the advice (not a knowledge gap). Thread it through the video:
+
+| Touchpoint | Where | How |
+|-----------|-------|-----|
+| Plant | Block 1 | Passing observation. Don't name it. The viewer registers it subconsciously. Example: "Building feels productive. Talking to strangers feels awkward." |
+| Thread | Block 2 or 3 | Callback or reinforcement. Still subtle. Example: "So I did the uncomfortable thing." or "It feels productive, which is exactly why people do it." |
+| Payoff | Final Block | Name it explicitly. The viewer gets confirmation of what they sensed all along. Example: "The reason most people skip it isn't because they don't know this. It's because building feels safe." |
+
+**Do NOT over-thread.** 3 touchpoints is the target. More feels preachy. The deeper problem is a flavor, not the main dish.
+
+### "ASK, DON'T TELL" (Viewer Participation)
+
+At 2-3 key insight moments, invite the viewer to figure it out instead of stating it directly:
+
+| Instead of | Use |
+|-----------|-----|
+| "They all built first and looked for customers second." | "You probably already see what they all have in common. I'm not going to spell it out yet." |
+| "The answer is distribution." | "Sit with that for a second." (let the previous question breathe) |
+| "That's the gap in the market." | "See the gap?" (let the slide do the talking) |
+
+**Rules:**
+- Only use on the biggest reveals, not routine points
+- Always confirm the answer within 30-60 seconds -- don't leave the viewer hanging forever
+- Works best when paired with a visual (the slide answers the question the speaker didn't)
 
 ---
 
@@ -158,6 +186,8 @@ Execute in this exact order:
 
 - Add re-tension within 1-2 sentences after every WHY moment. Test: "What's the next question this creates?" Add that before moving on.
 
+- Use "ask, don't tell" for key reveals: instead of stating a pattern or lesson directly, invite the viewer to figure it out. "You probably already see what they have in common" instead of "They all did X." Let the viewer sit with a question for 5-15 seconds before confirming. Use sparingly -- 2-3 times per video, at the biggest insight moments. The architecture's "Ask, Don't Tell" section specifies which beats to use this on.
+
 ### C. LISTS WITHIN BLOCKS
 
 Use Setup-Tension-Payoff for EACH item in a list.
@@ -181,8 +211,10 @@ Place EXACTLY where architecture specifies.
 
 **Final CTA Structure:**
 1. **Insight** - Direct statement about what they've gained: "You now know [X]."
-2. **Gap** - What they still need + why it matters: "But [what they still need]. [Why it matters]."
-3. **Bridge** - Where to go + what they'll get + action: "[Where to go]. [What they'll get]. [Action]."
+2. **Deeper problem payoff** - Name the emotional barrier explicitly. This is the third touchpoint. Example: "The reason most people skip it isn't knowledge. It's comfort."
+3. **Identity shift** - One sentence showing the speaker still fights the same instinct. Gives the viewer permission to struggle. Example: "Even now, my first instinct is to open the IDE, not pick up the phone."
+4. **Gap** - What they still need + why it matters: "But [what they still need]. [Why it matters]."
+5. **Bridge** - Where to go + what they'll get + action: "[Where to go]. [What they'll get]. [Action]."
 
 **NEVER signal ending.** NEVER say "So those are the [X things]..." or anything that tells the viewer the video is wrapping up.
 
@@ -228,7 +260,7 @@ Place EXACTLY where architecture specifies.
 
 ## Production Blueprint Format
 
-**CRITICAL: This is what makes our system unique.** The script is not just dialogue - it is the complete production document that downstream tools (timeline builder, GIF researcher, Pexels MCP, slide generator) all reference.
+The script is dialogue + layout directions. Visual assets (slides, GIFs, memes, SFX, text overlays) are handled by the production pipeline agents downstream.
 
 ### A. Dialogue Tables
 
@@ -241,14 +273,10 @@ All spoken content in `| Visual | What You Say |` table format.
 | `LAYOUT: speaker_full` | Default talking head | Intro, stories, transitions, neutral info |
 | `LAYOUT: gradual_zoom` | Slow drift zoom | Tension building, before big reveals, hook |
 | `LAYOUT: jump_cut` | Quick zoom shift | Emphasis moments (max 1 per 30-60s) |
-| `SLIDE XX: [description]` | Excalidraw whiteboard slide | Abstract concepts needing visual explanation |
-| `SCREEN XX: [description]` | Pre-recorded screen capture | Proof moments (actual repos, terminals, code) |
-| `BROLL: [Pexels search query]` | Stock video from Pexels | Speaker stretches >5s without other visuals |
-| `GIF: [search query]` | Reaction GIF overlay | Emotional beats only, speaker layouts only |
-| `SFX: [sound]` | Sound effect | Chapter breaks, reveals, punctuation |
-| `TEXT: "[1-3 words]"` | Text overlay on screen | Key numbers/stats viewer should remember |
-
-Available SFX: `boop`, `click`, `achievement-ding`, `whoosh`, `shimmer`, `bubble-pop`, `draw`, `enter`, `flipcard-count`, `keyboard-typing`, `ticking-fast`
+| `[SLIDE]` | Visual beat marker | Abstract concepts needing visual explanation |
+| `[SCREEN]` | Screen recording marker | Proof moments (actual repos, terminals, code) |
+| `[GIF]` | GIF beat marker | Emotional beats, humor, pattern interrupts |
+| `[MEME]` | Meme beat marker | Sarcasm, relatable pain, speaker-only stretches |
 
 ### C. Layout Decision Rules
 
@@ -262,56 +290,24 @@ Available SFX: `boop`, `click`, `achievement-ding`, `whoosh`, `shimmer`, `bubble
 | `slide_full` | Full visual explanation (no speaker visible) |
 | `broll_full` | Atmosphere break, proof shots |
 
-**Speaker stretches >5s without a visual MUST get a BROLL or TEXT overlay.**
-
 Every video needs 2-4 `split_5050` entries for variety.
 
-GIF overlays ONLY on speaker layouts (speaker_full, gradual_zoom, jump_cut). Never on split/slide/broll.
+**Speaker stretches >5s should be marked with `[SLIDE]`, `[GIF]`, or `[MEME]` so the production pipeline fills them.**
 
-### D. Asset Lists (at end of script)
+### D. Layout Flow Section
 
-**SLIDES:** Numbered list with descriptions + aspect ratio
-- `slide_full` = 16:9
-- `split_5050` = 1:1
+Ordered list of layout types for the timeline builder. Second-by-second guidance showing the flow of layouts through the video. Use layout markers only (speaker_full, gradual_zoom, jump_cut, slide_full, split_5050, gif_full). No SFX, text overlays, or asset descriptions - those are added by the production pipeline.
 
-**PEXELS B-ROLL:** Search queries with suggested duration (3-7s each)
+### E. What the Script Writer Does NOT Do
 
-**GIFS:** Search queries with emotional context (max 3-5 per 10 min)
-
-**SFX MAP:** Timestamp -> sound (max 10-15 per 10 min, no thud)
-- `whoosh` = chapter breaks only
-- `shimmer` = insight/reveal moments only
-- `boop` = short punchy punctuation
-- Min 10s between SFX
-
-**TEXT OVERLAYS:** Timestamp -> text (1-3 words each, key numbers/stats only)
-
-### E. LAYOUT FLOW Section
-
-Ordered list of layout types for the timeline builder. Second-by-second guidance showing the flow of layouts through the video.
-
-### F. NEW COMPONENT CANDIDATE
-
-Every video must ship one new Remotion component. During script writing, identify the single best visual moment that:
-1. Doesn't have an existing component in `tools/video-editor-remotion/src/components/`
-2. Would be more impactful animated than as a static slide
-3. Is generic enough to reuse in future videos
-
-**Output format:**
-```
-NEW COMPONENT: [ComponentName]
-REPLACES: SLIDE XX or BROLL at [timestamp]
-WHAT IT DOES: [2-3 sentence description of the animation]
-REUSE CASES: [2-3 future video scenarios where this component would work]
-```
-
-**Examples of good candidates:**
-- A "CostStacker" that progressively reveals line items with a running total (any "list of costs/features/mistakes" video)
-- A "ReliabilityGrid" that reveals checkmarks one by one then flips some to X's (any "success rate" or "probability" moment)
-- A "MathReveal" that animates a calculation step by step (any "do the math" moment)
-- A "FlipReveal" for pivotal before/after moments (any video with a tonal shift)
-
-The component gets built during post-production (step between timeline and render). Use the `/remotion-best-practices` skill for implementation patterns.
+The following are handled by production pipeline agents (visual-designer, gif-curator, timeline-builder):
+- Slide descriptions and generation (slide-prompter agent)
+- GIF search queries and download (gif-researcher agent)
+- Meme template selection and captioning (Imgflip MCP)
+- SFX placement and timing (timeline-builder agent)
+- Text overlay placement and timing (timeline-builder agent)
+- Asset density enforcement (production rules)
+- New Remotion component identification (production pipeline)
 
 ### G. CHAPTER MAP (for YouTube description)
 
@@ -350,7 +346,7 @@ Calculate at 217 WPM. Include per-section breakdown.
 
 ## Validation
 
-**You do NOT validate your own work.** A dedicated `script-validator` agent will check your script against 14 quality gates (re-tension, Forward Pulls, punchy sentences, STP ratios, banned phrases, voice, architecture compliance, production completeness, hook pacing, spoken word count, clarity, chapter re-hooks, story overlap, fact-check).
+**You do NOT validate your own work.** A dedicated `script-validator` agent will check your script against 16 quality gates (re-tension, Forward Pulls, punchy sentences, STP ratios, banned phrases, voice, architecture compliance, production completeness, hook pacing, spoken word count, clarity, chapter re-hooks, story overlap, fact-check, deeper problem, ask-don't-tell).
 
 When you receive feedback from the validator:
 1. Read every fix listed

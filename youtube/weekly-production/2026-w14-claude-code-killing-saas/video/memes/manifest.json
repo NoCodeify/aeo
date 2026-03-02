@@ -1,0 +1,122 @@
+{
+  "memes/meme-01.jpg": {
+    "script_quote": "even my own product is vulnerable to this exact shift",
+    "template": "This Is Fine (Dog in fire)",
+    "captions": ["MY SAAS DOES $100K/YR", "AND IT'S VULNERABLE TOO"],
+    "description": "Dog sitting in burning room saying this is fine, applied to owning a SaaS that's vulnerable"
+  },
+  "memes/meme-02.jpg": {
+    "script_quote": "Midjourney $10 to $30 a month replace it with Imagen MCP",
+    "template": "Is This a Pigeon (Butterfly)",
+    "captions": ["MIDJOURNEY USERS PAYING $30/MO", "IS THIS A DOWNGRADE?"],
+    "description": "Anime guy asking if butterfly is a pigeon, Midjourney users questioning if Imagen is a downgrade"
+  },
+  "memes/meme-03.jpg": {
+    "script_quote": "$497 a month every month like clockwork I used 4 features",
+    "template": "Buff Doge vs Cheems",
+    "captions": ["GHL CHARGING $497/MO FOR HUNDREDS OF FEATURES", "ME BUILDING THE 4 I ACTUALLY USE"],
+    "description": "Buff doge = GoHighLevel massive platform, small cheems = just building the 4 features needed"
+  },
+  "memes/meme-04.jpg": {
+    "script_quote": "Cursor Bolt Replit Agent they all have the same problem They're middlemen",
+    "template": "Distracted Boyfriend",
+    "captions": ["DEVELOPERS", "CLAUDE CODE DIRECT API", "(wrapper tools)"],
+    "description": "Boyfriend (developers) looking at Claude Code direct API instead of wrapper tools girlfriend"
+  },
+  "memes/meme-05.jpg": {
+    "script_quote": "I used to pay over $1,000 a month in software subscriptions",
+    "template": "Drake Hotline Bling",
+    "captions": ["PER SEAT PRICING", "ONE API KEY, INFINITE AGENTS"],
+    "description": "Drake rejecting per-seat pricing, approving one API key with infinite agents"
+  },
+  "memes/meme-06.jpg": {
+    "script_quote": "Semrush charges up to $450 a month for a dashboard with hundreds of features I never touch",
+    "template": "Clown Applying Makeup (4 panels)",
+    "captions": ["PAYING $450/MO FOR SEMRUSH", "USING 4 OUT OF 100 FEATURES", "FINDING OUT THE DATA COMES FROM DATAFORSEO", "REALIZING YOU CAN HIT THE API DIRECTLY FOR $50"],
+    "description": "Progressive clown makeup as you realize how badly you're overpaying for Semrush"
+  },
+  "memes/meme-07.jpg": {
+    "script_quote": "Every workflow you're paying Zapier to run is really just paying for a UI",
+    "template": "Change My Mind",
+    "captions": ["EVERY SAAS SUBSCRIPTION IS JUST PAYING FOR A UI WRAPPER"],
+    "description": "Man at table with sign saying every SaaS subscription is just paying for a UI wrapper"
+  },
+  "memes/meme-08.jpg": {
+    "script_quote": "cut in half The SEO had to publicly apologize on Twitter",
+    "template": "Surprised Pikachu",
+    "captions": ["CURSOR CUTS PRO REQUESTS FROM 500 TO 225", "USERS WHO TRUSTED THE WRAPPER"],
+    "description": "Surprised Pikachu face when Cursor cuts requests in half"
+  },
+  "memes/meme-09.jpg": {
+    "script_quote": "When you're a wrapper your economics are controlled by the company you wrap",
+    "template": "UNO Draw 25",
+    "captions": ["LOWER API COSTS OR", "DRAW 25"],
+    "description": "Guy holding 25 UNO cards because wrappers won't lower API costs"
+  },
+  "memes/meme-10.jpg": {
+    "script_quote": "6 subscriptions $700 to $1,100 a month and the replacement cost for all 6 combined",
+    "template": "Expanding Brain (4 panels)",
+    "captions": ["PAY $1,100/MO FOR 6 SAAS TOOLS", "REALIZE YOU ONLY USE 10% OF EACH", "BUILD ALL 6 WITH ONE $80 SUBSCRIPTION", "TOOLS DO MORE THAN THE ORIGINALS"],
+    "description": "Brain expanding as you realize you can replace all 6 SaaS tools with one subscription"
+  },
+  "memes/meme-11.jpg": {
+    "script_quote": "paying $497 every single month for a platform where 96% of the features",
+    "template": "Trade Offer",
+    "captions": ["I RECEIVE: $497/MO FOREVER", "YOU RECEIVE: 4 FEATURES OUT OF HUNDREDS"],
+    "description": "Trade offer guy showing the absurd deal GoHighLevel offers"
+  },
+  "memes/meme-12.jpg": {
+    "script_quote": "They charge per task and complex workflows get expensive",
+    "template": "Waiting Skeleton",
+    "captions": ["ME WAITING FOR ZAPIER TO ADD THE ONE AUTOMATION I NEED", "WITHOUT CHARGING PER TASK"],
+    "description": "Skeleton on bench waiting forever for Zapier to stop charging per task"
+  },
+  "memes/meme-13.jpg": {
+    "script_quote": "They're wrappers Same exact structure as every SaaS on the kill list",
+    "template": "Two Buttons (Sweating Man)",
+    "captions": ["KEEP PAYING $1,100/MO IN SAAS", "LEARN TO BUILD IT YOURSELF FOR $80"],
+    "description": "Sweating man struggling to choose between paying $1,100/mo or building for $80"
+  },
+  "memes/meme-14.jpg": {
+    "script_quote": "Let me show you exactly what I canceled",
+    "template": "Starter Pack (custom Imagen)",
+    "captions": ["THE SAAS I KILLED STARTER PACK", "Semrush $450/mo", "Zapier $70/mo", "Midjourney $30/mo", "Premiere Pro $45/mo", "VidIQ $50/mo", "GoHighLevel $497/mo", "TOTAL: $1,142/mo REPLACED BY $80"],
+    "description": "Starter pack grid showing 6 SaaS tools with red X marks through each, total replaced by $80"
+  },
+  "memes/meme-15.jpg": {
+    "script_quote": "That's the entire business model Take something that exists wrap it in a dashboard and charge monthly",
+    "template": "Middleman Layer Diagram (custom Imagen)",
+    "captions": ["YOU", "CURSOR / LOVABLE / BOLT", "THE MIDDLEMAN LAYER", "CLAUDE API"],
+    "description": "Flow diagram showing YOU at top, Cursor/Lovable/Bolt as red middleman layer, Claude API at bottom"
+  },
+  "memes/meme-16.jpg": {
+    "script_quote": "even the AI coding tools themselves they're all getting eaten alive",
+    "template": "Squeezed Both Sides (custom Imagen)",
+    "captions": ["ENTERPRISE AI REPLACING HUMANS", "TRADITIONAL SAAS", "SOLO BUILDERS WITH CLAUDE CODE"],
+    "description": "Traditional SaaS being crushed between enterprise AI from above and solo builders from below"
+  },
+  "memes/meme-17.jpg": {
+    "script_quote": "Travel agents music labels taxi companies Every single time the middleman gets squeezed out",
+    "template": "Middlemen Graveyard (custom Imagen)",
+    "captions": ["MIDDLEMEN GRAVEYARD", "TRAVEL AGENTS (2000s)", "MUSIC LABELS (2010s)", "TAXI COMPANIES (2010s)", "SAAS WRAPPERS (2025)"],
+    "description": "Four tombstones in a graveyard for travel agents, music labels, taxi companies, and SaaS wrappers"
+  },
+  "memes/meme-18.jpg": {
+    "script_quote": "The moment the model provider offers direct access at the same price point the wrapper's entire value proposition collapses",
+    "template": "Wrapper Tax Receipt (custom Imagen)",
+    "captions": ["THE WRAPPER TAX", "Claude API access: $20/mo", "Pretty UI wrapper: $0 value", "Request limits: -275 requests", "WRAPPER MARKUP: +$180/mo", "YOU ARE PAYING 10x FOR A UI"],
+    "description": "Fake receipt showing the hidden wrapper tax: $20 API marked up to $200 for a UI"
+  },
+  "memes/meme-19.jpg": {
+    "script_quote": "SaaS isn't dying it's being redistributed Like music",
+    "template": "Redistribution Diagram (custom Imagen)",
+    "captions": ["REDISTRIBUTION", "Record Labels / Enterprise SaaS", "Independent Artist / Solo Founder with 1 API Key"],
+    "description": "Split comparison: blue side (500 employees, record labels, enterprise SaaS) arrow to green side (independent artist, solo founder with 1 API key)"
+  },
+  "memes/meme-20.jpg": {
+    "script_quote": "$7,400 to $12,200 per year back in your pocket",
+    "template": "Savings Stack (custom Imagen)",
+    "captions": ["$12,720/YEAR BACK IN YOUR POCKET", "BEFORE: $0/mo SAVED", "AFTER: $1,060/mo SAVED"],
+    "description": "Before/after money stacks: sad small stack vs happy glowing tall stack with green arrow up"
+  }
+}

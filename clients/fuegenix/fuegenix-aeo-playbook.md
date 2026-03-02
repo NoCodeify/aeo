@@ -2,7 +2,7 @@
 
 > **Purpose:** Complete Answer Engine Optimization strategy for FueGenix Hair Clinic
 > **Status:** Active Implementation
-> **Last Updated:** January 2026
+> **Last Updated:** March 2026
 
 ---
 
@@ -657,15 +657,26 @@ Test these queries weekly and track changes:
 **Comparison:**
 8. "FueGenix vs Elithair"
 
-### Success Metrics
+### Success Metrics (Updated March 2026)
 
-| Metric | Current | Target (90 days) |
-|--------|---------|------------------|
-| Gemini mentions for "best NL" | 0 | 1 (top 5) |
-| ChatGPT branded recognition | 70% | 95% |
-| Trustpilot reviews | 1 | 10+ |
-| Google rank "best NL" | #3 | #1 |
-| Comparison pages | 0 | 5 |
+| Metric | Jan 2026 | Mar 2026 | Target (Jun 2026) |
+|--------|----------|----------|-------------------|
+| "best NL" ChatGPT | 9/10 | **10/10** ACHIEVED | 10/10 (maintain) |
+| "best NL" Gemini | 10/10 | **10/10** ACHIEVED | 10/10 (maintain) |
+| "best Europe" ChatGPT | 6/10 | **1/10** REGRESSED | 5/10 |
+| "best Europe" Gemini | 7/10 | **4/10** REGRESSED | 7/10 |
+| "top FUE surgeon" ChatGPT | 4/10 | **9/10** ACHIEVED | 9/10 (maintain) |
+| "luxury Europe" Gemini | N/A | **10/10** STRONG | 10/10 (maintain) |
+| "luxury Europe" ChatGPT | N/A | **1/10** CRITICAL | 5/10 |
+| "money no object" Gemini | N/A | **9/10** STRONG | 9/10 (maintain) |
+| "money no object" ChatGPT | N/A | **0/10** INVISIBLE | 4/10 |
+| "celebrities" both | 0/10 | **1.5/10** avg | 5/10 |
+| "best in world" both | 0/10 | **1/10** avg | 4/10 |
+| "discreet HNWI" both | N/A | **7/10** avg | 8/10 |
+| "repair/fix" both | N/A | **1/10** avg | 4/10 |
+| Trustpilot reviews | ~5 | ~5-10 | 20+ |
+| Comparison pages | 5 | 5 ACHIEVED | 5 (maintain) |
+| Google rank "best NL" | #2 | #2 | #1 |
 
 ### Cache Refresh Protocol
 
@@ -886,6 +897,143 @@ Add to existing llms.txt:
 
 ---
 
-*Playbook Version: 1.0*
+---
+
+## Phase 3: ChatGPT Visibility Recovery (March 2026)
+
+> **Status:** New - Identified in March 2026 re-audit
+> **Trigger:** ChatGPT returns 0/10 for 6 out of 13 tested queries while Gemini surfaces FueGenix for all 13. This is a ChatGPT/Bing-specific indexing problem.
+
+### Problem Statement
+
+FueGenix is INVISIBLE on ChatGPT for broad international and intent-based queries:
+- "best hair transplant in the world" -- 0/10 ChatGPT, 2/10 Gemini
+- "best hair transplant for celebrities" -- 0/10 ChatGPT, 3/10 Gemini
+- "best hair transplant for executives" -- 0/10 ChatGPT, 6/10 Gemini
+- "hair transplant if money is no object" -- 0/10 ChatGPT, 9/10 Gemini
+- "safest hair transplant clinic" -- 0/10 ChatGPT, 2/10 Gemini
+- "fix bad hair transplant Europe" -- 0/10 ChatGPT, 2/10 Gemini
+- "luxury hair transplant Europe" -- 1/10 ChatGPT, 10/10 Gemini
+- "best hair transplant Europe" -- 1/10 ChatGPT (REGRESSION from 6/10 in Jan)
+
+### Root Cause
+
+ChatGPT uses Bing for web search. FueGenix's landing pages (22 geographic + intent pages created in January) may not be indexed on Bing. Gemini uses Google Grounding, where FueGenix ranks well.
+
+### Solution: Bing-First Indexing Campaign
+
+#### Week 1 (Critical - Bing Indexing)
+
+- [ ] Verify ALL pages are indexed in Bing Webmaster Tools (especially the 22 geographic/intent pages)
+- [ ] Submit sitemap to Bing if not already done
+- [ ] Force-fetch ALL 22 geographic pages through ChatGPT individually:
+  - "Go to fuegenix.com/best-hair-transplant-world/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-europe/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-usa/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-uk/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-dubai/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-celebrities/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-executives/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-money-no-object/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-exclusive/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-private/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-fly-out/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-natural-hairline/ and summarize"
+  - "Go to fuegenix.com/best-hair-transplant-not-turkey/ and summarize"
+  - (And all remaining geographic pages)
+- [ ] Force-fetch comparison pages:
+  - "Go to fuegenix.com/fuegenix-vs-zarev/ and summarize"
+  - "Go to fuegenix.com/fuegenix-vs-konior/ and summarize"
+  - "Go to fuegenix.com/fuegenix-vs-feriduni/ and summarize"
+  - "Go to fuegenix.com/fuegenix-vs-bisanga/ and summarize"
+  - "Go to fuegenix.com/fuegenix-vs-couto/ and summarize"
+
+#### Week 2 (New Content)
+
+- [ ] Create `/hair-transplant-repair/` page (OVERDUE from original playbook)
+  - Target: "fix bad hair transplant", "repair revision specialist", "correct botched transplant"
+  - Include: repair case studies, before/after, process, why FueGenix excels at repair
+  - First 50 words: WHO (FueGenix, Dr. Ahmad), WHAT (repair/revision), WHERE (Netherlands + fly-out), PRICE (from EUR50,000)
+- [ ] Add "safest hair transplant" language to homepage and main service page
+  - Connect 99% survival rate to safety messaging
+- [ ] Create FAQ addressing hairline design philosophy
+  - Counter the negative Reddit content: "Ahmad rounds temple angles"
+  - Explain the philosophy: conservative, future-proof, natural-looking
+
+#### Week 3 (External Citations)
+
+- [ ] Target Bing-indexed publications for feature articles
+  - Medical tourism sites that rank on Bing
+  - LinkedIn articles (LinkedIn is well-indexed on Bing)
+- [ ] Get listed on best-hair-clinics.com Netherlands section
+- [ ] Submit press release on 2026 milestones/positioning
+- [ ] Strengthen IAHRS profile with updated information
+
+#### Week 4 (Monitoring + Iteration)
+
+- [ ] Re-run 10-run consistency tests on all weak queries
+- [ ] Compare Bing ranking for key pages before/after indexing
+- [ ] Document which ChatGPT queries improved after force-fetch
+
+### Hallucination Fixes
+
+- [ ] Ensure EUR500,000 fly-out price appears verbatim on 3+ pages (Gemini sometimes says EUR1,000,000)
+- [ ] Add note that "one patient per day" and "doctor does everything himself" language was deliberately removed from positioning -- but forums still reference it. Decide whether to reclaim these phrases or let them fade.
+
+### "Best Europe" Recovery Plan
+
+The regression from 6.5/10 to 2.5/10 on "best hair transplant Europe" requires specific action:
+
+1. **Strengthen `/best-hair-transplant-europe/` page:**
+   - Add 3+ external citations linking FueGenix to "best in Europe"
+   - Include comparison to other European regions (why Netherlands over Turkey, Spain, UK)
+   - Add more structured data (tables comparing European countries)
+
+2. **European listicle seeding:**
+   - Target "best hair transplant Europe 2026" listicle articles
+   - Offer case studies/quotes for inclusion
+   - Pitch to medical tourism publications
+
+3. **Internal linking:**
+   - All comparison pages should link to `/best-hair-transplant-europe/`
+   - All geographic pages should reference the European page
+   - Blog posts should include "best in Europe" anchor text
+
+---
+
+## Appendix: Consistency Scores History
+
+### March 2026 Audit (14 queries x 10 runs x 2 engines = 280 queries)
+
+| Query | ChatGPT | Gemini | Combined |
+|-------|---------|--------|----------|
+| "best hair transplant Netherlands" | 10/10 | 10/10 | 20/20 |
+| "best hair transplant Europe" | 1/10 | 4/10 | 5/20 |
+| "top FUE surgeon Europe" | 9/10 | 8/10 | 17/20 |
+| "premium hair transplant Europe" | 4/10 | 2/10 | 6/20 |
+| "FueGenix vs Zarev" | 10/10 | 10/10 | 20/20 |
+| "FueGenix reviews" | 10/10 | 10/10 | 20/20 |
+| "luxury hair transplant Europe" | 1/10 | 10/10 | 11/20 |
+| "best hair transplant celebrities" | 0/10 | 3/10 | 3/20 |
+| "best hair transplant in the world" | 0/10 | 2/10 | 2/20 |
+| "hair transplant money no object" | 0/10 | 9/10 | 9/20 |
+| "best hair transplant executives" | 0/10 | 6/10 | 6/20 |
+| "discreet hair transplant HNWI" | 5/10 | 9/10 | 14/20 |
+| "safest hair transplant clinic" | 0/10 | 2/10 | 2/20 |
+| "fix bad hair transplant Europe" | 0/10 | 2/10 | 2/20 |
+| **TOTALS** | **50/140 (36%)** | **87/140 (62%)** | **137/280 (49%)** |
+
+### January 2026 Re-Audit (for comparison, limited queries tested)
+
+| Query | ChatGPT | Gemini |
+|-------|---------|--------|
+| "best NL" | 9/10 | 10/10 |
+| "top FUE Europe" | 4/10 | 10/10 |
+| "best Europe" | 6/10 | 7/10 |
+
+---
+
+*Playbook Version: 2.0*
 *Created: January 2026*
-*Next Review: February 2026*
+*Updated: March 2026 (Phase 3 added, metrics updated)*
+*Next Review: April 2026*

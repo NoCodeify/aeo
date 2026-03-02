@@ -50,8 +50,7 @@ Create an agent team called "video-production" with these teammates:
 2. Create the team: visual-designer and gif-curator work in parallel
 3. When assets are ready, timeline-builder generates timeline.json
 4. Review timeline, request fixes - timeline-builder still has context
-5. Auto-cutter runs separately if needed (`/auto-cutter`)
-6. Render at 4K: `cd tools/video-editor-remotion && npx remotion render src/index.ts MyComposition out/video.mp4 --video-bitrate=35M`
+5. Render at 4K: `cd tools/video-editor-remotion && npx remotion render src/index.ts MyComposition out/video.mp4 --video-bitrate=35M`
 
 ## Input
 

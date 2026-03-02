@@ -54,7 +54,8 @@ export type LayoutType =
   | "notification_stack"
   | "pricing_card"
   | "countdown_flip"
-  | "text_highlight";
+  | "text_highlight"
+  | "kill_list";
 
 export interface BaseEdit {
   type: LayoutType;
@@ -649,7 +650,17 @@ export type Edit =
   | NotificationStackEdit
   | PricingCardEdit
   | CountdownFlipEdit
-  | TextHighlightEdit;
+  | TextHighlightEdit
+  | KillListEdit;
+
+// Animated SaaS subscription kill list with staggered slash + replacement
+export interface KillListEdit extends BaseEdit {
+  type: "kill_list";
+  items: { name: string; price: string }[];
+  title?: string;
+  replacement?: string;
+  color?: string;
+}
 
 export interface BgMusicConfig {
   src: string; // path relative to public/, e.g. "sfx/lofi-beat-bg.mp3"

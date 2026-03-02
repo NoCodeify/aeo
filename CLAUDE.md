@@ -7,7 +7,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 AEO (Answer Engine Optimization) Protocol toolkit: consulting methodology, MCP servers, YouTube production, and client delivery.
 
 - `aeo-protocol-sop.md` - Master AEO methodology (3500+ lines, source of truth)
-- `aeo-audit-mcp/` / `seo-agent-mcp/` / `imagen-mcp/` / `giphy-mcp/` / `pexels-mcp/` / `scrapingbee-mcp/` / `trend-scanner-mcp/` / `imgflip-mcp/` - MCP servers
+- `aeo-audit-mcp/` / `seo-agent-mcp/` / `imagen-mcp/` / `giphy-mcp/` / `pexels-mcp/` / `scrapingbee-mcp/` / `trend-scanner-mcp/` / `imgflip-mcp/` / `veo-mcp/` - MCP servers
 - `tools/video-editor-remotion/` - React-based video editor (Remotion)
 - `youtube/` - Video production framework
 - `clients/` - Client project files
@@ -22,7 +22,7 @@ cd [server]-mcp && npm run build
 # Dev mode
 cd [server]-mcp && npm run dev
 
-# Servers: aeo-audit-mcp, seo-agent-mcp, imagen-mcp, giphy-mcp, pexels-mcp, scrapingbee-mcp, trend-scanner-mcp, imgflip-mcp
+# Servers: aeo-audit-mcp, seo-agent-mcp, imagen-mcp, giphy-mcp, pexels-mcp, scrapingbee-mcp, trend-scanner-mcp, imgflip-mcp, veo-mcp
 ```
 
 ## Environment Variables
@@ -52,7 +52,7 @@ Domain-specific rules load automatically based on what files you're working with
 | `aeo/methodology.md` | Always | AEO protocol reference, workflow, first-50-words |
 | `aeo/mcp-servers.md` | Always | MCP server architecture, tools, backends |
 | `youtube/production.md` | `youtube/**` | Keyword data, title/thumbnail rules, search-first strategy |
-| `youtube/video-editing.md` | `tools/video-editor-remotion/**` | 4K render, layouts, timeline, autocut |
+| `youtube/video-editing.md` | `tools/video-editor-remotion/**` | 4K render, layouts, timeline |
 | `saas/decisions.md` | `systems/**` | D1-D59 decisions, tech stack, pricing |
 | `clients/workflow.md` | `clients/**` | Client structure, delivery pipeline, templates |
 | `website/copywriting.md` | Always | Copy rules: sitemap first, no em dashes, 500+ words |
@@ -83,7 +83,6 @@ Domain-specific rules load automatically based on what files you're working with
 | `/image-generation` | Website image prompts | image-prompter |
 | `/client-report` | Client visibility report | report-generator |
 | `/forum-research` | Reddit/forum competitor research | competitor-researcher |
-| `/auto-cutter` | Intelligent silence removal | auto-cutter |
 | `/thumbnail` | YouTube thumbnails + validation | thumbnail-prompter |
 | `/playbook` | Audit to playbook conversion | playbook-creator |
 | `/optimize-content` | Content optimization for LLMs | content-optimizer |

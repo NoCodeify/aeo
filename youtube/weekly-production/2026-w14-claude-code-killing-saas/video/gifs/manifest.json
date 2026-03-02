@@ -1,0 +1,128 @@
+{
+  "gifs/gif-01-throwing-money.mp4": {
+    "script_quote": "I used to pay over $1,000 a month in software subscriptions",
+    "description": "Little Rascals kid throwing money out the window",
+    "emotion": "wasting money on subscriptions",
+    "search_query": "throwing money away waste spending"
+  },
+  "gifs/gif-02-money-burning.mp4": {
+    "script_quote": "I used to pay over $1,000 a month in software subscriptions",
+    "description": "Stack of money on fire burning away",
+    "emotion": "wasting money on SaaS subscriptions",
+    "search_query": "money burning gif"
+  },
+  "gifs/gif-03-empty-office.mp4": {
+    "script_quote": "Salesforce charges per seat HubSpot charges per seat ServiceNow charges per seat",
+    "description": "Empty office with no one sitting in the chairs",
+    "emotion": "empty seats, per-seat pricing collapse",
+    "search_query": "empty office gif"
+  },
+  "gifs/gif-04-crushed-squeezed.mp4": {
+    "script_quote": "There's a second squeeze coming from below",
+    "description": "Something being crushed or squeezed from both sides",
+    "emotion": "pressure from above and below simultaneously",
+    "search_query": "crushed squeezed pressure"
+  },
+  "gifs/gif-05-industry-dominos.mp4": {
+    "script_quote": "This is happening across the entire industry",
+    "description": "Dominos falling in a chain reaction on black background",
+    "emotion": "industry-wide cascade, one after another falling",
+    "search_query": "dominos chain reaction"
+  },
+  "gifs/gif-06-receipts.mp4": {
+    "script_quote": "I've got receipts Let me show you",
+    "description": "Person pulling out receipts or proof",
+    "emotion": "backing up claims with evidence",
+    "search_query": "receipts proof gif"
+  },
+  "gifs/gif-07-checklist.mp4": {
+    "script_quote": "Here's what replaced every single one of them",
+    "description": "Person checking off items on a list",
+    "emotion": "systematic completion, ticking off items",
+    "search_query": "checklist check mark gif"
+  },
+  "gifs/gif-08-side-eye.mp4": {
+    "script_quote": "Nobody is immune I know this because I've been on both sides",
+    "description": "Person giving a knowing side-eye glance",
+    "emotion": "insider knowledge, been there done that",
+    "search_query": "side eye knowing look"
+  },
+  "gifs/gif-09-surprised.mp4": {
+    "script_quote": "people push back hardest Midjourney",
+    "description": "Person with surprised/shocked reaction",
+    "emotion": "disbelief that Midjourney can be replaced",
+    "search_query": "surprised reaction gif"
+  },
+  "gifs/gif-10-mind-blown.mp4": {
+    "script_quote": "pennies per image batch generation 4K output",
+    "description": "Person's mind being blown, head exploding gesture",
+    "emotion": "amazement at how cheap the replacement is",
+    "search_query": "mind blown gif"
+  },
+  "gifs/gif-11-free-zero-cost.mp4": {
+    "script_quote": "All free APIs $0 a month",
+    "description": "Animated dollar sign with green background, deal/discount theme",
+    "emotion": "celebration of zero cost, free stuff",
+    "search_query": "free zero cost deal"
+  },
+  "gifs/gif-12-overkill.mp4": {
+    "script_quote": "built exactly what I needed with Claude Code Only the 4 features I actually use",
+    "description": "Something being way overdone or excessive",
+    "emotion": "the absurdity of paying for 100 features when you use 4",
+    "search_query": "overkill excessive gif"
+  },
+  "gifs/gif-13-sticker-shock-497.mp4": {
+    "script_quote": "The next one was $497 and killing",
+    "description": "Person checking a price tag in a store looking shocked",
+    "emotion": "sticker shock at seeing the $497/mo price",
+    "search_query": "shocked at price expensive"
+  },
+  "gifs/gif-14-flexing-stronger.mp4": {
+    "script_quote": "replacements actually do more than the originals",
+    "description": "Cartoon character flexing muscles, showing off strength",
+    "emotion": "the replacement is stronger/better than the original",
+    "search_query": "flexing muscles stronger"
+  },
+  "gifs/gif-15-skeptical.mp4": {
+    "script_quote": "probably toy replacements Simple scripts pretending to be real tools",
+    "description": "Person with skeptical/doubtful expression",
+    "emotion": "audience skepticism about whether replacements actually work",
+    "search_query": "skeptical doubt gif"
+  },
+  "gifs/gif-16-suspicious.mp4": {
+    "script_quote": "They're middlemen and middlemen always get squeezed",
+    "description": "Person looking suspicious, narrowing eyes",
+    "emotion": "suspicion about middlemen business models",
+    "search_query": "suspicious narrowing eyes"
+  },
+  "gifs/gif-17-middleman-squeeze.mp4": {
+    "script_quote": "the middleman gets squeezed out No exceptions",
+    "description": "Something being squeezed or pushed out from the middle",
+    "emotion": "inevitability of middlemen getting eliminated",
+    "search_query": "middleman squeeze eliminated"
+  },
+  "gifs/gif-18-cutting.mp4": {
+    "script_quote": "I've replaced almost all of it",
+    "description": "Pressing a delete/remove button",
+    "emotion": "cutting subscriptions, removing unnecessary tools",
+    "search_query": "delete button press"
+  },
+  "gifs/gif-19-ticking-clock.mp4": {
+    "script_quote": "Every wrapper-based tool has a ticking clock",
+    "description": "Clock ticking down, countdown timer",
+    "emotion": "time running out for wrapper businesses",
+    "search_query": "ticking clock countdown"
+  },
+  "gifs/gif-20-mic-drop.mp4": {
+    "script_quote": "6 middlemen every single one lost",
+    "description": "Person dropping a microphone after making a final point",
+    "emotion": "definitive conclusion, case closed",
+    "search_query": "mic drop gif"
+  },
+  "gifs/gif-21-eaten-alive.mp4": {
+    "script_quote": "they're all getting eaten alive",
+    "description": "PAC-MAN gobbling up dots and ghosts",
+    "emotion": "being devoured/consumed by competition",
+    "search_query": "pac man eating gobbling"
+  }
+}

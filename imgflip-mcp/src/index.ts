@@ -323,7 +323,8 @@ async function captionMeme(
   templateId: string,
   topText?: string,
   bottomText?: string,
-  font?: string
+  font?: string,
+  boxes?: string[]
 ): Promise<ImgflipCaptionResponse> {
   if (!IMGFLIP_USERNAME || !IMGFLIP_PASSWORD) {
     throw new Error(
@@ -337,9 +338,17 @@ async function captionMeme(
     password: IMGFLIP_PASSWORD,
   });
 
-  if (topText !== undefined) params.set("text0", topText);
-  if (bottomText !== undefined) params.set("text1", bottomText);
-  if (font) params.set("font", font);
+  // Use boxes array if provided (for templates with 3+ text areas)
+  if (boxes && boxes.length > 0) {
+    for (let i = 0; i < boxes.length; i++) {
+      params.set(`boxes[${i}][text]`, boxes[i]);
+      if (font) params.set(`boxes[${i}][font]`, font);
+    }
+  } else {
+    if (topText !== undefined) params.set("text0", topText);
+    if (bottomText !== undefined) params.set("text1", bottomText);
+    if (font) params.set("font", font);
+  }
 
   const response = await fetch(`${IMGFLIP_BASE_URL}/caption_image`, {
     method: "POST",
@@ -532,17 +541,21 @@ server.tool(
     top_text: z
       .string()
       .optional()
-      .describe("Text for the top of the meme"),
+      .describe("Text for the top of the meme (box 0). Use 'boxes' instead for templates with 3+ text areas."),
     bottom_text: z
       .string()
       .optional()
-      .describe("Text for the bottom of the meme"),
+      .describe("Text for the bottom of the meme (box 1). Use 'boxes' instead for templates with 3+ text areas."),
+    boxes: z
+      .array(z.string())
+      .optional()
+      .describe("Array of text strings for each box in order. Use for templates with 3+ boxes (e.g., Expanding Brain has 4). Overrides top_text/bottom_text when provided."),
     font: z
       .enum(["impact", "arial"])
       .optional()
       .describe("Font to use (default: 'impact'). Use 'arial' for a cleaner look."),
   },
-  async ({ template_id, top_text, bottom_text, font }) => {
+  async ({ template_id, top_text, bottom_text, boxes, font }) => {
     if (!IMGFLIP_USERNAME || !IMGFLIP_PASSWORD) {
       return {
         content: [
@@ -566,7 +579,7 @@ server.tool(
         // Non-critical, continue without name
       }
 
-      const result = await captionMeme(template_id, top_text, bottom_text, font);
+      const result = await captionMeme(template_id, top_text, bottom_text, font, boxes);
 
       return {
         content: [
@@ -657,6 +670,7 @@ server.tool(
           template_id: z.string().describe("Meme template ID"),
           top_text: z.string().optional().describe("Top text"),
           bottom_text: z.string().optional().describe("Bottom text"),
+          boxes: z.array(z.string()).optional().describe("Array of text for each box (for 3+ box templates). Overrides top_text/bottom_text."),
           filename: z.string().describe("Output filename without extension"),
         })
       )
@@ -703,7 +717,9 @@ server.tool(
         const captionResult = await captionMeme(
           req.template_id,
           req.top_text,
-          req.bottom_text
+          req.bottom_text,
+          undefined,
+          req.boxes
         );
 
         const downloadResult = await downloadImage(

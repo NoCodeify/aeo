@@ -91,7 +91,7 @@ Meme generation via Imgflip API. Search 100+ templates, caption with custom text
 |----------|----------|---------|
 | `searchMemes()` | GET `/get_memes` + client filter | Fuzzy search templates by name/emotion keyword |
 | `getPopularMemes()` | GET `/get_memes` | Top N templates by popularity |
-| `captionMeme()` | POST `/caption_image` | Generate meme with custom top/bottom text |
+| `captionMeme()` | POST `/caption_image` | Generate meme with top/bottom text or `boxes[]` for 3+ text areas |
 | `downloadMeme()` | HTTP GET image URL | Save generated meme to project dir |
 | `batchCaptionAndDownload()` | Sequential caption + download | Bulk meme generation (750ms delay for rate limits) |
 
@@ -100,3 +100,19 @@ Meme generation via Imgflip API. Search 100+ templates, caption with custom text
 **Tools:** `search_memes`, `get_popular_memes`, `caption_meme`, `download_meme`, `batch_caption_and_download`
 
 **Pipeline:** Script marks `MEME:` beats -> pick template + write caption -> imgflip-mcp (caption + download) -> timeline uses `slide_full`
+
+> **Imgflip vs Imagen for memes:** Use Imgflip for famous photo-based templates (Drake, distracted boyfriend, etc.) where recognition IS the joke. Use Imagen for custom scenes with Impact font (no template exists), layout-based memes (starter pack, tier list), or multi-label memes. Never use vague "funny image" prompts with Imagen — always describe the exact meme format.
+
+## Veo MCP (`veo-mcp/src/index.ts`)
+
+AI video generation using Google Veo 3.1. Text-to-video and image-to-video. Outputs MP4 clips (4-8s). Includes pixel art post-processing mode (10fps, 4K nearest-neighbor upscale).
+
+| Function | Mode | Purpose |
+|----------|------|---------|
+| `generateVideo()` | Text-to-video | Generate video from text prompt |
+| `animateImage()` | Image-to-video | Animate a static image (pixel art, illustrations) |
+| `batchAnimate()` | Batch image-to-video | Animate multiple images sequentially |
+
+> Models: `veo-3.1-generate-preview` (HQ) or `veo-3.1-fast-generate-preview` (fast). Resolution: 720p native, pixel art mode upscales to 4K nearest-neighbor.
+
+**Tools:** `generate_video`, `animate_image`, `batch_animate`
